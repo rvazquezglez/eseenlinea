@@ -1,0 +1,524 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+            "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Plot your own graphs using JSXGraph</title>
+<meta name="description"
+content="Free graph plotter. Works on any browser, any operating system.">
+
+
+<script type="text/javascript" src="http://intmstat.com/scripts/convert-to-math.js"></script> 
+
+<script type='text/javascript' src='http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js'></script>
+
+<!--script type="text/javascript" src="http://intmstat.com/scripts/jsxgraphcore.js"></script-->
+
+<style type="text/css">
+.centerBox{width:350px;margin:1.5em auto;border:#ccc 1px solid;text-align:center}
+.separate{margin-left:50px;}
+</style>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="Murray Bourne">
+<meta property="fb:admins" content="533623152">
+
+<base href="http://www.intmath.com/functions-and-graphs/graphs-using-jsxgraph.php">
+<link rel="shortcut icon" href="http://intmstat.com/images/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="intmath.com RSS Feed" href="http://www.intmath.com/feed/">
+<link type="text/css" rel="stylesheet" href="http://intmstat.com/css/math2012-07-12.css">
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-347284-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({
+   asciimath2jax: {
+      delimiters: [['`','`'],['qq','qq']]
+    },
+    "HTML-CSS": {
+      styles: {
+        ".MathJax_Preview": {
+           color: "#eee"
+        }
+      }
+    }    
+});
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready",function () {
+     MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data) {
+       data.math.root.scriptminsize = 0.7;
+     });
+});
+</script>  
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
+<!-- ClickTale -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+</head>
+<body>
+<div id="wrapper">
+ <div id="header">
+<div id="logoTopnav">
+  <div id="logo">
+    
+    <a href="http://www.intmath.com/" title="Home page of Interactive Mathematics"><img src="http://intmstat.com/images/sqclogo2.png" width="40" height="40" alt="home"></a> 
+   <p>This is <a href="http://www.intmath.com/" title="Home page of Interactive Mathematics">interactive mathematics</a><br>
+    where you learn math by playing with it!</p>
+    
+
+  </div> <!-- logo -->
+
+ <div id="topNav">
+    <ul id="hori">
+<li><a href="http://www.intmath.com/">home</a></li>
+<li><a href="http://www.intmath.com/help/sitemap.php">sitemap</a></li>
+<li><a href="http://www.intmath.com/help/interactive-math-applications.php">math interactives</a></li>
+<li><a href="http://www.intmath.com/help/scientific-notebook.php">Scientific Notebook</a></li>
+<li><a href="http://www.intmath.com/blog/category/mathematics">math blog</a></li>
+
+<li><a href="http://www.intmath.com/help/site-info.php">about</a></li>
+
+<li><a href="http://www.intmath.com/help/comments.php">feedback</a></li>
+</ul>
+ </div>  <!-- topNav -->
+
+</div> <!-- logoTopnav -->
+
+  <div id="searchFb">
+
+<form action="http://www.intmath.com/help/search-g.php" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2127235491321065:5426004799">
+    <input type="hidden" name="cof" value="FORID:11">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" size="31" value="">
+    <input type="submit" name="sa" value="Search site">
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+
+
+
+
+<p class="socialLink"><a  rel="nofollow" href="http://www.intmath.com/includes/social.php"><img class="soclogo" src="http://intmstat.com/images/social-logos20x20.png" width="140" height="20" alt="social networking logos" title="Share this page!"></a>
+</p> 
+
+ 
+ 
+
+  </div>
+</div> <!-- header -->
+
+
+   
+  
+  <div id="links">
+<h3 class="noTop">Chapter Contents</h3>
+<ul>
+  <li><a href="functions-graphs-intro.php">Functions and Graphs</a></li>
+  <li><a href="1-introduction-to-functions.php">1. Introduction to Functions</a></li>
+  <li><a href="2b-functions-from-verbal-statements.php">2. Functions from Verbal Statements</a></li>
+  <li><a href="3-rectangular-coordinates.php">3. Rectangular Coordinates</a></li>
+  <li><a href="4-graph-of-function.php">4. The Graph of a Function</a></li>
+  <li><a class="liTabbed" href="2a-domain-and-range.php">Domain and Range of a Function</a></li>
+  <li><a class="liTabbed" href="bmi-bai-comparison.php">Comparison calculator BMI - BAI</a></li>
+  <li><a href="5-graphs-using-computer-algebra-system.php">5. Graphing Using a Computer Algebra System</a></li>
+  <li id="current" class="currentTabbed">Online graphing calculator (1): Plot your own graph (JSXGraph)</li>
+  <li><a class="liTabbed" href="graphs-using-svg.php">Online graphing calculator (2): Plot your own graph (SVG)</a></li>
+  <li><a href="6-graphs-functions-tables-data.php">6. Graphs of Functions Defined by Tables of Data</a></li>
+  <li><a href="7-continuous-discontinuous-functions.php">7. Continuous and Discontinuous Functions</a></li>
+  <li><a href="8-split-functions.php">8. Split Functions</a></li>
+  <li><a href="9-even-odd-functions.php">9. Even and Odd Functions</a></li>
+    <li><a class="liTabbed" href="/help/problem-solver.php?title=functions-and-graphs&amp;fid=36&amp;refTitle=Online graphing calculator (1): Plot your own graph (JSXGraph)">Functions and Graphs Problem Solver</a></li>
+</ul>
+  <ul><li><a href="/help/comments.php">Comments, Questions?</a></li></ul>
+
+<h3>Gadgets and math</h3>
+<div id="poll">
+<p class="ques">I mostly learn math using:</p>
+	<form action="javascript:vote('http://www.intmath.com/')" method="GET" name="myform" id="myform">
+		<div class="formbox1">
+<p><input type=radio  name="who" value="1">Computer (desktop)</p><p><input type=radio  name="who" value="2">Laptop</p><p><input type=radio  name="who" value="3">Tablet (iPad etc)</p><p><input type=radio  name="who" value="4">Mobile phone</p><p><input type=radio  name="who" value="5">Calculator</p><p><input type=radio  name="who" value="6">No device</p><p class="voteButt"><input type=submit value="Vote!"></p>
+		</div>
+	</form>
+<p>Votes so far: <b>222</b></p>	
+</div>
+<h3>Recommendation</h3>
+<p class="imgCenter"><a href="/help/math-videos/?topic=math"> 
+<img src="http://intmstat.com/images/mathTutorDVD.png" width="100" height="100" alt="get MathTutorDVDs"></a></p>
+<p>Easy to understand math lessons on DVD. Try before you commit. More info:<br>
+<a href="/help/math-videos/?topic=math">MathTutorDVD.com</a></p>
+
+
+
+<h3>Online Algebra Solver</h3>
+<p>Solve your algebra problem step by step!</p>
+<p class="probLink"><a href="/help/problem-solver.php">Online Algebra Solver &raquo;</a></p>
+
+
+<h3>Share</h3>
+<p class="socialLink"><a rel="nofollow" href="http://www.intmath.com/includes/social.php"><img src="http://intmstat.com/images/social-logos20x20.png" width="140" height="20" alt="social networking logos" title="Share this page!"></a></p>
+<p>Share this page.</p>
+<p class="imgCenter">
+<script type="text/javascript"><!--
+google_ad_client = "pub-2127235491321065";
+/* 160x600, created 12/18/09 */
+google_ad_slot = "0328195812";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</p>
+<h3>From the math blog...</h3>
+<div id="blogPromo">
+
+
+<h4><a href="http://www.intmath.com/blog/online-graph-plotter-using-jsxgraph/6117">
+Online graph plotter using JSXGraph</a></h4>
+<p><a href="http://www.intmath.com/blog/?p=6117"><img alt="Draw your own graph with this online graphing calculator." src="http://intmstat.com/blog/2011/06/jsxgraph-plot-graph.png" title="Draw your own graph with this online graphing calculator."  width="128" height="100" border="0"><br></a>This is a handy and user-friendly graph plotter which works in all major browsers and operating systems....</p>
+<p class='moreRt'><a href='http://www.intmath.com/blog/online-graph-plotter-using-jsxgraph/6117' title="Go to Online graph plotter using JSXGraph">more &raquo;</a></p>
+
+<h4><a href="http://www.intmath.com/blog/math-graphs-on-the-web-without-images/3298">
+Math graphs on the Web without images</a></h4>
+<p><a href="http://www.intmath.com/blog/?p=3298"><img src="http://intmstat.com/blog/2009/12/ASCIIsvg-graphs.gif" alt="ASCIIsvg graphs" title="ASCIIsvg-graphs" width="128" height="104"><br></a>Here's one way to plot good looking graphs on the Web - ASCIIsvg....</p>
+<p class='moreRt'><a href='http://www.intmath.com/blog/math-graphs-on-the-web-without-images/3298' title="Go to Math graphs on the Web without images">more &raquo;</a></p>
+
+<h4><a href="http://www.intmath.com/blog/autograph-2-d-and-3-d-graph-plotter-a-review/6989">
+Autograph 2-D and 3-D graph plotter: a review</a></h4>
+<p><a href="http://www.intmath.com/blog/?p=6989"><img src="http://intmstat.com/blog/2012/01/vol-solid-revolution_th.png" alt="Autograph plotter" width="128" height="100" border="0"><br></a>
+Autograph is a well-designed 2-D and 3-D plotting application for education. Here's my review....</p>
+<p class='moreRt'><a href='http://www.intmath.com/blog/autograph-2-d-and-3-d-graph-plotter-a-review/6989' title="Go to Autograph 2-D and 3-D graph plotter: a review">more &raquo;</a></p>
+
+<h4><a href="http://www.intmath.com/blog/how-to-import-geogebra-files-into-jsxgraph/4862">
+How to import Geogebra files into JSXGraph</a></h4>
+<p><a href="http://www.intmath.com/blog/how-to-import-geogebra-files-into-jsxgraph/4862"><img src="http://intmstat.com/blog/2010/07/geogebra-jsxgraph.png" alt="geogebra jsxgraph" title="geogebra jsxgraph" width="128" height="100"><br></a>GeoGebra is a good tool for creating interactive java applets. Can they be served using javascript?...</p>
+<p class='moreRt'><a href='http://www.intmath.com/blog/how-to-import-geogebra-files-into-jsxgraph/4862' title="Go to How to import Geogebra files into JSXGraph">more &raquo;</a></p>
+
+<h4><a href="http://www.intmath.com/blog/jsxgraph-interactive-javascript-graphs/4579">
+JSXGraph: interactive javascript graphs</a></h4>
+<p><a href="http://www.intmath.com/blog/jsxgraph-interactive-javascript-graphs/4579"><img src="http://intmstat.com/blog/2010/05/pentagon-jsxgraph.gif" alt="pentagon built with jsxgraph" title="pentagon built with jsxgraph" width="128" height="121"><br></a>JSXGraph is a method for producing interactive graphs on a Web page, using javascript....</p>
+<p class='moreRt'><a href='http://www.intmath.com/blog/jsxgraph-interactive-javascript-graphs/4579' title="Go to JSXGraph: interactive javascript graphs">more &raquo;</a></p>
+
+
+</div>
+</div>  <!-- links -->  
+
+<div id="content">
+
+
+
+
+<h1>Plot your own graphs using JSXGraph</h1>
+<div class="explanation">
+<p>You can plot 3 functions, <b>function 1</b> (in blue), <b>function 2</b> (in green) and  <b>function 3</b> (in magenta).</p>
+<p>Edit your function and then click the "Plot" button.</p>
+
+<form name="myPlotterForm" id="myPlotterForm" class="centerBox">
+  <p><span class="intmath"><i>f</i><sub>1</sub>(<i>x</i>) = </span>
+  <input type="text" id="graph1" value="cos(x)" onkeyup="plotter2(1);"> 
+  <input type="button" value="plot" onClick="plotter2(0)"> 
+  <input type="button" value="clear" onClick="plotter2(1);"></p>
+  <p><span class="intmath"><i>f</i><sub>2</sub>(<i>x</i>) =  </span>
+  <input type="text" id="graph2" value="sec(x)"> 
+  <input type="button" value="plot" onClick="plotter2(2)"> 
+  <input type="button" value="clear" onClick="plotter2(3);"></p>
+  <p><span class="intmath"><i>f</i><sub>3</sub>(<i>x</i>) =  </span>
+  <input type="text" id="graph3" value="cosh (0.25x)"> 
+  <input type="button" value="plot" onClick="plotter2(4)"> 
+  <input type="button" value="clear" onClick="plotter2(5);"></p>
+</form>
+
+<div id="jxgbox" class="jxgbox" style="width:650px;height:450px;margin:0 auto"></div>
+<script type="text/javascript">
+JXG.Options.grid.gridOpacity = '70';
+JXG.Options.grid.gridDash=false;  
+var board = JXG.JSXGraph.initBoard('jxgbox', {
+  boundingbox:[-10.9, 8.55, 10.9, -8.55], 
+  showCopyright:false, grid:true, snapToGrid:true, keepaspectratio:false
+});
+
+axisx = board.create('axis', [[0,0], [1,0]], {});
+axisy = board.create('axis', [[0,0], [0,1]], {});
+
+var f, curve1, curve2, curve3, num; // global objects
+
+function plotter2(num) {
+  if(num==0){
+    if(curve1) {
+      board.removeObject(curve1)
+     }
+     fn1 = document.getElementById('graph1').value;
+     curve1=board.create('functiongraph', [function(x){return eval(mathjs(fn1,"x"));}],{name:fn1, strokeWidth:1, strokeColor:'#0000ff',withLabel:true});
+  } else if (num==1){
+     board.removeObject(curve1)
+  } else if(num==2){
+     if(curve2) {
+       board.removeObject(curve2)
+     }
+     fn2 = document.getElementById('graph2').value;
+     curve2=board.create('functiongraph', [function(x){return eval(mathjs(fn2,"x"));}],{name:fn2, strokeWidth:1, strokeColor:'#008800',withLabel:true});
+  } else if (num==3){
+     board.removeObject(curve2)
+  } else if(num==4){
+     if(curve3) {
+       board.removeObject(curve3)
+     }
+     fn3 = document.getElementById('graph3').value;
+     curve3=board.create('functiongraph', [function(x){return eval(mathjs(fn3,"x"));}],{name:fn3, strokeWidth:1, strokeColor:'#ff00ff',withLabel:true});
+  } else if (num==5){
+     board.removeObject(curve3)
+  }
+  showAxis = function() {
+    var i;
+    if(document.myForm.axisbox.checked == true) {
+      axisx.showElement();
+      axisx.defaultTicks.showElement();
+      axisy.showElement();
+      axisy.defaultTicks.showElement();
+    } else {
+      axisx.hideElement();
+      axisx.defaultTicks.hideElement();
+      axisy.hideElement();
+      axisy.defaultTicks.hideElement();
+      /*alert(axisx.defaultTicks.labels.length)
+      axisx.defaultTicks.labels[2].hideElement();
+      for (i=0; i<axisx.defaultTicks.labels.length; i++) {
+        if (JXG.exists(axisx.defaultTicks.labels[i])) {
+        alert(i + ', '+axisx.defaultTicks.labels[i])
+        axisx.defaultTicks.labels[i].hideElement();
+      }*/
+    }
+  }
+  showGrid = function() {
+    if(document.myForm.gridbox.checked == true) {
+      board.addGrid().fullUpdate();
+    } else {
+      board.removeGrids().fullUpdate();
+    }
+  }
+  board.update(); //This is here so axis numbers are in correct position
+}
+txt = board.create('text',[-9.7,-7.7, '<span style="font-family:Arial, sans-serif;color:#888">Copyright &copy; www.intmath.com</span>'], {fontSize:12});
+document.onLoad = plotter2(0);
+</script>
+<form name="myForm" id="myForm" class="centerBox">
+  <p>Show axes: <input onClick="showAxis()" name="axisbox" id="axisbox" type="checkbox" checked="checked"> 
+  <span class="separate">Show grid: <input  onClick="showGrid()" name="gridbox" id="gridbox" type="checkbox" checked="checked"></span></p>
+</form>
+<p>You can <strong>zoom</strong> in and out of the graph by holding down the Shift key and using mouse scroll wheel.</p>
+<p>You can <strong>pan</strong> the graph (move it up, down, left, right) by holding the Shift key and dragging the graph with the mouse. </p>
+<p><strong>OR</strong> (slower), you can use the buttons "&minus; o + &larr; &uarr; &darr; &rarr;" at the bottom right of the graph to zoom out and in, and to move the viewport left, up, etc.)</p>
+
+
+<div class="adinText">
+
+<div class="imgCenter">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2127235491321065";
+/* Banner in Text IntM */
+google_ad_slot = "2604469017";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<br class="clearBoth">
+</div> <!-- adinText -->
+
+<h2>Some graphs to try</h2>
+  <p>The grapher will accept any of the following functions (use the notation shown):</p>
+   <ul>
+    <li><b>Straight lines:</b> (like <span class="intmath">3<em>x</em> &minus; 2</span>)</li>
+    <li><b>Polynomials:</b> (like <span class="intmath"><em>x</em>^3 + 3<em>x</em>^2 &minus; 5<em>x</em> + 2</span>)</li>
+    <li>Any of the <b>trigonometric functions:</b> <span class="intmath">sin(<em>x</em>), cos(<em>x</em>/2), tan(2<em>x</em>), csc(3<em>x</em>), sec(<em>x</em>/4), cot(<em>x</em>)</span></li> 
+    <li>The <b>inverse trigonometric functions:</b> <span class="intmath">arcsin(<em>x</em>), arccos(<em>x</em>), arctan(<em>x</em>), arccsc(<em>x</em>), arcsec(<em>x</em>), arccot(<em>x</em>)</span></li>
+    <li><strong>Exponential </strong>(<span class="intmath"><i>e</i>^<i>x</i></span>) and <strong>logarithm</strong> (<span class="intmath">ln(<i>x</i>)</span> for natural log and <span class="intmath">log(x)</span> for log base 10)</li>
+    <li><strong>Absolute value</strong>: use &quot;abs&quot; like this: abs(x)</li>
+    <li>The <b>hyperbolic functions and their inverses:</b> <span class="intmath">sinh(<em>x</em>), cosh(<em>x</em>), tanh(<em>x</em>), arcsinh(<em>x</em>), arccosh(<em>x</em>), arctanh(<em>x</em>)</span></li>
+    <li><strong>Sign </strong>(1 if the sign is positive, &minus;1 if the sign of the function is negative. For example, try <span class="intmath">sign(sin(<em>x</em>)))</span> </li>
+  </ul>  
+   <p>In fact, you can use most of the javascript math functions, including </p>
+   <ul>
+     <li><strong>ceiling: </strong><span class="intmath">ceil(<em>x</em>)</span> and <strong>round</strong>: <span class="intmath">round(<em>x</em>) </span></li>
+     <!--li><strong>random: </strong><span class="intmath">random(<em>x</em>)</span>; </li-->
+     <li><strong>square root: </strong><span class="intmath">sqrt(<em>x</em>)</span> </li>
+   </ul>
+  <p> You can also use any combinations of the above, like &quot;<span class="intmath">ln(abs(<em>x</em>))</span>&quot;.</p>
+   <p><b>If your graph doesn't work:</b> Try using brackets! For example, "2 tan x" works, but "tan 2x" does not. You have to put "tan(2x)".</p>
+  <h2>More Information</h2>
+<p>The above graph is not an image (that is, it's not a .GIF, .JPG or .PNG). It is a <b>javascript-based graph</b>. That's why we can change it so easily and not wait for an image to be created.</p>
+  
+  <p>For more information, see:</p>
+<p><a href="http://www.intmath.com/blog/jsxgraph-interactive-javascript-graphs/4579">JSXGraph: interactive javascript graphs</a></p>
+ 
+<p>Credits to:</p>
+<ul><li>The developers of JSXGraph: A "<a href="http://jsxgraph.uni-bayreuth.de/wp/documentation/the-team/">small team</a>" at the <a href="http://www.uni-bayreuth.de">University of Bayreuth</a>, Germany.</li>
+<li><a href="http://dlippman.imathas.com/">David Lippman</a>, for mathjs.js script, which converts "nice" math to javascript math, behind the scenes.</li>
+</ul>
+  
+</div> <!-- explanation -->
+
+<div id="subContent" class="clearBoth">
+<div class="imgCenter"> <!-- Google -->
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2127235491321065";
+/* Banner end pg IntM */
+google_ad_slot = "2464211330";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div> <!-- google -->
+<div id="botNav">
+
+
+  <div class="previous">  
+   <a href='5-graphs-using-computer-algebra-system.php'><img alt='left arrow'
+  src='http://intmstat.com/images/left-arrow.png' width='40' height='40'></a> <a href='5-graphs-using-computer-algebra-system.php'>5. Graphing Using a Computer Algebra System</a>
+  </div>  <!-- previous -->
+
+
+  <div class="next">  
+<a href='graphs-using-svg.php'>Online graphing calculator (2): Plot your own graph (SVG)</a> <a href='graphs-using-svg.php'><img alt='right arrow'
+  src='http://intmstat.com/images/right-arrow-sm.png' width='40' height='40'></a>
+  </div>  <!-- next -->  
+  <br class="clearBoth">
+
+
+
+
+
+</div> <!-- botNav -->
+
+
+<div style="text-align:center;margin-top:3em">  
+  <p>Didn't find what you are looking for on this page? Try <b>search</b>:</p>
+
+<form action="http://www.intmath.com/help/search-g.php" id="cse-search-box0">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-2127235491321065:5426004799">
+    <input type="hidden" name="cof" value="FORID:11">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" size="31" value="">
+    <input type="submit" name="sa" value="Search site">
+  </div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+
+
+
+ 
+</div> <!-- center -->
+
+
+
+
+<div id="adbookM" >
+<h3>Online Algebra Solver</h3>
+<p class="probSolver">This algebra solver can solve a wide range of math problems. (Please be patient while it loads.)</p>
+<p class="probLink"><a href="http://www.intmath.com/help/problem-solver.php">
+<img src="http://intmstat.com/images/online-problem-solver.gif" width="336" height="280" alt="Online algebra solver - can solve your math problems step-by-step">
+  </a></p>
+  <h3>Math Lessons on DVD</h3>
+  <p class="imgLt"><a href="http://www.intmath.com/help/math-videos/?topic=math"> 
+  <img src="http://intmstat.com/images/mathTutorDVD.png" width="100" height="100" alt="get MathTutorDVDs"></a></p>
+  <div style="width:240px;float:right"><p style="padding-top:0;margin-top:0">Easy to understand math lessons on DVD. See samples before you commit.</p>
+    <p>More info: <a href="http://www.intmath.com/help/math-videos/?topic=math">Math videos</a></p>
+  </div>
+  <h3 class="clearBoth">Ready for a break?</h3>
+  <a href="http://www.intmath.com/games/games.php?a=3">
+  <img src="http://intmstat.com/images/shadow-factory-thumb.jpg" alt="shadow factory" width="90" height="60" class="imgLt"></a>
+  <p>Play a <a href="http://www.intmath.com/games/games.php?a=3">math game</a>.</p>
+  <p>(Well, not really a math game, but each game was made using math...)</p>
+</div> <!-- adBookM -->
+<div id="NLSU" >
+
+<div style="padding:0 3px 10px;">
+<h3 style="text-align:center;">The IntMath Newsletter</h3>
+<p style="text-align:left;">Sign up for the free <b>IntMath Newsletter</b>. Get math study tips, information, news and updates each fortnight. Join thousands of satisfied students, teachers and parents!</p> 
+
+<form name="signup" method="post" action="http://www.intmath.com/includes/newsletter/newsletter-signup.php">
+<input type="hidden" name="subject" value="Newsletter Signup">
+<input type="hidden" name="url" value="/functions-and-graphs/graphs-using-jsxgraph.php">
+<p>Given name: <span style="color:#BB0000;">* required</span><br>
+<input type="text" name="givenName" id="givenName" size="20" value=""><br> 
+Family name:<br>
+<input type="text" name="familyName" id="familyName" size="20" value=""></p> 
+
+<p>email: <span style="color:#BB0000;">* required</span><br>
+<input type="text" name="email" id="email" size="20" value=""></p>
+<p><input type="submit" name="submit" value="Subscribe me!"></p>
+<p>See the Interactive Mathematics <a href="http://www.intmath.com/help/privacy.php">spam guarantee</a>.</p>
+</form>
+</div>
+
+
+
+  <h3>Share IntMath!</h3>
+  
+<p class="socialLink"><a rel="nofollow" href="http://www.intmath.com/includes/social.php"><img class="soclogo" src="http://intmstat.com/images/social-logos20x20.png" width="140" height="20" alt="social networking logos" title="Share this page!"></a>
+ 
+<h3>Short URL for this Page</h3><p>Save typing! You can use this URL to reach this page:</p>
+   <blockquote><a href="http://intmath.com/plotjsx">intmath.com/plotjsx</a></blockquote></div>
+
+
+
+<div id="footer" class="clearBoth">
+
+<div id="bottads">
+<p><a href="http://www.intmath.com/">Home</a> | 
+<a href="http://www.intmath.com/help/sitemap.php">Sitemap</a> |
+Author: <a href="https://plus.google.com/112349609860255705013/posts?rel=author" rel="me">Murray Bourne+</a> |
+<a href="http://www.intmath.com/help/site-info.php">About & Contact</a> |
+  <a href="http://www.intmath.com/help/comments.php">Feedback &amp; questions</a> |
+  <a href="http://www.intmath.com/help/privacy.php">Privacy</a> | 
+<a href="http://www.intmath.com/feed/">IntMath feed</a> |
+ 
+<a rel="nofollow" href="http://m.intmath.com/">Mobile</a> | 
+
+<p>Page last modified: 23 June 2012</p>
+   <br class="clearBothInvis">
+   </div>  <!-- bottads -->
+  </div>  <!-- footer -->
+ </div>  <!-- subContent -->
+</div>  <!-- content -->
+
+
+
+</div>  <!-- wrapper -->
+<p class="clearBoth">&nbsp;</p>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+
+  <script src="http://intmstat.com/scripts/ddivs-voting2012-04-02.js" type="text/javascript"></script>
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type="text/javascript">
+if(document.location.protocol!='https:')
+  document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRc5.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+if(typeof ClickTale=='function') ClickTale(983,0.012,"www02");
+</script>
+</body>
+</html>

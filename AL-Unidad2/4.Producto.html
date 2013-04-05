@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+		<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+  <script type="text/javascript" src="../js/page-transition.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2012-08-09"/>
+<link rel="stylesheet" href="../css/lyx.css" type="text/css" media="all"/>
+<title>ÁLGEBRA LINEAL</title>
+</head>
+<body>
+	<div id="globalWrapper">
+
+<div class="Indented">
+<b>Producto de matrices</b>
+</div>
+<div class="Indented">
+<div class="medskip"> </div>
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i></span> una matriz <span class="formula"><i>m</i></span> por <span class="formula"><i>n</i></span> y B una matriz <span class="formula"><i>n</i></span> por <span class="formula"><i>k</i></span>, se define el <b> producto</b> de <span class="formula"><i>A</i></span> por <span class="formula"><i>B</i></span> como sigue: <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>⋅<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>b</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>b</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>⋅<i>b</i><sub>11</sub> + <i>a</i><sub>12</sub>⋅<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>⋅<i>b</i><sub>12</sub> + <i>a</i><sub>12</sub>⋅<i>b</i><sub>22</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>⋅<i>b</i><sub>11</sub> + <i>a</i><sub>22</sub>⋅<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>⋅<i>b</i><sub>12</sub> + <i>a</i><sub>22</sub>⋅<i>b</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<i>A</i><sub><i>m</i>, <i>n</i></sub>⋅<i>B</i><sub><i>n</i>, <i>k</i></sub> = <i>C</i><sub><i>m</i>, <i>k</i></sub>
+</div>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> Calcular <span class="formula"><i>C</i><sub>2, 2</sub> = <i>A</i><sub>2, 2</sub>⋅<i>B</i><sub>2, 2</sub></span> donde <div class="formula">
+<i>A</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+8
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="hspace" style="width: 0.2cm;"> </span><span class="text">  y </span><span class="hspace" style="width: 0.2cm;"> </span><i>B</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+7
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ Calculando el producto
+</div>
+<div class="Indented">
+<div class="formula">
+<i>A</i><sub>2, 2</sub>⋅<i>B</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+8
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+7
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2⋅5 + 1⋅7
+</span>
+<span class="arraycell align-c">
+2⋅1 + 1⋅4
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0⋅5 + 8⋅7
+</span>
+<span class="arraycell align-c">
+0⋅1 + 8⋅4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ por tanto <div class="formula">
+<i>C</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+17
+</span>
+<span class="arraycell align-c">
+6
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+56
+</span>
+<span class="arraycell align-c">
+32
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ 
+</div>
+
+<div class="Indented">
+Ahora te invitamos a resolver un ejercicio de multiplicación de matrices, por favor da click en el botón siguiente.
+</div>
+
+
+		<a href="5.EjercicioProd1.html" class="transition">Siguiente</a>
+	</div>
+</body>
+</html>

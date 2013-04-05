@@ -1,0 +1,325 @@
+<html>
+<head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <title>Cálculo Trabajo individual.</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="Stylesheet" type="text/css" href="css/index.css" />    
+    <script type="text/javascript" src="js/jquery-1.7.2.js">
+    </script>
+    <script type="text/javascript" src="js/graficador.js">
+    </script>
+    <script type="text/javascript" src="js/jQuiz.js">
+    </script>
+    <script type="text/javascript"  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/javascript" src="js/ASCIIsvg.js"></script>
+</head>
+
+<body>
+
+    <h1>Tarea 1. Trabajo individual.</h1>
+    
+
+    <div class="questionContainer radius">
+
+        <div class="question"><b>Ejercicio 1:</b> <br /> Considera la función \(f(x) = x^2 - 1\), contesta en los espacios disponibles las siguientes preguntas:</div>
+
+        <div class="answers">
+
+            <ul>
+                <li> ¿Cuál es el valor de la función si \(x= -2\)? </li>
+
+                <li>
+
+                    <label><input type="text" name="q1" id="q1-a" /></label>
+
+                </li>
+
+                <li> ¿Cuánto vale \(f(3)\)? </li>
+                <li>
+
+                    <label>
+                        <input type="text" name="q1" id="q1-a" />
+                    </label>
+
+                </li>
+
+                <li> Grafica la función anterior.</li>
+                <li>
+
+                    <label><input type="text" name="q1" id="function1" /></label>
+                    <input type="button" name="q1" id="button" value ="Graficar"/>
+                </li>
+                <li>
+                    <embed id="graphCanvas" width="500" height="500" src="js/d.svg" 
+                        script='
+                            border = 0
+                            dibujaGrid(-6.3,6.3,-3.3,3.3)           
+                            axes()                          
+                        ' />
+                </li>
+
+                </li>
+
+                <li> ¿Cuál es el dominio de la función? </li>
+                <li>
+
+                <li>
+
+                    <label><input type="radio" name="q2" id="q2-a" />\((-\infty, \infty)\)</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q2" id="q2-b" />\((-1, \infty)\)</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q2" id="q2-c" />\((-\infty, -1)\)</label>
+
+                </li>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="btnContainer">
+
+                <div class="prev"></div>
+
+                <div class="next">
+
+                    <a class="btnNext">Siguiente &gt;&gt;</a>
+
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+
+    </div>
+
+    <div class="questionContainer hide radius">
+
+        <div class="question"><b>Ejercicio 1:</b> <br /> La función de demanda \(Q_d\) depende del precio \(P\) y
+  está determinada por la siguiente relación:
+\[
+   Q_d = a - bP \hspace{.5cm} a,b > 0
+\]
+Sea la siguiente función de demanda de cierto bien, contesta en los espacios
+disponibles las siguientes preguntas:
+\[
+   Q_d = 72 - 4P \hspace{.5cm}  0 \leq P \leq 18
+\]</div>
+
+        <div class="answers">
+
+            <ul>
+                <li>¿Cuánto vale la pendiente? </li>
+                <label><input type="text" name="q1" id="q1-a" /></label>
+                <li> Grafique esta función en el dominio especificado.</li>
+                <li>
+
+                    <label><input type="text" name="q1" id="function1" /></label>
+                    <input type="button" name="q1" id="button2" value ="Graficar"/>
+                </li>
+                <li>
+                    <!--<embed id="graphCanvas" width="500" height="500" src="js/d.svg" 
+                        script='
+                            border = 0
+                            dibujaGrid(-6.3,6.3,-3.3,3.3)           
+                            axes()                          
+                        ' />-->
+                </li>
+                <li> ¿Qué sucede con tu gráfica si \(a = 50\)? </li>
+                <label><input type="text" name="q1" id="q1-a" /></label>
+                <li> ¿Qué sucede con tu gráfica si \(b = 8\)? </li>
+                <label><input type="text" name="q1" id="q1-a" /></label>
+
+            </ul>
+
+        </div>
+
+        <div class="btnContainer">
+
+                <div class="prev">
+
+                    <a class="btnPrev">&lt;&lt; Anterior</a>
+
+                </div>
+
+                <div class="next">
+
+                    <a class="btnNext">Siguiente &gt;&gt;</a>
+
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+
+    </div>
+
+    <div class="questionContainer radius hide">
+
+        <div class="question"><b>Question 3:</b> Where is the correct place to insert a JavaScript?</div>
+
+        <div class="answers">
+
+            <ul>
+
+                <li>
+
+                    <label><input type="radio" name="q3" id="q3-a" />Both the &lt;thead&gt; section and the &lt;body&gt; section are correct</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q3" id="q3-b" />The &lt;body&gt; section</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q3" id="q3-c" />The &lt;head&gt; section</label>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="btnContainer">
+
+                <div class="prev">
+
+                    <a class="btnPrev">&lt;&lt; Anterior</a>
+
+                </div>
+
+                <div class="next">
+
+                    <a class="btnNext">Siguiente &gt;&gt;</a>
+
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+
+    </div>
+
+    <div class="questionContainer radius hide">
+
+        <div class="question"><b>Question 4:</b> What is the correct syntax for referring to an external script called "xxx.js"?</div>
+
+        <div class="answers">
+
+            <ul>
+
+                <li>
+
+                    <label><input type="radio" name="q4" id="q4-a" />&lt;script type="text/javascript" name="xxx.js"&gt;</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q4" id="q4-b" />&lt;script type="text/javascript" href="xxx.js"&gt;</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q4" id="q4-c" />&lt;script type="text/javascript" src="xxx.js"&gt;</label>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="btnContainer">
+
+                <div class="prev">
+
+                    <a class="btnPrev">&lt;&lt; Anterior</a>
+
+                </div>
+
+                <div class="next">
+
+                    <a class="btnNext">Siguiente &gt;&gt;</a>
+
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+
+    </div>
+
+    <div class="questionContainer radius hide">
+
+        <div class="question"><b>Question 5:</b> The external JavaScript file must contain the &lt;script&gt; tag?</div>
+
+        <div class="answers">
+
+            <ul>
+
+                <li>
+
+                    <label><input type="radio" name="q5" id="q5-a" />True</label>
+
+                </li>
+
+                <li>
+
+                    <label><input type="radio" name="q5" id="q5-b" />False</label>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="btnContainer">
+
+            <div class="prev">
+
+                <a class="btnPrev">&lt;&lt; Anterior</a>
+
+            </div>
+
+            <div class="next">
+
+                <a class="btnShowResult">Finish!</a>
+
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+    </div>
+
+    <div class="txtStatusBar">Avance de la actividad.</div>
+
+    <div id="progressKeeper" class="radius">
+
+        <div id="progress"></div>
+
+    </div>
+
+    <div id="resultKeeper" class="radius hide"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,2262 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{graphicx} % PDFLaTeX
+\DeclareGraphicsExtensions{.png,.pdf,.jpg}
+\usepackage{epsf}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{prop}[teorema]{Proposici\'on}
+\newtheorem{definicion}[teorema]{Definici\'on}
+\newtheorem{problema}{Problema}
+\newtheorem{ejemplo}{Ejemplo}
+\spanishdecimal{.}
+\usepackage[latin1]{inputenc}
+
+\begin{document}
+
+\title{\'ALGEBRA LINEAL}
+\author{\textbf{ESCUELA SUPERIOR DE ECONOMIA}}
+\date{\large{M\'exico, D.F., 10 de marzo de 2010}}
+\def\contentsname{Contenido}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Diagonalizaci\'on de matrices}
+
+La obtención  de valores y vectores propios  es fundamental para
+resolver sistemas de ecuaciones diferenciales, que seran tema
+principal en el curso de sistemas dinamicos. En el análisis de
+series de tiempo la diagonalización de matrices juega un papel
+fundamental en los vectores autorregresivos.
+
+\subsection{Valores y vectores propios}
+\subsubsection{Obtención  de los valores y vectores propios de una matriz y sus propiedades}
+
+\begin{definicion}
+Si $A$ es una matriz $n \times n$, un vector columna $X$, $n \times
+1$, se llama \textbf{vector propio} de $A$ si y solo si $A X =
+\lambda X$ para alg\'un escalar $\lambda$. $\lambda$ se llama
+\textbf{valor propio} de $A$ que corresponde al vector $X$.
+\end{definicion}
+
+\begin{ejemplo}
+\begin{enumerate}
+\item[a)]  Los valores propios de la matriz
+\[
+\left(
+\begin{matrix}
+4 &  3 \\
+0 & 1
+\end{matrix}
+\right)
+\]
+son $\lambda_1 = 1$ y $\lambda_2 = 4$.
+\item[b)] Los valores propios de
+la matriz
+\[
+\left(
+\begin{matrix}
+1 &  1 \\
+0 & 1
+\end{matrix}
+\right)
+\]
+son $\lambda_1 = \lambda_2 = 1$.
+\item[c)] Los valores propios de
+la matriz
+\[
+\left(
+\begin{matrix}
+1 &  -1 \\
+1 & 1
+\end{matrix}
+\right)
+\]
+son complejos.
+\item[d)] Los valores propios de
+la matriz
+\[
+\left(
+\begin{matrix}
+2 &  0 & 0  \\
+-7 & 9 & 7 \\
+0 & 0 & 2
+\end{matrix}
+\right)
+\]
+son $\lambda_1 = 9$, $\lambda_2 = \lambda_3 = 2$.
+\end{enumerate}
+\end{ejemplo}
+
+
+
+\begin{teorema}
+Sea $A$ una matriz $n \times n$ y sea $X$ un vector columna $n \times
+1$ no nulo.
+\begin{enumerate}
+ \item $X$ es un vector propio de $A$ perteneciente a $\lambda_0$ si y
+ solo si $(A - \lambda_0 I_n) =0$
+ \item Un escalar $\lambda_0$ es un valor propio de $A$ si y solo si
+$\lambda_0$ es una ra\'{\i}z real de la ecuaci\'on polin\'omica
+   $\det(A- \lambda_0 I_n) =  0.$
+\end{enumerate}
+\end{teorema}
+
+\begin{definicion}
+Sea $A$ una matriz $n \times n$. El polinomio $\det(A-\lambda I_n) $
+de grado $n$ se llama \textbf{polinomio caracter\'{\i}stico} de $A$
+y se le denota por $p_A(\lambda )$. A la ecuaci\'on  $\det (A -
+\lambda I_n) = 0 $ se llama la \textbf{ecuaci\'on
+caracter\'{\i}stica} de $A.$ Las ra\'{\i}ces reales de la ecuaci\'on
+caracter\'{\i}stia de $A$ son los valores propios reales o los
+valores caracter\'{\i}sticos de $A$.
+\end{definicion}
+
+Un pregunta natural es si existe una manera simple de encontrar el
+polinomio caracter\'{\i}stico de una matriz. Para el caso de una
+matriz $2 \times 2$ la respuesta es afirmativa y el polinomio
+caracter\'{\i}stico puede ser calculado con base en la traza y el
+determinante.
+\medskip
+
+Si $A$ una matrix $2 \times 2$, entonces
+\[
+A- \lambda I  = \left( \begin{matrix} a_{11} & a_{12} \\
+a_{21} & a_{22} \end{matrix} \right) - \lambda
+\left(\begin{matrix}
+1 &  0 \\
+0 & 1
+\end{matrix}
+\right) =
+\left(\begin{matrix}
+a_{11} - \lambda &  a_{12} \\ a_{21} & a_{22} - \lambda
+\end{matrix}\right)
+\]
+
+
+\begin{teorema}
+Si $A$ es una matriz $2 \times 2$ Entonces
+\[
+  p_A(\lambda)= \det(A -\lambda I)  =  \lambda^2 - tr(A) \lambda + \det(A).
+\]
+
+adem\'as, si $\lambda_1$ y $\lambda_2$ son las ra\'{\i}ces del
+polinomio caracter\'{\i}stico $p_A(\lambda) = \det (A - \lambda I) =
+0$, entonces
+\begin{align*}
+   tr(A) &= \lambda_1 + \lambda_2 \\
+ \det(A) &= \lambda_1 \lambda_2
+\end{align*}
+
+\end{teorema}
+
+\begin{ejemplo}
+Sea
+\[
+\left(\begin{matrix}
+4 &  2 \\ 3 & 3
+\end{matrix}\right)
+\]
+
+Resolvemos la ecuación $Ax=\lambda x$ aplicando los siguientes
+pasos:
+
+\begin{enumerate}
+\item[1.] Calcular el determinante de $A - \lambda I$:
+\[
+det(A - \lambda I) =
+ det \left|
+ \begin{matrix}
+   4 - \lambda & 2 \\
+   3 & 1 & 3 - \lambda
+  \end{matrix}
+  \right|
+\]
+o sea, el polinomio característico de la matriz $A$ es:
+\[
+p(\lambda) = det(A- \lambda I) =(4- \lambda) (3 - \lambda)- 6
+\]
+Otra forma de calcularlo es usando el teorema anterior:
+
+\begin{align*}
+ tr(A) &=4 + 3 = 7 \\
+\det (A) &= 12- 6 = 6
+\end{align*}
+
+\begin{align*}
+  p_A(\lambda) &= \det(A -\lambda I)  =  \lambda^2 - tr(A) \lambda + \det(A) \\
+    & = \lambda^2 - 7 \lambda + 6
+\end{align*}
+
+\item[2.] Encontrar las raíces del polinomio característico:
+
+\begin{align*}
+ p(\lambda) = det(A- \lambda I) &= 0 \\
+             (4- \lambda) (3 - \lambda)- 6 &= 0 \\
+             \lambda^2 - 7 \lambda + 6  &= 0 \\
+             (\lambda-6) (\lambda -1) &= 0
+\end{align*}
+
+
+entonces las ra\'{\i}ces del polinomio caracter\'{\i}stico
+$p_A(\lambda)$ son $\lambda_1 = 6$ y $\lambda_2 = 1$ las cuales
+cumplen
+
+\begin{align*}
+\lambda_1 + \lambda_2 &= tr(A) \\
+7 = 6 + 1 &= tr(A)  \\
+\lambda_1 \lambda_2 &= \det (A) \\
+   6  = 6 \cdot 1 &= \det(A)
+\end{align*}
+
+\item[3.] Para cada valor característico, resolvemos la ecuación $(A- \lambda I)x =
+0$. Buscamos ahora los correspondientes vectores propios asociados a
+los valores propios  $\lambda_1 = 1$ y $\lambda_2 = 6$
+respectivamente.
+
+Para $\lambda_1= 1$
+
+
+\[
+\left(\begin{matrix} 3 &  2 \\ 3 & 2
+\end{matrix}\right)
+\left(\begin{matrix} x_1 \\ x_2
+\end{matrix}\right)=
+\left(\begin{matrix} 0 \\ 0
+\end{matrix}\right)
+\]
+
+\begin{align*}
+ 3x_1 + 2x_2 &= 0 \\
+ 3x_1 +  2x_2 &= 0
+ \end{align*}
+
+ cuyas soluciónes son de la forma $x_1= -2/3x_2$.
+
+ Por lo tanto , para $\lambda_1 = 1$, los vectores propios son de la
+ forma
+$v_1 = \alpha \left(\begin{matrix} -2/3  \\ 1
+\end{matrix}\right)$.
+
+
+
+
+
+Para $\lambda_2= 6$
+
+
+\[
+\left(\begin{matrix} -2 &  2 \\ 3 & -3
+\end{matrix}\right)
+\left(\begin{matrix} x_1 \\ x_2
+\end{matrix}\right)=
+\left(\begin{matrix} 0 \\ 0
+\end{matrix}\right)
+\]
+
+\begin{align*}
+ -2x_1 + 2x_2 &= 0 \\
+ x_1   &= x_2
+ \end{align*}
+
+ cuya solución es $x_1= x_2 =  1$.
+
+ Por lo tanto , para $\lambda_2 = 6$, el vector propio es
+ $v_2 =\left(\begin{matrix} 1 \\ 1
+\end{matrix}\right)$
+
+\end{enumerate}
+\end{ejemplo}
+
+
+
+
+\begin{teorema}
+Si $A$ es una matriz $3 \times 3$, entonces su polinomio
+caracter\'{\i}stico es de la forma
+\[
+  p_A(\lambda) = -\lambda^3 + tr(A) \lambda^2 + \frac{1}{2}
+\left(tr(A^2)- tr(A)^2  \right) \lambda + det (A).
+\]
+
+\end{teorema}
+
+
+
+Los vectores propios tambi\'en poseen una representaci\'on sencilla
+en el caso de una matriz $A$ de $2 \times 2$ como la anterior. Para
+encontrar el vector\vspace{.2cm} propio
+$
+\left(
+ \begin{matrix}
+   x_1  \\
+   x_2
+  \end{matrix}
+  \right)
+$
+asociado al valor propio $\lambda$, se resuelve el siguiente sistema
+de ecuaciones:
+\begin{align*}
+     ax_1 + bx_2 &= \lambda_1 x_1, \\
+     ax_1 + dx_2 &= \lambda_1 x_2.
+\end{align*}
+
+Por construcci\'on, las ecuaciones  son dependientes, y el sistema no
+es originalmente diagonal. Tenemos que alguno de los coeficientes $b$
+o $c$ es diferente de cero. Supongamos que $b \ne 0$; suponiendo que
+$x_1 = b$ en la primera ecuaci\'on, es f\'acil ver que $x_2 = \lambda -
+a$, de manera que
+$ \textbf{v} =
+\left(
+\begin{matrix}
+   b  \\
+   \lambda - a
+\end{matrix}
+\right)
+$
+es un vector propio con valor propio  $\lambda$. En el caso en que $b
+= 0$ y $c \ne 0$, utilizamos \vspace{.2cm} la segunda ecuaci\'on y obtenemos que
+$
+\left(
+\begin{matrix}
+ \lambda - d  \\
+  c
+  \end{matrix}
+  \right)
+$
+es el vector propio buscado.
+
+
+\begin{ejemplo}
+Sea
+\[
+ A = \left(
+ \begin{matrix}
+   1 & 1  \\
+   2 & 2
+  \end{matrix}
+  \right)
+\]
+notemos que la matriz es singular y que por lo tanto $\lambda = 0 $ es una ra\'{\i}z del polinomio
+caracter\'{\i}stico. El polinomio esta dado por
+\[
+p_A(\lambda) = \lambda (\lambda - 3),
+\]
+con ra\'{\i}ces $\lambda_1 = 3$ y $\lambda_2 = 0$. es f\'acil ver que
+ $ v_1 = \left(
+ \begin{matrix}
+   1  \\
+   2
+  \end{matrix}
+  \right)
+$
+es un vector propio asociado al valor propio $\lambda_1 = 3$ y que $ v_2 =
+ \left(
+ \begin{matrix}
+   1 \\
+   -1
+  \end{matrix}
+  \right)
+$
+es un vector no nulo que satisface la ecuaci\'on $A \textbf{v} = \textbf{0}$, o sea un vector propio con valor propio
+$\lambda = 0$.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea
+\[
+ A = \left(
+ \begin{matrix}
+   1 & -1 & 4 \\
+   3 & 2 & -1 \\
+   2 & 1 & -1
+  \end{matrix}
+  \right)
+\]
+Entonces el polinomio caracter\'{\i}stico es
+
+\begin{align*}
+ p_A (\lambda) &= det
+ \left(
+ \begin{matrix}
+   1 - \lambda & -1 & 4 \\
+   3 & 2 - \lambda & -1 \\
+   2 & 1 & -1 - \lambda
+  \end{matrix}
+  \right) \\
+  &= -(\lambda-1)(\lambda -3 )(\lambda + 2).
+\end{align*}
+Por lo tanto los valores propio de $A$ son $\lambda_1 = 1$, $\lambda_2 = 3$ y $\lambda_3 = -2.$ Ahora encontraremos los vectores propios  correspondientes a estos valores propios.
+Si $\lambda_1 = 1$, resolvemos el sistema $(A - \lambda I)v = 0$. Estos es, si $\textbf{v} = (a,b,c)$ entonces
+\[
+\left(
+ \begin{matrix}
+   0 & -1 & 4 \\
+   3 & 1 & -1 \\
+   2 & 1 & -2
+  \end{matrix}
+  \right)
+\left(
+ \begin{matrix}
+   a \\
+   b \\
+   c
+  \end{matrix}
+  \right)
+ =
+\left(
+ \begin{matrix}
+   0 \\
+   0 \\
+   0
+  \end{matrix}
+  \right)
+ \]
+
+Al resolver estas ecuaciones y escoger $a = -1$, obtenemos $b = 4$ y $c = 1$. En concluisi\'on,
+\[
+v_1= \left(
+ \begin{matrix}
+ -1 \\
+  4 \\
+  1
+  \end{matrix}
+  \right)
+\]
+es vector propio con valor propio $\lambda_1 = 1.$ Para verificarlo consideramos
+
+\[
+A v_1 = \left(
+ \begin{matrix}
+   1 & -1 & 4 \\
+   3 & 2 & -1 \\
+   2 & 1 & -1
+  \end{matrix}
+  \right)
+\left(
+ \begin{matrix}
+   -1 \\
+   4 \\
+   1
+  \end{matrix}
+  \right)
+ =
+\left(
+ \begin{matrix}
+   -1 \\
+   4 \\
+   1
+  \end{matrix}
+  \right)
+  = \lambda_1 v_1
+ \]
+De modo semejante se obtiene que el vector $v_2 = \left(
+ \begin{matrix}
+   1 \\
+   2 \\
+   1
+  \end{matrix}
+  \right)
+$
+es vector propio de $\lambda_2 = 3$ y $ v_3 = \left(
+ \begin{matrix}
+   -1 \\
+   1 \\
+   1
+  \end{matrix}
+  \right)
+$
+es un vector propio correspondiente a $\lambda_3 = -2.$
+
+\end{ejemplo}
+
+
+En el caso de ra\'{\i}ces repetidas,  es que no tiene una base de
+vectores propios y por lo tanto la matriz no puede ser
+diagonalizada. Sin embargo puede obtenerse una matriz triangular de
+la forma
+\begin{equation}
+\label{T}
+T =
+\left(
+ \begin{matrix}
+   \lambda & 1   \\
+   0   & \lambda
+  \end{matrix}
+  \right)
+\end{equation}
+
+Para obtener la matriz $T$, lo que se necesita es el vector propio $\textbf{v}$ co\-rres\-pon\-di\-en\-te al valor propio $\lamba$ y otro vector $\textbf{w}$ tal que la matriz
+\[
+  P = \left[ \textbf{ v \quad w } \right]
+\]
+
+cumpla $P^{-1}A P  = T$, donde $T$ es la matriz triangular dada en
+\ref{T}. Para obtener el vector $\textbf{w}$ se procede como sigue.
+
+
+\begin{definicion}
+Sea $\textbf{v}$ un vector propio con valor propio $\lambda$. Se dice
+que $\textbf{w}$ \textbf{ es un vector propio generalizado} si satisface
+\[
+    (A - \lambda I)\textbf{w} = \textbf{v}.
+\]
+\end{definicion}
+
+Si la matriz $A$ est\'a dada por
+\[
+ A  =
+\left(
+ \begin{matrix}
+  a & b  \\
+  c & d
+  \end{matrix}
+  \right)
+\]
+y $b \ne 0$, entonces un vector propio asociado al valor propio
+$\lambda$ est\'a dado por
+\[
+  \textbf{v} =
+\left(
+ \begin{matrix}
+   b  \\
+   \lambda - a
+  \end{matrix}
+  \right).
+\]
+El valor propio es una ra\'{\i}z del polinomio $\lambda^2 - \lambda
+tr(A)  + det(A)$ y si es una ra\'iz doble debe ser de la forma
+$\lambda = \frac{tr(A)}{2} = \frac{a + d}{2}$. Resolvamos ahora el
+sistema  \vspace{.2cm} $(A - \lambda I) \textbf{w} = \textbf{v}$, con estos valores
+espec\'{\i}ficos de $\textbf{v}$ y $\lambda.$ Si $ \textbf{w} =
+\left(
+\begin{matrix}
+   x  \\
+   y
+  \end{matrix}
+  \right)
+$
+
+se tiene que
+
+\[
+\left(
+ \begin{matrix}
+   \frac{a-d}{2} & b  \\
+   c & \frac{d -a}{2}
+  \end{matrix}
+  \right)
+\left(
+ \begin{matrix}
+   x  \\
+   y
+  \end{matrix}
+  \right)
+ =
+\left(
+ \begin{matrix}
+   b  \\
+ \frac{  d - a}{2}
+  \end{matrix}
+  \right)
+\]
+
+\vspace{.2cm}
+y por lo tanto es f\'acil ver que $\textbf{w} =
+\left(
+\begin{matrix}
+   0  \\
+   1
+  \end{matrix}
+  \right)
+$
+siempre es soluci\'on. Si en la \vspace{.2cm} matriz $A$, $b = 0$ pero $c \ne 0$,
+entonces se utiliza $\textbf{v} =
+\left(
+\begin{matrix}
+   \lambda - d \\
+   c
+  \end{matrix}
+  \right)
+ $
+como vector propio y procediendo de manera an\'aloga tenemos que $
+\textbf{w} = \left(
+ \begin{matrix}
+   1  \\
+   0
+  \end{matrix}
+  \right)
+$
+
+es un vector propio generalizado.
+
+\begin{ejemplo}
+Sea
+
+\[
+A  =
+ \left(
+  \begin{matrix}
+     3   & -2  \\
+     2   & -1
+  \end{matrix}
+  \right).
+  \]
+
+Como
+\begin{align*}
+det(A- \lambda I) &= det  \left(
+  \begin{matrix}
+     3-\lambda   & -2  \\
+     2   & -1-\lambda
+  \end{matrix}
+  \right) = (3- \lambda)(-1-\lambda) + 2
+\end{align*}
+
+entonces:
+\begin{align*}
+det(A- \lambda I) &= (3- \lambda)(-1-\lambda) + 2 = 0 \\
+                   &= -3-3\lambda + \lambda + \lambda^2 + 4 = 0 \\
+                   &= \lambda^2 - 2\lambda + 1 = 0
+\end{align*}
+
+
+Por lo tanto la ecuación característica de la matriz $A$ es
+$\lambda^2 - 2\lambda + 1 = 0$, cuya \'unica ra\'{\i}z es $\lambda =
+1$. El \vspace{.2cm} los vectores propios correspondientes son
+\[
+ \left(
+  \begin{matrix}
+     2   & -2  \\
+     2   & -2
+  \end{matrix}
+  \right)
+ \left(
+  \begin{matrix}
+     x_1  \\
+     x_2
+  \end{matrix}
+  \right)
+= \left(
+  \begin{matrix}
+     0  \\
+     0
+  \end{matrix}
+  \right)
+
+de donde
+\begin{align*}
+2x_1 - 2x_2 &= 0 \\
+  x_1 &= x_2.
+\end{align*}
+
+es decir, los vectores propios asociados al valor propio $\lambda_1
+= 1$ son de la forma $\alpha \left(
+  \begin{matrix}
+     1  \\
+     1
+  \end{matrix}
+  \right)
+   $.
+   Entonces escogemos al vector propio
+$
+   \left(
+  \begin{matrix}
+     -2  \\
+     -2
+  \end{matrix}
+  \right)
+$  y el vector propio generalizado, que se encuentra resolviendo
+
+\[
+\left(
+ \begin{matrix}
+   2 & -2  \\
+   2 & -2
+  \end{matrix}
+  \right)
+\left(
+ \begin{matrix}
+   a  \\
+   b
+  \end{matrix}
+  \right)
+ =
+\left(
+ \begin{matrix}
+   -2  \\
+ -2
+  \end{matrix}
+  \right),
+\]
+
+es simplemente
+\[
+\textbf{w} =
+\left(
+ \begin{matrix}
+   0  \\
+   1
+  \end{matrix}
+  \right)
+\]
+
+\end{ejemplo}
+
+
+\begin{teorema}\label{VP}
+Sea
+
+\begin{equation*}
+A  =
+ \left(
+  \begin{matrix}
+     0   & 1  &  0 &    \cdots   & 0\\
+     0   & 0  &  1  &    \cdots   & 0 \\
+    \vdots    & \vdots  & \vdots  &  \ddots   & 1 \\
+     - a_{0}  &- a_{1}  & -a_{2} &\cdots  & -a_{m-1}
+  \end{matrix}
+  \right)
+\end{equation*}
+Entonces la ecuaci\'on caracter\'{\i}stica de la matriz $A$ es:
+\[
+p(\lambda)_A = (-1)^m \left(\lambda^m + a_{m-1} \lambda^{m-1} + \cdots + a_1 \lambda + a_0 \right) = 0
+\]
+y para cada valor propio $\lambda_k$, el vector
+\[
+ v_k =
+\left(
+ \begin{matrix}
+   1  \\
+   \lambda_k \\
+   (\lambda_k)^2 \\
+   \vdots \\
+   (\lambda_k)^{m-1}
+  \end{matrix}
+  \right)
+\]
+\end{teorema}
+
+es un vector propio.
+
+
+\begin{ejemplo}
+
+Sea
+\[
+A  =
+ \left(
+  \begin{matrix}
+     0   & 1  &  0 \\
+     0   & 0  &  1  \\
+    0 & 1 & 0
+  \end{matrix}
+  \right)
+\]
+
+Por el Teorema (\ref{VP}), la ecuaci\'on caracter\'{\i}stica es
+$\lambda^3  - \lambda = 0$, los valores propios son $\lambda_1 = 0$,
+$\lambda_2 = 1$ y $\lambda_3 = -1$ y para $\lambda_1 =  0$,
+\[
+ v_1 =
+\left(
+ \begin{matrix}
+   1  \\
+   \lambda_1 \\
+   (\lambda_1)^2
+  \end{matrix}
+  \right)
+= \left(
+ \begin{matrix}
+   1  \\
+   0 \\
+   0
+  \end{matrix}
+  \right)
+ \]
+es vector propio. Del mismo modo,
+
+\[
+ v_2 =
+\left(
+ \begin{matrix}
+   1  \\
+   \lambda_2 \\
+   (\lambda_2)^2
+  \end{matrix}
+  \right)
+= \left(
+ \begin{matrix}
+   1  \\
+   1 \\
+   1
+  \end{matrix}
+  \right)
+  \]
+es vector propio con valor propio $\lambda_2 = 1$. Finalmente,
+
+\[
+ v_3 =
+\left(
+ \begin{matrix}
+   1  \\
+   \lambda_3 \\
+   (\lambda_3)^2
+  \end{matrix}
+  \right)
+= \left(
+ \begin{matrix}
+   1  \\
+   -1 \\
+   1
+  \end{matrix}
+  \right)
+\]
+es vector propio con valor propio $\lambda_3 = -1$.
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Sea
+\[
+A  =
+ \left(
+  \begin{matrix}
+     0   & 1  \\
+     -2   & 2
+  \end{matrix}
+  \right).
+\]
+El polinomio caracter\'{\i}stico de la ecuaci\'on es $p_A(\lambda) =
+\lambda^2 - 2\lambda + 2$, por lo que los valores propios son
+\[
+  \lambda_{1,2} = \frac{2 \pm \sqrt{4 - 8}}{2} = \frac{2 \pm
+  \sqrt{-4}}{2} = 1 \pm i,
+\]
+Es decir,
+\begin{align*}
+\lambda_1 = \lambda = 1+i,
+\lambda_2 = \bar{\lambda} = 1- i.
+\end{align*}
+Tomemos $\lambda = 1 + i$. Encontraremos vectores propios de la manera
+usual; esto es, si
+
+\[
+v  =
+ \left(
+  \begin{matrix}
+     a  \\
+     b
+  \end{matrix}
+  \right),
+\]
+
+entonces,
+
+\[
+(A - \lambda I)v   =
+ \left(
+  \begin{matrix}
+    -1 - i   & 1  \\
+     -2   & 1 - i
+  \end{matrix}
+  \right)
+ \left(
+  \begin{matrix}
+   a \\
+   b
+  \end{matrix}
+  \right)
+ =
+ \left(
+  \begin{matrix}
+     0  \\
+     0
+  \end{matrix}
+  \right).
+\]
+Si escogemos $a = 1$ obtenemos que $b = 1 + i$, y por lo tanto
+\[
+  v  =
+ \left(
+  \begin{matrix}
+     1  \\
+     1 + i
+  \end{matrix}
+  \right)
+\]
+
+es vector propio con valor propio $1 + i$.
+\end{ejemplo}
+
+
+
+\begin{ejemplo}
+Sea
+\[
+A  =
+ \left(
+  \begin{matrix}
+     0   & 1  \\
+     -1   & 0
+  \end{matrix}
+  \right)
+\]
+
+Entonces el polinomio caracter\'{\i}stico  es
+\[
+p_A(\lambda) = \lambda^2 + 1.
+\]
+Las ra\'{\i}ces de $p_A$ son  $\lambda = i$ y $\bar{\lambda} =
+-i$. Encontraremos un vector propio $v$ para el valor propio $\lambda
+= i$ usando el teorema (\ref{VP}). As\'{\i}
+\[
+v  =
+ \left(
+  \begin{matrix}
+     1 \\
+     i
+  \end{matrix}
+  \right)
+\]
+es un vector propio  con valor propio $\lambda.$
+\end{ejemplo}
+
+\newpage
+
+\hspace{2cm}  \textbf{Valores y vectores propios}
+
+\vspace{.2cm}
+
+Tarea individual. \\
+
+Obtener los valores y vectores propios de las siguientes matrices.
+\begin{enumerate}
+  \item
+\[
+ A =
+ \left[
+  \begin{matrix}
+     -2   & 1   \\
+     1   & -2
+  \end{matrix}
+  \right]
+ \]
+\item
+
+\[
+ B =
+ \left[
+  \begin{matrix}
+     4   & -1   \\
+     2   & 1
+  \end{matrix}
+  \right]
+ \]
+  \item
+\[
+ C =
+ \left[
+  \begin{matrix}
+     1   & 1   \\
+     -2   & 4
+  \end{matrix}
+  \right]
+ \]
+ \item
+\[
+ D =
+ \left[
+  \begin{matrix}
+     1   & 2   \\
+     2   & 1
+  \end{matrix}
+  \right]
+ \]
+\item
+\[
+ E =
+ \left[
+  \begin{matrix}
+     3   & 1   \\
+     5   & -1
+  \end{matrix}
+  \right]
+ \]
+ \item
+\[
+ F =
+ \left[
+  \begin{matrix}
+     -3   & 4   \\
+     -2   & 1
+  \end{matrix}
+  \right]
+ \]
+ \item
+\[
+ G =
+ \left[
+  \begin{matrix}
+     1  & 4   \\
+     -4  & 1
+  \end{matrix}
+  \right]
+ \]
+\item
+\[
+ H =
+ \left[
+  \begin{matrix}
+     2   & 8   \\
+     -1   & -2
+  \end{matrix}
+  \right]
+ \]
+\end{enumerate}
+
+\newpage
+
+\subsection{Diagonalización de matrices}
+
+\begin{definicion}
+Dos matrices cuadradas $A$ y $B$  de orden $n$  son equivalentes si
+existe una matriz $P$ de orden $n$, no singular (det($P \ne 0$)) tal
+que $ A = P^{-1} A P$.
+\end{definicion}
+
+\begin{ejemplo}
+Las matrices $
+ \left(
+  \begin{matrix}
+     3   & 0   \\
+     1   & 1
+  \end{matrix}
+  \right)
+$ y $
+ \left(
+  \begin{matrix}
+     3   & 0   \\
+     1   & 1
+  \end{matrix}
+  \right)
+$ son equivalentes pues:
+
+\[
+\left(
+  \begin{matrix}
+     3   & 2   \\
+     1   & 1
+  \end{matrix}
+  \right)^{-1}
+  \left(
+  \begin{matrix}
+     3   & 0   \\
+     1   & 1
+  \end{matrix}
+  \right)
+  \left(
+  \begin{matrix}
+     3   & 2   \\
+     1   & 1
+  \end{matrix}
+  \right)
+  =
+  \left(
+  \begin{matrix}
+     1   & 0   \\
+     3   & 3
+  \end{matrix}
+  \right)
+\]
+
+\end{ejemplo}
+
+\begin{definicion}
+Una matriz cuadrada $A$ es diagonalizable si posee una matriz
+equivalente $B$ que sea diagonal.
+\end{definicion}
+
+Suponga que  la matriz $A$ de orden $n$  tiene $n$ vectores
+característicos linealmente independientes. Si estos vectores
+característicos  son las columnas de una matriz $S$, entonces
+$S^{-1} A S$ es una matriz diagonal $\Lambda$, es decir $A$ es
+diagonalizable y los valores característicos de $A$ están sobre la
+diagonal de $\Lambda$:
+
+\[
+S^{-1} A S = \Lambda = \left(
+  \begin{matrix}
+     \lambda_1   &  &   &  \\
+                 &  \lambda_2 &    &   \\
+  &  &   \ddots  &   \\
+  &  &     & \lambda_n
+  \end{matrix}
+  \right).
+\]
+
+\vspace{.5cm}
+
+\textbf{Diagonalización de matrices de orden 2}
+
+\vspace{.5cm}
+
+Consideremos la matriz $A= \left(
+  \begin{matrix}
+     a_{11}   & a_{12}   \\
+     a_{21}   & a_{22}
+  \end{matrix}
+  \right)$ y calculemos sus valores propios, los cuales son las soluciones de:
+\[
+ \left|
+  \begin{matrix}
+     a_{11} - \lambda   & a_{12}   \\
+     a_{21}   & a_{22} -\lambda
+  \end{matrix}
+  \right| = 0
+\]
+
+Entonces tenemos los siguientes casos:
+
+\begin{enumerate}
+\item \textbf{Dos raíces reales distintas} $\lambda_1$ y $\lambda_2$:
+Entonces la matriz $A$ es equivalente a la matriz $A= \left(
+  \begin{matrix}
+     \lambda_1   & 0   \\
+     0  & \lambda_2
+  \end{matrix}
+  \right)$ y por tanto es diagonalizable.
+
+\begin{ejemplo}
+Dada la matriz
+
+\[
+ A = \left[
+  \begin{matrix}
+   1  & 2  \\
+   3  & 0
+  \end{matrix}
+  \right]
+\]
+
+Hallar
+\begin{enumerate}
+\item Los valores propios de $A$.
+\item Los vectores propios $A$.
+\item Diagonalizar la matriz $A$
+\end{enumerate}
+
+La ecuaci\'on caracter\'{\i}stica  es
+\[
+   \mid A - \lambda I  \mid =
+\left|
+  \begin{matrix}
+   1 - \lambda  & 2  \\
+   3   &   -\lambda
+  \end{matrix}
+  \right|  = \lambda^2 - \lambda - 6 = 0
+\]
+
+cuyas soluciones $\lambda_1 = -2$ y $\lambda_2 =  3$ son los valores
+propios de $A$. Para $\lambda = \lambda_1 = -2$ da
+
+\begin{align*}
+3x_1 + 2x_2 &= 0 \\
+3x_1 + 2x_2 &= 0
+\end{align*}
+
+Tomando $x_2 = t$ tenemos $x_1 = - \frac{2}{3} t $. Por lo tanto los
+vectores propios a $\lambda_1 = -2$ son
+\[
+ x = t \left(
+  \begin{matrix}
+   - 2/3   \\
+   1
+  \end{matrix}
+  \right)   \quad (t \in \Bbb{R})
+\]
+Para $\lambda_2 = 3$, $x_1 = x_2$. Luego los vectores propios son:
+\[
+ x = s \left(
+  \begin{matrix}
+   1   \\
+   1
+  \end{matrix}
+  \right)   \quad (t \in \Bbb{R})
+\]
+Finalmente, como los lo valores propios de $A$ son $\lambda_1 = -1$
+y $\lambda_2 = 3$, podemos tomar los vectores propios respectivos
+\[
+\left(
+  \begin{matrix}
+   2   \\
+   -3
+  \end{matrix}
+\right) \quad  \text{y} \quad
+  \left(
+  \begin{matrix}
+   1   \\
+   1
+  \end{matrix}
+  \right)
+\]
+
+As\'{\i}
+
+\[
+P= \left(
+  \begin{matrix}
+   2   & 1  \\
+   -3  & 1
+  \end{matrix}
+\right) \quad  \text{para la cual} \quad P^{-1}  = \left(
+  \begin{matrix}
+   1/5  & -1/5   \\
+   3/5  & 2/5
+  \end{matrix}
+  \right)
+\]
+
+Multiplicando deducimos que $P^{-1}AP =  \left(
+  \begin{matrix}
+     -2  & 0   \\
+     0  & 3
+  \end{matrix}
+  \right)$
+\end{ejemplo}
+\item \textbf{Una raíz doble} $\lambda$ y el rango de $A- \lambda I$ igual a
+1; entonces la matriz $A$ es equivalente a la matriz: $\left(
+  \begin{matrix}
+     \lambda   & 0   \\
+     1  & \lambda
+  \end{matrix}
+  \right)$ y no es diagonalizable. Observemos que si el rango de $A- \lambda
+  I$ es 0, entonces $A= \left(
+  \begin{matrix}
+     \lambda   & 0   \\
+     0  & \lambda
+  \end{matrix}
+  \right)$ que ya es diagonal.
+
+\begin{ejemplo}
+Sea $A= \left(
+  \begin{matrix}
+     0   & 1   \\
+     0  & 0
+  \end{matrix}
+  \right)$.
+
+La ecuaci\'on caracter\'{\i}stica  es
+\[
+   \mid A - \lambda I  \mid =
+\left|
+  \begin{matrix}
+   - \lambda  & 1  \\
+   0  &   -\lambda
+  \end{matrix}
+  \right|  = \lambda^2  = 0
+\]
+
+cuyas soluciones $\lambda =\lambda_1 = \lambda_2 = 0 $, es decir,
+$\lambda = 0$ es un valor característico doble y el rango de la
+matriz $A- \lambda I$ es 1, entonces la matriz $A$ es equivalente a
+la matriz $\left(
+  \begin{matrix}
+  \lambda  & 0  \\
+   1   &  \lambda
+  \end{matrix}
+  \right) =
+  \left(
+  \begin{matrix}
+  0  & 0  \\
+   1   &  0
+  \end{matrix}
+  \right)
+$. la cual no es diagonal.
+\end{ejemplo}
+\item \textbf{Dos raíces complejas conjugadas}  $a + bi$ y $a- bi$:  entonces
+la matriz $A$ es equivalente  a la matriz $ A = \left(
+  \begin{matrix}
+  a  & -b  \\
+   b   & a
+  \end{matrix}
+  \right)
+  $
+y no es diagonalizable.
+
+\begin{ejemplo}
+Sea
+\[
+A  =
+ \left(
+  \begin{matrix}
+     0  & 1  \\
+     -1   & 0
+  \end{matrix}
+  \right)
+\]
+
+
+\[
+   \mid A - \lambda I  \mid =
+\left|
+  \begin{matrix}
+   - \lambda  & 1  \\
+   -1  &   -\lambda
+  \end{matrix}
+  \right|  = \lambda^2  + 1 = 0
+\]
+
+cuyas ra\'{\i}ces son $\lambda_1= \lambda = i$ y $\lambda_2=
+\bar{\lambda} = -i$. Entonces la matriz $A$ es equivalente a la
+matriz
+\[
+ \left(
+  \begin{matrix}
+     0  & -1  \\
+     1   & 0
+  \end{matrix}
+  \right)
+\] y no es diagonalizable.
+
+
+\end{ejemplo}
+\end{enumerate}
+
+\newpage
+
+
+
+\hspace{2cm}  \textbf{DIAGONALIZACIÓN DE MATRICES}
+
+\vspace{.2cm}
+
+Tarea individual. \\
+
+
+\begin{enumerate}
+  \item Para la matriz:
+\[
+ A =
+ \left[
+  \begin{matrix}
+     2   & 1   \\
+     1   & 2
+  \end{matrix}
+  \right]
+ \]
+\begin{enumerate}
+  \item Escribir la ecuaci\'on caracter\'{\i}stica y calcular los valores propios.
+  \item Calcular los vectores propios correspondientes a la
+  equaci\'on caracter\'{\i}stica.
+  \item Diagonalize $A$.
+\end{enumerate}
+\vspace{.2cm}
+\item Consteste las mismas preguntas del problema 1 para la matriz $A$
+  dada por:
+\[
+ A =
+ \left[
+  \begin{matrix}
+     1   & 0 & 1   \\
+     0 & 1 & 1     \\
+     1 & 1 & 2
+  \end{matrix}
+  \right]
+ \]
+\vspace{.2cm}
+\item Obtener los valores propios de la matriz $P = X(X^T X)^{-1}X^T$,
+  si:
+\[
+ X =
+ \left[
+  \begin{matrix}
+     1   & 2   \\
+     1   & 4   \\
+     1   & 1   \\
+     1 & 3
+  \end{matrix}
+  \right].
+ \]
+\end{enumerate}
+
+\newpage
+
+
+
+\subsection{Matrices simétricas y formas cuadráticas}
+
+
+Sea $A$ una matriz cuadradada simetrica. En este caso, si
+postmultiplicamos $A$ por un  vector $x$ y la premultiplicamos por
+el transpuesto de ese mismo vector $x$, tenemos una \textbf{forma
+cuadr\'atica}. Por ejemplo,
+
+\[
+ \left(
+  \begin{matrix}
+     x_1   & x_2
+  \end{matrix}
+  \right)
+  \left(
+  \begin{matrix}
+     a_{11}   & a_{12}  \\
+     a_{21}   & a_{22}
+  \end{matrix}
+  \right)
+  \left(
+  \begin{matrix}
+     x_1 \\
+     x_2
+  \end{matrix}
+  \right) = a_{11} x_1^2 + (a_{21} + a_{12})x_1x_2 + a_{22} x_2^2.
+ \]
+
+ Supongamos que $A$ es la matriz identidad. En este caso, no es
+ dific\'{\i}l ver que cualesquiera que sean los valores de $x_1$ y
+ $x_2$, la forma cuadr\'atica debe ser no negativa. De hecho, si $x_1$ y
+ $x_2$ no son cero, $xAx$ ser\'a estrictamente positiva. La matriz
+ identidad es un ejemplo de \textbf{  matriz definida positiva}.
+
+\vspace{.2cm}
+
+
+\textbf{Matrices definidas}. Una matriz cuadrada $A$ es:
+
+
+
+
+\begin{enumerate}
+\item[(a)] \textbf{definida positiva} si $x^t A x > 0$ cualquiera que sea $x
+\ne 0$;
+\item[(b)] \textbf{definida negativa} si $x^t A x < 0$ cualquiera
+que sea $x$;
+\item[(c)] \textbf{semidefinida positiva} si $x^t A x \geq 0$
+cualquiera que sea $x$;
+\item[(d)] \textbf{semidefinida negativa} si $x^t A x \leq 0$,
+cuaquiera que sea $x$.
+\end{enumerate}
+
+
+\begin{ejemplo}
+Considere el $n$-vector de variables aleatorias
+
+\[
+y = \left[
+\begin{matrix}
+y_1 \\
+y_2 \\
+\vdots \\
+y_n
+\end{matrix}
+\right]
+\]
+
+y sea
+
+\[
+\tilde{y} = \left[
+\begin{matrix}
+y_1 -E(y_1) \\
+y_2 -E(y_2)\\
+\vdots \\
+y_n-E(y_n)
+\end{matrix}
+\right]
+\]
+
+la  matriz covarianza de $y$ es definida como
+
+
+\[
+V = E \left[
+\begin{matrix}
+\tilde{y_1}^2 & \tilde{y_1}\tilde{y_2} & \hdots & \tilde{y_1}\tilde{y_n}  \\
+\tilde{y_2}\tilde{y_1} & \tilde{y_2}^2 & \hdots & \tilde{y_2}\tilde{y_n} \\
+\vdots & \vdots &  \ddots &  \vdots \\
+\tilde{y_n}\tilde{y_1} &  \tilde{y_n}\tilde{y_2} &  \hdots &
+ \tilde{y_n}^2
+\end{matrix}
+\right]
+\]
+
+La matrix covarianza es simetrica y semidefinida positiva. Para
+demostrar esta afirmaci\'on, primero notemos que $V$ se puede
+escribir como
+\[
+ V= E(\tilde{y}\tilde{y}^T )
+\]
+As\'{\i}, para cualquier $x \ne 0$, tenemos
+
+\begin{align*}
+x^T V x &= x^T E(\tilde{y}\tilde{y}^T )x \\
+       &= E x^T (\tilde{y}\tilde{y}^T) x \\
+       &= E\left(\limits\sum_{j=1}^{n} x_j \tilde{y_j} \right)^2 \\
+       &= E \left(\limits\sum_{j= 1}^{n}x_j ( y_j - E(y_j)) \right)^2
+       \geq 0.
+\end{align*}
+\end{ejemplo}
+
+
+En algunos casos no es necesario que $x^t A x$ tenga un signo
+definido en el caso de todos los valores de $x$, si no s\'olo de un
+conjunto restringido de ellos. Decimos que $A$ es definida positiva
+sujeta a la restricci\'on $bx = 0$. Las otras definiciones se
+ampl\'{\i}an de manera natural al caso con restricciones.
+
+
+Las \textbf{matrices menores} de la matriz $A$  son las matrices que
+se forman eliminando $k$-columnas y $k$-filas de la misma
+numeraci\'on. Los menores principales naturalmente ordenados o
+encadenados de la matriz $A$ vienen dados por
+
+\[
+a_{11} \qquad
+ \left(
+  \begin{matrix}
+     a_{11}   & a_{12}  \\
+     a_{21}   & a_{22}
+  \end{matrix}
+  \right)
+\qquad
+ \left(
+  \begin{matrix}
+     a_{11}   & a_{12} & a_{13}  \\
+     a_{21}   & a_{22} & a_{23} \\
+     a_{31}  & a_{32} & a_{33}
+  \end{matrix}
+  \right)
+\]
+
+etc. Los determinantes menores o menores de una matriz o menores
+principales, son los determinantes de las matrices menores
+
+\[
+D_1= a_{11} \qquad D_2 =
+ \left|
+  \begin{matrix}
+     a_{11}   & a_{12}  \\
+     a_{21}   & a_{22}
+  \end{matrix}
+  \right|
+\qquad D_3=
+ \left|
+  \begin{matrix}
+     a_{11}   & a_{12} & a_{13}  \\
+     a_{21}   & a_{22} & a_{23} \\
+     a_{31}  & a_{32} & a_{33}
+  \end{matrix}
+  \right|
+\]
+
+etc.
+
+
+
+
+
+
+
+Supongamos que se nos da una matriz cuadrada $A$ y un vector $b$.
+Podemos \text{ orlar} A por medio de $b$ de la siguiente manera:
+
+\[
+ \left(
+  \begin{matrix}
+  0    & b_1  & \cdots   & b_n \\
+     b_1   & a_{11}  & \cdots   & a_{1n} \\
+    \vdots    & \vdots  & \vdots   & \vdots \\
+      b_n  & a_{n1}  & \cdots  & a_{nn}
+  \end{matrix}
+  \right)
+\]
+
+
+
+Esta matriz  se denomina \textbf{matriz orlada}. La \'util
+generalizaci\'on a las matrices menores genera los \textbf{menores
+principales que conservan la orla}. Son las submatrices que se
+forman eliminando las filas y las columnas adecuadas de $A$ y los
+elementos de la orla que tienenla misma numeraci\'on, pero sin
+eliminar la propia orla. Por lo tanto, las eliminaciones pueden
+provenir de filas y columnas  de 1 al $n$, pero no de la fila o la
+columna $n + 1$, que es donde se encuentra la orla. Dada esta
+terminolog\'{\i}a, para que una matriz sea definida positiva o
+negativa.
+
+
+\begin{teorema}. Una matriz cuadrada $A$ es:
+
+\begin{enumerate}
+\item[(a)] definida positiva si y s\'olo si los menores principales
+  son todos positivos.
+\item[(b)] definida negativa si y s\'olo si los menores principales
+  tienen el signo $(-1)^k$ siendo $k = 1,...,n.$
+\item[(c)] definida positiva sujeta a la restricci\'on $bx = 0$ si y
+s\'olo si los menores principales que conservan la orla son todos
+ellos negativos;
+\item[(d)] definida negativa sujeta a la restricci\'on $bx = 0 $ si y
+  s\'olo si los menores principales que generan la orla tienen el
+  signo $(-1)^k$ siendo $k= 2,...,n.$
+\end{enumerate}
+\end{teorema}
+
+\newpage
+
+
+\begin{definicion}
+Una forma cuadratica en dos variables es un polinomio de la forma
+\[
+ q = au^2 + 2huv + bv^2
+\]
+\end{definicion}
+
+\begin{definicion}
+Una forma cuadr\'atica $q$ se dice
+
+\begin{enumerate}
+\item[(a)] positiva definida si $q > 0$.
+\item[(b)] semidefinida positiva si $q \geq 0 $.
+\item[(c)] semidefinida negativa si $q \leq 0 $
+\item[(d)] definida negativa si $q <  0$.
+\end{enumerate}
+\end{definicion}
+
+Una forma cuadr\'atica se puede expresar en t\'erminos de matrices.
+Sea
+\[
+ q = au^2 + 2huv + bv^2
+\]
+entonces
+
+\[
+q = \left[
+\begin{matrix}
+u & v
+\end{matrix}
+ \right]
+\left[
+\begin{matrix}
+a & h \\
+h & b
+\end{matrix}
+ \right]
+\left[
+\begin{matrix}
+u \\
+v
+\end{matrix}
+\right]
+\]
+
+
+luego, si
+\[
+A= \left[
+\begin{matrix}
+a & h \\
+h & b
+\end{matrix}
+ \right]
+\]
+
+la forma cuadr\'atica $q$ es
+\begin{enumerate}
+\item[(a)] positiva definida si y solo si la matriz $A$ es definida positiva.
+\item[(b)] semi-definida positiva definida si y solo si la matriz $A$ es semi-definida positiva.
+\item[(c)] definida negativa si y solo si la matriz $A$ es definida negativa.
+\item[(d)] semi-definida negativa si y solo si la matriz $A$ es semi-definida negativa.
+\end{enumerate}
+
+\begin{ejemplo}
+?`La forma cuadr\'atica $q = 5u^2 + 3uv + 2v^2$ es positiva definida
+o negativa definida ?
+
+En forma de matrices:
+\[
+q = \left[
+\begin{matrix}
+u & v
+\end{matrix}
+ \right]
+\left[
+\begin{matrix}
+5 & 1.5 \\
+1.5 & 2
+\end{matrix}
+ \right]
+\left[
+\begin{matrix}
+u \\
+v
+\end{matrix}
+\right]
+\]
+
+Sea
+\[
+A= \left[
+\begin{matrix}
+5 & 1.5 \\
+1.5 & 2
+\end{matrix}
+ \right].
+\]
+
+
+Como
+
+
+\[
+D_1= 5 > 0 \qquad D_2 =
+ \left|
+  \begin{matrix}
+     5   & 1.5  \\
+     1.5   & 2
+  \end{matrix}
+  \right| = 10 -2.25 = 7.75> 0
+\]
+
+entonces la matriz $A$ es definida positiva, por tanto la forma
+cuadr\'atica $q$ es definida positiva.
+
+\end{ajemplo}
+
+
+\begin{ejemplo}
+Con el fin de conseguir una reducci\'on del d\'eficit p\'ublico, el
+gobierno esta estudiando la posibilidad de introducir un nuevo
+impuesto complementario del impuesto sobre la renta de las personas
+f\'{\i}sicas y el impuesto sobre el patrimonio, pero de tal forma
+que dependa de ellos, seg\'un:
+
+\[
+T = 2R^2 + 4P^2- 4 RP
+\]
+
+donde $R$ y $P$ son, respectivamente, las cantidades ingresadas por
+el impuesto sobre la renta y el de patrimonio.
+
+Justifique que ning\'un contibuyente conseguir\'a, con este nuevo
+impuesto, que su declaraci\'on le salga devolver.
+
+
+\textbf{Soluci\'on:}
+
+El nuevo impuesto puede considerarse como una forma cuadr\'atica en
+las variables $R$ y $P$:
+\[
+T(R,P) = 2R^2 + 4P^2- 4 RP
+\]
+
+que, por tanto tiene como matriz sim\'etrica asociada:
+
+\[
+A= \left(
+\begin{matrix}
+2 & -2 \\
+-2 & 4
+\end{matrix}
+\right)
+\]
+
+El hecho de que el gobierno no quiera devolver dinero se traduce en
+que la forma cuadr\'atica no debe tomar valores negativos para
+ning\'un $R,P$, es decir, tiene que verificarse que:
+
+\[
+T(R,P)  \geq 0 \quad \text{para cualesquiera $R$ y $P$}
+\]
+Por tanto $T$ debe ser al menos semidefinida positiva. Veamos si
+esto es as\'{\i}, calculando los menores principales de $A$
+
+\begin{align*}
+D_1 &= 2 > 0 \\
+D_2 &= \det (A) = 4 > 0
+\end{align*}
+
+luego $T$ es definida positiva, por lo que se verifica lo pedido.
+As\'{\i} pues , el impuesto re\'une las condiciones exigidas para su
+aplicaci\'on.
+
+\subsection{Matrices hermitianas}
+\begin{definicion}
+Una matriz A se le llama hermitiana si es igual a su traspuesta
+conjugada, es decir $A = \bar{A^T} = A^{H}$.
+\end{definicion}
+
+\begin{ejemplo}
+\[
+A= \left(
+\begin{matrix}
+2 & 3 - 3i \\
+3 + 3i & 5
+\end{matrix}
+\right) = A^{H}
+\]
+\end{ejemplo}
+
+Las tres propiedades básicas de las matrices hermitianas son:
+
+\begin{enumerate}
+\item Si $A = A^{H}$, entonces para todos los vectores compelejos
+$x$ , el n\'umero $x^{H} A x$ es real.
+\begin{ejemplo}
+Cada elemento de $A$ contibuye  a $x^{H}A x$. Si $x=(u,v)$, entonces
+
+\begin{align*}
+x^{H}A x &= x^{H} \left(
+\begin{matrix}
+2 & 3 - 3i \\
+ 3 + 3i & 5
+\end{matrix}
+\right) x = \left(
+\begin{matrix}
+\bar{u} & \bar{v}
+\end{matrix}
+\right)\left(
+\begin{matrix}
+2 & 3 - 3i \\
+3 + 3i & 5
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\bar{u} \\
+\bar{v}
+\end{matrix}
+\right) \\
+&= 2\bar{u}u + 5 \bar{v}v + (3-3i)\bar{u}v + (3 + 3i)u \bar{v},
+\end{align*}
+el cual es un n\'umero real.
+\end{ejemplo}
+\item Si $A = A^{H}$, todo valor característico es real.
+
+\begin{ejemplo}
+Si $ A= \left(
+\begin{matrix}
+2 & 3 - 3i \\
+3 + 3i & 5
+\end{matrix}
+\right) $, entonces:
+
+\[
+|A- \lambda I| = \left|
+\begin{matrix}
+2 - \lambda & 3 - 3i \\
+3 + 3i & 5 -\lambda
+\end{matrix}
+\right| = \lambda^2 - 7\lambda -8 =(\lambda - 8) (\lambda + 1).
+\]
+de donde sus valores característicos son  los n\'umeros reales
+$\lambda_1 = 8$ y $\lambda_2 = -1$.
+\end{ejemplo}
+\item Dos vectores característicos de una matriz hermitiana, si
+provienen de valores característicos distintos, son ortogonales
+entre sí:
+\begin{ejemplo}
+Para la matriz $ A= \left(
+\begin{matrix}
+2 & 3 - 3i \\
+3 + 3i & 5
+\end{matrix}
+\right)$, obtenemos los valores característicos asociados a
+$\lambda_1 = 8$ y $\lambda_2 = 1$. De las siguientes ecuaciones
+
+\begin{align*}
+(A- 8I) x &= \left(
+\begin{matrix}
+-6 & 3 - 3i \\
+3 + 3i & -3
+\end{matrix}
+\right)= \left(
+\begin{matrix}
+x_1 \\
+x_2
+\end{matrix}
+\right) = \left(
+\begin{matrix}
+0 \\
+0
+\end{matrix}
+\right) \\
+(A + I) y &= \left(
+\begin{matrix}
+3 & 3 - 3i \\
+3 + 3i & 6
+\end{matrix}
+\right)= \left(
+\begin{matrix}
+y_1 \\
+y_2
+\end{matrix}
+\right) = \left(
+\begin{matrix}
+0 \\
+0
+\end{matrix}
+\right)
+\end{align*}
+se obtienen los vectores característicos asociados a $\lambda_1$ y
+$\lambda_2$ respectivamente:
+
+\begin{align*}
+x &= \left(
+\begin{matrix}
+1 \\
+1+i
+\end{matrix}
+\right) \\
+y &= \left(
+\begin{matrix}
+1 -i\\
+-1
+\end{matrix}
+\right)
+\end{align*}
+Estos vectores son ortogonales:
+\[
+ x^{H} y =
+ \left(
+\begin{matrix}
+ 1 & 1 -i
+\end{matrix}
+\right) \left(
+\begin{matrix}
+1 -i\\
+-1
+\end{matrix}
+\right) = 0.
+
+\]
+
+
+\end{ejemplo}
+
+
+
+\end{enumerate}
+
+\subsection{Forma can\'onica de Jordan}
+
+Dada una matriz cuadrada $A$, se quiere escoger $M$ de forma que
+$M^{-1}A M$ sea lo más diagonalmente posible. En el caso más
+sencillo, $A$ tiene un conjunto completo de vectores característicos
+que se convierten en las columnas de $M$, la cual la denotamos por
+$S$. La forma de Jordan es $J = M^{-1}A M = \Lambda;$ se construyo
+completamente a partir de bloques $J_i = \lambda_i$ de 1 por 1, y el
+objeto de una matriz diagonal se ha alcanzado por completo. En el
+caso más general y difícil, faltan algunos vectores característicos
+y una forma diagonal es imposible. Ese caso constituye ahora nuestro
+principal interés.
+
+\begin{teorema}
+Si una matrizx $A$ tiene $s$ vectores característicos linealmente
+independientes, entonces es semejante a una matriz $J$ que es la
+\textbf{forma de Jordan}, con $s$ bloques cuadrados en la diagonal:
+\[
+J =M^{-1} A M = \Lambda = \left(
+  \begin{matrix}
+     J_1   &  &   &  \\
+                 &  J_2 &    &   \\
+  &  &   \ddots  &   \\
+  &  &     & J_s
+  \end{matrix}
+  \right).
+\]
+Cada bloque tiene un vector característico, un valor característico
+y unos justo arriba de la diagonal:
+
+\[
+J_i = \Lambda = \left(
+  \begin{matrix}
+     \lambda_i   & 1 &   & &  \\
+                 &  \lambda_i   & \ddots   & & \\
+  &  &   \ddots  &   & 1\\
+  &  &     &   \lambda_i&
+  \end{matrix}
+  \right).
+\]
+\end{teorema}
+
+\begin{ejemplo}
+Un ejemplo de esta forma de Jordan es la matriz $J$, con
+\[
+J = \left[
+  \begin{matrix}
+     8   & 1 &  0 &   0 & 0  \\
+     0   & 8  &  0 & 0 & 0 \\
+     0   & 0  & 0 &  1 & 0  \\
+    0  & 0  &  0&  0 & 0 \\
+     0  & 0  &  0&  0 & 0
+  \end{matrix}
+  \right] =
+\left(
+  \begin{matrix}
+     J_1   &  &   &  \\
+                 &  J_2 &    &   \\
+  &  &    &   \\
+  &  &     & J_3
+  \end{matrix}
+  \right).
+\]
+
+donde $J_1 =\left(
+\begin{matrix}
+ 8 & 1 \\
+ 0 & 8
+\end{matrix}
+\right)$, $J_2 =\left(
+\begin{matrix}
+ 0 & 1 \\
+ 0 & 0
+\end{matrix}
+\right)$ y $J_3 = [0]$. El valor característico dobre $\lambda = 8$
+sólo tiene un simple vector característico, en la primera dirección
+de coordenadas $e_1=(1,0,0,0,0)$; como resultado $\lambda =8$ sólo
+aparece  en un simple bloque $J_1$. El valor característico triple
+$\lambda = 0$, tiene dos vectores característicos, $e_3$ y $e_5$ que
+corresponden a los dos bloques de Jordan $J_2$ y $J_3$.
+\end{ejemplo}
+
+
+
+
+
+\textbf{En términos de operadores.} Sea $T$ un operador en
+$\Bbb{R}^n$ y $m_T(x)= p_1^{e_1}(x) \cdots p_r^{er}(x)$ la
+representaci\'on del polinomio m\'{\i}nimo de $T$ como productos de
+irreducibles. Entonces
+\[
+    V = W_1 \oplus \cdots \oplus W_k, \, \text{ con} \, W_i = V_{pi^{e_i}}
+\]
+
+Tambi\'en sabemos que el polinomio m\'{\i}nimo de $T$ restringido a
+$W_j$ es ${p_j}^{e_j} (x)$. Entonces:
+\[
+   W_j = W_{1j} \oplus \cdots \oplus W_{ij}
+\]
+
+donde cada $W_{ij}$ es T-c\'{\i}clico con anulador
+${p_j}^{e_{ij}(x)}$, los exponentes satisfacen: $e_j = e_{1j} \geq
+\cdots \geq e_{ij}$.
+
+\begin{definicion}
+Los polinomios ${p_j}^{e_j} (x)$ se llaman divisores elementales de
+$T$.
+\end{definicion}
+
+Ahora, supongamos que alg\'un $p_j(x)$ es lineal y que el anulador y
+que el anulador de $W_{ij}$ es $(x -c_j)^{e_{ij}}$. Si $v$ es un
+vector c\'{\i}clico de $W_{ij}$ entonces:
+\[
+  \{v, (T-c_jI)v,..., (T-c_jI)^{e_{ij-1}}  \}
+\]
+es una base.
+
+La matriz de $T$ restringida a $W_{ij}$ respecto a la base $\{v,
+(T-c_jI)v,..., (T-c_jI)^{e_{ij-1}}  $ se obtiene aplicando $T$ a
+cada elemento.
+\begin{align*}
+  T(v) &= c_jv + (T-c_jI)v \\
+  T(T-c_jI)v &=  c_j (T-c_jI)v + (T-c_jI)^2 v \\
+            & \ \vdots          \\
+T((T-c_jI)^{e_{ij}-1} (v)) &=  c_j (T-c_jI)^{e_{ij} -1}(v)
+\end{align*}
+
+De estas ecuaciones se tiene que la matriz asociada a la
+restricci\'on de $T$ en $W_{ij}$ es:
+\begin{equation*}
+ \left[
+  \begin{matrix}
+     c_j   & 0  & \cdots & 0 &   0  & 0 \\
+     1   & c_j  & \cdots & 0 &   0 & 0 \\
+     0   & 1  & \cdots & 0 &   0 & 0 \\
+    \vdots    & \vdots  & \cdots &  \vdots & \vdots  & \vdots \\
+     0   & 0  & \cdots & 1 &  c_j & 0 \\
+    0  & 0  &  \cdots & 0 &   0& c_j
+  \end{matrix}
+  \right]
+\end{equation*}
+
+\vspace{.2cm}
+
+Por tanto existe una base de $W_j$ respecto de la cual la matriz
+asociada a $T$ restringida a $W_j$ es diagonal por bloques con cada
+bloque de la forma , llamado bloque de Jordan. Si el polinomio
+m\'{\i}nimo se expresa como  un producto de factores lineales,
+entonces el anulador en cada $W_{ij}$ es de la forma $(x-
+c_j)^{e_{ij}}$ y procediendo como en el caso anterior se tiene que
+la restricci\'on de $T$ a cada $W_j$ es diagonal por bloques con
+cada bloque de la forma. Resumiendo se tiene el siguiente resultado:
+
+\begin{teorema}
+\textbf{(Forma Can\'onica de Jordan)} Sobre $\Bbb{R}^n$, sea $T$ un
+operador lineal. Supongamos que el polinomio m\'{\i}nimo
+ de $T$ se expresa como $m_T(x) = (x- c_1)^{e_1} \cdots (x -c_k)^{e_k}$. Entonces existe una base $\Bbb{R}^n$ respecto de la cual $T$ se representa por una matriz de la forma $J = \text{diag} \{j_1,...,j_k  \}$, con cada $J_m$ a la vez diagonal por bloques:
+ $J_m = \text{diag} \{j_{1},...,{j}_{i_mm}  \}$ y cada $J_{rm}$ un bloque de Jordan de orden $e_{rm}$, los cuales satisfacen
+$e_m = e_{1m} \geq \cdots e_{r_mm}$.
+\end{teorema}
+\begin{ejemplo}
+Sea
+\[
+A = \left[
+  \begin{matrix}
+     2   & 0 &  0 &   0   \\
+     1   & 2  &  0 & 0 \\
+     0   & 0  & 2 &  0  \\
+    0  & 0  &  0& 2
+  \end{matrix}
+  \right]
+\]
+El polinomio característico de $A$ es $(x - 2)^4$. Como $A$ es suma
+directa de dos matrices $2 \times 2$, es claro que el polinomio
+minimal de $A$ es $(x - 2)^2$. Luego $A$ está en forma de Jordan.
+\end{ejemplo}
+
+\newpage
+\textbf{TAREA: FORMAS CUADRATICAS, MATRICES HERMITIANAS Y FORMA CANONICA DE JORDAN}
+\vspace{.2cm}
+Trabajo en equipo
+\vspace{.2cm}
+
+\begin{enumerate}
+\item Calcular la matriz Q (cuyas columnas son los vectores característicos ortonormales), y diagonaliza las siguientes matrices simétricas:\\
+
+$
+A=
+\left(
+\begin{matrix}
+3& 2& 2\\
+2& 2& 0\\
+2& 0& 4
+\end{matrix}
+\right)
+ \qquad \qquad
+B=
+\left(
+\begin{matrix}
+-1& 2& 2\\
+2& -1& 2\\
+2& 2& 1
+\end{matrix}
+\right)$
+ \\
+
+ \vspace{0.2cm}
+$
+C=
+\left(
+\begin{matrix}
+3& -1\\
+-1& 3
+\end{matrix}
+\right) \qquad \qquad
+D=
+\left(
+\begin{matrix}
+3& 4\\
+4& -3
+\end{matrix}
+\right)
+$
+\item Encontrar y diagonalizar la matriz simétrica $ A $ que corresponde a la forma cuadrática.
+\begin{enumerate}
+\item $ x_1^2+2x_1x_2+x^2_2+4x_1x_3+6x_2x_3+3x^2_3+7x_1x_4-2x_2x_4+x^2_4 $
+\item $ x_1^2-x^2_2+x_1x_3-x_2x_4+x^2_4 $
+\item $ 4x^2+4xy+y^2=9 $
+\item $ 3x^2-6xy+5y^2=36 $
+\end{enumerate}
+
+\item Diagonalizar las siguientes matrices hermitianas\\
+$
+A=
+\left(
+\begin{matrix}
+2& i\\
+-i& 5\\
+\end{matrix}
+\right) \qquad \qquad
+B=\left(
+\begin{matrix}
+2& 1-i\\
+1+i& 3
+\end{matrix}
+\right)
+\qquad \qquad
+\left(
+\begin{matrix}
+1& 2i& 3+4i\\
+-2i& 4& 5\\
+3-4i& 5& 0
+\end{matrix}
+\right)
+$
+\item diagonalizar las siguientes matrices de Jordan:
+\[
+A=
+\left(
+\begin{matrix}
+-2& 1& 0\\
+-2& 1& -1\\
+-1& 1& -2
+\end{matrix}
+\right)
+ \qquad \qquad
+B=
+\left(
+\begin{matrix}
+-1& -2& -1\\
+-1& -1& -1\\
+2& 3& 2
+\end{matrix}
+\right)
+\]
+\[
+C=
+\left(
+\begin{matrix}
+-4& 4\\
+-1& 0\\
+\end{matrix}
+\right) \qquad \qquad
+D=
+\left(
+\begin{matrix}
+-9& 4\\
+-25& 11
+\end{matrix}
+\right)
+\]
+\end{enumerate}
+
+\newpage
+
+\begin{thebibliography}{10}
+   \bibitem{T1}
+    Gilbert Strang, 2007. Algebra Lineal y sus aplicaciones,
+    Thomson. 4a edici\'on.
+   \bibitem{T2}
+    Darell A. Turkington, 2007. Mathematical Tools for Economics,
+    Blackwell Publishing.
+   \bibitem{T3}
+    Mike Rosser, 2003. Basic Mathematics for Economicsts,
+    Routledge. Routledge. 2da. edici\'on.
+   \bibitem{T4}
+   Nakos George, 2004. Algebra Lineal con aplicaciones. Internacional
+   Thomson Editores. 2a Ed, M\'exico.
+\end{thebibliography}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,1823 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.8.14)  14 AUG 2012 21:14
+entering extended mode
+**Calculo*Moodle*13.09.2011.tex
+
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Calculo latex\Calculo Mood
+le 13.09.2011.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen112
+)
+\es@datefmt=\count100
+\es@quottoks=\toks25
+\es@quotdepth=\count101
+Package babel Info: Making " an active character on input line 492.
+Package babel Info: Making . an active character on input line 585.
+Package babel Info: Making < an active character on input line 630.
+Package babel Info: Making > an active character on input line 630.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count102
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\epsf\epsf.sty"
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen115
+\epsfframethickness=\dimen116
+\epsfrsize=\dimen117
+\epsftmp=\dimen118
+\epsftsize=\dimen119
+\epsfxsize=\dimen120
+\epsfysize=\dimen121
+\pspoints=\dimen122
+)
+\c@teorema=\count103
+\c@problema=\count104
+\c@ejemplo=\count105
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks27
+\footnotemargin=\dimen123
+\c@pp@next@reset=\count106
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen124
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen125
+\subfiglabelskip=\skip52
+\c@subfigure=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@lotdepth=\count110
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count111
+\rotFPtop=\skip55
+\rotFPbot=\skip56
+\rot@float@box=\box28
+\rot@mess@toks=\toks30
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Calculo latex\Calculo Mood
+le 13.09.2011.aux"
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura10' multiply defined.
+
+
+LaTeX Warning: Label `Figura9' multiply defined.
+
+
+LaTeX Warning: Label `Figura15' multiply defined.
+
+
+LaTeX Warning: Label `Figura15' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura16' multiply defined.
+
+
+LaTeX Warning: Label `Figura23' multiply defined.
+
+
+LaTeX Warning: Label `Figura23' multiply defined.
+
+
+LaTeX Warning: Label `Figura23' multiply defined.
+
+
+LaTeX Warning: Label `Figura23' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen126
+\scratchbox=\box29
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen127
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks32
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 38.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Calculo latex\Calculo Mood
+le 13.09.2011.toc" [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+\tf@toc=\write3
+
+[2] [1] <unid1graf1.pdf, id=18, 160.6pt x 113.76201pt>
+File: unid1graf1.pdf Graphic file (type pdf)
+ <use unid1graf1.pdf>
+Package pdftex.def Info: unid1graf1.pdf used on input line 99.
+(pdftex.def)             Requested size: 160.5996pt x 113.76172pt.
+
+[2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf1
+.pdf>] [3] <unid1graf4.pdf, id=38, 102.784pt x 76.24184pt>
+File: unid1graf4.pdf Graphic file (type pdf)
+
+<use unid1graf4.pdf>
+Package pdftex.def Info: unid1graf4.pdf used on input line 184.
+(pdftex.def)             Requested size: 102.78372pt x 76.24164pt.
+ <unid1graf5.pdf, id=39, 102.784pt x 76.24184pt>
+File: unid1graf5.pdf Graphic file (type pdf)
+
+<use unid1graf5.pdf>
+Package pdftex.def Info: unid1graf5.pdf used on input line 185.
+(pdftex.def)             Requested size: 102.78372pt x 76.24164pt.
+ <unid1graf6.pdf, id=40, 102.784pt x 76.24184pt>
+File: unid1graf6.pdf Graphic file (type pdf)
+
+<use unid1graf6.pdf>
+Package pdftex.def Info: unid1graf6.pdf used on input line 186.
+(pdftex.def)             Requested size: 102.78372pt x 76.24164pt.
+ <unid1graf2.pdf, id=41, 160.6pt x 114.34518pt>
+File: unid1graf2.pdf Graphic file (type pdf)
+
+<use unid1graf2.pdf>
+Package pdftex.def Info: unid1graf2.pdf used on input line 212.
+(pdftex.def)             Requested size: 160.5996pt x 114.3449pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf4
+.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1gr
+af5.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid
+1graf6.pdf>] <unid1graf3.pdf, id=81, 160.6pt x 113.93968pt>
+File: unid1graf3.pdf Graphic file (type pdf)
+
+<use unid1graf3.pdf>
+Package pdftex.def Info: unid1graf3.pdf used on input line 235.
+(pdftex.def)             Requested size: 160.5996pt x 113.93939pt.
+ [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf
+2.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1g
+raf3.pdf>] [6]
+<unid1graf134.pdf, id=101, 160.6pt x 107.51266pt>
+File: unid1graf134.pdf Graphic file (type pdf)
+ <use unid1graf134.pdf>
+Package pdftex.def Info: unid1graf134.pdf used on input line 293.
+(pdftex.def)             Requested size: 160.5996pt x 107.51239pt.
+
+<unid1graf135.pdf, id=102, 160.6pt x 107.7355pt>
+File: unid1graf135.pdf Graphic file (type pdf)
+ <use unid1graf135.pdf>
+Package pdftex.def Info: unid1graf135.pdf used on input line 303.
+(pdftex.def)             Requested size: 160.5996pt x 107.73523pt.
+
+[7 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf1
+34.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1
+graf135.pdf>] <unid1graf136.pdf, id=133, 160.6pt x 108.15306pt>
+File: unid1graf136.pdf Graphic file (type pdf)
+
+<use unid1graf136.pdf>
+Package pdftex.def Info: unid1graf136.pdf used on input line 320.
+(pdftex.def)             Requested size: 160.5996pt x 108.15279pt.
+ [8 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf
+136.pdf>] [1] [2] [1]
+<unid1graf11.pdf, id=161, 192.72pt x 127.0878pt>
+File: unid1graf11.pdf Graphic file (type pdf)
+ <use unid1graf11.pdf>
+Package pdftex.def Info: unid1graf11.pdf used on input line 493.
+(pdftex.def)             Requested size: 192.71951pt x 127.08748pt.
+
+<unid1graf10.pdf, id=162, 192.72pt x 139.0525pt>
+File: unid1graf10.pdf Graphic file (type pdf)
+ <use unid1graf10.pdf>
+Package pdftex.def Info: unid1graf10.pdf used on input line 512.
+(pdftex.def)             Requested size: 192.71951pt x 139.05215pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf1
+1.pdf>] [3 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/un
+id1graf10.pdf>] [4] <unid1graf15.pdf, id=185, 192.72pt x 127.64287pt>
+File: unid1graf15.pdf Graphic file (type pdf)
+
+<use unid1graf15.pdf>
+Package pdftex.def Info: unid1graf15.pdf used on input line 630.
+(pdftex.def)             Requested size: 251.99745pt x 162.42404pt.
+ [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf
+15.pdf>]
+<unid1graf14.pdf, id=205, 192.72pt x 125.70464pt>
+File: unid1graf14.pdf Graphic file (type pdf)
+ <use unid1graf14.pdf>
+Package pdftex.def Info: unid1graf14.pdf used on input line 677.
+(pdftex.def)             Requested size: 251.99745pt x 138.06068pt.
+
+[6 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf1
+4.pdf>] [7] <unid1graf16.pdf, id=229, 192.72pt x 128.35152pt>
+File: unid1graf16.pdf Graphic file (type pdf)
+
+<use unid1graf16.pdf>
+Package pdftex.def Info: unid1graf16.pdf used on input line 735.
+(pdftex.def)             Requested size: 251.99745pt x 162.43074pt.
+ [8 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf
+16.pdf>] [1] [2]
+<unid1graf18.pdf, id=255, 192.72pt x 127.0878pt>
+File: unid1graf18.pdf Graphic file (type pdf)
+ <use unid1graf18.pdf>
+Package pdftex.def Info: unid1graf18.pdf used on input line 862.
+(pdftex.def)             Requested size: 251.99745pt x 162.43329pt.
+ [1]
+[2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf1
+8.pdf>] [3] [4]
+Overfull \hbox (9.02411pt too wide) in paragraph at lines 1022--1024
+[]\OT1/cmr/m/n/10.95 que se apro-xi-ma ra-zo-na-ble-men-te bien me-dian-te el c
+os-to mar-gi-nal $\OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 (8) =
+ []
+
+[5] [6] [7]
+Overfull \hbox (8.33792pt too wide) in paragraph at lines 1160--1162
+[]\OT1/cmr/m/n/10.95 Aveces nos in-tere-sa es-tu-diar las ta-sas de cre-ci-mien
+-to por-cen-tual $\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.9
+5 a\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
+10.95 a\OT1/cmr/m/n/10.95 )$.
+ []
+
+[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1726--1727
+
+ []
+
+[19] [20] [21]
+Overfull \hbox (12.80289pt too wide) in paragraph at lines 1856--1856
+[] 
+ []
+
+[1]
+
+LaTeX Warning: Command \' invalid in math mode on input line 1910.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 1910.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 1910.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 1910.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.1910 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+[1] [2] [3] [1] [2] [3] [4] <unid1graf17.pdf, id=367, 192.72pt x 127.34274pt>
+File: unid1graf17.pdf Graphic file (type pdf)
+
+<use unid1graf17.pdf>
+Package pdftex.def Info: unid1graf17.pdf used on input line 2183.
+(pdftex.def)             Requested size: 251.99745pt x 162.43852pt.
+ [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf
+17.pdf>] [1] [2] [3]
+<unidad2graf1.pdf, id=397, 224.84pt x 146.93896pt>
+File: unidad2graf1.pdf Graphic file (type pdf)
+ <use unidad2graf1.pdf>
+Package pdftex.def Info: unidad2graf1.pdf used on input line 2329.
+(pdftex.def)             Requested size: 252.0112pt x 162.42255pt.
+
+[4 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unidad2gra
+f1.pdf>] <unid1graf20.pdf, id=417, 224.84pt x 146.93896pt>
+File: unid1graf20.pdf Graphic file (type pdf)
+
+<use unid1graf20.pdf>
+Package pdftex.def Info: unid1graf20.pdf used on input line 2400.
+(pdftex.def)             Requested size: 252.0112pt x 162.42255pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1g
+raf20.pdf>] [7] <unid1graf21.pdf, id=443, 244.30472pt x 157.0919pt>
+File: unid1graf21.pdf Graphic file (type pdf)
+
+<use unid1graf21.pdf>
+Package pdftex.def Info: unid1graf21.pdf used on input line 2477.
+(pdftex.def)             Requested size: 252.0057pt x 157.0148pt.
+ <unid1graf22.pdf, id=444, 244.94711pt x 164.63206pt>
+File: unid1graf22.pdf Graphic file (type pdf)
+
+<use unid1graf22.pdf>
+Package pdftex.def Info: unid1graf22.pdf used on input line 2486.
+(pdftex.def)             Requested size: 252.00679pt x 157.00748pt.
+ [8 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf
+21.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1
+graf22.pdf>] [9] [10] [11]
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.2616 \end{align*}
+                   
+? 
+
+LaTeX Warning: Command \i invalid in math mode on input line 2616.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \' invalid in math mode on input line 2616.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+! You can't use `\spacefactor' in math mode.
+<argument> ...cefactor \spacefactor }\spacefactor 
+                                                  \accent@spacefactor 
+l.2616 \end{align*}
+                   
+? 
+Missing character: There is no è in font cmex10!
+Missing character: There is no è in font cmex10!
+[1] [1] [2]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
+ on input line 2727.
+
+[1] <unid1graf25.jpg, id=504, 149.62433pt x 132.19237pt>
+File: unid1graf25.jpg Graphic file (type jpg)
+ <use unid1graf25.jpg>
+Package pdftex.def Info: unid1graf25.jpg used on input line 2778.
+(pdftex.def)             Requested size: 252.0224pt x 151.59644pt.
+
+[2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf2
+5.jpg>] <unid1graf28.jpg, id=508, 139.45567pt x 125.65538pt>
+File: unid1graf28.jpg Graphic file (type jpg)
+
+<use unid1graf28.jpg>
+Package pdftex.def Info: unid1graf28.jpg used on input line 2850.
+(pdftex.def)             Requested size: 139.45532pt x 125.65506pt.
+ <unid1graf27.pdf, id=509, 96.36pt x 105.0324pt>
+File: unid1graf27.pdf Graphic file (type pdf)
+
+<use unid1graf27.pdf>
+Package pdftex.def Info: unid1graf27.pdf used on input line 2851.
+(pdftex.def)             Requested size: 96.35974pt x 105.03214pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1g
+raf28.jpg> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/un
+id1graf27.pdf>] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+[18]
+Overfull \hbox (23.21747pt too wide) in paragraph at lines 3618--3620
+[]\OT1/cmr/bx/n/10.95 Ejercicio 1. \OT1/cmr/m/n/10.95 Ha-lle las de-ri-va-das p
+ar-cia-les in-di-ca-das $[]\OML/cmm/m/it/10.95 ; []; []; []:[]; []$
+ []
+
+[1] [2] [1] [2] <unid1graf23.jpg, id=585, 196.10954pt x 200.10437pt>
+File: unid1graf23.jpg Graphic file (type jpg)
+
+<use unid1graf23.jpg>
+Package pdftex.def Info: unid1graf23.jpg used on input line 3820.
+(pdftex.def)             Requested size: 252.01581pt x 157.00899pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] <unid1graf24.jpg, id=589, 181.94608pt x 167.78261pt>
+File: unid1graf24.jpg Graphic file (type jpg)
+ <use unid1graf24.jpg>
+Package pdftex.def Info: unid1graf24.jpg used on input line 3883.
+(pdftex.def)             Requested size: 252.00755pt x 157.00139pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf2
+3.jpg>] [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/un
+id1graf24.jpg>] [6] [7] [8] [1] [1] [2] [3]
+<unid1graf29.pdf, id=619, 224.84pt x 229.658pt>
+File: unid1graf29.pdf Graphic file (type pdf)
+ <use unid1graf29.pdf>
+Package pdftex.def Info: unid1graf29.pdf used on input line 4287.
+(pdftex.def)             Requested size: 252.0112pt x 157.00288pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1g
+raf29.pdf>] <unid1graf30.pdf, id=632, 224.84pt x 234.1548pt>
+File: unid1graf30.pdf Graphic file (type pdf)
+
+<use unid1graf30.pdf>
+Package pdftex.def Info: unid1graf30.pdf used on input line 4377.
+(pdftex.def)             Requested size: 252.0112pt x 157.01152pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1g
+raf30.pdf>]
+Overfull \hbox (9.66771pt too wide) in paragraph at lines 4426--4429
+[]\OT1/cmr/m/n/10.95 Simplificando por $\OML/cmm/m/it/10.95 K[]L[]$ \OT1/cmr/m/
+n/10.95 ob-te-ne-mos $2\OML/cmm/m/it/10.95 rK \OT1/cmr/m/n/10.95 = 4\OML/cmm/m/
+it/10.95 wL$\OT1/cmr/m/n/10.95 , lue-go $\OML/cmm/m/it/10.95 L \OT1/cmr/m/n/10.
+95 = (\OML/cmm/m/it/10.95 r=\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 w\OT1/cmr/m
+/n/10.95 )\OML/cmm/m/it/10.95 K$\OT1/cmr/m/n/10.95 .
+ []
+
+[8] [9] [1] [2] [1] [2] [3] [4] [5] [6] [7] [8] [1] [1]
+<unid1graf33.pdf, id=690, 160.6pt x 100.82268pt>
+File: unid1graf33.pdf Graphic file (type pdf)
+ <use unid1graf33.pdf>
+Package pdftex.def Info: unid1graf33.pdf used on input line 5029.
+(pdftex.def)             Requested size: 252.00775pt x 157.01657pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2]
+Runaway argument?
+! Paragraph ended before \end was complete.
+<to be read again> 
+                   \par 
+l.5067 
+       
+? 
+[3 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf3
+3.pdf>] [4]
+
+! LaTeX Error: \begin{ejemplo} on input line 5036 ended by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5129 \end{enumerate}
+                      
+? 
+[5] <unid1graf31.pdf, id=713, 160.6pt x 99.31805pt>
+File: unid1graf31.pdf Graphic file (type pdf)
+ <use unid1graf31.pdf>
+Package pdftex.def Info: unid1graf31.pdf used on input line 5177.
+(pdftex.def)             Requested size: 252.00775pt x 157.01021pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] <Gini1.pdf, id=718, 200.75pt x 139.95789pt>
+File: Gini1.pdf Graphic file (type pdf)
+ <use Gini1.pdf>
+Package pdftex.def Info: Gini1.pdf used on input line 5196.
+(pdftex.def)             Requested size: 216.01645pt x 157.00589pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/unid1graf3
+1.pdf>] <Gini.pdf, id=727, 200.34851pt x 136.23598pt>
+File: Gini.pdf Graphic file (type pdf)
+ <use Gini.pdf>
+Package pdftex.def Info: Gini.pdf used on input line 5215.
+(pdftex.def)             Requested size: 216.0063pt x 157.00276pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/Gini1.pdf>
+] [9 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Calculo latex/Gini.pdf
+>] [10]
+! Extra \right.
+l.5334 ...nfty}  2x^{1/2}\,  \Big|_{1}^{N} \right)
+                                                  
+? 
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.5337 \]
+         
+? 
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 5384--5386
+
+ []
+
+[12] [1]
+
+! LaTeX Error: \begin{problema} on input line 2534 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5478 \end{document}
+                     
+? 
+[1]
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Calculo latex\Calculo Mood
+le 13.09.2011.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 2)
+
+### semi simple group (level 2) entered at line 2534 (\begingroup)
+### semi simple group (level 1) entered at line 2172 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 3466 strings out of 494045
+ 45000 string characters out of 3148366
+ 106876 words of memory out of 3000000
+ 6666 multiletter control sequences out of 15000+200000
+ 14554 words of font info for 57 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 27i,13n,27p,548b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb>
+Output written on "Calculo Moodle 13.09.2011.pdf" (129 pages, 1649460 bytes).
+PDF statistics:
+ 830 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+

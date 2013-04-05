@@ -1,0 +1,3803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2012-08-09"/>
+<link rel="stylesheet" href="http://elyxer.nongnu.org/lyx.css" type="text/css" media="all"/>
+<title>ÁLGEBRA LINEAL</title>
+</head>
+<body>
+<div id="globalWrapper">
+<h1 class="title">
+ÁLGEBRA LINEAL
+</h1>
+<h2 class="author">
+<b>ESCUELA SUPERIOR DE ECONOMIA</b>
+</h2>
+<h2 class="Date">
+<span class="large">México, D.F., 10 de marzo de 2010</span>
+</h2>
+<div class="Unindented">
+ <div class="fulltoc">
+<div class="tocheader">
+Table of Contents
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Section-1">Section 1: Unidad 1</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section-2">Section 2: Matrices y sistemas de ecuaciones</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsection-2.1">Subsection 2.1: Matrices</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection-2.1.1">Subsubsection 2.1.1: Definición de matriz</a>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection-2.1.2">Subsubsection 2.1.2: Aritmética de matrices</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection-2.2">Subsection 2.2: Determinantes</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection-2.2.1">Subsubsection 2.2.1: Definición</a>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Subsection-2.3">Subsection 2.3: Solución de sistemas de ecuaciones lineales</a>
+</div>
+<div class="tocindent">
+<div class="toc">
+<a class="Link" href="#toc-Subsubsection-2.3.1">Subsubsection 2.3.1: Representación matricial de un sistema de ecuaciones lineales</a>
+</div>
+</div>
+</div>
+<div class="toc">
+<a class="Link" href="#toc-Section-3">Section 3: Matrices aplicadas a la macroeconomía</a>
+</div>
+</div>
+
+</div>
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+ 
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-1">1</a> Unidad 1
+</h1>
+<div class="Unindented">
+<p><br/>
+</p>
+
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-2">2</a> Matrices y sistemas de ecuaciones
+</h1>
+<h2 class="Subsection">
+<a class="toc" name="toc-Subsection-2.1">2.1</a> Matrices
+</h2>
+<div class="Unindented">
+<b>Introducción</b>
+</div>
+<div class="Indented">
+<div class="medskip"> </div>
+</div>
+<div class="Indented">
+En macroeconomía y econometría estamos preocupados con la organización y el modelado de los datos observados. En muchos casos el número de datos numéricos es grande (varios cientos o miles) de las observaciones de una serie de posibles variables de interés y todos los datos deben ser manejados de una manera organizada. Muchos conjuntos de datos se almacenan en una hoja de cálculo, donde cada columna es igual al número de observaciones de esa variable. Por ejemplo, los datos sobre las calificaciones de Cálculo, Inglés e Historia de cinco estudiantes se puede representar por la siguiente tabla.
+</div>
+<div class="Indented">
+<div class="center">
+<table>
+<tr>
+<td align="right" valign="top">
+Estudiantes 
+</td>
+<td align="right" valign="top">
+Cálculo 
+</td>
+<td align="right" valign="top">
+Inglés 
+</td>
+<td align="right" valign="top">
+Historia 
+</td>
+
+</tr>
+<tr>
+<td align="right" valign="top">
+1 
+</td>
+<td align="right" valign="top">
+1.8 
+</td>
+<td align="right" valign="top">
+4 
+</td>
+<td align="right" valign="top">
+8 
+</td>
+
+</tr>
+<tr>
+<td align="right" valign="top">
+2 
+</td>
+<td align="right" valign="top">
+2.4 
+</td>
+<td align="right" valign="top">
+6 
+</td>
+<td align="right" valign="top">
+9 
+</td>
+
+</tr>
+<tr>
+<td align="right" valign="top">
+3 
+</td>
+<td align="right" valign="top">
+2.9 
+</td>
+<td align="right" valign="top">
+6 
+</td>
+<td align="right" valign="top">
+7 
+</td>
+
+</tr>
+<tr>
+<td align="right" valign="top">
+4 
+</td>
+<td align="right" valign="top">
+3.0 
+</td>
+<td align="right" valign="top">
+7 
+</td>
+<td align="right" valign="top">
+6 
+</td>
+
+</tr>
+<tr>
+<td align="right" valign="top">
+5 
+</td>
+<td align="right" valign="top">
+3.5 
+</td>
+<td align="right" valign="top">
+8 
+</td>
+<td align="right" valign="top">
+7 
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+<b>Matriz de datos</b>
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+La información consiste en datos reales de las cinco puntuaciones en Cálculo, Inglés e Historia y podemos resumir estos datos en la siguiente matriz: <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎛</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎜</span></span><span class="arrayrow"><span class="bracket align-left">⎝</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1.8
+</span>
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+8
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2.4
+</span>
+<span class="arraycell align-c">
+6
+</span>
+<span class="arraycell align-c">
+9
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2.9
+</span>
+<span class="arraycell align-c">
+6
+</span>
+<span class="arraycell align-c">
+7
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+3.0
+</span>
+<span class="arraycell align-c">
+7
+</span>
+<span class="arraycell align-c">
+6
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+3.5
+</span>
+<span class="arraycell align-c">
+8
+</span>
+<span class="arraycell align-c">
+7
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎞</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎟</span></span><span class="arrayrow"><span class="bracket align-right">⎠</span></span></span>
+</div>
+
+</div>
+<div class="Indented">
+Este bloque rectangular de números se llama matriz. La matriz anterior tiene cinco filas y tres columnas.
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<h3 class="Subsubsection">
+<a class="toc" name="toc-Subsubsection-2.1.1">2.1.1</a> Definición de matriz
+</h3>
+<div class="Unindented">
+<span class="environment"></span> Una matriz de orden m filas por n columnas es un arreglo rectangular de la forma: <span class="unknown">\end</span>definicion <div class="formula">
+<i>A</i><sub><i>mn</i></sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>1<i>n</i></sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>2<i>n</i></sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub><i>m</i>1</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub><i>m</i>2</sub>
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub><i>mn</i></sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+
+</div>
+<h3 class="Subsubsection">
+<a class="toc" name="toc-Subsubsection-2.1.2">2.1.2</a> Aritmética de matrices
+</h3>
+<div class="Unindented">
+<b>Suma de matrices</b>
+</div>
+<div class="Indented">
+<div class="medskip"> </div>
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i></span> una matriz <span class="formula"><i>m</i></span> por <span class="formula"><i>n</i></span> y B una matriz <span class="formula"><i>n</i></span> por <span class="formula"><i>k</i></span>, se define la <b>suma</b> de <span class="formula"><i>A</i></span> mas <span class="formula"><i>B</i></span> como sigue: <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> + <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>b</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>b</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub> + <i>b</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub> + <i>b</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub> + <i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub> + <i>b</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> La suma de las matrices <span class="formula"><i>A</i></span> y <span class="formula"><i>B</i></span> donde: <div class="formula">
+<i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+9
+</span>
+<span class="arraycell align-c">
+7
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="hspace" style="width: 0.2cm;"> </span><span class="text"> y</span><span class="hspace" style="width: 0.2cm;"> </span><i>B</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+8
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+
+</div>
+<div class="Indented">
+es: <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1 + 4
+</span>
+<span class="arraycell align-c">
+3 + 1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+9 + 8
+</span>
+<span class="arraycell align-c">
+7 + 2
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+17
+</span>
+<span class="arraycell align-c">
+9
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+<b>Producto de matrices</b>
+</div>
+<div class="Indented">
+<div class="medskip"> </div>
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i></span> una matriz <span class="formula"><i>m</i></span> por <span class="formula"><i>n</i></span> y B una matriz <span class="formula"><i>n</i></span> por <span class="formula"><i>k</i></span>, se define el <b> producto</b> de <span class="formula"><i>A</i></span> por <span class="formula"><i>B</i></span> como sigue: <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>⋅<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>b</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>b</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>⋅<i>b</i><sub>11</sub> + <i>a</i><sub>12</sub>⋅<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>⋅<i>b</i><sub>12</sub> + <i>a</i><sub>12</sub>⋅<i>b</i><sub>22</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>⋅<i>b</i><sub>11</sub> + <i>a</i><sub>22</sub>⋅<i>b</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>⋅<i>b</i><sub>12</sub> + <i>a</i><sub>22</sub>⋅<i>b</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="formula">
+<i>A</i><sub><i>m</i>, <i>n</i></sub>⋅<i>B</i><sub><i>n</i>, <i>k</i></sub> = <i>C</i><sub><i>m</i>, <i>k</i></sub>
+</div>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> Calcular <span class="formula"><i>C</i><sub>2, 2</sub> = <i>A</i><sub>2, 2</sub>⋅<i>B</i><sub>2, 2</sub></span> donde <div class="formula">
+<i>A</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+8
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="hspace" style="width: 0.2cm;"> </span><span class="text">  y </span><span class="hspace" style="width: 0.2cm;"> </span><i>B</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+7
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ Calculando el producto
+</div>
+<div class="Indented">
+<div class="formula">
+<i>A</i><sub>2, 2</sub>⋅<i>B</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0
+</span>
+<span class="arraycell align-c">
+8
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+7
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2⋅5 + 1⋅7
+</span>
+<span class="arraycell align-c">
+2⋅1 + 1⋅4
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0⋅5 + 8⋅7
+</span>
+<span class="arraycell align-c">
+0⋅1 + 8⋅4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ por tanto <div class="formula">
+<i>C</i><sub>2, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+17
+</span>
+<span class="arraycell align-c">
+6
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+56
+</span>
+<span class="arraycell align-c">
+32
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<span class="environment"></span> Calcular <span class="formula"><i>C</i><sub>3, 3</sub> = <i>A</i><sub>3, 2</sub>⋅<i>B</i><sub>2, 3</sub></span> donde <div class="formula">
+<i>A</i><sub>3, 2</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+6
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="hspace" style="width: 0.2cm;"> </span><span class="text">  y </span><span class="hspace" style="width: 0.2cm;"> </span><i>B</i><sub>2, 3</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ Calculando el producto <div class="formula">
+<i>A</i><sub>3, 2</sub>⋅<i>B</i><sub>2, 3</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+6
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1⋅5 + 2⋅2
+</span>
+<span class="arraycell align-c">
+1⋅1 + 2⋅4
+</span>
+<span class="arraycell align-c">
+1⋅1 + 2⋅1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4⋅5 + 3⋅2
+</span>
+<span class="arraycell align-c">
+4⋅1 + 3⋅4
+</span>
+<span class="arraycell align-c">
+4⋅1 + 3⋅1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+1⋅5 + 6⋅2
+</span>
+<span class="arraycell align-c">
+1⋅1 + 6⋅4
+</span>
+<span class="arraycell align-c">
+1⋅1 + 6⋅1
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ por tanto <div class="formula">
+<i>C</i><sub>3, 3</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+9
+</span>
+<span class="arraycell align-c">
+9
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+26
+</span>
+<span class="arraycell align-c">
+16
+</span>
+<span class="arraycell align-c">
+7
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+17
+</span>
+<span class="arraycell align-c">
+25
+</span>
+<span class="arraycell align-c">
+7
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Subsection">
+<a class="toc" name="toc-Subsection-2.2">2.2</a> Determinantes
+</h2>
+<div class="Unindented">
+En esta sección introducimos una función, la función determinante. Si <span class="formula"><i>A</i></span> es una matriz cuadrada, entonces la función determinante asocia a <span class="formula"><i>A</i></span> exactamente un número real llamado el determinante de <span class="formula"><i>A</i></span>, el determinante de <span class="formula"><i>A</i></span> el cual se le denota por <span class="formula">∣<i>A</i>∣</span>.
+</div>
+<h3 class="Subsubsection">
+<a class="toc" name="toc-Subsubsection-2.2.1">2.2.1</a> Definición
+</h3>
+<div class="Unindented">
+<span class="environment"></span> Si <span class="formula"><i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span> es una matriz cuadrada de orden 2, entonces <span class="formula">∣<i>A</i>∣ = <i>a</i><sub>11</sub><i>a</i><sub>22</sub> − <i>a</i><sub>21</sub><i>a</i><sub>12</sub>.</span> <span class="unknown">\end</span>definicion
+</div>
+<div class="Indented">
+<span class="environment"></span> <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+3
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = 4⋅2 − 3⋅1 = 8 − 3 = 5
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<span class="environment"></span> Determinante de <span class="formula">3 × 3</span><br/>
+
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>13</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>23</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>31</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>32</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>33</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span>. Entonces <div class="vspace" style="height: 0.2cm;">
+
+</div>
+ <div class="formula">
+det<i>A</i> = |<i>A</i>| = <i>a</i><sub>11</sub><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>23</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>32</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>33</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> − <i>a</i><sub>12</sub><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>23</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>31</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>33</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> + <i>a</i><sub>13</sub><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>31</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>32</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span>
+</div>
+ <span class="unknown">\end</span>definicion
+</div>
+<div class="Indented">
+<span class="environment"></span> Cálculo de un determinante <span class="formula">3 × 3</span><br/>
+
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+3
+</span>
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span>. Calcule <span class="formula">|<i>A</i>|</span>.
+</div>
+<div class="Indented">
+<div class="formula">
+|<i>A</i>| = <span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+3
+</span>
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> = 3<span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> − 5<span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> + 2<span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> = 3⋅2 − 5⋅19 + 2⋅10 =  − 69
+</div>
+
+</div>
+<div class="Indented">
+<span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<h2 class="Subsection">
+<a class="toc" name="toc-Subsection-2.3">2.3</a> Solución de sistemas de ecuaciones lineales
+</h2>
+<div class="Unindented">
+<b>Introducción</b> <div class="medskip"> </div>
+</div>
+<div class="Indented">
+Cuando una situación debe describirse matemáticamente, no es raro que surja un conjunto de ecuaciones. Por ejemplo, suponga que el administrador de una fábrica establece un plan de producción para dos modelos de un producto nuevo. El modelo <span class="formula"><i>A</i></span> requiere de 4 piezas del tipo <span class="formula"><i>I</i></span> y 9 piezas de tipo <span class="formula"><i>II</i></span>. El modelo <span class="formula"><i>B</i></span> requiere de 5 piezas del tipo <span class="formula"><i>I</i></span> y 14 piezas del tipo <span class="formula"><i>II</i></span>. De sus proveedores, la fábrica obtiene 335 piezas del tipo <span class="formula"><i>I</i></span> y 850 piezas del tipo <span class="formula"><i>II</i></span> cada día. ¿Cuántos productos de cada modelo debe producir cada día, de modo que todas las piezas del tipo <span class="formula"><i>I</i></span> y piezas del tipo <span class="formula"><i>II</i></span> sean utilizadas? <div class="medskip"> </div>
+</div>
+<div class="Indented">
+Suponga que hacemos que <span class="formula"><i>x</i></span> igual al número de artículos del modelo <span class="formula"><i>A</i></span> fabricados cada día, y igual al número de artículos del modelo <span class="formula"><i>B</i></span>. Entonces éstos requieren de <span class="formula">4<i>x</i> + 5<i>y</i></span> piezas del tipo <span class="formula"><i>I</i></span> y <span class="formula">9<i>x</i> + 14<i>y</i></span> piezas del tipo <span class="formula"><i>II</i></span>. Como están disponibles 335 y 850 piezas del tipo <span class="formula"><i>I</i></span> y <span class="formula"><i>II</i></span>, respectivamente tenemos: <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+4<i>x</i> + 5<i>y</i> = 335
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+9<i>x</i> + 14<i>y</i> = 850
+</span>
+
+</span>
+</span>
+</div>
+ A este conjunto de ecuaciones le llamamos <b>sistema de dos ecuaciones lineales</b> en las variables (o incógnitas) <span class="formula"><i>x</i></span> y <span class="formula"><i>y</i></span>. El problema es encontrar valores de <span class="formula"><i>x</i></span> y <span class="formula"><i>y</i></span> para los cuales ambas ecuaciones sean verdaderas de manera simultánea. Estos valores se llaman soluciones del sistema.
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<h3 class="Subsubsection">
+<a class="toc" name="toc-Subsubsection-2.3.1">2.3.1</a> Representación matricial de un sistema de ecuaciones lineales
+</h3>
+<div class="Unindented">
+<span class="environment"></span> Una ecuación lineal en las variables <span class="formula"><i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x</i><sub><i>n</i></sub></span> es una ecuación de la forma: <div class="formula">
+<i>a</i><sub>1</sub><i>x</i><sub>1</sub> + <i>a</i><sub>2</sub><i>x</i><sub>2</sub> + ⋯ + <i>a</i><sub><i>n</i></sub><i>x</i><sub><i>n</i></sub> = <i>b</i>
+</div>
+ <span class="unknown">\end</span>definicion
+</div>
+<div class="Indented">
+<span class="environment"></span> Un sistema de ecuaciones de <span class="formula"><i>m</i></span> ecuaciones lineales en las incognitas <span class="formula"><i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>n</i></sub></span> es un colección de ecuaciones de la forma: <span class="unknown">\end</span>definicion <div class="formula">
+<span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub><i>x</i><sub>1</sub> + 
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+ + <i>a</i><sub>1<i>n</i></sub><i>x</i><sub><i>n</i></sub>
+</span>
+<span class="arraycell align-c">
+ = <i>b</i><sub>1</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub><i>m</i>1</sub><i>x</i><sub>1</sub> + 
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+ + <i>a</i><sub><i>mn</i></sub><i>x</i><sub><i>n</i></sub>
+</span>
+<span class="arraycell align-c">
+ = <i>b</i><sub><i>n</i></sub>
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+Dado el sistema, este se puede representar en forma matricial <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>1<i>n</i></sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub><i>m</i>1</sub>
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub><i>mn</i></sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>x</i><sub>1</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>x</i><sub><i>n</i></sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub>1</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>b</i><sub><i>n</i></sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> El sistema de ecuaciones <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+4<i>x</i> + 5<i>y</i>
+</span>
+<span class="arraycell align-l">
+ = 335
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+9<i>x</i> + 14<i>y</i>
+</span>
+<span class="arraycell align-l">
+ = 850
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+se representa matricialmente por
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+5
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+9
+</span>
+<span class="arraycell align-c">
+14
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>x</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>y</i>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+335
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+850
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+<b>Regla de Cramer</b>
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Una de las aplicaciones más importantes de los determinantes es resolver ciertos tipos de sistemas de ecuaciones lineales.
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Se va a estudiar el siguiente método, conocido como la <b>regla de Cramer</b> para resolver sistemas de ecuaciones lineales.
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Sea un sistema de <span class="formula"><i>n</i></span> ecuaciones lineales con <span class="formula"><i>n</i></span> incógnitas dado por:
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub><i>x</i><sub>1</sub>  + 
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+ +  <i>a</i><sub>1<i>n</i></sub><i>x</i><sub><i>n</i></sub> = <i>c</i><sub>1</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+⋮
+</span>
+<span class="arraycell align-c">
+
+</span>
+<span class="arraycell align-c">
+⋮
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub><i>n</i>1</sub><i>x</i><sub>1</sub>  + 
+</span>
+<span class="arraycell align-c">
+⋯
+</span>
+<span class="arraycell align-c">
+ +  <i>a</i><sub><i>nn</i></sub><i>x</i><sub><i>n</i></sub> = <i>c</i><sub><i>n</i></sub>
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+Si el determinante <span class="formula">Δ</span> de la matriz de los coeficientes <span class="formula"><i>A</i></span> es diferente de cero, entonces el sistema tiene una única solución. Además, la solución esta dada por: <div class="formula">
+<i>x</i><sub>1</sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator">Δ<sub>1</sub></span><span class="ignored">)/(</span><span class="denominator">Δ</span><span class="ignored">)</span></span>,  ...,  <i>x</i><sub><i>n</i></sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator">Δ<sub><i>n</i></sub></span><span class="ignored">)/(</span><span class="denominator">Δ</span><span class="ignored">)</span></span>, 
+</div>
+
+</div>
+<div class="Indented">
+donde <span class="formula">Δ<sub><i>k</i></sub></span>, es el determinante de la matriz obtenida al remplazar la k-ésima columna de <span class="formula"><i>A</i></span> por la columna de constantes.
+</div>
+<div class="Indented">
+<span class="environment"></span> Usar la regla de Cramer para resolver el sistema de ecuaciones <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+2<i>x</i><sub>1</sub> − <i>x</i><sub>2</sub>
+</span>
+<span class="arraycell align-l">
+ = 1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+4<i>x</i><sub>1</sub> + 4<i>x</i><sub>2</sub>
+</span>
+<span class="arraycell align-l">
+ = 20
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+<b>Solución:</b>
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+La matriz de coeficientes y el vector columna son: <div class="formula">
+<i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+ − 1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> <span class="text"> y</span> <i>b</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>, 
+</div>
+ así que <div class="formula">
+det<i>A</i> = 8 − ( − 4) = 12
+</div>
+
+</div>
+<div class="Indented">
+por tanto <div class="formula">
+<i>x</i><sub>1</sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+ − 1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+20
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span><span class="ignored">)/(</span><span class="denominator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+ − 1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">24</span><span class="ignored">)/(</span><span class="denominator">12</span><span class="ignored">)</span></span> = 2 <span class="text"> y</span> <i>x</i><sub>2</sub> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span><span class="ignored">)/(</span><span class="denominator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+ − 1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">36</span><span class="ignored">)/(</span><span class="denominator">12</span><span class="ignored">)</span></span> = 3
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<h1 class="Section">
+<a class="toc" name="toc-Section-3">3</a> Matrices aplicadas a la macroeconomía
+</h1>
+<div class="Unindented">
+<span class="environment"></span> Una empresa compra dos bienes, la mano de obra <span class="formula"><i>L</i></span> y de capital <span class="formula"><i>K</i></span>, la cantidad total de los cuales no puede exceder es de 50 unidades. El salario es $8 y la tasa de interes es $10. La empresa puede gastar $440 entre los dos bienes. ¿Cuáles son las cantidades de los dos bienes que la empresa debe comprar para producir la máxima cantidad? Utilice el método de Cramer. <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<b>Solución:</b> <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>L</i> + <i>K</i>
+</span>
+<span class="arraycell align-l">
+ = 50
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+8<i>L</i> + 10<i>K</i>
+</span>
+<span class="arraycell align-l">
+ = 440
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+Dado en forma matricial <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+8
+</span>
+<span class="arraycell align-c">
+10
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>L</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>K</i>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+50
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+440
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <div class="formula">
+|<i>A</i>| = 10 − 8 = 2 ≠ 0.
+</div>
+ Usando la Regla de Cramer,
+</div>
+<div class="Indented">
+<div class="formula">
+<i>L</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">|<i>A</i><sub>1</sub>|</span><span class="ignored">)/(</span><span class="denominator">|<i>A</i>|</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+50
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+440
+</span>
+<span class="arraycell align-c">
+10
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">500 − 440</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span> = 30 <i>K</i> = <span class="fraction"><span class="ignored">(</span><span class="numerator">|<i>A</i><sub>2</sub>|</span><span class="ignored">)/(</span><span class="denominator">|<i>A</i>|</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1
+</span>
+<span class="arraycell align-c">
+50
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+8
+</span>
+<span class="arraycell align-c">
+440
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">440 − 400</span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span> = 20
+</div>
+
+</div>
+<div class="Indented">
+La empresa puede comprar un máximo de 20 máquinas y contratar a 30 trabajadores
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> En el modelo Keynesiano <span class="formula"><i>IS</i> − <i>LM</i></span> <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i>
+</span>
+<span class="arraycell align-l">
+ = <i>C</i> + <i>I</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>C</i>
+</span>
+<span class="arraycell align-l">
+ = 100 + 0.8<i>Y</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>I</i>
+</span>
+<span class="arraycell align-l">
+ = 1000 − 20<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>s</i></sup>
+</span>
+<span class="arraycell align-l">
+ = <i>M</i><sup><i>d</i></sup>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>s</i></sup>
+</span>
+<span class="arraycell align-l">
+ = 2350
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>d</i></sup>
+</span>
+<span class="arraycell align-l">
+ = 0.5<i>Y</i> − 30<i>i</i>
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+A partir de las ecuaciones anteriores obtener los valores de equilibrio del ingreso (<span class="formula"><i>Y</i></span>) y la tasa de interes (<span class="formula"><i>i</i></span>). <div class="medskip"> </div>
+</div>
+<div class="Indented">
+<b>Solución:</b> <div class="medskip"> </div>
+</div>
+<div class="Indented">
+Dadas las condiciones de equilibrio obtenemos: <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i> = 100 + 
+</span>
+<span class="arraycell align-l">
+0.8<i>Y</i> + 1000 − 20<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.2<i>Y</i> + 20<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 1100
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.5<i>Y</i> − 30<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 2350
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+Escribiendo en forma matricial <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.5
+</span>
+<span class="arraycell align-c">
+ − 30
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>Y</i></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>i</i></span>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1100
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2350
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <div class="formula">
+|<i>A</i>| =  − 6 − 10 =  − 16.
+</div>
+ Usando la Regla de Cramer,
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="bar"><i>Y</i></span> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1100
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2350
+</span>
+<span class="arraycell align-c">
+ − 30
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">16</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">33000 + 47000</span><span class="ignored">)/(</span><span class="denominator">16</span><span class="ignored">)</span></span> = 5000 <span class="bar"><i>i</i></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+1100
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.5
+</span>
+<span class="arraycell align-c">
+2350
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">16</span><span class="ignored">)</span></span> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator">470 − 550</span><span class="ignored">)/(</span><span class="denominator">16</span><span class="ignored">)</span></span> = 5%
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> En el modelo Keynesiano <span class="formula"><i>IS</i> − <i>LM</i></span> <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i>
+</span>
+<span class="arraycell align-l">
+ = <i>C</i> + <i>I</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>C</i>
+</span>
+<span class="arraycell align-l">
+ = 800 + 0.8<i>Y</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>I</i>
+</span>
+<span class="arraycell align-l">
+ = 4000 − 300<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>L</i>
+</span>
+<span class="arraycell align-l">
+ = 0.85<i>Y</i> − 400<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>s</i></sup>
+</span>
+<span class="arraycell align-l">
+ = <i>L</i>
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+En equilibrio la oferta de dinero <span class="formula"><i>M</i><sup><i>s</i></sup></span> es igual a la demanda de dinero <span class="formula"><i>L</i></span> en el mercado monetario, y se sabe que <span class="formula"><i>M</i><sup><i>s</i></sup> = 10, 350</span>. Encontrar los valores de equilibrio de la renta nacional (<span class="formula"><i>Y</i></span>) y la tasa de interés (<span class="formula"><i>i</i></span>).
+</div>
+<div class="Indented">
+<div class="medskip"> </div> <b>Solución:</b> <div class="medskip"> </div>
+</div>
+<div class="Indented">
+Sustituyendo en la primera ecuación y la reescritura de la última obtenemos: <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i> = 800 + 
+</span>
+<span class="arraycell align-l">
+0.8<i>Y</i> + 4000 − 300<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.2<i>Y</i> + 300<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 4800
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.85<i>Y</i> − 400<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 10350
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+Escribiendo en forma matricial <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+300
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.85
+</span>
+<span class="arraycell align-c">
+ − 400
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>Y</i></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>i</i></span>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4800
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+10350
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <div class="formula">
+|<i>A</i>| =  − 80 − 255 =  − 335.
+</div>
+ Usando la Regla de Cramer, <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<span class="bar"><i>Y</i></span>
+</span>
+<span class="arraycell align-l">
+ =  − <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4800
+</span>
+<span class="arraycell align-c">
+300
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+10350
+</span>
+<span class="arraycell align-c">
+ − 400
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">335</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">(19200 + 31050)100</span><span class="ignored">)/(</span><span class="denominator">335</span><span class="ignored">)</span></span> = 15000
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<span class="bar"><i>i</i></span>
+</span>
+<span class="arraycell align-l">
+ = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+4800
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.85
+</span>
+<span class="arraycell align-c">
+10350
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">335</span><span class="ignored">)</span></span> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator">2070 − 4080</span><span class="ignored">)/(</span><span class="denominator">335</span><span class="ignored">)</span></span> = 6%
+</span>
+
+</span>
+</span>
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> Considere la siguiente economía abierta <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i>
+</span>
+<span class="arraycell align-l">
+ = <i>C</i> + <i>I</i> + <i>G</i><sub>0</sub> + <i>X</i> − <i>M</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>C</i>
+</span>
+<span class="arraycell align-l">
+ = 80 + 0.8<i>Y</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>I</i>
+</span>
+<span class="arraycell align-l">
+ = 50 − 20<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>X</i>
+</span>
+<span class="arraycell align-l">
+ = 0.3<i>Y</i> − 14<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i>
+</span>
+<span class="arraycell align-l">
+ = 50 + 0.2<i>Y</i>
+</span>
+
+</span>
+</span>
+</div>
+ de los cuales <span class="formula"><i>G</i><sub>0</sub> = 190</span> y el déficit comercial se sabe que es 20. Encontrar <span class="formula"><span class="bar"><i>Y</i></span></span> e <span class="formula"><span class="bar"><i>i</i></span></span>. ¿Cuál es el valor de las exportaciones? ¿Cuanto vale la propensión marginal a importar?
+</div>
+<div class="Indented">
+<div class="medskip"> </div> <b>Solución:</b> <div class="medskip"> </div>
+</div>
+<div class="Indented">
+Como el país se enfrenta a un déficit comercial, tenemos <div class="formula">
+<i>X</i> − <i>M</i> =  − 20
+</div>
+ sustituyendo en la ecuación de ingreso <div class="formula">
+<i>Y</i> = 80 + 0.8<i>Y</i> + 50 − 20<i>i</i> + 190 − 20
+</div>
+ y de la ecuación comercial tenemos: <div class="formula">
+0.3<i>Y</i> − 14<i>i</i> − 50 − 0.2<i>Y</i> =  − 20
+</div>
+ la transformación de estas dos ecuaciones: <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+0.2<i>Y</i> + 20<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 300
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.1<i>Y</i> − 14<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 30
+</span>
+
+</span>
+</span>
+</div>
+ Escribiendo en forma matricial <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.1
+</span>
+<span class="arraycell align-c">
+ − 14
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>Y</i></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>i</i></span>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+300
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+30
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <div class="formula">
+|<i>A</i>| =  − 2.8 − 2 =  − 4.8.
+</div>
+ Usando la Regla de Cramer, <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<span class="bar"><i>Y</i></span>
+</span>
+<span class="arraycell align-l">
+ =  − <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+300
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+30
+</span>
+<span class="arraycell align-c">
+ − 14
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">4.8</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">4200 + 600</span><span class="ignored">)/(</span><span class="denominator">4.8</span><span class="ignored">)</span></span> = 1000
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<span class="bar"><i>i</i></span>
+</span>
+<span class="arraycell align-l">
+ = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+300
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.1
+</span>
+<span class="arraycell align-c">
+30
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator">4.8</span><span class="ignored">)</span></span> =  − <span class="fraction"><span class="ignored">(</span><span class="numerator">6 − 30</span><span class="ignored">)/(</span><span class="denominator">4.8</span><span class="ignored">)</span></span> = 5%
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>X</i>
+</span>
+<span class="arraycell align-l">
+ = 0.3<i>Y</i> − 14<i>i</i> = 0.3(1000) − 14(5) = 300 − 70 = 230
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i>
+</span>
+<span class="arraycell align-l">
+ = 50 + 0.2<i>Y</i> = 50 + 0.2(1000) = 50 + 200 = 250
+</span>
+
+</span>
+</span>
+</div>
+ Como el modelo supone, la balanza comercial del país es negativo a -20. Esto implica la nación está importando más de lo que está exportando. La propensión marginal a importar muestra la proporción del ingreso nacional que se dedica a la importación, es decir, <span class="formula"><i>MPI</i> = 0.2.</span> <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<p><br/>
+</p>
+
+</div>
+<div class="Indented">
+<span class="environment"></span> En el modelo Keynesiano <span class="formula"><i>IS</i> − <i>LM</i></span> <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i>
+</span>
+<span class="arraycell align-l">
+ = <i>C</i> + <i>I</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>C</i>
+</span>
+<span class="arraycell align-l">
+ = 100 + 0.8<i>Y</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>I</i>
+</span>
+<span class="arraycell align-l">
+ = 1000 − 20<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>s</i></sup>
+</span>
+<span class="arraycell align-l">
+ = <i>M</i><sup><i>d</i></sup>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>s</i></sup>
+</span>
+<span class="arraycell align-l">
+ = 2350
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+<i>M</i><sup><i>d</i></sup>
+</span>
+<span class="arraycell align-l">
+ = 0.5<i>Y</i> − 30<i>i</i>
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+A partir de las ecuaciones anteriores obtener los valores de equilibrio del ingreso(<span class="formula"><i>Y</i></span>) y la tasa de interes (<span class="formula"><i>i</i></span>). <div class="medskip"> </div>
+</div>
+<div class="Indented">
+<b>Solución:</b> <div class="medskip"> </div>
+</div>
+<div class="Indented">
+Dadas las condiciones de equilibrio obtenemos: <div class="formula">
+<span class="environment"><span class="arrayrow">
+<span class="arraycell align-r">
+<i>Y</i> = 100 + 
+</span>
+<span class="arraycell align-l">
+0.8<i>Y</i> + 1000 − 20<i>i</i>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.2<i>Y</i> + 20<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 1100
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+ 
+</span>
+<span class="arraycell align-l">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-r">
+0.5<i>Y</i> − 30<i>i</i>
+</span>
+<span class="arraycell align-l">
+ = 2350
+</span>
+
+</span>
+</span>
+</div>
+
+</div>
+<div class="Indented">
+Escribiendo en forma matricial <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.5
+</span>
+<span class="arraycell align-c">
+ − 30
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span><span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>Y</i></span>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<span class="bar"><i>i</i></span>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1100
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2350
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span>
+</div>
+ <div class="formula">
+|<i>A</i>| =  − 6 − 10 =  − 16.
+</div>
+ Usando la Regla de Cramer,
+</div>
+<div class="Indented">
+<div class="formula">
+<span class="bar"><i>Y</i></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+1100
+</span>
+<span class="arraycell align-c">
+20
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2350
+</span>
+<span class="arraycell align-c">
+ − 30
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator"> − 16</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"> − 33000 − 47000</span><span class="ignored">)/(</span><span class="denominator"> − 16</span><span class="ignored">)</span></span> = 5000
+</div>
+ <div class="formula">
+<span class="bar"><i>i</i></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator"><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+0.2
+</span>
+<span class="arraycell align-c">
+1100
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+0.5
+</span>
+<span class="arraycell align-c">
+2350
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span></span><span class="ignored">)/(</span><span class="denominator"> − 16</span><span class="ignored">)</span></span> = <span class="fraction"><span class="ignored">(</span><span class="numerator">470 − 550</span><span class="ignored">)/(</span><span class="denominator"> − 16</span><span class="ignored">)</span></span> = 5%
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+
+<hr class="footer"/>
+<div class="footer" id="generated-by">
+Document generated by <a href="http://elyxer.nongnu.org/">eLyXer 1.2.3 (2011-08-31)</a> on <span class="create-date">2012-08-09T09:22:12.486000</span>
+</div>
+</div>
+</body>
+</html>

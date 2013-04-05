@@ -1,0 +1,495 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.8.14)  15 AUG 2012 07:31
+entering extended mode
+**Unid1Calculo*15.08.2012.tex
+
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Unidad1\Unidad1 latex\Unid
+1Calculo 15.08.2012.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks24
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen112
+)
+\es@datefmt=\count100
+\es@quottoks=\toks25
+\es@quotdepth=\count101
+Package babel Info: Making " an active character on input line 492.
+Package babel Info: Making . an active character on input line 585.
+Package babel Info: Making < an active character on input line 630.
+Package babel Info: Making > an active character on input line 630.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count102
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\epsf\epsf.sty"
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen115
+\epsfframethickness=\dimen116
+\epsfrsize=\dimen117
+\epsftmp=\dimen118
+\epsftsize=\dimen119
+\epsfxsize=\dimen120
+\epsfysize=\dimen121
+\pspoints=\dimen122
+)
+\c@teorema=\count103
+\c@problema=\count104
+\c@ejemplo=\count105
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks27
+\footnotemargin=\dimen123
+\c@pp@next@reset=\count106
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen124
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen125
+\subfiglabelskip=\skip52
+\c@subfigure=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@lotdepth=\count110
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count111
+\rotFPtop=\skip55
+\rotFPbot=\skip56
+\rot@float@box=\box28
+\rot@mess@toks=\toks30
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Unidad1\Unidad1 latex\Unid
+1Calculo 15.08.2012.aux"
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura4' multiply defined.
+
+
+LaTeX Warning: Label `Figura10' multiply defined.
+
+
+LaTeX Warning: Label `Figura9' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count112
+\scratchdimen=\dimen126
+\scratchbox=\box29
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen127
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks32
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 52.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<unid1graf1.pdf, id=10, 160.6pt x 113.76201pt>
+File: unid1graf1.pdf Graphic file (type pdf)
+ <use unid1graf1.pdf>
+Package pdftex.def Info: unid1graf1.pdf used on input line 95.
+(pdftex.def)             Requested size: 160.5996pt x 113.76172pt.
+ [2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/u
+nid1graf1.pdf>] [3] <unid1graf4.pdf, id=30, 102.784pt x 76.24184pt>
+File: unid1graf4.pdf Graphic file (type pdf)
+ <use unid1graf4.pdf>
+Package pdftex.def Info: unid1graf4.pdf used on input line 180.
+(pdftex.def)             Requested size: 102.78372pt x 76.24164pt.
+
+<unid1graf5.pdf, id=31, 102.784pt x 76.24184pt>
+File: unid1graf5.pdf Graphic file (type pdf)
+ <use unid1graf5.pdf>
+Package pdftex.def Info: unid1graf5.pdf used on input line 181.
+(pdftex.def)             Requested size: 102.78372pt x 76.24164pt.
+
+<unid1graf6.pdf, id=32, 102.784pt x 76.24184pt>
+File: unid1graf6.pdf Graphic file (type pdf)
+ <use unid1graf6.pdf>
+Package pdftex.def Info: unid1graf6.pdf used on input line 182.
+(pdftex.def)             Requested size: 102.78372pt x 76.24164pt.
+
+<unid1graf2.pdf, id=33, 160.6pt x 114.34518pt>
+File: unid1graf2.pdf Graphic file (type pdf)
+ <use unid1graf2.pdf>
+Package pdftex.def Info: unid1graf2.pdf used on input line 208.
+(pdftex.def)             Requested size: 160.5996pt x 114.3449pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/un
+id1graf4.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unida
+d1 latex/unid1graf5.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Un
+idad1/Unidad1 latex/unid1graf6.pdf>]
+<unid1graf3.pdf, id=73, 160.6pt x 113.93968pt>
+File: unid1graf3.pdf Graphic file (type pdf)
+ <use unid1graf3.pdf>
+Package pdftex.def Info: unid1graf3.pdf used on input line 231.
+(pdftex.def)             Requested size: 160.5996pt x 113.93939pt.
+ [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/u
+nid1graf2.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unid
+ad1 latex/unid1graf3.pdf>] [6] <unid1graf134.pdf, id=92, 160.6pt x 107.51266pt>
+File: unid1graf134.pdf Graphic file (type pdf)
+
+<use unid1graf134.pdf>
+Package pdftex.def Info: unid1graf134.pdf used on input line 289.
+(pdftex.def)             Requested size: 160.5996pt x 107.51239pt.
+ <unid1graf135.pdf, id=93, 160.6pt x 107.7355pt>
+File: unid1graf135.pdf Graphic file (type pdf)
+
+<use unid1graf135.pdf>
+Package pdftex.def Info: unid1graf135.pdf used on input line 299.
+(pdftex.def)             Requested size: 160.5996pt x 107.73523pt.
+ [7 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/u
+nid1graf134.pdf> <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Un
+idad1 latex/unid1graf135.pdf>]
+<unid1graf136.pdf, id=125, 160.6pt x 108.15306pt>
+File: unid1graf136.pdf Graphic file (type pdf)
+ <use unid1graf136.pdf>
+Package pdftex.def Info: unid1graf136.pdf used on input line 316.
+(pdftex.def)             Requested size: 160.5996pt x 108.15279pt.
+
+[8 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/un
+id1graf136.pdf>] [1] [2] [1] <unid1graf11.pdf, id=152, 192.72pt x 127.0878pt>
+File: unid1graf11.pdf Graphic file (type pdf)
+
+<use unid1graf11.pdf>
+Package pdftex.def Info: unid1graf11.pdf used on input line 489.
+(pdftex.def)             Requested size: 192.71951pt x 127.08748pt.
+ <unid1graf10.pdf, id=153, 192.72pt x 139.0525pt>
+File: unid1graf10.pdf Graphic file (type pdf)
+
+<use unid1graf10.pdf>
+Package pdftex.def Info: unid1graf10.pdf used on input line 508.
+(pdftex.def)             Requested size: 192.71951pt x 139.05215pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/un
+id1graf11.pdf>] [3 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/
+Unidad1 latex/unid1graf10.pdf>] [4]
+<unid1graf15.pdf, id=177, 192.72pt x 127.64287pt>
+File: unid1graf15.pdf Graphic file (type pdf)
+ <use unid1graf15.pdf>
+Package pdftex.def Info: unid1graf15.pdf used on input line 626.
+(pdftex.def)             Requested size: 251.99745pt x 162.42404pt.
+
+[5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/un
+id1graf15.pdf>] <unid1graf14.pdf, id=197, 192.72pt x 125.70464pt>
+File: unid1graf14.pdf Graphic file (type pdf)
+
+<use unid1graf14.pdf>
+Package pdftex.def Info: unid1graf14.pdf used on input line 673.
+(pdftex.def)             Requested size: 251.99745pt x 138.06068pt.
+ [6 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/u
+nid1graf14.pdf>] [7]
+<unid1graf16.pdf, id=220, 192.72pt x 128.35152pt>
+File: unid1graf16.pdf Graphic file (type pdf)
+ <use unid1graf16.pdf>
+Package pdftex.def Info: unid1graf16.pdf used on input line 731.
+(pdftex.def)             Requested size: 251.99745pt x 162.43074pt.
+
+[8 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 latex/un
+id1graf16.pdf>] [1] [2] <unid1graf18.pdf, id=247, 192.72pt x 127.0878pt>
+File: unid1graf18.pdf Graphic file (type pdf)
+
+<use unid1graf18.pdf>
+Package pdftex.def Info: unid1graf18.pdf used on input line 858.
+(pdftex.def)             Requested size: 251.99745pt x 162.43329pt.
+ [1] [2 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 lat
+ex/unid1graf18.pdf>] [3] [4]
+Overfull \hbox (9.02411pt too wide) in paragraph at lines 1018--1020
+[]\OT1/cmr/m/n/10.95 que se apro-xi-ma ra-zo-na-ble-men-te bien me-dian-te el c
+os-to mar-gi-nal $\OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 (8) =
+ []
+
+[5] [6] [7]
+Overfull \hbox (8.33792pt too wide) in paragraph at lines 1156--1158
+[]\OT1/cmr/m/n/10.95 Aveces nos in-tere-sa es-tu-diar las ta-sas de cre-ci-mien
+-to por-cen-tual $\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.9
+5 a\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 =f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
+10.95 a\OT1/cmr/m/n/10.95 )$.
+ []
+
+[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1722--1723
+
+ []
+
+[19] [20] [21]
+Overfull \hbox (12.80289pt too wide) in paragraph at lines 1852--1852
+[] 
+ []
+
+[1] [1] [2] [1] [2] [3] <unid1graf17.pdf, id=352, 192.72pt x 127.34274pt>
+File: unid1graf17.pdf Graphic file (type pdf)
+
+<use unid1graf17.pdf>
+Package pdftex.def Info: unid1graf17.pdf used on input line 2145.
+(pdftex.def)             Requested size: 251.99745pt x 162.43852pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5 <C:/Users/Metodos 2012/Documents/Pagina web/Calculo/Unidad1/Unidad1 late
+x/unid1graf17.pdf>]
+("C:\Users\Metodos 2012\Documents\Pagina web\Calculo\Unidad1\Unidad1 latex\Unid
+1Calculo 15.08.2012.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3339 strings out of 494045
+ 43067 string characters out of 3148366
+ 103588 words of memory out of 3000000
+ 6560 multiletter control sequences out of 15000+200000
+ 12902 words of font info for 50 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 27i,13n,27p,277b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Unid1Calculo 15.08.2012.pdf" (49 pages, 853351 bytes).
+PDF statistics:
+ 422 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

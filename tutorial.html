@@ -1,0 +1,109 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<script type="text/javascript" src="js/ASCIIsvg.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+   $("#button").click(function(event){
+   	dibujaGrid2();
+   	pintaFunc1();
+   	pintaFunc2();     
+   });
+ });
+
+function dibujaGrid2() {	
+	var xmin = $('#xmin').val();
+	var xmax = $('#xmax').val();
+	var ymin = $('#ymin').val();
+	var ymax = $('#ymax').val();
+
+	//alert("xmin:" + xmin);
+
+	dibujaGrid(xmin,xmax,ymin,ymax);
+}
+
+function dibujaGrid(xMin, xMax, yMin, yMax) {	
+	/*alert("xmin: "+xMin+"\n"+
+		"xmax: "+xMax+"\n"+
+		"ymin: "+yMin+"\n"+
+		"ymax: "+yMax+"\n");*/
+	initPicture(xMin,xMax,yMin,yMax);
+
+	
+	
+	for(i = parseFloat(xMin); i < xMax; i++){
+		text([i.toFixed(0),0],""+i.toFixed(0),"below");
+	}
+
+	for(i = parseFloat(yMin); i < yMax; i++){
+		if(i.toFixed(0)!=0)
+		text([0,i.toFixed(0)],""+i.toFixed(0),"left");
+	}
+}
+
+
+function pintaFunc1(){
+	//fill = "yellow"
+	stroke = "blue"
+	plot($('#function1').val(),"func1")
+}
+function pintaFunc2(){
+	//fill = "green"
+  	stroke = "red"
+  	plot($('#function2').val(),"func2")	
+}
+
+</script>
+
+<title>Graficador en línea.</title>
+</head>
+<body>
+	<div id ="canvasGraph">
+		<embed id="graphCanvas" width="500" height="500" src="js/d.svg" 
+		script='
+			border = 0
+			dibujaGrid(-6.3,6.3,-3.3,3.3)			
+  			axes()  			  			
+		' />
+	</div>
+	
+	<form name="makeGraph" method='post'>
+		<p>
+			<b style="color:blue;">Function 1:</b> 
+			<input name="function1" id="function1" type="text" size="13" value="-2x + 3" />
+			<span style="margin-left:50px;font-weight:bold;color:green">
+				Function 2: 
+				<input name="function2" id="function2" type="text" size="13" value="sin(x)" />
+			</span>
+		</p>
+
+		<p>Min 
+			<i>x</i>
+			-value: 
+			<input name="xmin" id="xmin" type="text" size="3" value="-6.3" />
+			Max 
+			<i>x</i>
+			-value: 
+			<input name="xmax" id="xmax" type="text" size="3" value="6.3" /> 
+			Grid interval (along <i>x</i>-axis): 
+			<input name="xgrid" id="xgrid" type="text" size="2" value="1">
+		</p>
+		<p>
+			Min <i>y</i>
+			-value: 
+			<input name="ymin" id="ymin" type="text" size="3" value="-3.3" />    
+			Max <i>y</i>
+			-value: 
+			<input name="ymax" id="ymax" type="text" size="3" value="3.3" /> 
+			Grid interval (along <i>y</i>-axis): 
+			<input name="ygrid" id="ygrid" type="text" size="2" value="1" />
+		</p>
+		
+	</form>			
+	<p>
+		<input type="submit" name="button" id="button" value="Grafíca" />
+	</p>
+</body>
+</html>

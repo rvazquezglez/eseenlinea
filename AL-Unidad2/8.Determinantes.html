@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+		<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+  <script type="text/javascript" src="../js/page-transition.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2012-08-09"/>
+<link rel="stylesheet" href="../css/lyx.css" type="text/css" media="all"/>
+<title>ÁLGEBRA LINEAL</title>
+</head>
+<body>
+	<div id="globalWrapper">
+<h2 class="Subsection">
+<a class="toc" name="toc-Subsection-2.2">2.2</a> Determinantes
+</h2>
+<div class="Unindented">
+En esta sección introducimos una función, la función determinante. Si <span class="formula"><i>A</i></span> es una matriz cuadrada, entonces la función determinante asocia a <span class="formula"><i>A</i></span> exactamente un número real llamado el determinante de <span class="formula"><i>A</i></span>, el determinante de <span class="formula"><i>A</i></span> el cual se le denota por <span class="formula">∣<i>A</i>∣</span>.
+</div>
+<h3 class="Subsubsection">
+<a class="toc" name="toc-Subsubsection-2.2.1">2.2.1</a> Definición
+</h3>
+<div class="Unindented">
+<span class="environment"></span> Si <span class="formula"><i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span> es una matriz cuadrada de orden 2, entonces <span class="formula">∣<i>A</i>∣ = <i>a</i><sub>11</sub><i>a</i><sub>22</sub> − <i>a</i><sub>21</sub><i>a</i><sub>12</sub>.</span> <span class="unknown">\end</span>definicion
+</div>
+<div class="Indented">
+<span class="environment"></span> <div class="formula">
+<span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+1
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+3
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span> = 4⋅2 − 3⋅1 = 8 − 3 = 5
+</div>
+ <span class="unknown">\end</span>ejemplo
+</div>
+<div class="Indented">
+<span class="environment"></span> Determinante de <span class="formula">3 × 3</span><br/>
+
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>11</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>12</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>13</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>23</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>31</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>32</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>33</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span>. Entonces <div class="vspace" style="height: 0.2cm;">
+
+</div>
+ <div class="formula">
+det<i>A</i> = |<i>A</i>| = <i>a</i><sub>11</sub><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>23</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>32</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>33</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> − <i>a</i><sub>12</sub><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>23</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>31</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>33</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> + <i>a</i><sub>13</sub><span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>21</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>22</sub>
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+<i>a</i><sub>31</sub>
+</span>
+<span class="arraycell align-c">
+<i>a</i><sub>32</sub>
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span>
+</div>
+ <span class="unknown">\end</span>definicion
+</div>
+<div class="Indented">
+<span class="environment"></span> Cálculo de un determinante <span class="formula">3 × 3</span><br/>
+
+</div>
+<div class="Indented">
+<div class="vspace" style="height: 0.2cm;">
+
+</div>
+
+</div>
+<div class="Indented">
+Sea <span class="formula"><i>A</i> = <span class="array"><span class="arrayrow"><span class="bracket align-left">⎡</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎢</span></span><span class="arrayrow"><span class="bracket align-left">⎣</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+3
+</span>
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">⎤</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎥</span></span><span class="arrayrow"><span class="bracket align-right">⎦</span></span></span></span>. Calcule <span class="formula">|<i>A</i>|</span>.
+</div>
+<div class="Indented">
+<div class="formula">
+|<i>A</i>| = <span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+3
+</span>
+<span class="arraycell align-c">
+5
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> = 3<span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+2
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> − 5<span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+3
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+4
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> + 2<span class="array"><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span><span class="arrayrow"><span class="bracket align-left">|</span></span></span><span class="array"><span class="arrayrow">
+<span class="arraycell align-c">
+4
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ 
+</span>
+<span class="arraycell align-c">
+ 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="arraycell align-c">
+ − 1
+</span>
+<span class="arraycell align-c">
+2
+</span>
+
+</span>
+</span><span class="array"><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span><span class="arrayrow"><span class="bracket align-right">|</span></span></span> = 3⋅2 − 5⋅19 + 2⋅10 =  − 69
+</div>
+
+</div>
+<a href="9.ejer22Determinantes.html" class="transition">Siguiente</a>
+
+	</div>
+</body>
+</html>

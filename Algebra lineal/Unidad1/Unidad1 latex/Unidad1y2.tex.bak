@@ -1,0 +1,3860 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{graphicx} % PDFLaTeX
+\DeclareGraphicsExtensions{.png,.pdf,.jpg}
+\usepackage{epsf}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{prop}[teorema]{Proposici\'on}
+\newtheorem{definicion}[teorema]{Definici\'on}
+\newtheorem{problema}{Problema}
+\newtheorem{ejemplo}{Ejemplo}
+\spanishdecimal{.}
+\usepackage[latin1]{inputenc}
+
+\begin{document}
+
+\title{\'ALGEBRA LINEAL}
+\author{\textbf{ESCUELA SUPERIOR DE ECONOMIA}}
+\date{\large{M\'exico, D.F., 10 de marzo de 2010}}
+\def\contentsname{Contenido}
+\maketitle
+\tableofcontents
+\newpage
+
+\setcounter{page}{1}
+\section{\'Algebra lineal}
+
+\textbf{Introducci\'on}
+\medskip
+
+En la presente unidad de aprendizaje introduciremos una serie de t\'ecnicas matem\'aticas encuadradas dentro de lo que se conoce como el \textbf{\'Algebra lineal}, que nos proporcionar\'an un lenguaje eficiente para el tratamiento de una gran cantidad de fen\'omenos econ\'omicos.
+
+\subsection{Vectores}
+
+\subsubsection{Definici\'on}
+\begin{definicion}
+Para cada entero positivo $n$, definimos el espacio Euclidiano
+$n$-dimensional como:
+\[
+ \Bbb{R}^n = \{(x_1,...,x_n) \mid x_i \in \Bbb{R},\, i =1,2,...,n   \}
+\]
+
+
+Un elemento particular de $\Bbb{R}^n$, digamos $x = (x_1,...,x_n)$
+tambi\'en pueden denotarse como vector columna
+\[ x^T =
+\left(
+  \begin{matrix}
+  x_1      \\
+  x_2 \\
+  \vdots \\
+x_n
+  \end{matrix}
+  \right)
+\]
+
+se le llama \textbf{vector ( o vector columna)}. Las cantidades
+$x_i$ se le llaman componentes (o elementos de x), a $n$ se le llama
+el orden de $x$. Los vectores de orden 1 se les llaman \textbf{escalares}.
+\end{definicion}
+
+\subsubsection{Operaci\'ones de vectores}
+
+La operaci\'on de suma entre dos vectores $x,y  \in \Bbb{R}^{n}$ se
+define como:
+\[ x + y =
+\left(
+  \begin{matrix}
+  x_1      \\
+  x_2 \\
+  \vdots \\
+x_n
+  \end{matrix}
+  \right)
++
+\left(
+  \begin{matrix}
+  y_1      \\
+  y_2 \\
+  \vdots \\
+y_n
+  \end{matrix}
+  \right)
+=
+  \left(
+  \begin{matrix}
+  x_1 + y_1      \\
+  x_2  + y_2\\
+  \vdots \\
+x_n + y_n
+  \end{matrix}
+  \right)
+\]
+
+y el producto  de un escalar $\lambda$ por un vector $x \in
+\Bbb{R}^n$ se define como:
+
+\[ \lambda x  =
+\left(
+  \begin{matrix}
+  \lambda  x_1      \\
+  \lambda x_2 \\
+  \vdots \\
+   \lambda x_n
+  \end{matrix}
+  \right)
+\]
+
+
+
+\begin{ejemplo}
+Sea
+\[
+ x = \left(
+  \begin{matrix}
+  1      \\
+  2 \\
+-3
+  \end{matrix}
+  \right)
+ \quad
+ \text{y}
+\quad
+y = \left(
+  \begin{matrix}
+  7      \\
+  -1 \\
+  2
+  \end{matrix}
+  \right)
+\]
+
+\vspace{.2cm}
+
+Calcule $x+y, 3x, -y$, y $5x - 2y$.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+
+
+\[
+ x + y = \left(
+  \begin{matrix}
+  8      \\
+  1\\
+  -1
+  \end{matrix}
+  \right),
+  \quad
+  3x =
+\left(
+  \begin{matrix}
+  3     \\
+  6 \\
+ -9
+  \end{matrix}
+  \right), \quad
+-y =
+\left(
+  \begin{matrix}
+  -7      \\
+  1 \\
+ -2
+  \end{matrix}
+  \right)
+  \quad
+  5x - 2y =
+\left(
+  \begin{matrix}
+  -9      \\
+  12 \\
+  -19
+  \end{matrix}
+  \right)
+\]
+\end{ejemplo}
+
+\subsubsection{Representaci\'on gr\'afica.}
+
+La suma y multiplicaci\'on por escalar definidas anteriormente
+tienen un significado geom\'etrico. La representaci\'on geom\'etrica en $\Bbb{R}^3$ de la
+suma de vectores $x=(x_1,x_2,x_3)$ y $y =(y_1,y_2,y_3)$ se obtiene trasladando a uno de ellos al extremo
+del otro, formando un paralelogramo, una de cuyas diagonales representa el vector resultante
+$ x + y =(x_1 + y_1,x_2 + y_2,x_3 + y_3)$. A esta representaci\'on  de la suma de
+vectores es a lo que se le llama \textbf{ la ley del paralelogramo}.
+
+\vspace{.2cm}
+
+El producto de un escalar por un vector se interpreta de la
+siguiente manera: s\'{\i} el escalar $\lambda$ es positivo y diferente de uno, al multiplicar el escalar $\lambda$ por
+el vector $ x = ( x_1,x_2 , x_3)$, el vector resultante es  $\lambda x =  (\lambda x_1,\lambda x_2 , \lambda x_3)$, el cual se obtiene del vector $x $ multiplicando su magnitud por $\lambda$; si el escalar es negativo y diferente
+de menos uno, el vector cambia su magnitud y sentido ; si el escalar
+es cero, el vector se hace cero.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.9
+\textwidth,height=0.3
+\textheight]{Alg1.pdf}
+\end{center}
+\caption{Paralelogramo}
+\label{Figura13}
+\end{figure}
+
+\newpage
+\subsection{Producto punto}
+
+Una aplicaci\'on del Teorema de Pit\'agoras en el espacio permite
+definir la distancia  del origen de coordenadas al punto que determina
+un vector $\alpha $.
+
+\begin{definicion}
+Dados los vectores $x, y \in \Bbb{R}^n$, se define su
+producto punto como:
+\[
+  x \cdot y  = \sum_{i = 1 }^n \, x_iy_i
+\]
+\end{definicion}
+
+
+El producto punto  satisface las siguientes propiedades:
+
+\begin{itemize}
+  \item El producto interno de dos vectores en $\Bbb{R}^n$ es un escalar \'unico.
+ \item $x \cdot y = y \cdot x$
+ \item $\lambda x \cdot y = x \cdot \lambda y = \lambda(x \cdot y) $
+ \item $ (x + y) \cdot z  = x \cdot z + x \cdot z$
+ \item $x \cdot x > 0$ si $x \ne 0$. $x \cdot x = 0$ si $\alpha = 0.$
+ \end{itemize}
+
+\begin{ejemplo}
+Si
+\[ x=
+\left(
+  \begin{matrix}
+  1      \\
+  2 \\
+ -3
+  \end{matrix}
+  \right)
+  \quad
+  y =
+  \left(
+  \begin{matrix}
+ 4      \\
+  -5 \\
+ 1
+ \end{matrix}
+  \right)
+\]
+Calcular $x \cdot y $: \\
+
+Soluci\'on:
+\[
+ x \cdot y = (1)(4) + (2)(-5) + (-3)(1) = -9.
+\]
+\end{ejemplo}
+
+\subsubsection{Norma de un vector}
+
+\begin{definicion}
+Dado un vector $x \in \Bbb{R}^n$, se define su norma
+o longitud como
+\[
+\left\| x \right\| = \sqrt{ x \cdot x }.
+\]
+\end{definicion}
+
+\begin{ejemplo}
+Calcule la norma del vector $
+x =\left(
+  \begin{matrix}
+  3     \\
+  4
+  \end{matrix}
+  \right) $
+
+Soluci\'on:
+
+\[
+\left\| x \right\| = \sqrt{3^2 + 4^2} = \sqrt{ 9 + 16} = \sqrt{25} = 5 .
+\]
+\end{ejemplo}
+
+La norma de cualesquirera  vectores $x,y \in \Bbb{R}^n$ tiene las siguientes propiedades:
+
+\begin{itemize}
+ \item  $\left\| x \right\| \geq 0$. $\left\| x \right\| = 0$ si y solo si $ x = 0$.
+ \item $\left\| \lambda x  \right\| = \mid \lambda \mid   \left\| x \right\| .$
+ \item $\left\| x + y \right\| \leq \left\| x  \right\| + \left\| y \right\|$.
+\end{itemize}
+
+\subsubsection{Ángulo entre vectores}
+
+El \'angulo entre dos vectores $x$ y $y$ se puede obtener a
+trav\'es de la ecuaci\'on:
+\[
+  \cos (\theta) = \frac{ x \cdot y }{\left\| x
+  \right\| \left\| y \right\|}.
+\]
+
+
+Notemos que la ecuaci\'on anterior  estable que los vectores $x$
+y $y$ son perpendiculares si y solo si $x \cdot y = 0$, pues para
+$0 \leq \theta \leq \pi$, $\cos (\theta) = 0$ si y solo si
+$\theta = \frac{\pi}{2}$.
+
+\begin{ejemplo} Calcular el \'angulo entre los vectores:
+\[
+x =\left(
+  \begin{matrix}
+  5     \\
+  -3 \\
+  2
+  \end{matrix}
+  \right) \quad  \text{y} \quad
+y =\left(
+  \begin{matrix}
+  -2     \\
+  1 \\
+  3
+  \end{matrix}
+  \right)
+\]
+
+\vspace{.2cm}
+El producto escalar de los vectores es
+\[
+ x \cdot y = -10 -3 + 6 = -7
+\]
+
+\vspace{.2cm}
+
+entonces como
+\[
+  \cos (\theta) = \frac{ x \cdot y }{\left\| x
+  \right\| \left\| y \right\|} = \frac{-7}{22.7} =-0.31
+\]
+de lo cual se sigue que el \'angulo $\theta$ entre los vectores $x$ y $y$ es
+\[
+ \theta = 108.31^{o}
+\]
+\end{ejemplo}
+
+\subsubsection{Vectores ortogonales}
+
+\begin{definicion}
+Dos vectores no nulos  $x$ y $y$ en $\Bbb{R}^n$
+ son llamados ortogonales o perpendiculares si y solo si $x \cdot y = 0$, y se escribe
+ $x \perp y$.
+\end{definicion}
+
+\begin{ejemplo}
+Determine todos los vectores que son ortogonales a:
+\[
+x =\left(
+  \begin{matrix}
+  1     \\
+  2
+  \end{matrix}
+  \right)
+  \]
+
+  Soluci\'on: \\
+  \vspace{.2cm}
+  Todos los vectores $y \in \Bbb{R}^2$  que son ortogonales a $x$ cumplen  $x \cdot y = 0$,
+  es decir, si $y = (y_1,y_2)$, entonces
+\[
+  x \cdot y  = (1,2) \cdot (y_1,y_2) = y_1 + 2y_2 = 0,
+\]
+  de lo cual se sigue que
+\[
+y = \lambda \left(
+  \begin{matrix}
+  -2    \\
+  1
+  \end{matrix}
+  \right)  \quad (\lambda \in \Bbb{R}).
+\]
+\end{ejemplo}
+
+La norma $\left\| x \right\|$ tambi\'en se usa para definir  la
+funci\'on distancia $d$ en $\Bbb{R}^n$ como sigue:
+
+
+\begin{definicion}
+   Para todo $\alpha, \beta \in \Bbb{R}^n$,
+   \[
+      d(x,y) = \left\| x -y \right\|.
+   \]
+\end{definicion}
+
+La funci\'on distancia $d$ satisface las siguientes propiedades:
+\begin{itemize}
+  \item $d(x,y) \geq 0$. Adem\'as, $d(\alpha,\beta) = 0$ si y solo si $\alpha = \beta.$
+  \item $d(x, y) = d(\beta,\alpha)$
+  \item $d(x,y) \leq d(x,z) + d(z,y)$.
+\end{itemize}
+
+\begin{ejemplo}
+Si
+\[
+x =\left(
+  \begin{matrix}
+  1    \\
+  -3
+  \end{matrix}
+  \right) \quad \text{y} \quad
+y =\left(
+  \begin{matrix}
+  7     \\
+  3
+  \end{matrix}
+  \right)
+\]
+
+
+Calcule la distancia entre los vectores $x$ y $y$: \\
+
+Soluci\'on:
+\[
+      d(x,y) = \left\| x - y \right\| = \sqrt{ (-6)^2 + (-6)^2}  = 8.48  .
+\]
+\end{ejemplo}
+
+\subsection{Producto cruz}
+
+\begin{definicion}
+Para cualquier par de vectores:
+\[
+x =\left(
+  \begin{matrix}
+  x_1     \\
+  x_2   \\
+  x_3
+  \end{matrix}
+  \right)
+  \quad
+y =\left(
+  \begin{matrix}
+  y_1     \\
+  y_2   \\
+  y_3
+  \end{matrix}
+  \right)
+\]
+
+en $\Bbb{R}^3$, el \textbf{producto cruz} se define como:
+
+
+
+\begin{equation*}
+x \times  y =
+\begin{vmatrix}
+ \vec{i}   & \vec{j}  & \vec{ k} \\
+ x_1   & x_2  & x_3 \\
+ y_1 & y_2 & y_3
+\end{vmatrix}
+= (x_2y_3 - y_2x_3) \vec{i} - (x_1y_3- y_1x_3) \vec{j} + (x_1y_2 -y_1x_2)\vec{k},
+\end{equation*}
+
+
+en donde
+
+\[
+\vec{i} =\left(
+  \begin{matrix}
+  1     \\
+  0 \\
+  0
+  \end{matrix}
+  \right)
+  \quad
+  \vec{j} =\left(
+  \begin{matrix}
+  0     \\
+  1  \\
+  0
+  \end{matrix}
+  \right)
+ \quad
+  \vec{k} =\left(
+  \begin{matrix}
+  0     \\
+  0 \\
+  1
+  \end{matrix}
+  \right)
+  \]
+\end{definicion}
+
+
+
+\begin{ejemplo}
+Dados
+\[
+x =\left(
+  \begin{matrix}
+  1     \\
+  2 \\
+  0
+  \end{matrix}
+  \right)
+  \quad
+  y =\left(
+  \begin{matrix}
+  1     \\
+  3  \\
+  0
+  \end{matrix}
+  \right)
+\]
+
+ calcule $x \times  y$, \\
+
+Soluci\'on:
+
+\vspace{.2cm}
+
+
+De acuerdo con la definici\'on del producto cruz tenemos:
+
+
+\begin{equation*}
+x \times  y=
+\begin{vmatrix}
+ \vec{i}   & \vec{j}  & \vec{ k} \\
+ 1    & 2  & 0 \\
+ 1 &  3 &  0
+\end{vmatrix}
+= (2 \cdot 0 - 3 \cdot 0) \vec{i} + (1 \cdot 0 - 1 \cdot 0) \vec{j} + (3 - 2)\vec{k} = \vec{k}.
+\end{equation*}
+
+
+Por tanto
+\[
+x \times y =
+\left(
+  \begin{matrix}
+  0     \\
+  0 \\
+  1
+  \end{matrix}
+  \right)
+  \]
+\end{ejemplo}
+
+
+Se puede demostrar que:
+
+ \begin{equation*}
+ \label{pcruz}
+ \left\| x \times y \right\| =
+ \left\| x \right\|\left\| y \right\| \sen (\theta)
+ \end{equation*}
+
+
+donde $\theta$ es el \'angulo formado  por $\vec{\alpha}$ y $\vec{\beta}$.
+
+\vspace{.2cm}
+
+La ecuaci\'on (\ref{pcruz}) proporciona una forma de calcular \textbf{el \'area del pa\-ra\-le\-lo\-gra\-mo} determinado por los vectores
+$x$ y $y$. Tambi\'en proporciona una alternativa para calcular el \'angulo entre dos vectores.
+
+\subsubsection{Propiedades del producto cruz}
+
+Si $x,\, y$ y $z$ son vectores  y $\lambda$ es un escalar,
+
+entonces:
+
+\begin{itemize}
+\item $x \times y = - (y \times x)$
+\item $ \lambda ( x \times y) = (\lambda x) \times y = x \times  (\lambda y)$
+\item $ x \times (y  +   z)  = x \times y + x \times z $
+\end{itemize}
+
+\subsubsection{Ecuaci\'on del plano}
+La ecuaci\'on del plano que pasa por un punto $(x_0,y_0,z_0)$ y cuyo vector normal es
+$(a,b,c)$ es :
+\begin{equation}
+\label{plano}
+   a(x - x_0) + b(y - y_0) + c(z - z_0) = 0.
+\end{equation}
+
+\begin{ejemplo}
+Determinar la ecuaci\'on del plano perpendicular al vector $(1,1,1)$ que contiene al punto
+$(1,0,0)$.
+
+\vspace{.2cm}
+Soluci\'on:
+De la ecuaci\'on (\ref{plano}), la ecuaci\'on del plano es
+\[
+ 1 (x -1) + 1 (y - 0) + 1(z - 0) =  0;
+\]
+esto es,
+\[
+ x + y + z = 1.
+\]
+\vspace{.2cm}
+
+\end{ejemplo}
+
+\newpage
+\setcounter{page}{1}
+\hspace{5cm}  \textbf{TAREA1: VECTORES}
+
+\vspace{.2cm}
+
+Trabajo en individual.
+
+\begin{enumerate}
+\item Sean los vectores $v = (1,-3,2)$ y $w=(4,2,1)$ calcule:
+\begin{enumerate}
+  \item $v + w$
+  \item $2 v$
+  \item $v - w$
+ \end{enumerate}
+ \vspace{.1cm}
+\item Encuente el producto escalar $x \cdot y$ donde:
+\begin{enumerate}
+  \item $x = (-1,3)$,\, $y = (-1,5)$
+  \item $x = (-6,12)$, \,$y = (15, -10)$
+ \end{enumerate}
+ \vspace{.1cm}
+\item Calcule la norma del vector $x = (4,2,1)$
+ \vspace{.2cm}
+\item Hallar el \'angulo que forman los vectores $x = (2,10,3)$ y $y = (10,8,12)$
+ \vspace{.2cm}
+\item Demuestre que los vectores $v = (1,-1,1)$ y $w = (2,3,1)$ son ortogonales.
+ \vspace{.2cm}
+\item Encuentre un vector ortogonal a:
+ \begin{enumerate}
+ \item $x = (1,2)$
+ \item $y = (-3,-4)$
+\end{enumerate}
+ \vspace{.1cm}
+\item Calcule la distancia entre los siguientes vectores:
+ \begin{enumerate}
+ \item $x = (2,3)$,\, $y = (4,7)$
+ \item $x = (-1,1)$, \,$y = (4, 0)$
+ \end{enumerate}
+\item Calcule el \'area del paralelogramo determinado por los vectores:
+\begin{enumerate}
+\item $x = (1,-1,2)$,\, $y = (-2,0,3)$.
+\item $x = (1, 0,-1)$, \,$y = (-3,-1, 2)$
+\end{enumerate}
+\item Calcule $x \times y$ dados
+Dados
+\[
+x =\left(
+  \begin{matrix}
+  2     \\
+  -1 \\
+  3
+  \end{matrix}
+  \right)
+  \quad
+  y =\left(
+  \begin{matrix}
+  1     \\
+  -2  \\
+  -1
+  \end{matrix}
+  \right)
+\]
+\item Encontrar un plano $\pi$ que pasa por el punto $(2,5,1)$ y cuyo vector normal es $(1,-2,3)$
+\end{enumerate}
+
+\newpage
+\setcounter{page}{1}
+\section{Matrices y sistemas de ecuaciones}
+\subsection{Matrices}
+\textbf{Introducci\'on}
+\medskip
+
+En econometr\'{\i}a estamos preocupados con el modelado de los datos observados. En muchos casos el n\'umero de datos num\'ericos es grande (varios cientos o miles) de las observaciones de una serie de posibles variables de interés y todos los datos deben ser manejados de una manera organizada. Muchos conjuntos de datos se almacenan en una hoja de c\'alculo, donde cada columna es igual al número de observaciones de esa variable. Por ejemplo, los datos sobre las calificaciones de Cálculo, Inglés e Historia de cinco estudiantes se puede representar por la siguiente tabla.
+
+\begin{center}
+\begin{tabular}{|1|r|r|r|} \hline
+Estudiantes & Cálculo & Inglés  & Historia \\  \hline
+1 & 1.8 & 4 & 8 \\ \hline
+2 & 2.4 & 6 & 9 \\ \hline
+3 & 2.9 & 6 & 7 \\ \hline
+4 & 3.0 & 7 & 6 \\ \hline
+5 & 3.5 & 8 & 7 \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{.2cm}
+
+\textbf{Matriz de datos}
+
+\vspace{.2cm}
+
+La informaci\'on consiste en datos reales de las cinco puntuaciones en Cálculo, Inglés e Historia y podemos resumir estos datos en la siguiente matriz:
+\[
+\left(
+\begin{matrix}
+1.8 & 4 & 8 \\
+2.4 & 6 & 9 \\
+2.9 & 6 & 7 \\
+3.0 & 7 & 6\\
+3.5 & 8 & 7
+\end{matrix}
+\right)
+\]
+
+Este bloque rectangular de n\'umeros se llama matriz. La matriz anterior tiene cinco filas y tres columnas. En econometr\'{\i}a trabajamos con las matrices, y por supuesto siempre debemos recordarnos el significado de las columnas y filas (en el caso, la correspondencia entre columnas y variables y entre las filas y los estudiantes, por lo que el n\'umero 2.9 en la columna 1 y la fila 3 se sabe que corresponden a la calificación de Cálculo del tercer estudiante).
+
+\subsubsection{Definici\'on}
+
+\begin{definicion}
+Sean $m,n$ n\'umeros naturales. Una matriz de orden m filas  por n
+columnas con coeficientes o entradas en los n\'umeros reales, es un
+arreglo rectangular:
+
+
+\begin{equation*}
+ \left[
+  \begin{matrix}
+     a_{11}   & a_{12}  & \cdots   & a_{1n} \\
+     a_{21}   & a_{22}  & \cdots   & a_{2n} \\
+    \vdots    & \vdots  & \vdots   & \vdots \\
+      a_{m1}  & a_{m2}  & \cdots  & a_{mn}
+  \end{matrix}
+  \right]
+\end{equation*}
+
+por simplicidad a la matriz anterior simplemente se representa por:
+$[a_{ij}]$.
+\end{definicion}
+
+\subsubsection{Tipos de matrices: Cuadrada, diagonal, identidad, sim\'etrica}
+
+\begin{definicion}
+Sea $[a_{ij}]$ una matriz m por n. Si $m = n$, al conjunto de matrices
+de orden $n$ por $n$ se le llama \textbf{ matrices cuadradas de orden $n$}.
+\begin{ejemplo}
+La siguiente matriz es una matriz de orden 2 por 2:
+\[
+\left[
+  \begin{matrix}
+   1    &  2   \\
+   3  &  4
+  \end{matrix}
+ \right]
+\]
+
+\end{ejemplo}
+
+\begin{definicion}
+La matriz cuadrada $[a_{ij}]$ de orden n, tal que $a_{ij} = 0$ si $i
+\ne j$, es decir, a la matriz
+\[
+\begin{equation*}
+\text{diag}(a_{11},a_{22}, ...,a_{nn}) =
+ \left[
+  \begin{matrix}
+     a_{11}   & 0  &  0     &  \cdots   & 0 \\
+     0   & a_{22}  &  0     &  \cdots   & 0 \\
+    \vdots    & \vdots & \vdots  & \vdots   & \vdots \\
+     0  & 0   &  0     &\cdots  & a_{nn}
+  \end{matrix}
+  \right]
+\]
+se le llama \textbf{matriz diagonal de orden n}. En particular
+si adem\'as $a_{ii} = 1$ es decir,a la matriz
+\[
+\begin{equation*}
+I_n =
+ \left[
+  \begin{matrix}
+     1   & 0  &  0     &  \cdots   & 0 \\
+     0   & 1  &  0     &  \cdots   & 0 \\
+    \vdots    & \vdots & \vdots  & \vdots   & \vdots \\
+     0  & 0   &  0     &\cdots  & 1
+  \end{matrix}
+  \right]
+\end{equation*}
+\]
+se le llama la  \textbf{matriz identidad de orden n}.
+\end{definicion}
+
+
+\begin{definicion}
+Si A es una matriz cuadrada puede ocurrir que $A^{T} = A$, en este
+caso a la matriz $A$ se le llama \textbf{matriz sim\'etrica.}
+\end{definicion}
+
+\begin{ejemplo}
+Si $A = \text{diag}(a_{11},a_{22},...,a_{nn})}$, entones $A = A^T$, es
+ decir, A es una matriz sim\'etrica.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea
+\[ A =
+ \left[
+ \begin{matrix}
+ 4 & - 2 & 7 \\
+ -2 & 1 & 5 \\
+ 7 & 5 & 3
+ \end{matrix}
+ \right]
+ \]
+ Entonces $A$ es una matriz sim\'etrica.
+\end{ejemplo}
+
+
+\subsubsection{Aritm\'etica de matrices}
+\textbf{Propiedades de la suma y multiplicaci\'on}
+
+Sean $A = [a_{ij}], B = [b_{ij}]$ matrices m por n. Se define la \textbf{ suma}
+de $A$ con $B$ por:
+
+
+\begin{equation*}
+ \left[
+  \begin{matrix}
+     a_{11}   & a_{12}  & \cdots   & a_{1n} \\
+     a_{21}   & a_{22}  & \cdots   & a_{2n} \\
+    \vdots    & \vdots  & \ddots   & \vdots \\
+      a_{m1}  & a_{m2}  & \cdots  & a_{mn}
+  \end{matrix}
+  \right] +
+ \left[
+  \begin{matrix}
+     b_{11}   & b_{12}  & \cdots   & b_{1n} \\
+     b_{21}   & b_{22}  & \cdots   & b_{2n} \\
+    \vdots    & \vdots  & \ddots   & \vdots \\
+      b_{m1}  & b_{m2}  & \cdots  & b_{mn}
+  \end{matrix}
+  \right] =
+\end{equation*}
+
+\begin{center}
+\begin{equation*}
+\left[
+  \begin{matrix}
+     a_{11} + b_{11}  & a_{12} + b_{12}  & \cdots   & a_{1n} + b_{1n} \\
+     a_{21} + b_{21}   & a_{22} + b_{22}  & \cdots   & a_{2n} + b_{2n} \\
+    \vdots    & \vdots  & \ddots   & \vdots \\
+      a_{m1} + b_{m1}  & a_{m2} + b_{m2}  & \cdots  & a_{mn} + b_{mn}
+  \end{matrix}
+\right]
+\end{equation*}
+\end{center}
+\vspace{.2cm }
+la cual tambi\'en es una matriz m por n.
+
+\begin{ejemplo}
+La suma de las matrices $A$ y $B$ donde:
+\begin{equation*}
+A =
+   \left[
+  \begin{matrix}
+   1    & 3      \\
+   9  &  7
+  \end{matrix}
+  \right] \hspace{.2cm}
+ \texct{  y  }
+ \hspace{.2cm}  B =
+ \left[
+  \begin{matrix}
+   4    & 1 \\
+   8  &    2
+  \end{matrix}
+ \right]
+\end{equation*}
+
+es:
+\[
+   \left[
+  \begin{matrix}
+   1    & 3      \\
+   9  &  7
+  \end{matrix}
+  \right] \hspace{.2cm}
+  +
+ \hspace{.2cm} \[
+ \left[
+  \begin{matrix}
+   4    & 1 \\
+   8  &    2
+  \end{matrix}
+ \right]
+=
+\left[
+  \begin{matrix}
+   5    & 4 \\
+   17  &  9
+  \end{matrix}
+ \right]
+\end{equation*}
+\]
+\end{ejemplo}
+
+Sea $A$ una matrix $m$ por $n$, $A  = [a_{ij}]$ y B una matriz $n$ por $k$
+con $B = [b_{jr}]$, se define el \textbf{ producto} de $A$ por $B$ como sigue:
+$AB = [c_{ir}]$ es una matriz $m$ por $k$ donde para todo $1 \leq i
+\leq m$, para todo $1 \leq r \leq k$:
+\[
+            c_{ir} = \sum_{j = 1}^{n}a_{ij}b_{jr}
+\]
+
+En el siguiente ejemplo usaremos la notaci\'on $A_{m,n}$ para
+denotar la matriz $A$ de orden $m \times n$.
+
+\begin{ejemplo}
+Calcular $C_{2,2} = A_{2,2} \cdot B_{2,2}$ donde
+\begin{equation*}
+A_{2,2} =
+   \left[
+  \begin{matrix}
+   2    & 1      \\
+   0  &  8
+  \end{matrix}
+  \right] \hspace{.2cm}
+ \texct{  y  }
+ \hspace{.2cm}  B_{2,2} =
+ \left[
+  \begin{matrix}
+   5    & 1 \\
+   7  &   4
+  \end{matrix}
+ \right]
+\end{equation*}
+Calculando el producto
+
+\[ A_{2,2} \cdot B_{2,2} =
+   \left[
+  \begin{matrix}
+   2    & 1      \\
+   0  &  8
+  \end{matrix}
+  \right]
+ \left[
+  \begin{matrix}
+   5    & 1 \\
+   7  &    4
+  \end{matrix}
+ \right]
+=
+\left[
+  \begin{matrix}
+   17    & 6 \\
+   56  &  32
+  \end{matrix}
+ \right]
+\end{equation*}
+\]
+por tanto
+\[C_{2,2} =
+\left[
+  \begin{matrix}
+   17    & 6 \\
+   56  &  32
+  \end{matrix}
+ \right]
+ \]
+\end{ejemplo}
+
+\begin{ejemplo}
+Calcular $C_{3,3} = A_{3,2} \cdot B_{2,3}$ donde
+\begin{equation*}
+A_{3,2} =
+   \left[
+  \begin{matrix}
+   1    & 2      \\
+   4  &  3 \\
+   1 & 6
+  \end{matrix}
+  \right] \hspace{.2cm}
+ \texct{  y  }
+ \hspace{.2cm}  B_{2,3} =
+ \left[
+  \begin{matrix}
+   5    & 1  & 1 \\
+   2  &   4  & 1
+  \end{matrix}
+ \right]
+\end{equation*}
+Calculando el producto
+
+\[ A_{3,2} \cdot B_{2,3} =
+   \left[
+  \begin{matrix}
+   1    & 2      \\
+   4  &  3 \\
+   1 & 6
+  \end{matrix}
+  \right]
+\left[
+  \begin{matrix}
+   5    & 1  & 1 \\
+   2  &   4  & 1
+  \end{matrix}
+ \right]
+ = \left[
+  \begin{matrix}
+   5    & 10 & 3 \\
+   10  &  20 & 7 \\
+   13 &  26 & 7
+  \end{matrix}
+ \right]
+\end{equation*}
+\]
+por tanto
+\[C_{3,3} =
+\left[
+  \begin{matrix}
+   9    & 10 & 3 \\
+   10  &  20 & 7 \\
+   13 &  26 & 7
+  \end{matrix}
+ \right]
+ \]
+\end{ejemplo}
+
+En \'algebra matricial  se dice que dos matrices son iguales si
+todos los elementos correspondientes son iguales. Si $A$ es
+cualquier matriz, una matriz $B$ ser\'a una matriz identidad para la
+suma si:
+
+\[
+        A + B = A \hspace{1cm} \text{y} \hspace{1cm} B + A = A
+\]
+
+Se puede verificar f\'acilmente que la matriz identidad para la suma
+es una matriz en la cual cada elemento es igual a cero.
+
+\vspace{.2cm}
+
+
+De manera similar, Si $A$ es cualquier matriz, la matriz identidad para
+la multiplicaci\'on es la matriz identidad $I_n$ que satisface la relaci\'on:
+\[
+        AI = A \hspace{1cm} \text{y} \hspace{1cm} IA = A
+\]
+
+\begin{ejemplo}
+\textbf{El beneficio de una Firma}
+
+\vspace{.2cm}
+
+Suponer que una firma produce tres tipos de productos, usando dos tipos de insumos, las cantidades de cada producto est\'an dadas por los vectores columna $q$:
+\[q=
+\left[
+\begin{matrix}
+15,000 \\
+27,000  \\
+13,000
+\end{matrix}
+\right]
+\]
+
+y los precios unitarios est\'an dadas por el vector de precios
+$
+\left[
+\begin{matrix}
+10 & 12 & 5
+\end{matrix}
+\right].
+$
+
+\vspace{.2cm}
+
+Las cantidades de insumos empleados  en la producci\'on  est\'an dadas por el vector columna $z$:
+
+\[ z=
+\left[
+\begin{matrix}
+11,000 \\
+30,000
+\end{matrix}
+\right]
+\]
+
+Y los precios  de esos insumos  por el vector $w = \left[
+\begin{matrix}
+20 & 8
+\end{matrix}
+\right]$. El beneficio de la empresa se
+encuentra dada por:
+\begin{align*}
+\prod &= pq- wz \\
+      &= \left[
+\begin{matrix}
+10 & 12 & 5
+\end{matrix}
+\right]
+\left[
+\begin{matrix}
+15,000 \\
+27,000  \\
+13,000
+\end{matrix}
+\right] -
+\left[
+\begin{matrix}
+20 & 8
+\end{matrix}
+\right]
+\left[
+\begin{matrix}
+11,000 \\
+30,000
+\end{matrix}
+\right]  \\
+&=(150,000 + 324,000 + 65,000)- (220,000 + 240,000) = 79,000
+\end{align*}
+\end{ejemplo}
+\newpage
+
+\textbf{Potencia de matrices y matriz idempotente}
+
+\begin{definicion}
+Si $A$ es una matriz cuadrada y $n$ es un entero positivo, entonces \textbf{ la n-\'esima
+potencia de $A$}, la cual se escribe como $A^n$, es el producto de $n$ factores de $A$:
+\[
+ A^n = \underbrace{A \cdot A \cdots A}_{n}
+ \]
+Si $A$ es una matriz de orden $n$, se define $A^0 = I_n$.
+\end{definicion}
+
+\begin{ejemplo}
+Si  $A =\left(
+  \begin{matrix}
+   1    &  -1  \\
+   0  &  1
+  \end{matrix}
+ \right)$
+ entonces:
+
+ \begin{align*}
+ A^2 &= A A = \left(
+  \begin{matrix}
+   1    &  -1   \\
+   0  &  1
+  \end{matrix}
+ \right)
+ \left(
+  \begin{matrix}
+   1    &  -1   \\
+   0  &  1
+  \end{matrix}
+ \right) =
+ \left(
+  \begin{matrix}
+   1    &  -2   \\
+   0  &  1
+  \end{matrix}
+ \right) \\
+ A^3 &= A^2 A =
+  \left(
+  \begin{matrix}
+   1    &  -2   \\
+   0  &  1
+  \end{matrix}
+ \right)
+ \left(
+  \begin{matrix}
+   1    &  -1   \\
+   0  &  1
+  \end{matrix}
+ \right) =
+ \left(
+  \begin{matrix}
+   1    &  -3   \\
+   0  &  1
+  \end{matrix}
+ \right).
+ \end{align*}
+\end{ejemplo}
+
+Es f\'acil demostrar por  inducci\'on que
+\[
+  A^n =
+\left(
+  \begin{matrix}
+   1    &  -n   \\
+   0  &  1
+  \end{matrix}
+ \right)
+\]
+
+\begin{definicion}
+Una matriz $A$ tal que $A^2 = A$ se le llama \textbf{matriz idempotente}.
+\end{definicion}
+
+\begin{ejemplo}
+La matriz $A =\left[
+  \begin{matrix}
+   1    &  0   \\
+   -1  &  0
+  \end{matrix}
+ \right]$ es idempotente.
+\end{ejemplo}
+
+\subsubsection{Transpuesta y sus propiedades}
+
+\begin{definicion}
+Dada una matriz $A = [a_{ij}]$, se define la matriz
+$A^{T} = [b_{ij}]$ donde $b_{ij} = a_{ji}$. A la matriz $A^T$ se le
+llama la \textbf{ matriz traspuesta de $A$}.
+\end{definicion}
+
+\begin{ejemplo}
+La traspuesta de la matriz:
+\begin{equation*}
+A =
+   \left[
+  \begin{matrix}
+   5    & -2       \\
+   -1  &  7
+  \end{matrix}
+  \right]
+\end{equation}
+
+es dada por:
+
+\[
+A^{T} =
+   \left[
+  \begin{matrix}
+   5    & -1       \\
+   -2  &  7
+  \end{matrix}
+  \right]
+\end{equation}
+\]
+\end{ejemplo}
+
+Propiedades de la matriz traspuesta:
+
+\begin{itemize}
+\item $A= (A^T)^T$
+\item $(A + B)^T = A^T + B^T$
+\item $(AB)^T = B^T A^T$
+\end{itemize}
+
+\begin{ejemplo}
+Si
+\[
+A =
+   \left[
+  \begin{matrix}
+   2    & 1 & 3       \\
+   3  &  1  & 4
+  \end{matrix}
+  \right]
+\]
+
+entonces
+\[
+A^T =
+   \left[
+  \begin{matrix}
+   2    & 3       \\
+   1  & 1  \\
+   3  & 4
+  \end{matrix}
+  \right]
+\]
+
+as\'{\i}
+
+\[
+(A^T)^T =
+   \left[
+  \begin{matrix}
+   2    & 1 & 3       \\
+   3  &  1  & 4
+  \end{matrix}
+  \right] =  A
+ \]
+\end{ejemplo}
+
+\begin{ejemplo}
+Sean
+\[
+A =
+   \left[
+  \begin{matrix}
+   1    & 2        \\
+   3  &  0
+  \end{matrix}
+  \right], \quad
+B =
+   \left[
+  \begin{matrix}
+   3    & 1        \\
+   -1  &  1
+  \end{matrix}
+  \right]
+ \]
+
+entonces
+
+\[
+A^T =
+   \left[
+  \begin{matrix}
+   1    & 3        \\
+   2  &  0
+  \end{matrix}
+  \right], \quad
+B^T =
+   \left[
+  \begin{matrix}
+   3    & -1        \\
+   1  &  1
+  \end{matrix}
+  \right]
+ \]
+
+Para la suma tenemos que
+
+\begin{align*}
+A + B &=
+\left[
+  \begin{matrix}
+   1    & 2       \\
+   3  &  0
+  \end{matrix}
+  \right]
++
+   \left[
+  \begin{matrix}
+   3    & 1       \\
+   -1  &  1
+  \end{matrix}
+  \right] \\
+ &= \left[
+  \begin{matrix}
+   4    & 3       \\
+   2  &  1
+  \end{matrix}
+  \right]
+\end{align*}
+
+entonces
+\[
+(A + B)^T =
+   \left[
+  \begin{matrix}
+   4    & 2        \\
+   3  &  1
+  \end{matrix}
+  \right] = A^T + B^T
+ \]
+
+
+ya que
+
+
+\begin{align*}
+A^T + B^T &=
+\left[
+  \begin{matrix}
+   1    & 3       \\
+   2  &  0
+  \end{matrix}
+  \right]
++
+   \left[
+  \begin{matrix}
+   3    & -1       \\
+   1  &  1
+  \end{matrix}
+  \right] \\
+ &= \left[
+  \begin{matrix}
+   4    & 2       \\
+   3  &  1
+  \end{matrix}
+  \right].
+\end{align*}
+
+
+Ahora, para la multiplicaci\'on tenemos
+
+\begin{align*}
+A B &=
+\left[
+  \begin{matrix}
+   1    & 2       \\
+   3  &  0
+  \end{matrix}
+  \right]
+   \left[
+  \begin{matrix}
+   3    & 1       \\
+   -1  &  1
+  \end{matrix}
+  \right] \\
+ &= \left[
+  \begin{matrix}
+   1    & 3       \\
+   9  &  3
+  \end{matrix}
+  \right]
+\end{align*}
+
+entonces
+\[
+(AB)^T =
+   \left[
+  \begin{matrix}
+   1   & 9        \\
+   3  &  3
+  \end{matrix}
+  \right] = B^T A^T
+ \]
+
+ya que
+
+\begin{align*}
+B^T A^T &=
+\left[
+  \begin{matrix}
+   3    & -1       \\
+   1  &  1
+  \end{matrix}
+  \right]
+   \left[
+  \begin{matrix}
+   1    & 3       \\
+   2  &  0
+  \end{matrix}
+  \right] \\
+ &= \left[
+  \begin{matrix}
+   1    & 9       \\
+   3  &  3
+  \end{matrix}
+  \right].
+\end{align*}
+
+\end{ejemplo}
+
+
+\textbf{Traza y sus propiedades}
+\medskip
+
+La traza de una matriz es una operaci\'on definida s\'olo para
+matrices cuadradas.
+
+\begin{definicion}
+Si $\textbf{A}$ es una matriz $n \times n$, la \textbf{traza de la
+  matriz $A$}, denotada como $tr(A)$, se define como
+\[
+   tr(A) =  \sum_{i = 1}^{n} \ a_{ii}.
+\]
+
+\begin{itemize}
+\item  $ tr(I_n) = n$
+\item  $tr(A^T) = tr(A)$
+\item  $tr(A + B) = tr(A) + tr(B)$
+\item  $tr(\alpha A) = \alpha tr(A)$, para todo escalar $\alpha$
+\item  $tr(AB) = tr(BA)$, donde $A$ es una matriz $m \times n$ y $B$
+  es una matriz $n \times m$.
+\end{itemize}
+
+\begin{ejemplo}
+ Si
+\[
+ A = \left[
+  \begin{matrix}
+   2    & 7       \\
+   3  &  4
+  \end{matrix}
+  \right]
+ \]
+
+entonces
+\[
+tr(A)= 2 + 4  =  6
+\]
+
+\end{ejemplo}
+\end{definicion}
+
+\subsection{Determinantes}
+En esta secci\'on introducimos una
+funci\'on, la funci\'on determinante. Si $A$ es una matriz cuadrada,
+entonces la funci\'on determinante asocia a $A$ exactamente un
+n\'umero real llamado el determinante de $A$, el determinante de $A$
+el cual se le denota por $\mid A \mid$.
+
+\subsubsection{Definici\'on}
+\begin{definicion}
+Si $A =[a_{ij}]$  es una matriz cuadrada de orden 1, entonces $\mid A \mid = a_{11}.$
+\end{definicion}
+
+\begin{definicion}
+Si $A =
+   \left[
+  \begin{matrix}
+   a_{11}    & a_{12}      \\
+   a_{21}  &  a_{22}
+  \end{matrix}
+  \right]
+$
+es una matriz cuadrada de orden 2, entonces $\mid A \mid = a_{11}a_{22}- a_{21}a_{12}.$
+\end{definicion}
+
+\begin{ejemplo}
+
+\[
+\left[
+  \begin{matrix}
+   4    & 1      \\
+   3  &  2
+  \end{matrix}
+  \right] = 4 \cdot 2 - 3 \cdot 1 = 8 - 3 = 5
+\]
+\end{ejemplo}
+
+\begin{definicion} Determinante  de $3 \times 3$\\
+
+\vspace{.2cm}
+
+ Sea  $ A = \left(
+ \begin{matrix}
+ a_{11} & a_{12} & a_{13} \\
+ a_{21} & a_{22} & a_{23} \\
+ a_{31} & a_{32} & a_{33}
+ \end{matrix}
+ \right) $. Entonces
+\vspace{.2cm}
+\[
+\det A = | A | = a_{11} \left|
+ \begin{matrix}
+ a_{22} & a_{23} \\
+ a_{32} &  a_{33}
+ \end{matrix}
+ \right| - a_{12} \left| \begin{matrix}
+ a_{21} & a_{23} \\
+ a_{31} &  a_{33}
+ \end{matrix}
+ \right| + a_{13} \left|
+ \begin{matrix}
+ a_{21} & a_{22} \\
+ a_{31} &  a_{32}
+ \end{matrix}
+ \right|
+\]
+
+\end{definicion}
+
+
+\begin{ejemplo}
+C\'alculo de un determinante $3\times 3$\\
+
+\vspace{.2cm}
+
+
+Sea $ A = \left(
+ \begin{matrix}
+ 3   & 5 & 2 \\
+ 4 & 2 & 3 \\
+ -1 &  2 & 4
+ \end{matrix}
+ \right) $. Calcule $|A|$.
+
+\[
+| A | = \left|
+ \begin{matrix}
+ 3   & 5 & 2 \\
+ 4 & 2 & 3 \\
+ -1 &  2 & 4
+ \end{matrix}
+ \right|
+= 3 \left|
+ \begin{matrix}
+ 2 & 3 \\
+ 2 &  4
+ \end{matrix}
+ \right| - 5 \left| \begin{matrix}
+ 4 & 3 \\
+ -1 &  4
+ \end{matrix}
+ \right| + 2 \left|
+ \begin{matrix}
+ 4 & 2 \\
+ -1 &  2
+ \end{matrix}
+ \right| =
+ 3 \cdot 2 - 5 \cdot 19 + 2 \cdot 10 = -69
+\]
+
+\end{ejemplo}
+
+
+\begin{definicion}
+(\textbf{Menor}) Sea $A$ una matriz de $n \times n $ y sea $M_{ij}$
+la matriz de $(n - 1) \times (n - 1)$ que se obtiene de $A$
+eliminando el rengl\'on $i$ y la columna $j$. $M_{ij}$ se llama el
+\textbf{menor ij} de $A$.
+ \end{definicion}
+
+\begin{ejemplo}
+C\'alculo de dos menores de una matriz $3 \times 3$\\
+
+ Sea A = \left(
+ \begin{matrix}
+ 2   & -1 & 4 \\
+ 0 & 1 & 5 \\
+ 6 &  3 & -4
+ \end{matrix}
+ \right). $ Encuentre $M_{13}$ y $M_{32}$.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:} Eliminando el primer rengl\'on y la tercer
+columna de $A$ se obtiene $M_{13} = \left( \begin{matrix}
+ 0 & 1 \\
+ 6 &  3
+ \end{matrix}
+ \right).$
+
+\vspace{.2cm}
+
+ De manera similar, si se elimina el tercer rengl\'on y la segunda
+ columna se obtiene
+ $M_{32} = \left( \begin{matrix}
+ 2 & 4 \\
+ 0 &  5
+ \end{matrix}
+ \right).$
+\end{ejemplo}
+
+
+\begin{definicion}
+Sea $A$ una matriz de $n \times n$. El  $\textbf{cofactor ij}$ de
+$A$, denotado por $A_{ij}$, est\'a dado por
+\begin{equation}
+\label{cofactor}
+ A_{ij} = (-1)^{i + j} |M_{ij}|
+\end{equation}
+
+Estos es, el cofactor $ij$ de $A$ se obtiene tomando el determinante
+del menor $ij$  y multiplic\'andolo por $(-1)^{i+j}$. Observe que
+
+\[
+(-1)^{i+j} = \left{
+\begin{cases}
+ 1 & \text{si $i+j$ es  par} \\ -1 & \text{si $i+j$ es impar}
+\end{cases}
+\]
+
+\end{definicion}
+
+\begin{ejemplo}
+ Si $ A = \left(
+ \begin{matrix}
+ 2   & -1 & 4 \\
+ 0 & 1 & 5 \\
+ 6 &  3 & -4
+ \end{matrix}
+ \right). $\\
+\vspace{.2cm}
+
+Del ejemplo anterior tenemos que
+ $M_{13} = \left(
+\begin{matrix}
+ 0 & 1 \\
+ 6 &  3
+ \end{matrix}
+ \right)$ y $M_{32} = \left( \begin{matrix}
+ 2 & 4 \\
+ 0 &  5
+ \end{matrix}
+ \right)$. Entonces los cofactores $A_{13}$ y $A_{32}$ de la matriz
+ $A$ se obtienen usando formula $\ref{cofactor}$ como sigue
+\begin{align*}
+A_{13} &= (-1)^{1+ 3}|M_{13} | = (-1)^4  (0 \cdot 3 - 1 \cdot 6) =-6
+\\
+A_{32} &= (-1)^{3+ 2}|M_{32} | = (-1)^5  (2 \cdot 5 - 0 \cdot 4)
+=-10
+\end{align*}
+\end{ejemplo}
+
+\begin{definicion}
+(\textbf{Determinante $n \times n$}) Sea $A$ una matriz $n \times
+n$. Entonces el determinante de $A$, denotado por $\det A$ o $|A|$,
+est\'a dado por
+\begin{equation}
+\label{determinante}
+\begin{align*}
+\det A &= |A| = a_{11} A_{11} + a_{12}A_{12} + \cdots + a_{1n}A_{1n
+} \\
+&= \limits\sum_{k = 1}^{n} a_{1k}A_{1k}
+\end{align*}
+\end{equation}
+La expresi\'on al lado derecho de $(\ref{determinante})$ se llama
+\textbf{expansi\'on por cofactores. }
+\end{definicion}
+
+\begin{definicion}
+(\textbf{La adjunta}). Sea $A$ una matriz de $n \times n$, y sea
+$B$, dada por
+\[
+ B =\left[
+  \begin{matrix}
+     A_{11}   & A_{12}  & \cdots   & A_{1n} \\
+     A_{21}   & A_{22}  & \cdots   & A_{2n} \\
+    \vdots    & \vdots  &          & \vdots \\
+      A_{n1}  & A_{n2}  & \cdots  & A_{nn}
+  \end{matrix}
+  \right]
+  \]
+es decir, la matriz de sus cofactores. Entonces la \textbf{ adjunta}
+de $A$, escrito adj $A$, es la transpuesta de la matriz $B$ de $n
+\times n$; es decir
+
+\[
+ \text{adj A} = B^T =\left[
+  \begin{matrix}
+     A_{11}   & A_{21}  & \cdots   & A_{n1} \\
+     A_{12}   & A_{22}  & \cdots   & A_{n2} \\
+    \vdots    & \vdots  &          & \vdots \\
+      A_{1n}  & A_{2n}  & \cdots  & A_{nn}
+  \end{matrix}
+  \right]
+  \]
+
+\begin{ejemplo}
+ Sea $ A = \left(
+ \begin{matrix}
+ 2   & 4 & 3 \\
+ 0 & 1 & -1 \\
+ 3 &  5 & 7
+ \end{matrix}
+ \right). $ Calcule adj $A$.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}\\
+\vspace{.2cm}
+
+Se tiene $A_{11} = \left|
+\begin{matrix}
+1  & -1 \\
+ 5 &  7
+ \end{matrix}
+ \right| = 12$, $A_{12} = -\left| \begin{matrix}
+ 0 & -1\\
+ 3 &  7
+ \end{matrix}
+ \right| = -3$, $A_{13} = -3$, $A_{21} = -13$, $A_{22} = 5$, $A_{23} =
+ 2$, $A_{31}= -7$, $A_{32} = 2$ y $A_{33} = 2.$ As\'{\i},
+
+\vspace{.4cm}
+
+$
+  B =\left(
+  \begin{matrix}
+  12   & -3  & -3 \\
+     -13  & 5  & 2 \\
+  -7   & 2  &      2
+  \end{matrix}
+  \right)$  y \hspace{.3cm} $ \text{adj A} = B^T = \left(
+ \begin{matrix}
+ 12   & -13 & -7 \\
+ -3 & 5 & 2 \\
+ -3 &  2 & 2
+ \end{matrix}
+ \right). $
+\end{ejemplo}
+\end{definicion}
+
+\textbf{Regla de Sarrus}
+\medskip
+
+Hay una forma alternativa de calcular determinantes de orden 3. Se
+a\~{n}aden a la derecha sus dos primeras columnas de una matriz $A$ dada, donde
+
+\[
+ A = \left(
+ \begin{matrix}
+ a_{11}   & a_{12} & a_{13} \\
+ a_{21} & a_{22} & a_{23} \\
+ a_{31} &  a_{32} & a_{33}
+ \end{matrix}
+ \right)
+\]
+
+Primero se multiplican las tres l\'{\i}neas que van de arriba a la izquireda a abajo a la derecha, poniendo el signo $+$ a los productos.
+\begin{equation}
+\label{s1}
+ a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32}
+\end{equation}
+Luego se multiplican las tres l\'{\i}neas que van de abajo a la
+izquierda a arriba a la derecha, poniendo el signo $-$ a a los
+productos.
+\begin{equation}
+\label{s2}
+ -a_{31}a_{22}a_{13} - a_{32}a_{23}a_{11}  - a_{33}a_{21}a_{12}
+\end{equation}
+La suma de los t\'erminos de (\ref{s1}) y (\ref{s2}) es igual a $A$.
+\medskip
+
+Sea
+\[ A =
+\left(
+\begin{matrix}
+1 &  2 & 3  \\
+-4 & 5 & 1 \\
+-2 & 1 & -3
+\end{matrix}
+\right)
+\]
+Entonces para calcular el determinante de la matriz $A$ consideremos el
+si\-gui\-en\-te arreglo
+
+\[
+\begin{matrix}
+1  &  2  &  3  & 1   & 2 \\
+-4 &  5  &  1  & -4  & 5   \\
+-2 &  1  & -3  & -2  & 1
+\end{matrix}
+\]
+Aplicando la regla de Sarrus tenemos que
+\begin{align*}
+ \mid A \mid &=  1 \cdot 5 \cdot (-3) + 2 \cdot 1 \cdot (-2) + 3 \cdot
+ (-4) \cdot 1 - (-2) \cdot 5 \cdot 3 - 1  \cdot 1 \cdot 1 - (-3) \cdot
+ (-4) \cdot 2 \\
+&= -15 - 4  -12 +30 -1 -24 \\
+&= - 26
+\end{align*}
+Por tanto $\mid A \mid = - 26$
+
+
+\subsubsection{Propiedades de los determinantes}
+
+El c\'alculo de los determinantes se simplifica utilizando varias propiedades. En lo siguiente $A$ denota una matriz cuadrada.
+
+\vspace{.2cm}
+
+\textbf{Propiedades de los determinantes}:
+
+\begin{enumerate}
+  \item Si cada una de las entradas de un rengl\'on (o columna) de $A$ es 0, entonces $\mid A \mid = 0$.
+  \item Si dos renglones (o columnas) de $A$ son id\'enticos, $\mid A\mid = 0.$
+  \item Si $A$ es triangular superior (o inferior), entonces $\mid A \mid$ es igual al producto de las entradas de la diagonal principal.
+  \item Si $B$ es la matriz que se obtiene sumando un m\'ultiplo de un rengl\'on (o columna) de  $A$ a otro rengl\'on (columna), entonces $\mid A\mid =  \mid B\mid$.
+  \item Si $B$ es la matriz que se obtiene multiplicando cada entrada de un rengl\'on (o columna) de $A$ por el mismo n\'umero $k$, entonces \\ $\mid B \mid = k \mid A \mid .$
+\end{enumerate}
+
+\subsection{Matriz inversa}
+\subsubsection{Definici\'on}
+\begin{definicion}
+Sea $A$ una matriz $n$ por $n$, una matriz $B$ $n$ por $n$ que tiene
+la propiedad de que $AB = BA = I_n$ se le llama la \textbf{matriz
+inversa} de $A$ y se le denota por $B = A^{-1}$. M\'as a\'un, se
+dice que $A$ es \textbf{ matriz invertible} en este caso.
+\end{definicion}
+
+\begin{teorema}
+Una matriz cuadrada tiene inversa \Longleftrightarrow
+ \mid A \mid \ne 0.
+\end{teorema}
+
+\begin{definicion}
+Una matriz $A$ se llama \textbf{matriz singular} si $\mid A \mid  =
+0$ y  \textbf{matriz no singular} si $\mid A \mid \ne 0$. Entonces
+una matriz tiene inversa si y s\'olo si es no singular.
+\end{definicion}
+
+Sea
+\[
+A =
+   \left(
+  \begin{matrix}
+   a  & b       \\
+   c  & d
+  \end{matrix}
+  \right).
+\]
+Si $\mid A \mid = ad - bc \ne 0$, entonces
+\[
+A^{-1} = \frac{1}{ad - bc}
+   \left(
+  \begin{matrix}
+   d    & -b       \\
+   -c  &  a
+  \end{matrix}
+  \right).
+\]
+
+
+\begin{ejemplo}
+La matriz inversa de la matriz:
+\begin{equation*}
+A =
+   \left[
+  \begin{matrix}
+   1    & 2      \\
+   3  &  4
+  \end{matrix}
+  \right]
+\end{equation}
+\]
+es dada por:
+\begin{align*}
+A^{-1} &= \frac{1}{4-6}
+\left[
+  \begin{matrix}
+   4    & -2      \\
+   -3  &  1
+  \end{matrix}
+  \right] \\
+\hspace{.3cm}
+ &=
+\left[
+  \begin{matrix}
+   \frac{4}{-2}    & \frac{-2}{-2}       \\
+   \frac{-3}{-2}  &  -\frac{1}{2}
+  \end{matrix}
+  \right] \\
+\hspace{.3cm}
+&=
+   \left[
+  \begin{matrix}
+   -2    & 1       \\
+   \frac{3}{2}  &  -\frac{1}{2}
+  \end{matrix}
+  \right]
+\end{align*}
+
+Puesto que
+
+\begin{align*}
+AA^{-1} & =\left[
+  \begin{matrix}
+   1    & 2      \\
+   3  &  4
+  \end{matrix}
+  \right]
+   \left[
+  \begin{matrix}
+   -2
+    & 1       \\
+   \frac{3}{2}  &  -\frac{1}{2}
+  \end{matrix}
+  \right]=
+   \left[
+  \begin{matrix}
+   1    & 0       \\
+   0  &  1
+  \end{matrix}
+  \right] = I_2 \\
+\hspace{.3cm}
+A^{-1}A & =
+   \left[
+  \begin{matrix}
+   -2    & 1       \\
+   \frac{3}{2}  &  -\frac{1}{2}
+  \end{matrix}
+  \right]
+  \left[
+  \begin{matrix}
+   1    & 2      \\
+   3  &  4
+  \end{matrix}
+  \right]=
+   \left[
+  \begin{matrix}
+   1    & 0       \\
+   0  &  1
+  \end{matrix}
+  \right] = I_2
+\end{align*}
+\end{ejemplo}
+
+\vspace{.2cm}
+
+\subsubsection{Propiedades}
+
+\vspace{.2cm}
+
+
+Propiedades de la matriz inversa: Sea $A$ y $B$ matrices invertibles
+$n \times n$. Entonces:
+
+\begin{itemize}
+\item $(A^{-1})^{-1} = A$.
+\item $(AB)^{-1} =B^{-1} A^{-1}$
+\item La traspuesta de $A$ es invertible y $(A^T)^{-1} = (A^{-1})^T.$
+\item $(\lambda A)^{-1} = c^{-1} A^{-1}$, si $\lambda \in \Bbb{R}, \lambda \ne 0.$
+\end{itemize}
+
+En una matriz $A$ $m$ por $n$  se tienen tres operaciones elementales
+de filas:
+\begin{enumerate}
+   \item[1.] Multiplicaci\'on de una fila de A por un n\'umero $c$
+    distinto de cero.
+   \item[2.] Remplazo de la r-\'esima fila de A por la fila $r$ m\'as $c$
+   veces la fila $s$, donde $c$ es cualquier n\'umero y $r$ es
+   distinto de $s$.
+   \item[3.] Intercambio de dos filas de $A$.
+\end{enumerate}
+
+\hspace{.2cm}
+
+Si $A$ y $B$ son dos matrices $m$ por $n$ sobre los n\'umeros reales,
+se dice que $B$ es equivalente por filas a $A$ si $B$ se obtiene de A
+por una sucesi\'on finita de operaciones elementales de filas.
+
+\vspace{.2cm}
+
+Se puede ver que si A es inversible, entonces A es equivalente por filas
+a la matriz identidad $I_n$. Mas a\'un, al reducir la matriz A a la matriz
+identidad $I_n$ por medio de una sucesi\'on de operaciones elementales
+de filas, la inversa de A se obtiene al aplicar la misma sucesi\'on
+de operaciones a la matriz identidad.
+
+\newpage
+\setcounter{page}{1}
+\hspace{5cm}  \textbf{TAREA 2: MATRICES}
+
+\vspace{.2cm}
+
+Tarea en equipo. \\
+
+\begin{enumerate}
+\item Sea $A=\left[
+  \begin{matrix}
+   1  & 2      \\
+   3  & 4
+  \end{matrix}
+  \right]$,
+   $B=\left[
+  \begin{matrix}
+   0   & 1 \\
+   -1  & 2
+  \end{matrix}
+ \right]$
+y $\alpha=3$, $\beta=4$ calcular:\\
+\begin{enumerate}
+\item $\alpha A+\beta B$
+\item $\alpha (B)$
+\item $(\alpha-\beta)(A-B)$
+\end{enumerate}
+\item Obtener las matrices A + B, A - B y AB si:
+\[
+  A = \left[
+  \begin{matrix}
+   3    & 5     \\
+   -7  &  2
+  \end{matrix}
+  \right],
+\quad B =
+ \left[
+  \begin{matrix}
+   -3    & 1 \\
+   4  &    6
+  \end{matrix}
+ \right]
+\]
+\item Sean las siguientes matrices\\
+\[
+A=\left[
+\begin{matrix}
+1& -1\\
+1&  0
+\end{matrix}
+  \right]
+\qquad
+B=
+\left[
+\begin{matrix}
+-1& 0\\
+1& 2
+\end{matrix}
+\right]
+\]
+\[
+C=
+\left[
+\begin{matrix}
+1& 2& 3\\
+4& 5& 6
+\end{matrix}
+  \right]
+\qquad
+D=
+\left[
+\begin{matrix}
+1& 2\\
+3& 4\\
+5& 6
+\end{matrix}
+\right]
+\]
+
+Calcular $ AB $, $\: BA $, $\:CD $, $ \:DA $, $\: C'B $
+\vspace{.4cm}
+\item
+Cierto o falso: $ (AB)^2=A^2B^2 $, demuestra tu respuesta.
+\item  Verificar que las matrices $A$ y $B$ satisfaces $(AB)^T = B^T
+  A^T$, si:
+\[
+A =
+   \left[
+  \begin{matrix}
+   1    & 0 & 0       \\
+   0  &  0 & 1
+  \end{matrix}
+  \right]
+, B =
+ \left[
+  \begin{matrix}
+   4    & 3 \\
+   1  &  1 \\
+   0 & 2
+  \end{matrix}
+ \right]
+\]
+\item Sea $A=\left[
+  \begin{matrix}
+   1  & 3      \\
+   0  & -2     \\
+   -2 & -1
+  \end{matrix}
+  \right]$,
+   $B=\left[
+  \begin{matrix}
+   1  & 2 \\
+   0  & -1
+  \end{matrix}
+ \right]$ realizar:\\
+\begin{enumerate}
+\item $A \cdot A^{T}$
+\item $B(I+B)$
+\item $B^{2}$
+\end{enumerate}
+\item Dar los valores de $x$ y $y$ si:
+\[
+   \left[
+  \begin{matrix}
+   1    & 2      \\
+   x - y  &  2
+  \end{matrix}
+  \right]
+=
+ \left[
+  \begin{matrix}
+   1    & y \\
+   0  &    2
+  \end{matrix}
+ \right]
+\]
+\item Calcule el determinante de las siguientes matrices:
+\begin{enumerate}
+\item
+\[
+A =
+\left[
+  \begin{matrix}
+   3    & 0  & 4\\
+   2  &  3  & 2 \\
+   0 & 5 & -1
+  \end{matrix}
+ \right]
+\]
+\item
+\[
+B =
+\left[
+  \begin{matrix}
+   4    &  3 & 0  \\
+   6  &  5 & 2  \\
+  9 & 7 & 3
+  \end{matrix}
+ \right]
+\]
+\end{enumerate}
+\item Calcule $\mid A^3 \mid $, donde:
+\[
+A =
+\left[
+  \begin{matrix}
+   1    & 0  & 1 \\
+   1  &  1 & 2 \\
+   1 & 2 & 1
+  \end{matrix}
+ \right]
+\]
+\item Obtener la inversa de las siguientes matrices:
+\begin{enumerate}
+\item
+\[
+A= \left[
+  \begin{matrix}
+   3    & 2 \\
+   -1  &  1
+  \end{matrix}
+ \right]
+\]
+ \item
+\[
+B =
+\left[
+  \begin{matrix}
+   1  & 1  & 2 \\
+   2  & -2 & 0 \\
+   3  & 0  & 4
+  \end{matrix}
+ \right]
+\]
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+\setcounter{page}{1}
+\hspace{5cm}  \textbf{TAREA 3: MATRICES}
+
+\vspace{.2cm}
+
+Trabajo en equipo con dos o tres integrantes. \\
+
+Realicen en excel o en mathematica las siguientes operaciones matriciales.
+
+\begin{enumerate}
+\item Considerar las siguientes matrices
+\[
+A=
+\left[
+\begin{matrix}
+2& 0& -3\\
+4& 1& 5\\
+\end{matrix}
+\right]
+ \qquad
+B=
+\left[
+\begin{matrix}
+7& -1& 4& 7\\
+2& 5& 0& -4\\
+-3& 1& 2& 3
+\end{matrix}
+\right]
+\]
+\[
+C=
+\left[
+\begin{matrix}
+1& 3\\
+2& 5\\
+-1& 2
+  \end{matrix}
+  \right]
+\qquad
+D=
+\left[
+\begin{matrix}
+-2& 0\\
+1& 4\\
+-7& 5
+  \end{matrix}
+  \right]
+\qquad
+E=
+\left[
+\begin{matrix}
+-1& 1\\
+4& 6\\
+-7& 3
+  \end{matrix}
+  \right]
+\]
+calcular las operaciones matriciales,
+\begin{enumerate}
+\item
+AB
+\item
+3C
+\item
+C+D
+\item
+E-C
+\item
+-7C+3D
+\item
+2C-3D+4E
+\end{enumerate}
+\item Sea la siguiente matriz
+\vspace{.3cm}
+\[
+X=
+\left(
+\begin{matrix}
+1& 2\\
+0& 1\\
+1& 0\\
+\end{matrix}
+\right)
+\]
+\vspace{.4cm}
+\begin{enumerate}
+\item
+Encontrar la matriz $P=X(X'X)^{-1}X'$
+\vspace{.2cm}
+\item
+Encontrar $P'$ y calcular $ PX $
+\vspace{.2cm}
+\item
+Calcular $ PP $, $ P^3 $, $ P^4$,\ldots , $ P^n $
+\vspace{.2cm}
+\item
+Obtener $ M=I-P $
+\vspace{.2cm}
+\item
+Calcular $MM$, $ M^2 $, \ldots
+\vspace{.2cm}
+\item
+Calcular $ MX $
+\end{enumerate}
+\item Encontrar en cada caso el determinante
+\[
+A=
+\left[
+\begin{matrix}
+1& 2& -2& 0\\
+2& 3& -4& 1\\
+-1& -2& 0& 2\\
+0& 2& 5& 3
+\end{matrix}
+\right]
+\qquad
+B=
+\left[
+\begin{matrix}
+0& 0& 0& 1\\
+0& 0& 1& 0\\
+0& 1& 0& 0\\
+1& 0& 0& 0
+\end{matrix}
+\right]
+\]
+\item Calcular la inversa de las siguientes matrices
+\[
+A=
+\left[
+\begin{matrix}
+2& 1& 2\\
+0& 3& -1\\
+4& 1& 1
+\end{matrix}
+  \right]
+\qquad
+B=
+\left[
+\begin{matrix}
+2& -1& 0\\
+-1& 2& -1\\
+0& -1& 2
+\end{matrix}
+\right]
+\]
+\item Sean las siguientes matrices
+\[
+A=
+\left[
+\begin{matrix}
+1& -1\\
+1& 0
+\end{matrix}
+  \right]
+\qquad
+B=
+\left[
+\begin{matrix}
+-1& 0\\
+1& 2\\
+\end{matrix}
+\right]
+\]
+\begin{enumerate}
+\item Calcular $ AB $ y obtener su inversa, $ (AB)^{-1} $.
+\vspace{.1cm}
+\item Verificar que $ (AB)^{-1}=(A)^{-1}(B)^{-1} $.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+\setcounter{page}{1}
+\subsection{Soluci\'on de sistemas de ecuaciones lineales}
+\textbf{Introducci\'on}
+\medskip
+
+Cuando una situaci\'on debe describirse matem\'aticamente, no es raro que surja un conjunto de
+ecuaciones. Por ejemplo, suponga que el administrador de una
+f\'abrica establece un plan de producci\'on para dos modelos de un
+producto nuevo. El modelo $A$ requiere de 4 piezas del tipo $I$ y 9
+piezas de tipo $II$. El modelo $B$ requiere de 5 piezas del tipo $I$
+y 14 piezas del tipo $II$. De sus proveedores, la f\'abrica obtiene
+335 piezas del tipo $I$ y 850 piezas del tipo $II$ cada d\'{\i}a. \textquestiondown
+Cu\'antos productos de cada modelo debe producir cada d\'{\i}a, de
+modo que todas las piezas del tipo $I$ y piezas del tipo $II$ sean
+utilizadas?
+\medskip
+
+Suponga que hacemos que $x$ igual al n\'umero de art\'{\i}culos del modelo $A$ fabricados cada
+d\'{\i}a, y igual al n\'umero de art\'{\i}culos del modelo $B$. Entonces \'estos requieren de
+$4x + 5y$ piezas del tipo $I$ y $9x + 14y$ piezas del tipo $II$. Como est\'an disponibles 335
+y 850 piezas del tipo $I$ y $II$, respectivamente tenemos:
+\begin{align*}
+4x + 5y = 335 \\
+9x + 14y = 850
+\end{align*}
+A este conjunto de ecuaciones le llamamos \textbf{sistema} de dos ecuaciones lineales en las
+variables (o inc\'ognitas) $x$ y $y$. El problema es encontrar valores de $x$ y $y$ para los cuales
+ambas ecuaciones sean verdaderas de manera simult\'anea. Estos valores se llaman soluciones del
+sistema.
+\medskip
+
+Como las ecuaciones  son lineales, sus gr\'aficas son l\'{\i}neas rectas; lla\-me\-mos\-las
+$L_1$ y $L_2$. Ahora, las coordenadas de cualquier punto sobre una l\'{\i}nea satisfacen
+las ecuaciones de esa l\'{\i}nea; esto es, hacen la ecuaci\'on verdadera, Por tanto, las coordendas
+de cualquier punto de intersecci\'on de $L_1$ y $L_2$ satisfacen ambas ecuaciones. Estos significa
+que un punto de intersecci\'on da una soluci\'on del sistema.
+\medskip
+
+Si $L_1$ y $L_2$ se dibujan en el mismo plano, existen tres posibles situaciones:
+\begin{enumerate}
+   \item[1.] $L_1$ y $L_2$ pueden intersecarse en exactamente un punto, digamos $(x_0,y_0)$. Por tanto,
+   el sistema tiene soluci\'on $x= x_0$ y $y = y_0$.
+\begin{ejemplo}
+El sistema de ecuaciones tiene solución unica
+\begin{align*}
+ x - y &= 1 \\
+ x + y &= 5
+\end{align*}
+\end{ejemplo}
+   \begin{center}
+   \centering
+\includegraphics[width= 0.4\textwidth,height=0.3
+\textheight]{Sistem1.pdf}
+\end{center}
+   \item[2.] $L_1$ y $L_2$ pueden ser parelelas y no tener puntos en com\'un. En este caso no existe
+   soluci\'on.
+\begin{ejemplo}
+Sistema de ecuaciones sin solución
+\begin{align*}
+ x + y &= 7 \\
+2x +2y &= 13
+\end{align*}
+\end{ejemplo}
+   \begin{center}
+   \centering
+\includegraphics[width= 0.4\textwidth,height=0.3
+\textheight]{Sistem2.pdf}
+\end{center}
+   \item[3.] $L_1$ y $L_2$ pueden ser la misma recta. Por tanto las coordenadas de cualquier punto
+   sobre la recta son una soluci\'on del sistema. En consecuencia, existe un n\'umero infinito de
+   soluciones.
+\begin{ejemplo}
+Sistema de ecuaciones con un número infinito de soluciones
+\begin{align*}
+ x + y &= 7 \\
+2x +2y &= 14
+\end{align*}
+\end{ejemplo}
+   \begin{center}
+   \centering
+\includegraphics[width= 0.4\textwidth,height=0.3
+\textheight]{Sistem3.pdf}
+\end{center}
+\end{enumerate}
+
+M\'etodos algebraicos para resolver un sistema de ecuaciones en dos va\-ria\-bles:
+
+\begin{enumerate}
+ \item M\'etodo de eliminaci\'on por adici\'on.
+ \item M\'etodo de eliminaci\'on por sustituci\'on.
+ \item M\'etodo de eliminaci\'on por igualaci\'on.
+\end{enumerate}
+
+\begin{ejemplo}
+Encontrar el punto de equilibio si las ecuaciones de oferta  y demanda de un producto son $ p =  \frac{1}{300}q + 8$ y  $p =
+-\frac{1}{180}q + 12$ respectivamente.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+
+Sustituyendo $p$  por $\frac{1}{300} q  + 8 $ en la ecuaci\'on de
+demanda, obtenemos
+
+\begin{align*}
+\frac{1}{300} q  + 8 &= -\frac{1}{180} q + 12, \\
+\left( \frac{1}{300} + \frac{1}{180}   \right) q  &= 4, \\
+ q &= 450.
+\end{align*}
+
+\vspace{.2cm}
+
+Por tanto,
+
+\begin{align*}
+ p &= \frac{1}{300} (450) + 8 \\
+  &=9.50
+\end{align*}
+
+y el punto de equilibrio es $(450, 9.50)$.
+\end{ejemplo}
+
+\begin{center}
+\centering
+\includegraphics[width= 0.5\textwidth,height=0.3
+\textheight]{Sistem4.pdf}
+\end{center}
+
+\subsubsection{Representaci\'on matricial de un sistema de ecuaciones
+li\-nea\-les}
+
+\begin{definicion}
+Una ecuaci\'on lineal en las variables $x_1,x_2,...,x_n$ es una ecuaci\'on de la forma:
+\[
+  a_1x_1 + a_2x_2 + \cdots + a_n x_n = b
+\]
+\end{definicion}
+
+\begin{definicion}
+Un sistema de ecuaciones de $m$  ecuaciones lineales en las incognitas $x_1,...,x_n$ es un
+colecci\'on de ecuaciones de la forma:
+
+\begin{equation*}
+  \begin{matrix}
+     a_{11}x_1 \, +  & \cdots   & + \, a_{1n} x_n & = b_1\\
+    \vdots    &          & \vdots            & \vdots     \\
+      a_{m1} x_1 \,  + & \cdots        & + \, a_{mn} x_n & =
+       b_n
+  \end{matrix}
+\end{equation*}
+\end{definicion}
+
+
+Dado el sistema, este se puede representar en forma matricial
+
+
+\[
+\begin{equation*}
+\left[
+  \begin{matrix}
+     a_{11}   & \cdots   & a_{1n} \\
+    \vdots    &          & \vdots \\
+      a_{m1}  & \cdots        & a_{mn}
+  \end{matrix}
+  \right]
+   \left[
+  \begin{matrix}
+   x_1 \\
+   \vdots \\
+   x_n
+\end{matrix}
+  \right]
+   =
+ \left[
+  \begin{matrix}
+     b_1 \\
+     \vdots \\
+     b_n
+  \end{matrix}
+ \right]
+\]
+\end{definicion}
+
+\begin{ejemplo}
+El sistema de ecuaciones
+
+\begin{align*}
+4x + 5y &=  335 \\
+9x + 14y &= 850
+\end{align*}
+
+se representa matricialmente por
+
+\[
+\begin{equation*}
+\left[
+  \begin{matrix}
+     4  &  5 \\
+     9  &  14
+  \end{matrix}
+  \right]
+   \left[
+  \begin{matrix}
+   x \\
+   y
+\end{matrix}
+  \right]
+   =
+ \left[
+  \begin{matrix}
+     335 \\
+  850
+  \end{matrix}
+ \right]
+\]
+\end{ejemplo}
+
+\begin{definicion}
+Una soluci\'on del sistema es una n-ada $(c_1,...,c_n)$ tal que $ a_{i1}c_1 + a_{i2}c_2 + \cdots
++ a_{in} c_n = b$ para cada $i = 1, ...,n$. Cuando el sistema tiene soluci\'on se dice consistente, de otra forma es
+inconsistente.
+\end{definicion}
+
+\vspace{.2cm}
+
+\subsubsection{M\'etodos de soluci\'on: Forma escalonada, el m\'etodo de Gauss-Jordan, inversa de una matriz, regla de Cramer.}
+
+\vspace{.2cm}
+
+
+\textbf{Forma escalonada y el m\'etodo de Gauss-Jordan }
+
+\vspace{.2cm}
+
+Una t\'ecnica adecuada para resolver  sistema de ecuaciones lineales
+de gran tama\~{n}o es el \textbf{m\'etodo de eliminaci\'on} de
+Gauss-Jordan. Este m\'etodo comprende una serie de operaciones sobre
+un sistema de ecuaciones lineales para obtener en cada paso un
+\textbf{sistema equivalente}. La reducci\'on concluye cuando el
+sistema original ha sido transformado de modo que aparezca  en
+cierta forma can\'onica de la pueda leerse la soluci\'on con
+facilidad.
+
+\begin{definicion}
+Una matriz se le llama \textbf{reducida por renglones}, si:
+\begin{enumerate}
+  \item Cada rengl\'on compuesto  completamente de ceros se encuentra bajo los renglones con alg\'un valor distinto de cero.
+  \item El primer valor distinto de cero en cada rengl\'on es 1 (llamado el 1 principal)
+  \item En cualesquiera dos renglones sucesivos (distintos de cero), el 1 principal en el rengl\'on inferior se encuentra a la derecha  en el rengl\'on superior.
+  \item Si una columna contiene un 1 principal, entonces los dem\'as valores en esas columnas son ceros.
+\end{enumerate}
+\end{definicion}
+
+\vspace{.2cm}
+
+\begin{definicion} Un sistema de ecuaciones de $m$  ecuaciones
+lineales en las incognitas $x_1,...,x_n$
+
+\begin{equation*}
+  \begin{matrix}
+     a_{11}x_1 \, +  & \cdots   & + \, a_{1n} x_n & = b_1\\
+    \vdots    &          & \vdots            & \vdots     \\
+      a_{m1} x_1 \,  + & \cdots        & + \, a_{mn} x_n & =
+       b_n
+  \end{matrix}
+\end{equation*}
+
+se puede representar mediante la matriz:
+
+\begin{equation*}
+\left[
+  \begin{matrix}
+     a_{11} \,   & \cdots   &  \, a_{1n}  &  b_1\\
+    \vdots    &          & \vdots            & \vdots     \\
+      a_{m1}  \,   & \cdots        &  \, a_{mn}  & b_n
+  \end{matrix}
+  \right]
+\end{equation*}
+
+\vspace{.2cm}
+
+A la representaci\'on matricial anterior se le llama \textbf{matriz aumentada del sistema de ecuaciones.}
+\end{definicion}
+
+\vspace{.2cm}
+
+\textbf{El m\'etodo de eliminaci\'on de Gauss-Jordan}
+
+\begin{enumerate}
+  \item Se escribe la matriz aumentada correspondiente al sistema lineal.
+  \item En caso necesario, se intercambian renglones para obtener una matriz aumentada donde el primer valor en el primer rengl\'on sea distinto de cero. Luego se pivotea la matriz con respecto a este valor.
+  \item En caso necesario, se intercambia el segundo rengl\'on con otro para obtener una matriz aumentada donde el segundo valor del segundo rengl\'on sea distinto de cero. Luego se pivotea con respecto de este valor.
+  \item Se contin\'ua hasta que la \'ultima matriz tenga una forma reducida por renglones.
+\end{enumerate}
+
+El siguiente teorema nos permite determinar si un sistema homog\'eneo tiene una soluci\'on \'unica (la soluci\'on trivial) o un n\'umero infinito de soluciones.
+
+\begin{teorema}
+Sea $A$ la matriz reducida de un sistema homog\'eneo de $m$ ecuaciones lineales con $n$ inc\'ognitas. Si $A$ tiene exactamente $k$ renglones diferentes de cero, entonces $k \leq n$. Adem\'as:
+\begin{enumerate}
+ \item Si $k \leq n$, el sistema tiene un n\'umero infinito de soluciones.
+ \item Si $k = n$, el sistema tiene una \'unica soluci\'on (la soluci\'on trivial).
+\end{enumerate}
+\end{teorema}
+
+\vspace{.2cm}
+
+\textbf{Inversa de una matriz}
+
+\vspace{.2cm}
+
+Si $A$ es inversible, el sistema de ecuaciones:
+\[
+           AX =B
+\]
+donde:
+\[
+\begin{equation*}
+A =   \left[
+  \begin{matrix}
+     a_{11}   & \cdots   & a_{1n} \\
+    \vdots    &          & \vdots \\
+      a_{m1}  & \cdots        & a_{mn}
+  \end{matrix}
+  \right]
+\end{equation*}
+\begin{equation*}
+X =
+   \left[
+  \begin{matrix}
+   x_1 \\
+   \vdots \\
+   x_n
+\end{matrix}
+  \right] \hspace{.2cm}
+ \texct{  y  }
+ \hspace{.2cm}  B =
+ \left[
+  \begin{matrix}
+     b_1 \\
+     \vdots \\
+     b_n
+  \end{matrix}
+ \right]
+\end{equation*}
+\]
+tiene como \'unica soluci\'on
+\begin{equation}
+\label{sistema}
+X = A^{-1}B
+\end{equation}
+
+\begin{ejemplo}
+Por ($\ref{sistema}$) se tiene que la soluci\'on del sistema de ecuaciones:
+\[
+\begin{aligned}
+ 3x_1 + 2x_2 & = 1 \\
+ 4x_1 + 3x_2 & = 5
+\end{aligned}
+\]
+es:
+\[
+X = A^{-1}B =
+\begin{equation*}
+   \left[
+  \begin{matrix}
+   3    & -2       \\
+   -4  &  3
+  \end{matrix}
+  \right]
+  \left[
+  \begin{matrix}
+   1  \\
+   5
+  \end{matrix}
+  \right] =
+  \left[
+  \begin{matrix}
+   -7  \\
+    11
+  \end{matrix}
+  \right]
+\end{equation}
+\]
+Por tanto, la soluci\'on es:
+\[
+X =
+\begin{equation*}
+\left[
+ \begin{matrix}
+   x_1  \\
+   x_2
+  \end{matrix}
+  \right]
+=
+\left[
+ \begin{matrix}
+   -7  \\
+    11
+  \end{matrix}
+  \right]
+\end{equation}
+\]
+es decir, $x_1 = -7$ y $x_2 = 11$.
+\end{ejemplo}
+
+\begin{ejemplo}
+\textbf{Equilibrio entre oferta y demanda}}
+\medskip
+
+El equilibrio del mercado de bienes (el equilibrio del mercado) se produce cuando la cantidad demandada por los consumidores ($Q_d$) y la cantidad ofrecida $(Q_s)$ por los productores de los bienes de servicio son iguales. De manera equivalente, el equilibrio del mercado se produce cuando el precio que un consumidor est\'a dispuesto a pagar $(P_d)$ es igual al precio que un productor est\'a dispuesto a aceptar $(P_s)$. La condici\'on de equilibrio, por lo tanto, se expresa como
+\[
+  Q_d = Q_s = Q  \quad  \text{ y } \quad  P_d = P_s  = P
+\]
+
+Las funciones de demanda y la oferta de un producto son  dadas por:
+ \begin{align*}
+ \text{Funci\'on de demanda: }  \quad   P &= 100 - \frac{1}{2} Q \\
+  \text{Funci\'on de oferta:} \quad   P &= 10 + \frac{1}{2} Q
+ \end{align*}
+
+Calcular el precio de equilibrio y la cantidad algebraicamente y gr\'aficamente.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+
+\vspace{.2cm}
+De las funciones de demanda y oferta obtenemos el sistema de ecuaciones:
+\begin{align*}
+P + \frac{1}{2} Q &= 100 \\
+P - \frac{1}{2} Q &= 10
+\end{align*}
+
+Este sistema escrit\'o con matrices:
+\[
+A =
+  \left[
+  \begin{matrix}
+   1    & \frac{1}{2}      \\
+   1 &  -\frac{1}{2}
+  \end{matrix}
+  \right]
+\left[
+  \begin{matrix}
+   P      \\
+   Q
+  \end{matrix}
+  \right] = \left[
+  \begin{matrix}
+   100 \\
+   10
+  \end{matrix}
+  \right]
+\]
+
+Como la matriz inversa de
+ \[ A =
+  \left[
+  \begin{matrix}
+   1    & \frac{1}{2}      \\
+   1 &  -\frac{1}{2}
+  \end{matrix}
+  \right]
+ \]
+es la matriz
+
+\[ A^{-1} =
+  \left[
+  \begin{matrix}
+   \frac{1}{2}    & \frac{1}{2}      \\
+   1 &  -1
+  \end{matrix}
+  \right]
+  \]
+
+Entonces
+
+\[
+ \left[
+ \begin{matrix}
+   P  \\
+   Q
+  \end{matrix}
+  \right] =
+\[
+  \left[
+  \begin{matrix}
+   \frac{1}{2}    & \frac{1}{2}      \\
+   1 &  -1
+  \end{matrix}
+  \right]
+ \left[
+ \begin{matrix}
+   100  \\
+    10
+  \end{matrix}
+  \right]
+  =
+    \left[
+ \begin{matrix}
+   55  \\
+    90
+  \end{matrix}
+  \right]
+\]
+
+\vspace{.2cm}
+
+Por lo tanto, el precio de equilibrio es $P = 55$ y la cantidad de equilibrio es $Q = 90$.
+\end{ejemplo}
+\medskip
+
+La siguiente figura ilustra el  equilibrio del mercado, en el punto cuando la cantidad es 90, y precio de equilibrio \$55. El consumidor paga \$55 por la mercancía que es tambi\'en el precio que recibe el productor por las mercanc\'{\i}as.
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.6
+\textwidth,height=0.3
+\textheight]{O-D.pdf}
+\end{center}
+\caption{Equilibrio de mercado}
+\label{Figura13}
+\end{figure}
+
+\begin{ejemplo}
+(\textbf{Equilibrio en el mercado de trabajo})
+El equilibrio del mercado de trabajo se produce cuando la mano de obra demandada por las empresas $(L_d)$ es igual a la de la mano de obra ofrecida por los trabajadores $(L_s) $ o, equivalentemente, cuando el salario que las empresas est\'a dispuesto a ofrecer $(w_s)$ es igual al salario que los trabajadores están dispuestos a aceptar $(w_d)$. El Equilibrio del mercado de trabajo, por lo tanto, se expresa como
+\[
+  L_d = L_s = L  \quad  \text{ y } \quad  w_d = w_s  = w
+\]
+de nuevo, en la soluci\'on para el equilibrio del mercado de trabajo, $L$ y $w$ se refieren al n\'umero de unidades de trabajo y el salario de equilibrio, respectivamente.
+\medskip
+
+La funci\'on de demanda de trabajo y la funciones de oferta se dan como
+ \begin{align*}
+ \text{Funci\'on de demanda: }  \quad   w &= 9 - .6 L \\
+  \text{Funci\'on de oferta:} \quad   w &= 2 + .4 L
+ \end{align*}
+
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+
+\vspace{.2cm}
+De las funciones de demanda y oferta obtenemos el sistema de ecuaciones:
+\begin{align*}
+w +  0.6 L &= 9 \\
+w - 0.4 L &= 2
+\end{align*}
+
+
+Este sistema escrit\'o con matrices:
+
+\[
+  \left[
+  \begin{matrix}
+   1    & 0.6      \\
+   1 &  0.4
+  \end{matrix}
+  \right]
+\left[
+  \begin{matrix}
+   w      \\
+   L
+  \end{matrix}
+  \right] = \left[
+  \begin{matrix}
+   9 \\
+   2
+  \end{matrix}
+  \right]
+\]
+
+Como la matriz inversa de
+ \[ A =
+  \left[
+  \begin{matrix}
+   1    & 0.6      \\
+   1 &  0.4
+  \end{matrix}
+  \right]
+  \]
+es la matriz
+
+\[ A^{-1} =
+  \left[
+  \begin{matrix}
+   3    & -2      \\
+  -12  &  12
+  \end{matrix}
+  \right]
+  \]
+
+Entonces
+
+\[
+ \left[
+ \begin{matrix}
+   w  \\
+   L
+  \end{matrix}
+  \right] =
+\[
+  \left[
+  \begin{matrix}
+   3    & -2      \\
+  -12 &  12
+  \end{matrix}
+  \right]
+ \left[
+ \begin{matrix}
+   9  \\
+   2
+  \end{matrix}
+  \right]
+  =
+    \left[
+ \begin{matrix}
+   4.8 \\
+    7
+  \end{matrix}
+  \right]
+\]
+
+La siguiente figura ilustra el punto de equilibrio del mercado laboral,
+con n\'umero de equilibrio de trabajadores, 7 y \$4.80
+el salario de equilibrio. Cada trabajador recibe \$4.80  por hora
+de sus servicios laborados que tambi\'en el salario que la empresa est\'a dispuesta a pagar.
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.6
+\textwidth,height=0.3
+\textheight]{w-l.pdf}
+\end{center}
+\caption{Equilibrio en el mercado de trabajo}
+\label{Figura13}
+\end{figure}
+
+\begin{ejemplo}
+Una econom\'{\i}a cerrada es descrita por el sistema de ecuaciones que da el equilibrio entre el mercado de bienes y el mercado de dinero, la relaci\'on entre  la $IS$ y la $LM$. El mercado de bienes (la parte $IS$ del modelo) es  descrito por:
+\begin{align*}
+      Y &= C + I + G \\
+      C &= 15 + 0.8 (Y-T) \\
+      T &= -25 + 0.25 Y \\
+      I &= 65 - R \\
+      G &= 94
+\end{align*}
+donde $C$ es el gasto de consumo, $T$ es el  impuesto sobre los ingresos , $Y$ es la producci\'on total, $I$ es el gasto de inversi\'on, $R$ es la tasa de interes y $G$ es el gasto del gobierno.
+\begin{align*}
+ L &= 5Y -50 R \\
+ M &= 1,500
+\end{align*}
+donde $L$ es la demanda de dinero y $M$ es la oferta de dinero fija. Encontrar el nivel de equilibrio de  $Y$ y $R$. \\
+
+\textbf{Soluci\'on:}
+
+\vspace{.2cm}
+
+Expresamos el sistema de ecuaciones anterior en la forma
+\[
+    AX = B
+\]
+
+donde $A$ es una matriz $2 \times 2$ de coeficientes, \textbf{X} es
+el vector de variables $2 \times 1$ con entradas $Y$ y $R$, y
+\textbf{B} es el vector de constantes $2 \times 1$. Primero
+resolveremos el equilibrio en  el mercado de bienes y dinero,
+obteniendo las funciones $IS$ y $LM$  y luego ponemos las dos juntas.
+La funci\'on $IS$ se obtiene de $Y = C + I + G$, como sigue:
+\begin{align*}
+   Y &= 15 + 0.8 Y + -0.8(-25 + 0.25 Y) + 65 - R -94 \\
+   Y(1-0.8 + 0.2) &= 15 + 20 + 65 + 94- R \\
+   Y &= 485 - 2.5 R
+\end{align*}
+
+La funci\'on $LM$  es entonces dada de $M = L$:
+\[
+    1,500 = 5Y - 50 R \quad  \text{o} \quad Y = 300 + 10 R
+\]
+buscando entre las relaciones $IS$ y $LM$ como sistema de ecuaciones tenemos:
+\begin{align*}
+     Y + 2.5R &= 485  \\
+     Y - 10R &= 300
+\end{align*}
+El cual se representa matricialmente por:
+ \[
+ \left[
+  \begin{matrix}
+   1    &  2.5        \\
+   1  &  -10
+  \end{matrix}
+  \right] \cdot
+  \left[
+  \begin{matrix}
+   Y  \\
+   R
+  \end{matrix}
+  \right] =
+  \left[
+  \begin{matrix}
+   485 \\
+   300
+  \end{matrix}
+  \right]
+\end{equation}
+\]
+Resolviendo para $Y$ y $R$ tenemos:
+\begin{align*}
+ \left[
+  \begin{matrix}
+   Y  \\
+   R
+  \end{matrix}
+  \right] &=
+  \left[
+  \begin{matrix}
+   1    &  2.5        \\
+   1  &  -10
+  \end{matrix}
+  \right]^{-1}
+  \left[
+  \begin{matrix}
+   485 \\
+   300
+  \end{matrix}
+  \right] \\
+ &= \left[
+  \begin{matrix}
+   0.8    &  0.2        \\
+   0.08  &  -0.08
+  \end{matrix}
+  \right]
+  \left[
+  \begin{matrix}
+   485 \\
+   300
+  \end{matrix}
+  \right] \\
+  &=\left[
+  \begin{matrix}
+   448 \\
+   14.8
+  \end{matrix}
+  \right]
+ \end{align*}
+El nivel de equilibrio  de producci\'on de esta economi\'{\i}a es 448 y la tasa de interes 14.8 \%. Notemos que como el nivel de ingresos, impuesto sobre los ingresos es $T = -25 + 0.25 (448) = 87$, mientras que el gasto p\'ublico es $G = 94$. El d\'eficit p\'ublico corriente es por lo tanto $T - G = -7.$
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.55
+\textwidth,height=0.27
+\textheight]{IS-LM.pdf}
+\end{center}
+\caption{Modelo IS-LM de una economía cerrada}
+\label{Figura13}
+\end{figure}
+
+\vspace{.2cm}
+
+\textbf{Regla de Cramer}
+
+\vspace{.2cm}
+
+Una de las aplicaciones m\'as importantes de los determinantes es
+resolver ciertos tipos de sistemas de ecuaciones lineales.
+
+\vspace{.2cm}
+
+Se va a estudiar el siguiente m\'etodo, conocido como la \textbf{regla de Cramer} para resolver sistemas de ecuaciones lineales.
+
+\vspace{.2cm}
+
+
+Sea un sistema de $n$ ecuaciones lineales con $n$ inc\'ognitas dado por:
+
+
+\begin{equation*}
+  \begin{matrix}
+     a_{11}x_1 \, +  & \cdots   & + \, a_{1n} x_n =c_1\\
+    \vdots    &          & \vdots \\
+      a_{n1} x_1 \,  + & \cdots        & + \, a_{nn} x_n =c_n
+  \end{matrix}
+\end{equation*}
+
+Si el determinante $\Delta$ de la matriz de los coeficientes $A$ es diferente de cero, entonces el sistema tiene una \'unica soluci\'on. Adem\'as, la soluci\'on esta dada por:
+\[
+ x_1  = \frac{\Delta_1}{\Delta}, \, ..., \, x_n = \frac{\Delta_n}{\Delta},
+\]
+
+donde $\Delta_k$, es el determinante de la matriz obtenida al remplazar la k-\'esima columna de $A$ por la columna de constantes.
+
+\begin{ejemplo}
+Usar la regla de Cramer para resolver el sistema de ecuaciones
+\begin{align*}
+ 2x_1 - x_2 &= 1 \\
+4x_1 + 4x_2 &= 20
+\end{align*}
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+
+\vspace{.2cm}
+
+La matriz de coeficientes y el vector columna son:
+\[A =
+\left[
+\begin{matrix}
+2 & -1 \\
+4 & 4
+\end{matrix}
+\right]
+\quad \text{y} \quad
+ b= \left[
+\begin{matrix}
+1 \\
+20
+\end{matrix}
+\right],
+\]
+as\'{\i} que
+\[
+\det A = 8 -(-4) =12\]
+
+por tanto
+\[
+ x_1 = \frac{ \left|
+\begin{matrix}
+1  & -1 \\
+20 &  4
+\end{matrix}
+\right]}
+{
+\left|
+\begin{matrix}
+2 & -1 \\
+4 & 4
+\end{matrix}
+\right|
+} = \frac{24}{12} = 2
+\quad \text{y} \quad
+ x_2 = \frac{ \left|
+\begin{matrix}
+2 & 1 \\
+4 & 20
+\end{matrix}
+\right]}
+{
+\left|
+\begin{matrix}
+2 & -1 \\
+4 & 4
+\end{matrix}
+\right|
+} = \frac{36}{12} = 3
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+En el modelo Keynesiano $IS-LM$
+\begin{align*}
+ Y &= C + I  \\
+ C &= 100 + 0.8 Y \\
+ I &= 1000 - 20i \\
+ M^{s} &= M^{d} \\
+ M^{s} &= 2350 \\
+ M^{d} &= 0.5 Y - 30 i
+\end{align*}
+
+A partir de las ecuaciones anteriores obtener los valores de equilibrio del ingreso($Y$) y la tasa de interes ($i$).
+\medskip
+
+\textbf{Solución:}
+\medskip
+
+Dadas las condiciones de equilibrio obtenemos:
+\begin{align*}
+Y= 100 +& 0.8 Y + 1000 -20i  \\
+0.5 Y - 30i &= 2350 \\
+0.2Y + 20i  &= 1100 \\
+0.5 Y - 30i  &= 2350
+\end{align*}
+
+Escribiendo en forma matricial
+\[
+\left[
+\begin{matrix}
+0.2 & 20 \\
+0.5 & -30
+\end{matrix}
+\right] \left[
+\begin{matrix}
+\bar{Y} \\
+\bar{i}
+\end{matrix}
+\right] = \left[
+\begin{matrix}
+1100 \\
+2350
+\end{matrix}
+\right]
+\]
+\[
+|A| = -6 - 10 = -16.
+\]
+Usando la Regla de Cramer,
+
+\[
+\bar{Y} = \frac{\left|
+\begin{matrix}
+1100 & 20 \\
+2350 & -30
+\end{matrix}
+\right|}{-16} = \frac{-33000 - 47 000}{-16} = 5000
+\]
+\[\bar{i} = \frac{\left|
+\begin{matrix}
+0.2 & 1100 \\
+0.5 & 2350
+\end{matrix}
+\right|}{-16} =  \frac{470- 550}{-16} = 5 \%
+\]
+\end{ejemplo}
+
+\textbf{Estatica comparativa}
+\medskip
+
+Para ilustrar el uso de las derivadas parciales, se recurre al
+modelo keynesiano simple de ingreso nacional $Y,$ el nivel de
+consumo $C,$ el nivel de inversión $I_0$  y el gasto del gobierno
+está dado por $G_0$. Por otra parte, la notación detrás de las dos
+últimas variables muestra que la inversión y el gasto público
+son variables exógenas. En el contexto de los modelos económicos,
+esto significa que  dependen de factores externos al modelo y por lo
+tanto sus valores no pueden ser influenciados en el modelo y se
+deben tomar por sentados, es decir, ya estan dadas. Al mismo tiempo, las otras variables se
+suponen que son endógenas y, por tanto, dependen de factores internos
+del modelo. De hecho, las variables endógenas en el modelo depende
+de las exógenas, así como en los parámetros. Aquí $ C_{0} $ es el
+nivel de consumo autónomo. El parámetro $c$ es conocido como la propensión marginal a consumir.
+Queremos resolver el modelo a partir de las variables endógenas $\bar{Y} $ y $\bar{C}$ en equilibrio:
+\begin{align*}
+Y &=  C + I_0 + G_0 \\
+C &= C_{0}+ c Y  && C_{0} > 0 \quad c \in (0,1)
+\end{align*}
+Así formuladas, las ecuaciones dadas forman la así llamada forma
+estructural del modelo. Cuando se resuelve por $\bar{Y} $ o $ \bar{C} $,
+se obtiene la forma reducida del modelo. Tenemos la solución
+en forma reducida cuando la variable endógena se expresa en términos
+de las variables exógenas o parámetros en el modelo. Reescribiendo
+las ecuaciones,
+\begin{align*}
+Y- C &= I_0 + G_0 \\
+-c Y + C &= C_{0}
+\end{align*}
+\[
+\left[
+\begin{matrix}
+1 & -1 \\
+-c & 1
+\end{matrix}
+\right] \left[
+\begin{matrix}
+\bar{Y} \\
+\bar{C}
+\end{matrix}
+\right] = \left[
+\begin{matrix}
+I_0 + G_0 \\
+C_{0}
+\end{matrix}
+\right]
+\]
+\medskip
+
+$|A| = 1- c > 0$
+\medskip
+
+El determinante es claramente positivo, ya que la propensión
+marginal a consumir es menor que 1, calculando el valor de $ \bar{Y}$
+\[
+\bar{Y} = \frac{\left[
+\begin{matrix}
+I_0 + G_0 & -1 \\
+C_{0} & 1
+\end{matrix}
+\right] }{1- c} = \frac{I_0 + G_0 + C_{0} }{1- c}
+\]
+A partir de este modelo de ingreso, vemos que el
+equilibrio en el ingreso es positivo y se relaciona
+positivamente con la variable exógena inversión, el gasto
+gubernamental, y el consumo autónomo. Por otro lado, se
+relaciona positivamente con la propensión marginal a consumir.
+\medskip
+
+La estática comparativa nos ayuda a estudiar la forma en que el ingreso
+$ \bar {Y} $ responde ante cambios de las variables exógenas o de cualquier otro parámetro. Por ejemplo, podemos ver que el ingreso aumenta cuando la inversión aumenta en la economía simplemente diferenciando
+el ingreso con respecto a la inversión:
+\[
+\frac{\partial \bar{Y}}{\partial I_0} = \frac{1}{1 - c}
+> 0
+\]
+Igualmente el efecto del gasto del gobierno en el ingreso.
+Este efecto se muestra por el multiplicador del gasto del gobierno,
+expresado por la derivada parcial
+\[
+\frac{\partial \bar{Y}}{\partial G_0} = \frac{1}{1 - c}
+> 0
+\]
+Vemos que el valor del multiplicador del gasto gubernamental es el
+mismo que el multiplicador de la inversión. Para el consumo
+tenemos
+\[
+\bar{C} = \frac{\left[
+\begin{matrix}
+1 & I_0 + G_0  \\
+-c & C_{0}
+\end{matrix}
+\right] }{1- c} = \frac{ C_{0} + c (I_0 + G_0) }{1- c}
+= \frac{C_{0} + c (I_0 + G_0 )}{1 - c} > 0
+\]
+El equilibrio de consumo también es positivo. Podemos ver que el consumo se
+relaciona positivamente con el ingreso,  el nivel de inversión y el gasto público.
+\medskip
+
+Al igual que el ingreso el consumo aumenta con el
+nivel de inversión en la economía simplemente diferenciando el
+consumo con respecto a la inversión:
+\[
+\frac{\partial \bar{C}}{\partial I_0} = \frac{c}{1- c}> 0
+\]
+Nuevamente el efecto del gasto del gobierno aumenta  el consumo.
+Este efecto se muestra por el multiplicador del gasto del gobierno,
+expresada por la derivada parcial
+\[
+\frac{\partial \bar{C}}{\partial G_0} = \frac{c}{1- c}
+> 0
+\]
+Observemos que en en el caso del consumo, también el valor del
+multiplicador del gasto gubernamental es el mismo que el del
+multiplicador de la inversión.
+
+\begin{problema}
+En un modelo b\'asico macroeconómico keynesiano se supone que $Y = C
++ I_{0} + G_{0}$, donde $C =50+0.75 Y$,  $I = 100$ y $G_{0} = 50$  ¿calcule el efecto
+de un incremento de 20 unidades en la inversión?.
+\medskip
+
+\textbf{Soluci\'on}
+\begin{align*}
+Y- C &= 100 + 50 \\
+-0.75 Y + C &= 50
+\end{align*}
+\[
+\left[
+\begin{matrix}
+1 & -1 \\
+-0.75 & 1
+\end{matrix}
+\right] \left[
+\begin{matrix}
+\bar{Y} \\
+\bar{C}
+\end{matrix}
+\right] = \left[
+\begin{matrix}
+150 \\
+50
+\end{matrix}
+\right]
+\]
+\medskip
+
+$|A| = 1- 0.75 = 0.25 $
+\medskip
+
+El determinante es positivo, calculando el valor de $ \bar{Y}$
+\[
+\bar{Y} = \frac{\left[
+\begin{matrix}
+150 & -1 \\
+50 & 1
+\end{matrix}
+\right] }{0.25} = 1000
+\]
+Calculando el valor de $ \bar{C}$
+\[
+\bar{C} = \frac{\left[
+\begin{matrix}
+1 & 150  \\
+-0.75 & 50
+\end{matrix}
+\right] }{0.25} = 1000
+\]
+Ahora vamos obtener el multiplicador de la inversión
+\[
+\frac{\partial \bar{Y}}{\partial I_0} = \frac{1}{1 - 0.75} = 4
+\]
+Este multiplicador indica que por cada unidad que aumenta la inversión el ingreso se incrementará en 4 unidades. Luego, si la inversión aumenta en 20, entonces el ingreso aumentará en 80.
+\begin{align*}
+\partial \bar{Y} & = 4 * {\partial I_0} \\
+                 & = 4 * 20 \\
+\partial \bar{Y} & = 80
+\end{align*}
+\end{problema}
+
+\begin{ejemplo}
+El mercado de bienes es descrito por:
+\begin{align*}
+ Y &= C + I + G \\
+ C &= C_0 + c(1-t) Y \\
+ I &= I_0 - bR \\
+ G &= \bar{G}
+\end{align*}
+
+El mercado de dinero es descrito por:
+\begin{align*}
+L &= kY - h R \\
+M  &= \bar{M}
+\end{align*}
+ La econom\'{\i}a en equilibrio es entonces caracterizada por:
+\begin{align*}
+  Y &= C + I + \bar{G} \\
+  C &= C_0 + c(1-t)Y \\
+  I &= I_0 - bR \\
+  \bar{M} &= k Y - h R
+\end{align*}
+
+Estas son cuatro variables end\'ogenas en el sistema $Y, C, I$ y $R$
+y cuatro variables exogenas, $\bar{G}, C_0, I_0,$ y $\bar{M}$. El
+sistema se puede escribir en la forma:
+\[
+   A \textbf{x} = \texttbf{B}
+\]
+donde $A$ es una matriz $4 \times 4$ de par\'ametros, $x$ es el
+vector de variables endogenas, y \textbf{B} es un vector de
+constantes  y variables ex\'ogenas.
+
+\vspace{.2cm}
+
+Supongamos que nos interesa determinar $R$. Lo haremos por la regla de Cramer. El sistema es dado por:
+
+\[
+   \left[
+  \begin{matrix}
+   1    & -1   &-1   & 0   \\
+   -c(1-t) & 1 & 0 & 0     \\
+   0 & 0 & 1 & b  \\
+   k &0 &0 & -h
+  \end{matrix}
+  \right] \cdot
+  \left[
+  \begin{matrix}
+   Y  \\
+   C   \\
+    I    \\
+     R
+  \end{matrix}
+  \right] =
+  \left[
+  \begin{matrix}
+   \bar{G} \\
+   C_0 \\
+   I_0 \\
+    \bar{M}
+  \end{matrix}
+  \right]
+\end{equation}
+\]
+
+Obtenemos $\mid  A \mid $ desarrollandolo a lo largo de la tercer fila de $A$:
+\begin{align*}
+\mid A \mid & = 1
+\left|
+  \begin{matrix}
+   1       & -1   & 0   \\
+   -c(1-t) & 1    & 0   \\
+   k       & 0    & -h
+  \end{matrix}
+  \right|
+- b
+\left|
+  \begin{matrix}
+   1       & -1   &-1     \\
+   -c(1-t) & 1    & 0      \\
+   k       & 0    & 0
+  \end{matrix}
+  \right| \\
+  &= -h
+  \left|
+  \begin{matrix}
+   1       & -1   \\
+   -c(1-t) & 1
+  \end{matrix}
+  \right|
+  -b \left( -1
+  \left|
+  \begin{matrix}
+   -c(1-t) & 1    \\
+     k     & 0
+  \end{matrix}
+  \right|
+  \right) \\
+  &= -h[1- b(1-t)] -bk
+\end{align*}
+
+Resolviendo para  $R = \mid A_4 \mid  /   \mid  A \mid$, donde $\mid A_4 \mid$
+se obtiene remplazando la cuarta columna de $A$ por $\textbf{B}:$
+\[
+A_4 =
+\left|
+  \begin{matrix}
+   1    & -1   &-1   & \bar{G}   \\
+   -c(1-t) & 1 & 0 & C_0     \\
+   0 & 0 & 1 & I_0  \\
+   k & 0  & 0 & \tilde{M}
+  \end{matrix}
+  \right|
+\]
+
+Entonces $\mid A_4 \mid$ se obtiene expandiendo a lo largo de la tercer fila de $A_4$:
+
+\begin{align*}
+\mid A_4 \mid & = 1
+\left|
+  \begin{matrix}
+   1       & -1   & \tilde{G}   \\
+   -c(1-t) & 1    & C_0         \\
+   k       & 0    & \tilde{M}
+  \end{matrix}
+  \right|
+- I_0
+\left|
+  \begin{matrix}
+   1       & -1  &-1     \\
+   -c(1-t) & 1   & 0      \\
+   k       & 0   & 0
+  \end{matrix}
+  \right| \\
+  &= k
+  \left|
+  \begin{matrix}
+   -1    & \tilde{G}  \\
+   1     & C_0
+  \end{matrix}
+  \right|
+  +\tilde{M}
+  \left|
+  \begin{matrix}
+   1       & -1    \\
+   -c(1-t) & 1
+  \end{matrix}
+  \right|
+  -I_0 \left( k
+  \left|
+  \begin{matrix}
+   -1 & -1    \\
+    1 & 0
+  \end{matrix}
+  \right|
+  \right) \\
+  &= -k(C_0 + \tilde{G}) + \tilde{M} \left[ 1- c(1-t) \right] -I_0k.
+\end{align*}
+
+Por tanto $R$ es dado por:
+
+\[
+   R = \frac{k(C_0 + I_0 + \tilde{G}) - \tilde{M} \left[ 1- c(1-t) \right] }{h \left[ 1- c(1-t) \right] + bk}.
+\]
+\end{ejemplo}
+
+\newpage
+\setcounter{page}{1}
+\hspace{3cm}  \textbf{TAREA 3: SISTEMAS DE ECUACIONES}
+
+\vspace{.2cm}
+
+Tarea en equipo. \\
+\begin{enumerate}
+\item  Resolver las siguientes pares de ecuaciones por el método de igualación:
+
+\begin{enumerate}
+ \item
+\begin{align*}
+ y &= 22 - x \\
+2y &= 4 + 8x
+\end{align*}
+\item
+\begin{align*}
+ q &= 25-p \\
+ q &= 4+2p
+\end{align*}
+\end{enumerate}
+\item Cuales de los siguientes sistemas son consistentes
+  y cuales son inconsistentes:
+\begin{enumerate}
+\item
+\begin{align*}
+ 5x - 8y &= 4 \\
+ -x + 2y &= 2
+\end{align*}
+\item
+\begin{align*}
+  x - 4y &= 3 \\
+-3x +12y &= -14
+\end{align*}
+\item
+\begin{align*}
+  x - 4y &= 3 \\
+-3x +12y &= -9
+\end{align*}
+\item
+\begin{align*}
+   2x + y - z &= 10 \\
+  4y + 2z &= 4  \\
+   x &= 0
+\end{align*}
+\end{enumerate}
+\item Resuelva los siguientes sistemas de ecuaciones lineales mediante el m\'etodo de eliminaci\'on de Gauss-Jordan.
+\begin{enumerate}
+\item
+\begin{align*}
+3x + y &= 1 \\
+-7x - 2y &= -1
+\end{align*}
+\item
+\begin{alignat*}{3}
+    4x_1     &+  x_2  && + 2x_3   &&=  0      \\
+     x_1     &  - x_2      && + 4x_3  && = 1      \\
+    2x_1   & +  x_2 && -  x_3 &&= 2
+\end{alignat*}
+\end{enumerate}
+
+\item Usar la regla de Cramer para calcular las soluciones del sistema de
+  ecuaciones:
+\begin{enumerate}
+\item
+\begin{align*}
+ 2x - 6y &= 8 \\
+-3x +14y &= 8
+\end{align*}
+\item
+\begin{alignat*}{3}
+    2x_1     &+  x_2  && + x_3   &&=  3      \\
+    -x_1     &        && + 2x_3  && = 10      \\
+     3 x_1   & +  x_2 && +  3x_3 &&= -3
+\end{alignat*}
+\end{enumerate}
+
+\item Las funci\'ones  de demanda y oferta para un producto
+  (pantalones) son dadas por:
+
+\begin{align*}
+\text{Funci\'on de demanda:} \quad  P &= 50 - 3 Q \\
+\text{Funci\'on de oferta: } \quad    P &= 14 + 1.5 Q
+\end{align*}
+
+donde $P$ es el precio de un par de pantalones; $Q$ es el n\'umero de
+pares de pantalones. Calcular a través de la matriz inversa el precio y la cantidad de equilibrio.
+
+\item Las funci\'ones  de demanda y oferta para el trabajo son dadas por:
+
+\begin{align*}
+\text{Funci\'on de demanda de trabajo:} \quad  w &= 70 - 4 L \\
+\text{Funci\'on de oferta de trabajo: } \quad   w &= 10 + 2 L
+\end{align*}
+
+Calular con el método de Cramerel el n\'umero de trabajadores empleados y el
+salario de equilibrio por hora.
+\end{enumerate}
+
+\begin{ejemplo}
+Considere la siguiente econom\'{\i}a cerrada:
+\begin{align*}
+   C &= 15 + 0.8(Y-T) \\
+   T &= 25 + 0.25 Y \\
+   I &= 65- R \\
+   G &= 80 \\
+   L &= 5Y-50R \\
+   M &=1,500
+\end{align*}
+Resolver para el nivel de equilibrio de la renta y de la tasa de ínteres por cualquier método visto anteriormente.
+\end{ejemplo}
+\medskip
+
+\begin{ejemplo}
+El modelo de ingreso nacional es
+\begin{align*}
+Y &=  C + I_0 + G_0 \\
+C &= C_{0} + c(Y - T)  && C_{0} > 0 \quad c \in (0,1) \\
+T  &= T_{0} + \beta Y   && T_{0} > 0 \quad \beta \in (0,1)
+\end{align*}
+Encontrar las derivadas parciales $\frac{\partial Y}{\partial G_0}$ y $\frac{\partial C}{\partial G_0}$. Determinar sus signos e interpretar su significado económico.
+\end{ejemplo}
+
+\newpage
+
+\hspace{3cm}  \textbf{DERIVANDO LAS CURVAS IS Y LM}
+
+\vspace{.2cm}
+
+Practica en equipo con dos o tres integrantes en el aula de c\'omputo. \\
+
+\vspace{.2cm}
+
+Actividad: De la siguiente informaci\'on acerca de las ecuaciones
+estructurales de una econom\'{\i}a cerrada, derivar las curvas $IS \
+(Y = C+ I)$ y $LM \ (M / P = L)$, donde supondremos que $P =
+1$. Resolver la renta de equilibrio y la tasa de inter\'es a trav\'es
+de matrices con Excel
+
+\vspace{.2cm}
+
+Ejercicio 1.
+
+\begin{align*}
+ C  &= 50 + 0.8 Y \\
+ I &= 20 - 5R \\
+ L & = 100- R + 0.5 Y \\
+M &= 200
+\end{align*}
+
+Ejercicio 2
+\begin{align*}
+ C  &= 15 + 3/4 Y \\
+ I &= 10 - 1.5R \\
+ L & = 0.25 Y - 0.5 R \\
+M &= 8
+\end{align*}
+
+
+Ejercicio 3
+\begin{align*}
+ C  &= 20 + 0.8 Y \\
+ I &= 20 - 2R \\
+ L & = 10 + 0.25 Y - 0.5 R \\
+M &= 55
+\end{align*}
+
+\newpage
+
+\begin{thebibliography}{10}
+   \bibitem{T1}
+    Gilbert Strang, 2007. Algebra Lineal y sus aplicaciones,
+    Thomson. 4a edici\'on.
+   \bibitem{T2}
+    Darell A. Turkington, 2007. Mathematical Tools for Economics,
+    Blackwell Publishing.
+   \bibitem{T3}
+    Mike Rosser, 2003. Basic Mathematics for Economicsts,
+    Routledge. Routledge. 2da. edici\'on.
+   \bibitem{T4}
+   Nakos George, 2004. Algebra Lineal con aplicaciones. Internacional
+   Thomson Editores. 2a Ed, M\'exico.
+\end{thebibliography}
+
+\end{document}

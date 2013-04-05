@@ -1,0 +1,1012 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb,latexsym}
+\usepackage{amsthm}
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{graphicx} % PDFLaTeX
+\DeclareGraphicsExtensions{.png,.pdf,.jpg}
+\usepackage{epsf}
+\usepackage{graphicx}
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\theoremstyle{definition}
+\newtheorem{definicion}[teorema]{Definici\'on}
+\newtheorem{problema}{Problema}
+\newtheorem{ejemplo}{Ejemplo}
+
+\renewcommand{\baselinestretch}{1.2}
+\usepackage[bottom]{footmisc}  % places footnotes at page bottom
+\usepackage[latin1]{inputenc}      %    tipo de codificacion del documento: applemac,
+
+\usepackage{subfigure}
+%\usepackage{hyperref}
+%\usepackage[pdftitle={},pdfauthor={}, colorlinks=true, hyperindex=true, linkcolor=blue, pdfpagemode=UseOutlines, bookmarksopen=false, bookmarksnumbered=true, pdfstartview={FitH}]{hyperref} % %backref={page} para referencia de pagina
+\spanishdecimal{.}
+\usepackage{amssymb,amsmath,latexsym,amsfonts}
+\usepackage{rotating}
+\usepackage{indentfirst}        %
+%\usepackage[]{showkeys}
+
+\begin{document}
+
+\title{CÁLCULO PARA EL ANÁLISIS ECONÓMICO}
+\author{\textbf{ESCUELA SUPERIOR DE ECONOMÍA}}
+\date{\large{M\'exico, D.F., 27 de Agosto de 2010}}
+\def\contentsname{Contenido}
+
+
+\setcounter{page}{1}
+
+\section{Derivadas}
+\section{Optimización libre con una variable}
+
+\newpage
+\setcounter{page}{1}
+
+\section{Cálculo en varias variables}
+\subsection{Funciones en varias variables}
+
+Hasta ahora hemos estudiado mayormente funciones de una variable,
+esto es, funciones cuyo dominio es un conjunto de n\'umeros reales y
+cuyo rango es tambi\'en un conjunto de n\'umeros reales. Sin embargo
+la descripci\'on de muchos fen\'omenos econ\'omicos exigen
+considerar un n\'umero grande de variables de manera simult\'anea.
+Por ejemplo, la demanda de un bien depende del precio del bien, de
+los gustos del consumidor, de las rentas de los diferentes
+consumidores, y de los precios de los bienes complementarios y
+sustitutos, entre otras cosas. As\'{\i} esta demanda es
+esencialmente una funci\'on de varias variables.
+
+\begin{definicion}
+Una \textbf{ funci\'on de $n$ variables} $x_1,x_2,...,x_n$ con
+dominio $D \subset \Bbb{R}^{n}$ es una regla que asigna un n\'umero
+especifico $f(x_1,...,x_n)$ a cada n-vector $(x_1,...,x_n) \in D.$
+\end{definicion}
+
+Por ejemplo, la forma general de la función de producción es:
+\[
+Q=f(K,L)
+\]
+
+Decimos que $Q$  depende de las dos variables independientes, la
+variable capital $(K)$  y el trabajo $(L)$  . La forma específica de
+una función nos dice exactamente cómo el valor de la variable
+dependiente se determina a partir de los valores de la variable
+independiente. Una forma específica en una función de producción
+puede ser:
+\[
+Q=4K^{0.5}L^{0.5}
+\]
+
+Para cualquier valor dado de $K$ y $L$ la función específica nos
+permite calcular el valor de $Q$. Por ejemplo:
+
+\begin{center}
+$Si\,\,K=1\,y\,\,L=1\,\, entonces\,\, Q=4(1)^{0.5}(1)^{0.5}=4$
+$Si\,\,K=4\,y\,\,L=4\,\, entonces\,\, Q=4(4)^{0.5}(4)^{0.5}=16$
+\end{center}
+
+\begin{ejemplo}
+   Otro ejemplo de funci\'on de Producci\'on es:
+   \[
+     Y = F(K, L, T),
+   \]
+   donde $Y$ es el volumen de cosecha, $K$ es el capital invertido,
+   $L$ el trabajo y $T$ la superficie de explotaci\'on
+   agr\'{\i}cola.
+\end{ejemplo}
+
+\begin{ejemplo}
+Funci\'on de Cobb-Douglas:
+   \[
+                       F(x,y) = A x^{a}y^{b},
+   \]
+   donde $a>0$, $b>0$ y $A > 0, x > 0, y > 0$.
+\end{ejemplo}
+
+La gráfica de la función producción Cobb-Douglas se presenta en la
+figura 19.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.28
+\textheight]{unid1graf25.jpg}
+\end{center}
+\caption{$f(x,y)=A x^{a}y^{b}$\,\, \text{con}\,\, $a>0$, $b>0$ y $A,
+x, y, > 0$}\label{Figura4}
+\end{figure}
+\subsubsection{Curvas de nivel}
+\medskip
+
+El correspondiente conjunto de puntos $(x,y)$ del plano $xy$ que
+satisface $f(x,y)=C$ se llama \textbf{curva de nivel} de $f$ en $C$,
+cuando $C$ varía sobre un conjunto de números se genera toda una
+familia de curvas de nivel. Las curvas de nivel aparecen en
+numerosas aplicaciones diferentes. Por ejemplo, en economía, si la
+salida $Q(x,y)$ de un proceso de producción está determinada por dos
+entradas $x$ y $y$ (digamos horas de fuerza laboral e inversión de
+capital), entonces la curva de nivel $Q(x,y)=C$ se llama
+\textbf{curva de producción constante $C$} o, más brevemente,
+\textbf{isocuanta}.
+\medskip
+
+\begin{ejemplo}
+Una empresa tiene la siguiente función de producción
+\[
+  Q=4L^{1/2}K^{3/4}
+\]
+Identifique que combinaciones de trabajo $(L)$ y capital $(K)$
+generan el mismo nivel de producción $(Q)$ y por lo tanto se
+encuentran en la misma isocuanta.
+
+\textbf{Solución}
+\medskip
+
+Se construye la siguiente tabla de combinaciones de trabajo y
+capital
+\begin{center}
+\begin{tabular}{c|cccc|}
+ K/L &  \multicolumn{4}{c|}{Trabajo } \\
+ Capital &  1 &  16 &  64 & 729 \\
+\hline
+ 1  &  4   &  16  &  32 & 108 \\
+ 16 &  32  &  128 & 256 & 864 \\
+ 81 &  108 &  432 & 864 & 2916 \\
+\hline
+\end{tabular}
+\end{center}
+
+A partir de la tabla anterior se observa que
+\begin{align*}
+  \text{Si}\, L & = 1, K = 16\,\, \text{y}\,\, L = 64, K = 1 \Rightarrow Q = 32 \\
+  \text{Si}\, L & = 1, K = 81\,\, \text{y}\,\, L = 729, K = 1 \Rightarrow Q = 108 \\
+  \text{Si}\, L & = 64, K = 81\,\, \text{y}\,\, L = 729, K = 16 \Rightarrow Q = 864
+\end{align*}
+
+En la figura 20 se muestran las isocuantas de la función producción
+Cobb-Douglas.
+\end{ejemplo}
+
+\medskip
+
+Otra aplicación de curvas de nivel en economía comprende el concepto
+de curvas de indiferencia. Un consumidor que esté considerando la
+compra de varias unidades de cada una de dos mercancías está
+asociado con una \textbf{función de utilidad} $U(x,y)$, que mide la
+satisfacción total (o \textbf{utilidad}) que el consumidor obtiene
+por tener $x$ unidades de la primera mercancía, así como $y$
+unidades de la segunda. Una curva de nivel $U(x,y)=C$ de la función
+de utilidad se llama \textbf{curva de indiferencia} y da todas las
+combinaciones de $x$ y $y$ que conducen al mismo nivel de
+satisfacción del consumidor.
+\medskip
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{ll}
+\includegraphics{unid1graf28.jpg}
+& \includegraphics{unid1graf27.pdf}\\
+\end{tabular}
+\end{center}
+\caption{$Q(L,K)=4L^{1/2}K^{3/4}$}\label{Figura4}
+\end{figure}
+
+\newpage
+
+Las funciones que los economistas estudian normalmente tienen m\'as
+de dos variables, luego necesitamos extender a ellas el concepto  de
+derivadas parciales.
+
+\subsection{Derivadas parciales}
+Cuando se estudia una funci\'on $y = f(x)$ de una variable, la
+derivada $\frac{\partial f}{\partial x}$ mide la tasa de variaci\'on
+de la funci\'on cuando $x$ cambia. Para funciones de dos variables
+$z = f(x,y)$ queremos ver la velocidad de variaci\'on de la
+funci\'on respecto de los cambios de valores en las variables
+independientes.
+
+\begin{definicion}
+Sea $z = f(x,y)$. La \textbf{derivada parcial de z} con respecto de
+$x$, la cual se le denota por $\partial z/ \partial x$, es la
+derivada de $f(x,y)$ con respecto a $x$ cuando $y$ se mantiene
+constante. La derivada parcial de $f$ con respecto de $y$, la cual
+se le denota por $\partial z/ \partial y$, es la derivada de $f$ con
+respecto a $y$ cuando $x$ se mantiene constante.
+\end{definicion}
+
+\begin{definicion}
+Sea $z = f(x_1,...,x_n)$. Entonces $\partial f/ \partial x_i$ es la
+derivada de $f(x_1,...,x_n)$ con respecto a $x_i$, considerando las
+otras variables $x_j  \, (i \ne i)$ como constantes.
+\end{definicion}
+
+\begin{ejemplo}
+Encuentre las derivadas parciales $f_x$ y $f_y$ si
+$f(x,y)=2xy^{5}+3x^{2}y+x^{2}$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Para calcular $f_x$, considere $f$ como una función de $x$ y derive
+la suma término por término, tratando $y$ como constante para
+obtener
+\begin{align*}
+ f_x(x,y)&=2(1)y^{5}+3(2x)y+2x\\
+         &=2y^{5}+6xy+2x
+\end{align*}
+
+Para calcular $f_y$, considere $f$ como una función de $y$ y derive
+término por término, tratando $x$ como constante para obtener
+\begin{align*}
+ f_y(x,y)&=2x(5y^{4})+3x^{2}(1)+0\\
+         &=10xy^{4}+3x^{2}
+\end{align*}
+\end{ejemplo}
+
+\begin{ejemplo}
+Encuentre las derivadas parciales $f_x$ y $f_y$ si
+$f(x,y)=x^{2}+2xy^{2}+\frac{2y}{3x}$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Para simplificar el cálculo, empiece por reescribir la función como
+\[
+ f(x,y)=x^{2}+2xy^{2}+\frac{2}{3}yx^{-1}
+\]
+
+Para calcular $f_x$, considere $f$ como una función de $x$ y derive
+la suma término por término, tratando $y$ como constante para
+obtener
+
+\begin{align*}
+ f_x(x,y)&=2x+2(1)y^{2}+\frac{2}{3}y(-x^{-2})\\
+         &=2x+2y^{2}-\frac{2y}{3x^{2}}
+\end{align*}
+
+Para calcular $f_y$, considere $f$ como una función de $y$ y derive
+término por término, tratando $x$ como constante para obtener
+\begin{align*}
+ f_y(x,y)&=0+2x(2y)+\frac{2}{3}(1)(x^{-1})\\
+         &=4xy+\frac{2}{3x}
+\end{align*}
+\end{ejemplo}
+
+\subsubsection{Derivadas parciales de orden superior} Si $z =
+f(x,y)$, entonces $\partial f/ \partial x$ y , $\partial f/
+\partial y$ se llaman las \textbf{derivadas parciales de primer orden} o
+\textbf{derivadas parciales primeras}. Esas derivadas parciales son,
+a su vez, funciones de dos variables. A partir de $\partial f/
+\partial x$, podemos construir dos nuevas funciones tomando las
+derivadas parciales con res\-pec\-to a $x$ y $y$. De la misma manera
+podemos tomar las derivadas parciales de $\partial f/
+\partial y$ con respecto a $x$ y $y$. A continuación se muestra un
+resumen de la definición y notación para las cuatro posibles
+derivadas parciales de segundo orden de una función de dos
+variables.
+
+\begin{enumerate}
+ \item[(a)] Si $z = f(x,y)$, la derivada parcial de $f_x$ con respecto a $x$ es
+  \[
+  f_{xx}=(f_{x})_x \,\,\,\,\text{o}\,\,\,\, \frac{\partial^{2} z}{ \partial
+  x^{2}}=\frac{\partial }{ \partial  x}(\frac{\partial z}{ \partial  x})
+  \]
+
+  \item[(b)] La derivada parcial de $f_x$ con respecto a $y$ es
+\[
+  f_{xy}=(f_{x})_y \,\,\,\,\text{o}\,\,\,\, \frac{\partial^{2} z}{ \partial
+  y \partial x}=\frac{\partial } {\partial  y}(\frac{\partial z} {\partial  x})
+\]
+
+  \item[(c)] La derivada parcial de $f_y$ con respecto a $x$ es
+  \[
+  f_{yx}=(f_{y})_x \,\,\,\,\text{o}\,\,\,\, \frac{\partial^{2} z}{ \partial
+  x \partial y}=\frac{\partial } {\partial  x}(\frac{\partial z} {\partial  y})
+  \]
+
+  \item[(d)] La derivada parcial de $f_y$ con respecto a $y$ es
+  \[
+  f_{yy}=(f_{y})_y \,\,\,\,\text{o}\,\,\,\,  \frac{\partial^{2} z} {\partial
+  y^{2}}=\frac{\partial } {\partial  y}(\frac{\partial z} {\partial  y})
+  \]
+\end{enumerate}
+
+\begin{ejemplo}
+Calcule las cuatro derivadas parciales de segundo orden de la
+función $f(x,y)=xy^{3}+5xy^{2}+2x^{2}+1$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Como
+\begin{align*}
+ f_x &= y^{3}+5y^{2}+4x \\
+ f_y &= 3xy^{2}+10xy
+\end{align*}
+
+se deduce que
+\begin{align*}
+ f_{xx} &= 4\\
+ f_{yy} &= 6xy+10x
+\end{align*}
+
+Las derivadas cruzadas son
+\begin{align*}
+ f_{yx}=3y^{2}+10y\\
+ f_{xy}=3y^{2}+10y
+\end{align*}
+\end{ejemplo}
+
+\textbf{Aplicaciones de diferenciaci\'on parcial}
+\medskip
+
+La diferenciaci\'on parcial es b\'asicamente un aplicaci\'on
+matem\'atica del supuesto de ceteris paribus (es decir,  las otras
+cosas se suponen constantes), que es frecuentemente utilizado en el
+análisis econ\'omico. Debido a que la econom\'{\i}a es un sistema
+complejo de entender, los economistas a menudo ven el efecto de los
+cambios en una variable asumiendo que todos los demas factores
+permanecen sin cambios. Cuando la relaci\'on entre las distintas
+va\-ria\-bles se puede expresar en forma matem\'atica, el an\'alisis
+del efecto de los cambios en una variable puede ser descubierto a
+trav\'es de la diferenciaci\'on parcial. La diferenciaci\'on parcial
+se puede aplicar a las funciones de utilidad y a modelos
+macroeconómicos como veremos a continuación.
+\medskip
+
+\textbf{Funci\'on de utilidad del Consumo}
+\medskip
+
+La forma general de la funci\'on de utilidad del consumo es
+\[
+U = f(x_1,x_2,...,x_n)
+\]
+
+donde $x_1,x_2,...,x_n$ representan las cantidades de los diferentes
+bienes consumidos.
+
+\vspace{.2cm}
+
+La teor\'{\i}a econ\'omica moderna asume que la utilidad es un
+concepto ordinal, lo que significa que diferentes combinaciones de
+productos se pueden clasificar en orden de preferencia, pero las
+utilidades en sí mismas no puede ser cuantificados de ninguna
+manera. Sin embargo, los economistas tambi\'en trabajan un poco con
+el concepto de utilidad cardinal donde se supone que, al menos
+hipot\'eticamente, cada individuo puede cuantificar y comparar los
+diferentes niveles de su propia utilidad. Es este concepto de
+utilidad cardinal el que se utiliza aquí.
+\medskip
+
+Si se supone que s\'olo los dos bienes $x$ y $y$  son consumidos, la
+función de utilidad tendrá la forma.
+\[
+  U = f(x,y)
+\]
+
+\textbf{La utilidad marginal} se define como la tasa de cambio  de
+la utilidad total con respecto al aumento en el consumo de un bien.
+Por lo tanto las funciones de la utilidad marginal de los bienes $x$
+y $y$ son respectivamente
+
+\[
+  U_x = \frac{\partial U}{\partial x} \quad U_y =
+  \frac{\partial U}{\partial y}
+\]
+
+Dos principios importantes de la teoría de la utilidad son:
+\begin{enumerate}
+\item La ley de la utilidad marginal decreciente dice que si, ceteris paribus,
+la satisfacción adicional del consumidor disminuye a medida que se
+consume una mayor cantidad del bien.
+\item El consumidor va a consumir un bien hasta el punto de que su utilidad
+marginal es cero.
+\end{enumerate}
+
+Algunos aplicaciones de los dos principios se dan en los siguientes
+ejemplos.
+
+\begin{ejemplo}
+Analizar si la ley de la utilidad marginal decreciente es v\'alida
+para los bienes $x$ y $y$ en la siguiente función de utilidad del
+tipo Cobb-Douglas: $U = x^{\alpha} y^{\beta}$ y $0<\alpha<1,
+0<\beta<1, x>0, y>0$.
+
+\vspace{.2cm}
+
+\textbf{Solución}
+
+Para la funci\'on utilidad $U = x^{\alpha} y^{\beta}$ la
+diferenciaci\'on parcial lleva a la funci\'on de utilidad marginal
+\begin{align*}
+  U_x & = \frac{\partial U}{\partial x} =  \alpha x^{\alpha-1}
+  y^{\beta}>0 \quad \text{y} \\[.3cm]
+  U_y & = \frac{\partial U}{\partial y} = \beta
+  x^{\alpha}y^{\beta-1}>0
+\end{align*}
+
+Cuando aumenta el consumo del bien $x$ manteniendo constante la
+cantidad del bien $y$, la utilidad del consumidor $U$ aumenta. Del
+mismo modo cuando aumenta el consumo del bien $y$ manteniendo
+constante la cantidad del bien $x$, la utilidad del consumidor $U$
+aumenta. Para analizar los utilidad marginal decreciente hacemos las
+segundas derivadas de la función de utilidad.
+\begin{align*}
+  U_{xx} & = \frac{\partial^{2} U}{\partial x^{2}} = \alpha(\alpha-1) x^{\alpha-2}
+  y^{\beta}<0   \quad \text{y} \\[.3cm]
+  U_{yy} & = \frac{\partial^{2} U}{\partial y^{2}} =
+  \beta(\beta-1)  x^{\alpha}y^{\beta-2}<0
+\end{align*}
+As\'{i} $U_{xx}$ cae a medida que $x$ aumenta y la caída $U_{yy}$
+cae a medida que $y$ aumenta.
+\end{ejemplo}
+
+\textbf{Modelo macroeconómico keynesiano de una economía abierta}
+\medskip
+
+Si se introduce al comercio exterior el modelo macroeconómico
+keynesiano b\'asico se convierte en la identidad
+\begin{equation}
+\label{aa1}
+  Y = C + I + G + X - M
+\end{equation}
+
+y la relaci\'on funcional de la funci\'on consumo
+\begin{equation}
+\label{bb1}
+ C = c Y_d
+\end{equation}
+
+donde $c$ es la propensi\'on marginal al consumo, m\'as
+\begin{equation}
+\label{cc1}
+ M = m Y
+\end{equation}
+
+donde $M$ es la importaci\'on y $m$ es la propensi\'on marginal de
+la importaci\'on, y
+\begin{align}\label{dd1}
+ Y_d & = Y - T \nonumber \\
+   T & = tY
+\end{align}
+
+donde $Y_d$ es el ingreso disponible, $T$ son los impuestos y $t$ es
+la tasa de impuestos.
+
+\vspace{.2cm}
+
+La inversi\'on $I$, el gasto p\'ublico $G$ y las exportaciones $X$
+se determinan de manera ex\'ogena y $c,m$ y $t$ son par\'ametros
+dados. Sustituyendo (\ref{bb1}), (\ref{cc1}) y (\ref{dd1}) en (\ref{aa1})
+tenemos
+\begin{align}\label{ee1}
+       Y &= c(1-t) Y + I + G + X - m Y \nonumber  \\
+    Y[1 - c(1 - t)  + m ] &= I + G + X \nonumber  \\
+   Y &=  \frac{ I + G +  X  }{1 - c(1 - t) + m }
+\end{align}
+
+en el modelo b\'asico keynesiano sin $G$ y $X$, el multiplicador de
+la inversi\'on es simplemente $dY/dI$. Sin embargo, en este modelo
+extendido tambi\'en se tiene que asumir que $G$, $I$ y $X$ son
+constantes con el fin de obtener el multiplicador de la inversi\'on.
+Así, el multiplicador de la inversi\'on se encuentra  diferenciando
+parcialmente (\ref{ee1}) con respecto a $I$, lo c\'ual da
+
+\[
+\frac{\partial Y}{\partial  I} = \frac{1}{ 1- c(1 - t) + m }
+\]
+tambi\'en debe ser capaz de ver que el gasto p\'ublico y el
+multiplicador de exportaci\'on también toma esta, ya que
+
+\[
+\frac{\partial Y   }{\partial I} = \frac{\partial Y}{\partial G} =
+\frac{\partial Y  }{\partial X} = \frac{1}{1 - c(1 - t) + m}
+\]
+
+\begin{ejemplo}
+En un sistema macroecon\'omico Keynesiano se tienen las
+si\-gui\-en\-tes ecuaciones:
+\begin{align*}
+Y & = C + I + G + X - M \\
+C & = 0.8 Y_d & Y_d &= Y - T  & T &= 0.2 Y & M &= 0.16 Y \\
+G &= 400      & I   &= 300    & X &= 288
+\end{align*}
+
+¿Cu\'al es el nivel de equilibrio de $Y$? ¿Que aumento en $G$
+ser\'{\i}a necesario para que $Y$ tenga un crecimiento de 2,500? Si
+este aumento del gasto se lleva a cabo,  ¿Qu\'e pasar\'a con
+
+\begin{enumerate}
+\item[(i)] el superavit presupuestario o d\'eficit del gobierno, y
+\item[(ii)] el saldo de la balanza de pagos?
+\end{enumerate}
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+\vspace{.2cm}
+
+Primero derivamos ambas relaciones entre $C$ y $Y$. As\'{\i}:
+
+\begin{equation}
+\label{ff1} C = 0.8 Y_d = 0.8 (1 - t)Y = 0.8 (1- 0.2) Y
+\end{equation}
+
+A continuación sustituimos  (\ref{ff1}), las relaciones funcionales y
+los valores que figuran en la identidad  para encontrar el
+equilibrio $Y$. Por lo tanto
+\begin{align*}
+  Y &= C + I + G + X - M \\
+    &= 0.8(1-0.2)Y + 300 + 400 + 288 - 0.16 Y \\
+    &=  0.64 Y + 988 - 0.16 Y \\
+(1 - 0.48) Y &= 988 \\
+Y &= \frac{988}{0.52} = 1,900
+\end{align*}
+
+en este nivel de equilibr\'{\i}o de $Y$, la cantidad total de
+impuestos recaudados es
+\[
+T = tY  = 0.2 (1,900) = 380
+\]
+
+por lo tanto, el d\'eficit presupuestario, que es el monto de
+impuesto recaudados menos el gasto público, es
+\[
+ T - G = 380 - 400 = -20
+\]
+
+la cantidad gastada en las importaciones es
+\[
+ M =0.16 Y  = 0.16 \times 1,900 = 304
+\]
+
+por lo que la balanza de pagos es
+\[
+  X- M = 288 - 304 = -16
+\]
+
+es decir, un deficit de 16.
+
+\vspace{.2cm}
+
+El multiplicador del gasto p\'ublico es
+\begin{align}\label{gg1}
+  \frac{\partial Y}{\partial G} &= \frac{1}{1 - c( 1 - t ) + m}
+    = \frac{1}{1  - 0.8(1 - 0.2) + 0.16}  \nonumber \\
+    &= \frac{1}{1  - (0.8)(0.8) + 0.16} = \frac{1}{1- 0.48} = \frac{1}{0.52}
+\end{align}
+
+como el equilibrio $Y$ es 1,900, el aumento en $Y$ necesario para
+llegar al nivel deseado de  2,500 es
+\begin{equation}
+\label{hh1}
+ \Delta Y = 2,500 - 1,900 = 600
+\end{equation}
+
+dado que el impacto del multiplicador sobre $Y$ será siempre igual a
+
+\begin{equation}
+\label{ii1} \Delta G \frac{\partial Y}{\partial G} = \Delta Y
+\end{equation}
+
+D\'onde $\Delta G$ es el cambio en el gasto p\'ublico, sustituyendo
+(\ref{gg1}) y (\ref{hh1}) en
+ (\ref{ii1}) da
+\begin{align*}
+\Delta G  \frac{1}{0.52}  &= 600 \\
+  \Delta G  &= 600 (0.52) = 312
+\end{align*}
+
+este es el aumento en $G$ necesario para elevar a $Y$ a 2,500.
+
+\vspace{.2cm}
+
+En el nuevo nivel del ingreso nacional, el importe del impuesto
+recaudado ser\'a
+\[
+T = t Y = 0.2 (2,500) = 500
+\]
+
+el nivel de gasto p\'ublico nuevo, incluyendo  el aumento de 312 es
+\[
+ 400 + 312  = 712
+\]
+
+por lo tanto, el d\'eficit presupuestario es
+\[
+ T - G = 500 - 712 = -212
+\]
+
+es decir, hay un aumento de 192 en el d\'eficit.
+
+\vspace{.2cm}
+
+El nuevo nivel de importaciones es
+\[
+  M = (0.16)2,500 = 400
+\]
+
+por lo que el nuevo equilibr\'{\i}o donde figuran los pagos
+\[
+X - M = 288 - 400 = -112
+\]
+
+es decir, el  d\'eficit aumento en 96.
+\end{ejemplo}
+
+\begin{problema}
+Sea $F$ una funci\'on de producci\'on agr\'{\i}cola
+ $Y = F(K,L,T)$, donde $Y$ es el n\'umero de unidades producidas, $K$
+ el capital invertido, $L$ el trabajo y $T$ la superficie de la
+ tierra. Entonces $\frac{\partial Y}{\partial K} = F_K'$ se le llama
+ la \textbf{ productividad marginal del capital} y es la tasa de variaci\'on
+ de la producci\'on de $Y$ con respecto a $K$ cuando $L$ y $T$ se
+ mantienen constantes. De manera an\'aloga $\frac{\partial Y}{\partial L} =
+ F_L'$, es la \textbf{ productividad marginal del trabajo} y  $\frac{\partial Y}{\partial T} =
+ F_T'$ es la \textbf{productividad marginal de la tierra}.
+ Supongamos que $F$ es una funci\'on de Cobb-Douglas:
+ \[
+      F(K,L,T) = A K^{a}L^{b}T^{c}
+ \]
+Hallar las productividades marginales y las parciales segundas.
+Estudiar sus signos.
+\end{problema}
+
+
+\textbf{Soluci\'on del problema 12.} Las productividades marginales
+son:
+\[
+    F_K' = A aK^{a-1}L^{b}T^{c},\,\,    F_L' = A bK^{a}L^{b-1}T^{c},\,\,  F_T' = A cK^{a}L^{b}T^{c-1},
+\]
+Si $K,L$ y $T$ son positivas, las productividades marginales son
+positivas. As\'{\i}, un aumento de capital, trabajo o tierra se
+traducir\'a en un aumento del n\'umero de unidades producidas.
+
+\vspace{.2cm}
+
+Las derivadas parciales cruzadas son:
+\begin{align*}
+  F_{KL}'' &= AabK^{a-1}L^{b-1}T^{c}  \\
+  F_{KT}'' &= AacK^{a-1}L^{b}T^{c-1} \\
+  F_{LT}'' &= AbcK^{a}L^{b-1}T^{c-1}
+\end{align*}
+
+Adem\'as es f\'acil ver que  $F_{LK}'' = F_{KL}'', F_{TK}'' =
+F_{KT}''$ y $F_{LT}'' = F_{LT}$. Observemos que estas parciales son
+positivas. Llamamos complementarios a los factores de cada uno de
+los pares (capital y trabajo, capital y tierra, tierra y trabajo)
+por que si uno aumenta, aumenta la productividad marginal del otro.
+
+\vspace{.2cm}
+
+Las parciales directas son:
+\begin{align*}
+  F_{KK}'' &= Aa(a-1)K^{a-2}L^{b}T^{c}  \\
+  F_{LL}'' &= Ab(b-1)K^{a}L^{b-2}T^{c-1} \\
+  F_{TT}'' &= Ac(c-1)K^{a}L^{b}T^{c-2}
+\end{align*}
+Por ejemplo, $F_{KK}''$ es la derivada parcial de la productividad
+marginal del capital respecto a $K$. Si $a < 1$, entonces $F_{KK}''
+< 0$ y por lo tanto hay una disminuci\'on de la
+pro\-duc\-ti\-vi\-dad marginal del capital, es decir, un peque\~{n}o
+incremento del capital invertido redunda en una disminuci\'on de la
+productividad marginal del capital. Entonces podemos interpretar
+esto diciendo que, un peque\~{n}o incremento del capital hace que la
+producción aumente $(F_k' > 0)$, este aumento se prouduce a una tasa
+decreciente $(F_{kk}'' <  0)$. Lo an\'alogo ocurre para el trabajo
+si $(b < 1)$ y la tierra si $c> 1$.
+
+\subsection{La regla de la cadena}
+
+Muchos modelos económicos manejan funciones compuestas. Se trata de
+funciones de una o varias variables que, a su vez, son funciones de
+otras variables básicas. Por ejemplo, la cantidad producida puede
+ser función del capital y el trabajo y ambos funciones del tiempo.
+\textquestiondown Cómo varía la cantidad producida con el tiempo?.
+Más generalmente, \textquestiondown qué ocurre al valor de una
+función compuesta cuando los valores de sus variables básicas
+cambian?.
+\medskip
+
+Supongamos que
+\[
+  z=F(x,y)
+\]
+
+es una función de $x$ y $y$ donde, a su vez,
+\[
+  x=f(t) , \,\,\,\, y=g(t)
+\]
+
+son funciones de una variable $t$. Sustituyendo tenemos
+\[
+  z=F(f(t),g(t))
+\]
+
+de tal manera que $z$ es función de $t$ únicamente. Una variación de
+$t$ producirá en general una variación de $f(t)$ y $g(t)$ y, como
+resultado, una variación de $z$. \textquestiondown Cómo cambia $z$
+cuando varía $t$? Por ejemplo, \textquestiondown producirá un
+aumento de $t$ un aumento o disminución de $z$? La respuesta a estas
+preguntas será mucho más fácil si se puede hallar una expresión de
+$dz/dt$, la tasa de variación de $z$ con respecto a $t$. Esta
+expresión viene dada por la regla siguiente:
+
+\begin{definicion}
+Si la funcion esta dada por $z=F(x,y)$, $x=f(t)$, $y=g(t)$, entonces
+\[
+  \frac{dz}{dt}=F_x(x,y)\frac{dx}{dt}+F_y(x,y)\frac{dy}{dt}
+\]
+\end{definicion}
+
+Esta definición suministra la derivada de $z=F(x,y)$ con respecto a
+$t$, existen las derivadas parciales de $F$ con respecto a $x$ y
+$y$, y $x$, $y$ son funciones derivables de $t$. Esta derivada se
+llama normalmente la \textbf{derivada total} de $z$ con respecto a
+$t$. Según la definición, el hecho de que la primera variable $x$
+depende de $t$ contribuye con el término $F_x(x,y)dx/dt$ a la
+derivada total. Análogamente, el hecho de que la segunda variable
+$y$ dependa de $t$ contribuye con el término $F_y(x,y)dy/dt$ a la
+derivada total. La derivada total $dz/dt$ es la \textbf{suma} de las
+dos contribuciones.
+
+\begin{ejemplo}
+Calcular $dz/dt$ en la función $z=F(x,y)=x^{2}+y^{3}$, donde
+$x=t^{2}$, $y=2t$.
+
+\textbf{Solución}
+\medskip
+
+Se tiene que
+\[
+  F_x(x,y)=2x,\,\,\,\,\,\,F_y(x,y)=3y^{2},\,\,\,\,\,\,\frac{dx}{dt}=2t,\,\,\,\,\,\,\frac{dy}{dt}=2
+\]
+
+Así por la definición obtenemos
+\begin{align*}
+  \frac{dz}{dt} & = 2x \cdot 2t + 3y^{2} \cdot 2 \\
+                & = 4tx+6y^{2}  \\
+                & = 4t^{3}+24t^{2}
+\end{align*}
+
+donde la última igualdad se obtiene al sustituir $x$ y $y$ por sus
+valores en función de $t$.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea $Y=F(K,L)$, donde $Y$ representa la cantidad producida, $K$
+capital y $L$ trabajo. Supongamos que $K$ y $L$ son funciones del
+tiempo. Entonces a partir de la regla de la cadena tenemos que:
+\[
+  \dot{Y}=\frac{\partial Y} {\partial  K} \dot{K}+\frac{\partial Y} {\partial  L} \dot{L}
+\]
+
+Esto se interpreta diciendo que la producción total crece a la tasa
+obtenida multiplicando la productividad marginal de cada recurso por
+la tasa de cambio de ese recurso y sumando estos términos.
+\end{ejemplo}
+
+\subsection{Funciones implícitas}
+
+A menudo necesitamos derivar funciones definidas impl\'{\i}citamente
+por una ecuaci\'on o un sistema de ecuaciones.
+\medskip
+
+Sea $F$ una funci\'on de dos variables y consideremos la ecuaci\'on:
+\begin{equation}
+\label{im1}
+  F(x,y) = c \quad   \text{(c es constante)}
+\end{equation}
+
+Vemos que $(\ref{im1})$  representa una curva de nivel de $F$.
+Supongamos que esta ecuaci\'on define a $y$ como una funci\'on $y =
+f(x)$ de $x$ en cierto intervalo $I$. Esto significa que:
+\begin{equation}
+\label{im2}
+   F(x, f(x)) =  c \quad \text{para todo}\, x \in I
+\end{equation}
+
+Si $f$ es derivable ¿cu\'al es la derivada de $y = f(x)$?, el problema geom\'etrico es hallar
+su pendiente en el punto $P$.
+\medskip
+
+Para hallar la expresi\'on de la pendiente se introduce la funci\'on
+auxiliar $u$ definida por:
+\[
+   u(x) = F(x, f(x))
+\]
+Para todo $x \in I$. Entonces por la regla de la cadena tenemos
+$u'(x)= F_x'(x,f(x)) \cdot 1 + F_y'(x,f(x)) \cdot f'(x)$. Ahora
+bien, (\ref{im2}) dice que $u(x) = c$ para todo $x \in I$ y, como la
+derivada de una constante es cero, tenemos:
+\[
+   u'(x)= F_x'(x,f(x))  +  F_y'(x,f(x)) \cdot f'(x) =  0
+\]
+Si $F_y'(x,f(x)) \ne 0 $, entonces $f'(x) = \frac{-F_x (x,
+f(x))}{F_y'(x,f(x))}$.
+
+\vspace{.2cm}
+
+As\'{\i}, despu\'es de simplificar la notaci\'on, tenemos:
+\begin{equation}
+\label{im3} F(x,y)  \Longrightarrow \frac{dy}{dx} =
+-\frac{F_x'(x,y)}{F_y'(x,y)} \quad (F_y'(x,y) \ne 0)
+\end{equation}
+
+Este resultado es importante. Notese que, cuando $(\ref{im1})$
+define a $y$ como funci\'on impl\'{\i}cita de $x$, la formula
+(\ref{im3}) da la derivada de $y$ con respecto a $x$, aun cuando sea
+imposible resolver la ecuaci\'on en $y$.
+
+\begin{ejemplo}
+Usar $(\ref{im3})$ para calcular $y'$ si $xy^{1/2} = 2.$
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:} Escribimos $F(x,y) = xy^{1/2}$. Entonces
+$F_x'(x,y) =  y^{1/2}$ y $F_y'(x,y) =  1/2 xy^{-1/2}$. Por tanto
+$(\ref{im3})$ da:
+\[
+ y' = \frac{dy}{dx} =
+-\frac{F_x'(x,y)}{F_y'(x,y)} = - \frac{y^{1/2}}{1/2 xy^{-1/2}} = -
+\frac{2y}{x}
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Dada la curva de ecuaci\'on:
+\[
+   x^3 + x^2y -2y^2 -10y = 0
+\]
+Hallar la pendiente y la ecuaci\'on de la tangente en el punto
+$(x,y) = (2,1).$
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:} Se comprueba primero que $x = 2$ e $y = 1$
+satisfacen la ecuaci\'on, luego $(2,1)$ es un punto de la curva. Sea
+$F(x,y) =  x^3 + x^2y -2y^2 -10y ;$ la ecuaci\'on dada es
+equivalente a $F (x,y) = 0 $, que es la curva de nivel de $F$. Como
+$F_x'(x,y) = 3x^2 + 2xy$ y $F_y'(x,y) = x^2-4y-10, (\ref{im3})$
+implica que:
+\[
+     y' = - \frac{3x^2 + 2xy}{x^2 -4y -10}
+\]
+
+Para $x = 2$ e $y = 1$ se tiene que $y' = 8/5$. Por la formula
+punto-pendiente la ecuaci\'on de la tangente en $(2,1)$ es $y-1 =
+(8/5)(x -2)$, o bien $y = (1/5) (8x -11)$.
+\end{ejemplo}
+
+\begin{ejemplo}
+En el modelo de ingreso $Y = C(Y) + I(Y) + G_0$, utilice la regla de la funci\'on impl\'{\i}cita para encontrar el multiplicador del gasto del gobierno, es decir, $\frac{\partial Y}{ \partial G_0}$. Todas las derivadas son conocidas por ser continuas, ademas se tiene que, $0< C_Y < 1$ y $I'>0$. ¿Qu\'e otra condici\'on es necesaria para escribir una identidad de equilibrio?
+\medskip
+
+Utilizar el resultado para encontrar el equilibrio de ingreso, si $C= 65$ millones, $I= 12$ millones, $G_0= 5$ millones. Use diferenciales para encontrar el aumento del ingreso nacional, cuando el gasto p\'ublico se duplica.
+
+\textbf{ Soluci\'on:}
+\[
+ F = Y - C(Y)- I(Y)- G_0= 0
+\]
+
+De acuerdo con la regla de la funci\'on impl\'{\i}cita:
+
+
+$\frac{\partial y}{\partial x} = - \frac{F_x}{F_y}$, donde $F_y \ne 0$ y $F_x, F_y$ son continuas. Para este ejemplo se tiene
+$F'_{G_0} = -1$ y $F'_Y = 1- C_Y - I'$
+\[
+ \frac{\partial Y}{\partial G_0} = - \frac{-1}{1- C_Y - I'} =  \frac{1}{1- C_Y - I'}
+\]
+
+Necesitamos tener $C_Y - I' \ne 1$ a fin de que la regla de funciones impl\'{\i}citas se pueda aplicar y  obtener una solución viable. Para encontrar el equilibrio de ingreso nacional, sustituimos en la f\'ormula
+\[
+\bar{Y}= 65 + 12 + 5 = 82 \ \text{millones}
+\]
+
+Para el multiplicador del gasto del gobierno,
+\[
+\frac{\partial Y}{\partial G_0} =\frac{1}{1- C_Y- I'} = \frac{1}{1- 0.75-0.05} = \frac{1}{0.2} =5
+\]
+
+Cuando el gasto p\'ublico se duplic\'o, lo que tenemos $dG_0= 5$. Utilizando las reglas de los diferenciales, expresamos el aumento del ingreso nacional:
+\[
+dY=  \frac{\partial Y}{\partial G_0} dG_0 = 5(5)= 25 \ \text{millones}
+\]
+Debido al efecto estimulante de los gastos del gobierno, el ingreso nacional se incrementa por 25 millones para un total de 107 millones.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea el siguiente modelo:
+\[
+S(Y,i) +  T(Y)= I(i) + G_0  \hspace{.9cm} 0 < S_y < 1  \qquad S_i, T'> 0 \qquad I_i'< 0
+\]
+Donde $S, Y, i, T, I $ y $ G_0$ son el ahorro, la renta nacional, la tasa de inter\'es, los impuestos, la inversión y el gasto público, respectivamente. Todas las derivadas son continuas. Usando la regla de la funci\'on impl\'{\i}cita, dar el efecto del gasto de gobierno $G_0$ sobre el ingreso nacional $Y$ ($\frac{\partial Y}{ \partial G_0}$) y de la tasa de inter\'es  $i$ ($\frac{\partial i}{ \partial G_0}$). Interpretar los resultados.
+
+\textbf{Soluci\'on:}
+\[
+F = S(Y,i) + T(Y) - I(i) - G_0 = 0
+\]
+\[
+\frac{\partial Y}{\partial G_0} = -\frac{F_{G_0}}{F_Y} = \frac{1}{S_Y + T'} > 0
+\hspace{1 cm} \frac{\partial i}{\partial G_0} = - \frac{F_{G_0}}{F_i} = \frac{1}{S_i - I'}> 0
+\]
+\end{ejemplo}
+\medskip
+El aumento del gasto del gobierno aumenta el ingreso y la tasa de inter\'es.
+
+
+
+\newpage
+
+\setcounter{page}{1}
+\begin{center}
+\textbf{TAREA 1: DERIVADAS PARCIALES}
+\end{center}
+
+\vspace{.3cm}
+
+Trabajo individual.
+
+\vspace{.2cm}
+
+\textbf{Ejercicio 1.} Halle las derivadas parciales indicadas $\frac{\partial
+f}{\partial  x},\frac{\partial f}{\partial y} , \frac{\partial^{2}f}{\partial x^{2}},\frac{\partial^2 f}{\partial y^2 }. \frac{\partial f}{\partial x \partial  y },\frac{\partial f}{\partial y \partial  x } $ de las  siguientes funciones.
+\begin{align*}
+1.\,\,\, & f(x,y) = 2xy^5 + 3x^2 + y^2 & \qquad
+2.\,\,\, & f(x,y) = (3x + 2y)^5  & \qquad \\[.5cm]
+3.\,\,\, & f(x,y) = \cos 4xy + \sen \frac{x}{y} & \qquad
+4.\,\,\, & f(x,y) = x e^y
+\end{align*}
+
+\textbf{Ejercicio 2.} Use diferenciaci\'on impl\'icita para encontrar
+$\frac{dy}{dx}$ en los si\-gui\-en\-tes ejercicios.
+\begin{align*}
+1.\,\,\, &  x^2y + xy^2 = 6 & \qquad
+2.\,\,\, &  x^3 + y^3 = 18x & \qquad \\[.5cm]
+3.\,\,\, &  x^2 + 3xy + 2y^2 = 48 & \qquad
+4.\,\,\, &  e^{xy} + 2 (x + y) = 5
+\end{align*}
+
+\textbf{Problema 1.} Supongamos que una empresa tiene un funci\'on de
+pro\-du\-cci\-ón $Q(K,L) = A K^{\alpha} L^{1-\alpha}$, donde $A>0$ y
+$0 <\alpha<1$. Demostrar que el producto marginal del trabajo
+$\partial Q / \partial L$ es positivo y que es una funci\'on
+decreciente  de $L$ cuando $K$ es fija.
+\medskip
+
+\textbf{Problema 2.} En un modelo macroecon\'omico keynesiano con sector
+externo y con la terminolog\'{\i}a usual,
+\begin{align*}
+Y & = C + I + G + X - M\\
+Y_d  & = (1-t)Y  \hspace{.7cm}  C = 0.75 Y_d  \hspace{.7cm} M =
+0.25 Y \\
+I & = 820   \hspace{.7cm}   G = 960 \hspace{.7cm}  t = 0.3
+\hspace{.7cm}  X = 650
+\end{align*}
+
+¿cu\'al ser\'a el valor de equilibrio de $Y$? ¿Use el multiplicador
+de exportaci\'on para saber qu\'e pasar\'a con la balanza de pagos
+si la variable ex\'ogena exportaci\'on aumenta en 100 unidades?.
+\newpage
+
+\textbf{Problema 3.} Sea el siguiente modelo:
+\[
+S(Y,i) +  M(Y)= I(i) + X_0  \hspace{.9cm} 0 < S_y, M' < 1  \qquad S_i> 0 \qquad I_i'< 0
+\]
+donde $ S, Y,i , M, I$ y $ X_0 $ son el ahorro, la renta nacional, la tasa de inter\'es, importaciones, inversión y exportaciones, respectivamente. Todas las derivadas son continuas. Usando la regla de funciones impl\'{\i}cita, dar el efecto de las exportaciones de $X_0 $ sobre la renta nacional $Y$ (es decir, el multiplicador de las exportaciones) y sobre la tasa de inter\'es $i$. Interpretar los resultados.
+\medskip
+
+\textbf{Problema 4.} Para un mercado de dinero en equilibrio se tiene que la cantidad de dinero en circulaci\'on ($M^s$) es igual a la demanda de dinero ($M^d = L(Y,i)$)
+\[
+  M^s = L(Y,i)  \hspace{.9cm} L_Y > 0  \qquad L_i < 0
+\]
+
+Usando la diferenciaci\'on impl\'icita, encontrar el efecto del aumento de la oferta de dinero en el ingreso ($Y$) y en la tasa de inter\'es ($i$). Interprete resultados.
+
+
+\end{document}

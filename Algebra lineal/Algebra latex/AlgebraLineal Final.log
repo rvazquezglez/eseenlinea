@@ -1,0 +1,1743 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=pdflatex 2011.3.15)  30 MAR 2012 09:32
+entering extended mode
+**AlgebraLineal*Final.tex
+
+("C:\Users\metodos\Desktop\Algebra Lineal moodle 28.09.2011\AlgebraLineal Final
+.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, german-x-2009-06-19, ngerman-x-2009-06-19, french, loaded.
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks15
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.sty"
+Package: babel 2008/07/06 v3.8l The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.8\tex\generic\babel\babel.def"
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen112
+)
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Spanish'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@spanish = a dialect from \language0
+\es@datefmt=\count100
+\es@quottoks=\toks19
+\es@quotdepth=\count101
+Package babel Info: Making " an active character on input line 492.
+Package babel Info: Making . an active character on input line 585.
+Package babel Info: Making < an active character on input line 630.
+Package babel Info: Making > an active character on input line 630.
+)) ("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count102
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+("C:\Program Files\MiKTeX 2.8\tex\latex\epsf\epsf.sty"
+This is `epsf.tex' v2.7.3 <23 July 2005>
+\epsffilein=\read1
+\epsfframemargin=\dimen115
+\epsfframethickness=\dimen116
+\epsfrsize=\dimen117
+\epsftmp=\dimen118
+\epsftsize=\dimen119
+\epsfxsize=\dimen120
+\epsfysize=\dimen121
+\pspoints=\dimen122
+) ("C:\Program Files\MiKTeX 2.8\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup7
+)
+\c@teorema=\count103
+\c@problema=\count104
+\c@ejemplo=\count105
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Users\metodos\Desktop\Algebra Lineal moodle 28.09.2011\AlgebraLineal Final
+.aux"
+
+LaTeX Warning: Label `Figura13' multiply defined.
+
+
+LaTeX Warning: Label `Figura13' multiply defined.
+
+
+LaTeX Warning: Label `Figura13' multiply defined.
+
+
+LaTeX Warning: Label `T' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+ ("C:\Program Files\MiKTeX 2.8\tex\context\base\supp-pdf.tex"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count106
+\scratchdimen=\dimen123
+\scratchbox=\box28
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen124
+\MPnumerator=\count110
+\everyMPtoPDFconversion=\toks24
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+ ("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 28.
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 28.
+
+("C:\Program Files\MiKTeX 2.8\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+("C:\Users\metodos\Desktop\Algebra Lineal moodle 28.09.2011\AlgebraLineal Final
+.toc"
+Overfull \hbox (15.5092pt too wide) in paragraph at lines 17--17
+ [][] []\OT1/cmr/m/n/12 Tipos de ma-tri-ces: Cuadra-da, di-ag-o-nal, iden-ti-da
+d, simetri- 
+ []
+
+[1
+
+{C:/ProgramData/MiKTeX/2.8/pdftex/config/pdftex.map}])
+\tf@toc=\write3
+ [2]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
+ on input line 47.
+
+[1]
+
+pdfTeX warning: pdflatex (file C:/Users/metodos/Desktop/Algebra Lineal moodle 2
+8.09.2011/Alg1.pdf): PDF inclusion: found PDF version <1.6>, but at most versio
+n <1.4> allowed
+<Alg1.pdf, id=22, 367.91855pt x 143.48807pt>
+File: Alg1.pdf Graphic file (type pdf)
+ <use Alg1.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 257--259
+
+ []
+
+[3 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.2011/Alg1.pdf>]
+Overfull \hbox (16.0153pt too wide) in paragraph at lines 292--293
+[]\OT1/cmr/m/n/12 La nor-ma de cua-lesquir-era vec-tores $\OML/cmm/m/it/12 x; y
+ \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 R[]$ \OT1/cmr/m/n/12 tiene las sigu-ientes pr
+opiedades: 
+ []
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--522
+
+ []
+
+[6] [7] [8] [1] [2]
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.686 \begin{tabular}{|1|r|r|r|}
+                                 \hline
+? 
+[1]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.762 \begin{equation*}
+                       
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.772 \]
+        
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.776 \begin{equation*}
+                       
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.786 \end{equation*}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.787 \]
+        
+? 
+
+! LaTeX Error: \begin{definicion} on input line 758 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.787 \]
+        
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.787 \]
+        
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.787 \]
+        
+? 
+! Extra }, or forgotten $.
+l.798 ... = \text{diag}(a_{11},a_{22},...,a_{nn})}
+                                                  $, entones $A = A^T$, es
+? 
+[2]
+! Undefined control sequence.
+l.868  \texct
+             {  y  }
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.887  \hspace{.2cm} \[
+                       
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.901 \end{equation*}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.902 \]
+        
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 858 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.902 \]
+        
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.902 \]
+        
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.902 \]
+        
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.903 \end{ejemplo}
+                   
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.903 \end{ejemplo}
+                   
+? 
+[3]
+! Undefined control sequence.
+l.926  \texct
+             {  y  }
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.958 \]
+        
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 916 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.958 \]
+        
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.958 \]
+        
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.958 \]
+        
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.968 \end{ejemplo}
+                   
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.968 \end{ejemplo}
+                   
+? 
+! Undefined control sequence.
+l.981  \texct
+             {  y  }
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1014 \]
+         
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 970 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1014 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1014 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1014 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1025 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1025 \end{ejemplo}
+                    
+? 
+[4] [5]
+
+! LaTeX Error: \begin{equation*} on input line 1217 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1225 \end{equation}
+                     
+? 
+
+! LaTeX Error: \begin{equation*} on input line 1229 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1237 \end{equation}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1238 \]
+         
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 1215 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1238 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1238 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1238 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1239 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1239 \end{ejemplo}
+                    
+? 
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 1527--1528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1562
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 1611--1612
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1613  Sea A = \left
+                     (
+? 
+! Missing delimiter (. inserted).
+<to be read again> 
+                   {
+l.1654 (-1)^{i+j} = \left{
+                          
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.1658 \]
+         
+? 
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.1658 \]
+         
+? 
+[10]
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1702 \end{align*}
+                   
+? 
+! Limit controls must follow a math operator.
+<argument> ...cdots + a_{1n}A_{1n } \\ &= \limits 
+                                                  \sum _{k = 1}^{n} a_{1k}A_...
+l.1702 \end{align*}
+                   
+? 
+[11]
+Overfull \hbox (41.47174pt too wide) in paragraph at lines 1839--1839
+[] 
+ []
+
+[12]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1869 ...adrada tiene inversa \Longleftrightarrow
+                                                  
+? 
+
+! LaTeX Error: Command \end{teorema} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1871 \end{teorema}
+                    
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1871 \end{teorema}
+                    
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1871 \end{teorema}
+                    
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1871 \end{teorema}
+                    
+? 
+[13]
+
+! LaTeX Error: \begin{equation*} on input line 1903 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1911 \end{equation}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1912 \]
+         
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 1901 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1912 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1912 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.1912 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1983 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.1983 \end{ejemplo}
+                    
+? 
+[14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 2033--2034
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2036--2049
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2070--2071
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2129--2142
+
+ []
+
+[1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 2232--2233
+
+ []
+
+[1] [2] <Sistem1.pdf, id=167, 192.72pt x 202.6772pt>
+File: Sistem1.pdf Graphic file (type pdf)
+ <use Sistem1.pdf> [1]
+<Sistem2.pdf, id=171, 192.72pt x 197.13649pt>
+File: Sistem2.pdf Graphic file (type pdf)
+ <use Sistem2.pdf> [2 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.201
+1/Sistem1.pdf> <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.2011/Siste
+m2.pdf>]
+<Sistem3.pdf, id=185, 192.72pt x 197.13649pt>
+File: Sistem3.pdf Graphic file (type pdf)
+ <use Sistem3.pdf> [3 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.201
+1/Sistem3.pdf>]
+<Sistem4.pdf, id=193, 192.72pt x 132.86438pt>
+File: Sistem4.pdf Graphic file (type pdf)
+ <use Sistem4.pdf>
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2554 \begin{equation*}
+                        
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2577 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{definicion}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2578 \end{definicion}
+                       
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.2578 \end{definicion}
+                       
+? 
+[4 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.2011/Sistem4.pdf>]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2591 \begin{equation*}
+                        
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2611 \]
+         
+? 
+
+Overfull \hbox (5.94354pt too wide) in paragraph at lines 2622--2622
+[]\OT1/cmr/bx/n/12 Meto-dos de solu-cion: For-ma escalon-a-da, el meto-do de
+ Gauss-
+ []
+
+[5] [6]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2714 \begin{equation*}
+                        
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2722 \end{equation*}
+                      
+? 
+! Undefined control sequence.
+l.2732  \texct
+              {  y  }
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2742 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2742 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2742 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.2742 \]
+         
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.2742 \]
+         
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2760 \begin{equation*}
+                        
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2779 \end{equation}
+                     
+? 
+
+! LaTeX Error: \begin{equation*} on input line 2758 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2779 \end{equation}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2780 \]
+         
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 2749 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2780 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2780 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.2780 \]
+         
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2784 \begin{equation*}
+                        
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2798 \end{equation}
+                     
+? 
+
+! LaTeX Error: \begin{equation*} on input line 2782 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2798 \end{equation}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2799 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2799 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2799 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.2799 \]
+         
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.2799 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2801 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.2801 \end{ejemplo}
+                    
+? 
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.2804 \textbf{Equilibrio entre oferta y demanda}}
+                                                  
+? 
+[7]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2882 \[
+         
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2902 \]
+         
+? 
+[8]
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2911 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.2911 \end{ejemplo}
+                    
+? 
+<O-D.pdf, id=216, 200.75pt x 140.2309pt>
+File: O-D.pdf Graphic file (type pdf)
+ <use O-D.pdf> [9 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.2011/O-
+D.pdf>]
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3002 \[
+         
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.3022 \]
+         
+? 
+<w-l.pdf, id=226, 200.75pt x 138.20532pt>
+File: w-l.pdf Graphic file (type pdf)
+ <use w-l.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 3053--3055
+
+ []
+
+[11 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.2011/w-l.pdf>]
+
+! LaTeX Error: \begin{equation*} on input line 3087 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3106 \end{equation}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3107 \]
+         
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 3040 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3107 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3107 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.3107 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3148 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.3148 \end{ejemplo}
+                    
+? 
+<IS-LM.pdf, id=240, 200.75pt x 199.94699pt>
+File: IS-LM.pdf Graphic file (type pdf)
+ <use IS-LM.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12] [13 <C:/Users/metodos/Desktop/Algebra Lineal moodle 28.09.2011/IS-LM.pdf>]
+[14] [15] [16] [17]
+! Undefined control sequence.
+l.3535    A \textbf{x} = \texttbf
+                                 {B}
+? 
+[18]
+
+! LaTeX Error: \begin{equation*} on input line 3545 ended by \end{equation}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3570 \end{equation}
+                     
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3571 \]
+         
+? 
+
+! LaTeX Error: \begin{ejemplo} on input line 3509 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3571 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3571 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.3571 \]
+         
+? 
+
+! LaTeX Error: \begin{document} ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3672 \end{ejemplo}
+                    
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.3672 \end{ejemplo}
+                    
+? 
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 3680--3681
+
+ []
+
+
+Overfull \hbox (0.77928pt too wide) in paragraph at lines 3721--3722
+[]\OT1/cmr/m/n/12 Resuelva los sigu-ientes sis-temas de ecua-ciones lin-eales m
+e-di-ante el meto-
+ []
+
+[1] [2] [3]
+Overfull \hbox (4.63016pt too wide) in paragraph at lines 3796--3797
+[]  \OT1/cmr/bx/n/12 TAREA 4: SIS-TEMAS DE ECUA-CIONES EN C[]OMPUTO 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3800--3801
+
+ []
+
+[1] [1] [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 4020--4021
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4076 \item Una matriz (cuadrada) 3 \times
+                                            3 \  $\left[a_{ij} \right]$ sobr...
+
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4076 ...a matriz (cuadrada) 3 \times 3 \  $\left
+                                                  [a_{ij} \right]$ sobre $\B...
+
+? 
+[1]
+Overfull \hbox (4.37552pt too wide) in paragraph at lines 4164--4166
+[]\OT1/cmr/m/it/12 Un sub-con-jun-to $\OML/cmm/m/it/12 S$ \OT1/cmr/m/it/12 de $
+\OML/cmm/m/it/12 V$ \OT1/cmr/m/it/12 se dice $[]$,
+ []
+
+
+Overfull \hbox (0.33458pt too wide) in paragraph at lines 4168--4170
+\OT1/cmr/bx/it/12 pen-di-ente\OT1/cmr/m/it/12 . Si el con-jun-to $\OML/cmm/m/it
+/12 S$ \OT1/cmr/m/it/12 so-lo tiene un numero fini-to de vec-tores $\OML/cmm/m
+/it/12 []; :::; []$\OT1/cmr/m/it/12 ,
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4211 
+       
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.4211 
+       
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.4211 
+       
+? 
+[1]
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.4211 
+       
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4217 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4217 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.4217 \]
+         
+? 
+[2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 4419--4420
+
+ []
+
+[1]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4488 ...s las matrices sesgadas sim\'etricas (A^
+                                                  T = -A)
+? 
+
+! LaTeX Error: Command \end{enumerate} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4489 \end{enumerate}
+                      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4489 \end{enumerate}
+                      
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4489 \end{enumerate}
+                      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4489 \end{enumerate}
+                      
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 4490--4491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4500--4501
+
+ []
+
+[2]
+! Display math should end with $$.
+<to be read again> 
+                   T
+l.4558  entonces $T
+                   _A : \Bbb{R}^3  \to \Bbb{R}^2$ dada por $T_A (x) = Ax$ es
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4558  entonces $T_
+                    A : \Bbb{R}^3  \to \Bbb{R}^2$ dada por $T_A (x) = Ax$ es
+? 
+
+! LaTeX Error: Command \end{equation*} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4575 \end{ejemplo}
+                    
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4575 \end{ejemplo}
+                    
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4575 \end{ejemplo}
+                    
+? 
+
+! LaTeX Error: \begin{equation*} on input line 4560 ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4575 \end{ejemplo}
+                    
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.4575 \end{ejemplo}
+                    
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.4575 \end{ejemplo}
+                    
+? 
+
+Overfull \hbox (9.38954pt too wide) in paragraph at lines 4600--4605
+[]\OT1/cmr/m/it/12 Sea $\OML/cmm/m/it/12 V$ \OT1/cmr/m/it/12 un es-pa-cio vec-t
+o-ri-al de di-men-sion fini-ta $\OML/cmm/m/it/12 n$\OT1/cmr/m/it/12 , sea $\OM
+L/cmm/m/it/12 []; :::; []$
+ []
+
+[1] [2] [3] [4]
+
+! LaTeX Error: Environment corolario undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4808 \begin{corolario}
+                        
+? 
+
+! LaTeX Error: \begin{equation*} on input line 4550 ended by \end{corolario}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4811 \end{corolario}
+                      
+? 
+
+Overfull \hbox (11.5557pt too wide) in paragraph at lines 4814--4815
+\OT1/cmr/m/it/12 en-con-trar la ma-triz aso-ci-a-da a $\OML/cmm/m/it/12 T$ \OT1
+/cmr/m/it/12 re-spec-to a la base $\OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 (1\OML/cmm
+/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)\OML/cmm/m/it/
+12 ; \OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12  \OT1/cmr/m/n/12 1\O
+ML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (1\OML/cm
+m/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1)\OMS/cmsy/m/n
+/12 g$\OT1/cmr/m/it/12 ,
+ []
+
+[5] [6] [1] [2] [1] [2] [3] [4] [5]
+! Undefined control sequence.
+<recently read> \lamba 
+                       
+l.5412 ...-pon\-di\-en\-te al valor propio $\lamba
+                                                  $ y otro vector $\textbf{w...
+
+? 
+[6] [7]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5568 
+       
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.5568 
+       
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.5568 
+       
+? 
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.5568 
+       
+? 
+
+! LaTeX Error: \begin{equation*} on input line 5549 ended by \end{ejemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5626 \end{ejemplo}
+                    
+? 
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 5855--5856
+
+ []
+
+[1] [1] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 6257--6258
+
+ []
+
+[1] [1]
+! Limit controls must follow a math operator.
+<argument> ...ilde {y}^T) x \\ &= E\left (\limits 
+                                                  \sum _{j=1}^{n} x_j \tilde...
+l.6418 \end{align*}
+                   
+? 
+! Limit controls must follow a math operator.
+<argument> ...} \right )^2 \\ &= E \left (\limits 
+                                                  \sum _{j= 1}^{n}x_j ( y_j ...
+l.6418 \end{align*}
+                   
+? 
+! Limit controls must follow a math operator.
+<argument> ...ilde {y}^T) x \\ &= E\left (\limits 
+                                                  \sum _{j=1}^{n} x_j \tilde...
+l.6418 \end{align*}
+                   
+? 
+! Limit controls must follow a math operator.
+<argument> ...} \right )^2 \\ &= E \left (\limits 
+                                                  \sum _{j= 1}^{n}x_j ( y_j ...
+l.6418 \end{align*}
+                   
+? 
+[2] [3] [4]
+
+! LaTeX Error: \begin{ejemplo} on input line 6585 ended by \end{ajemplo}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6637 \end{ajemplo}
+                    
+? 
+[5] [6]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6844 
+       
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.6844 
+       
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.6844 
+       
+? 
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.6844 
+       
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6845 \]
+         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6845 \]
+         
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.6845 \]
+         
+? 
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 7037--7038
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7039--7058
+
+ []
+
+
+Overfull \hbox (24.32062pt too wide) in paragraph at lines 7084--7108
+\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = []   \OML/cmm/m/it/12 B \OT1/cmr/m/n/12 = 
+[]   []$ 
+ []
+
+[1]
+
+! LaTeX Error: \begin{ejemplo} on input line 6640 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7163 \end{document}
+                     
+? 
+[2]
+("C:\Users\metodos\Desktop\Algebra Lineal moodle 28.09.2011\AlgebraLineal Final
+.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(\end occurred inside a group at level 5)
+
+### semi simple group (level 5) entered at line 6640 (\begingroup)
+### semi simple group (level 4) entered at line 5515 (\begingroup)
+### semi simple group (level 3) entered at line 4550 (\begingroup)
+### semi simple group (level 2) entered at line 4546 (\begingroup)
+### semi simple group (level 1) entered at line 3844 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 2698 strings out of 495285
+ 33434 string characters out of 3180337
+ 96978 words of memory out of 3000000
+ 5850 multiletter control sequences out of 15000+200000
+ 18042 words of font info for 74 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 27i,15n,27p,612b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Pr
+ogram Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.8/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.8/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.8/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/
+amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program F
+iles/MiKTeX 2.8/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTe
+X 2.8/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.8/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.8/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/
+cm/cmti12.pfb><C:/Program Files/MiKTeX 2.8/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb>
+Output written on "AlgebraLineal Final.pdf" (100 pages, 562239 bytes).
+PDF statistics:
+ 486 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

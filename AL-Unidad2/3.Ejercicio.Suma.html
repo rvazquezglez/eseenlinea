@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+		<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src="../js/jquery-1.7.2.js"></script>
+  <script type="text/javascript" src="../js/page-transition.js"></script>
+  <script type="text/javascript" src="../js/matrices.js"></script>
+  <script type="text/javascript" >
+  $(document).ready(function(){
+    $("#solucion").hide();
+     $("#verSol").click(function(event){
+        var mat1 = [[3, 3 ],
+                    [9, 6 ]];
+        var mat2 = [[4, 8 ],
+                    [5, 3 ]];
+        $("#desarrolloSol").html(resuelveSuma(mat1,mat2));
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+     });
+     $("#revisar").click(function(event){      
+            if($("#A0_0").val() == 7
+            && $("#A0_1").val() == 11
+            && $("#A1_0").val() == 14
+            && $("#A1_1").val() == 9){
+              $("#mensaje").removeClass("erroneo");  
+              $("#mensaje").addClass("correcto");  
+              $("#mensaje").html("¡Muy bien!");  
+            }
+            else {
+              $("#mensaje").removeClass("correcto");  
+              $("#mensaje").addClass("erroneo");  
+              $("#mensaje").html("Respuesta incorrecta.");   
+            }
+            $("#solucion").show();
+
+
+     });
+   });
+  </script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.nongnu.org/elyxer/"/>
+<meta name="create-date" content="2012-08-09"/>
+<link rel="stylesheet" href="../css/lyx.css" type="text/css" media="all"/>
+<title>ÁLGEBRA LINEAL</title>
+</head>
+<body>
+	<div id="globalWrapper">
+<div class="Indented">Introduce el resultado de la siguiente operación en los recuadros.</div>
+
+\begin{equation*}
+   \left[
+  \begin{matrix}
+   3  &  3      \\
+   9  &  6
+  \end{matrix}
+  \right]
++
+ \left[
+  \begin{matrix}
+   4    & 8 \\
+   5  &    3
+  \end{matrix}
+ \right]=
+\end{equation*}
+
+<div class="formula">
+<br />
+<input type="text" id="A0_0" />
+<input type="text" id="A0_1" />
+<br />
+<input type="text" id="A1_0" />
+<input type="text" id="A1_1" />
+<br />
+
+<input id="revisar" type="button" value="Revisar." />
+<br />
+
+
+<div id="solucion">
+  <div id="mensaje"></div>  
+  <input id="verSol" type="button" value="Ver solución." />
+  <div id="desarrolloSol"></div>
+</div>
+
+</div>
+		<a href="4.Producto.html" class="transition">Siguiente</a>
+	</div>
+</body>
+</html>

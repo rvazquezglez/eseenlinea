@@ -1,0 +1,5476 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb,latexsym}
+\usepackage{amsthm}
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{graphicx} % PDFLaTeX
+\DeclareGraphicsExtensions{.png,.pdf,.jpg}
+\usepackage{epsf}
+\usepackage{graphicx}
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\theoremstyle{definition}
+\newtheorem{definicion}[teorema]{Definici\'on}
+\newtheorem{problema}{Problema}
+\newtheorem{ejemplo}{Ejemplo}
+
+\renewcommand{\baselinestretch}{1.2}
+\usepackage[bottom]{footmisc}  % places footnotes at page bottom
+\usepackage[latin1]{inputenc}      %    tipo de codificacion del documento: applemac,
+
+\usepackage{subfigure}
+%\usepackage{hyperref}
+%\usepackage[pdftitle={},pdfauthor={}, colorlinks=true, hyperindex=true, linkcolor=blue, pdfpagemode=UseOutlines, bookmarksopen=false, bookmarksnumbered=true, pdfstartview={FitH}]{hyperref} % %backref={page} para referencia de pagina
+\spanishdecimal{.}
+\usepackage{amssymb,amsmath,latexsym,amsfonts}
+\usepackage{rotating}
+\usepackage{indentfirst}        %
+%\usepackage[]{showkeys}
+
+\begin{document}
+
+\title{CÁLCULO PARA EL ANÁLISIS ECONÓMICO}
+\author{\textbf{ESCUELA SUPERIOR DE ECONOMÍA}}
+\date{\large{M\'exico, D.F., 27 de Agosto de 2010}}
+\def\contentsname{Contenido}
+\maketitle
+\tableofcontents
+\newpage
+
+\setcounter{page}{1}
+
+\section{Derivadas}
+\subsection{Funciones}
+\textbf{Introducci\'on.}
+\medskip
+
+Las funciones representan el principal objeto de análisis en el
+c\'alculo, ya que constituyen la clave para describir el mundo real
+en t\'erminos matem\'aticos. En esta secci\'on se da el concepto de
+funci\'on, su graficaci\'on y las maneras de representarlas.
+\medskip
+
+En muchas aplicaciones, con frecuencia existe cierta correspondencia
+entre dos conjuntos de n\'umeros. Por ejemplo, la ganancia $R$ que
+resulta de la venta de $x$ art\'iculos vendidos a \$1,000 cada uno
+es $R$=10$x$. Si conocemos el n\'umero de art\'iculos vendidos,
+entonces podemos calcular la ganancia por medio de la regla
+$R$=10$x$. Esta regla es un ejemplo de funci\'on.
+\medskip
+
+Veamos ahora la definici\'on de funci\'on
+
+\subsubsection{Definici\'on de funci\'on.}
+
+Sean $X$ y $Y$ dos conjuntos no vac\'ios de n\'umeros reales. Una
+\textbf{funci\'on} de $X$ en $Y$ es una regla o correspondencia que
+asocia a cada elemento de $X$ un \'unico elemento de $Y$. El
+conjunto $X$ es el dominio de la funci\'on. Para cada elemento $x$
+en $X$, el elemento correspondiente $y$ en $Y$ es el \textbf{valor}
+de  la funci\'on en $x$, o la \textbf{imagen} de $x$. El conjunto de
+todas las im\'agenes de los elementos del dominio es el
+\textbf{rango} de la funci\'on.
+\medskip
+
+La regla (o correspondencia) mencionada en la definici\'on de
+funci\'on se proporciona con mayor frecuencia como una ecuaci\'on
+con dos variables, denotadas por lo general con $x$ y $y$.
+\medskip
+
+\begin{ejemplo}
+{Considere la funci\'on definida por la ecuaci\'on}
+\[
+  y = 2x+1\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,-1\leq x \leq 2
+\]
+
+El dominio $-1 \leq x \leq 2$ específica que el n\'umero $x$ est\'a
+restringido a los n\'umeros reales entre -1 y 2. La regla  $y=2x+1$
+(ver figura 1) establece que el n\'umero $x$ se multiplica por 2 y
+que despu\'es se suma 1 al resultado para obtener $y$. Por ejemplo:
+
+\begin{center}
+$Si\,\,\,\,x=1\,\,\,\,\, entonces \,\,\,\, y=2(1)+1=3$
+\end{center}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf1.pdf}
+\end{center}
+\caption{$y=2x+1$}\label{Figura1}
+\end{figure}
+\end {ejemplo}
+
+Con frecuencia, las funciones se denotan por letras como $f$, $F$,
+$g$, $G$, y así sucesivamente. Si $f$ es una función, para cada
+número $x$ en su dominio la imagen correspondiente en el rango es
+designada por el símbolo $f(x)$, el cual se lee $f$\,\,de\,\,$x$.
+Nos referimos a $f(x)$ como el \textbf{valor de $f$ en el número
+$x$}. Así, $f(x)$ es el número obtenido cuando $x$ es conocido y se
+aplica la regla para $f$; $f(x)$ no significa $f$ por $x$.
+\medskip
+
+En general, cuando la regla que define a una función $f$ está dada
+por una ecuación en $x$ y $y$, decimos que la función tiene forma
+\textbf{implícita}. Si es posible despejar $y$ en términos de $x$ en
+la ecuación, entonces escribimos $y=f(x)$ y decimos que la función
+está dada en forma \textbf{explícita}. De hecho, por lo general
+escribimos: la función $y=f(x)$ para decir la función $f$ definida
+por la ecuación $y=f(x)$. Por ejemplo:
+\newpage
+
+\begin{center}
+\textbf{FORMA IMPLÍCITA}\,\,\,\,\,\,\,\,\,\,\textbf{FORMA EXPLÍCITA}
+\end{center}
+\begin{align*}
+& 3x+y=5
+& y=f(x)=5-3x\\
+& x^{2}-y=6
+& y=f(x)=x^{2}-6\\
+& xy=4 & y=f(x)=\frac{4}{x}
+\end{align*}
+
+\textbf{Variable Dependiente e Independiente}
+\medskip
+
+Considere una función $y=f(x)$. La variable $x$ se denomina
+\textbf{variable independiente}, ya que puede asumir cualquier
+número permisible del dominio. La variable $y$ es la
+\textbf{variable dependiente} porque su valor depende de $x$.
+\medskip
+
+Las funciones pueden tener más de una variable independiente. Por
+ejemplo, la forma general de la función de producción es:
+\[
+Q=f(K,L)
+\]
+
+Decimos que la cantidad $(Q)$  depende de las dos variables
+independientes, la variable capital $(K)$  y el trabajo $(L)$. La
+forma específica de una función nos dice exactamente cómo el valor
+de la variable dependiente se determina a partir de los valores de
+la variable independiente. Una forma específica en una función de
+producción puede ser:
+\[
+Q=4K^{0.5}L^{0.5}
+\]
+
+Para cualquier valor dado de $K$ y $L$ la función específica nos
+permite calcular el valor de $Q$. Por ejemplo:
+
+\begin{center}
+$Si\,\,K=1\,y\,\,L=1\,\, entonces\,\, Q=4(1)^{0.5}(1)^{0.5}=4$
+$Si\,\,K=4\,y\,\,L=4\,\, entonces\,\, Q=4(4)^{0.5}(4)^{0.5}=16$
+\end{center}
+
+\newpage
+\subsubsection{Funciones lineales}
+
+El dominio de la \textbf{función lineal} $f$ consta de todos los
+números reales y su gráfica es una línea recta no vertical con
+pendiente $m$ y ordenada al origen $b$.
+\[
+f(x)=mx+b
+\]
+
+Una función lineal es creciente si $m>0$, decreciente si $m<0$ y
+constante si $m=0$. A continuación se muestran los tres casos:
+(figura 2)
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{lll}
+\includegraphics{unid1graf4.pdf}
+& \includegraphics{unid1graf5.pdf}
+& \includegraphics{unid1graf6.pdf}\\
+\end{tabular}
+\end{center}
+\caption{$f(x)=mx+b$}\label{Figura4}
+\end{figure}
+
+\textbf{Funciones lineales en econom\'ia}
+\medskip
+
+Suponga que el gasto promedio semanal de los hogares en alimentos
+(C) depende de los ingresos semanales de los hogares (Y), de acuerdo
+con la relaci\'on:
+\[
+C=12+0.3Y
+\]
+
+En este caso tenemos que la pendiente $m=0.3$ es creciente. Si el
+ingreso semanal es de 90 unidades, entonces el consumo en alimentos
+es de 39 unidades. Lo anterior se expresa de la siguiente manera
+(ver figura 3):
+\[
+Si\,\,\,\,Y=90\,\,\,\,entonces\,\,\,\, C=12+0.3(90)=39
+\]
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf2.pdf}
+\end{center}
+\caption{$C=12+0.3Y$}\label{Figura2}
+\end{figure}
+
+Otro ejemplo de funciones en economía es del tipo $Q_d=f(p)$. Esta
+particular forma es cuando la cantidad demandada ($Q_d$) de una bien
+depende del precio ($p$). Una forma específica en una función de
+demanda puede ser:
+\[
+Q_d=80-2p
+\]
+
+Para cualquier valor dado de $p$ la función específica nos permite
+calcular el valor de $Q_d$. Por ejemplo:
+
+\begin{center}
+$Si\,\,\, p=10\,\,\, entonces\,\,\, Q_d=80-2(10)=80-20=60$
+$Si\,\,\,p=20\,\,\, entonces\,\,\, Q_d=80-2(20)=80-40=40$
+\end{center}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf3.pdf}
+\end{center}
+\caption{$Q_d=80-2p$}\label{Figura4}
+\end{figure}
+
+En este caso vemos que la pendiente $m=-2$, es decir, la función es
+decreciente como se observa en la figura 4.
+
+\begin{ejemplo}
+En un modelo macroeconómico keynesiano simple sin sector gobierno y
+sin el comercio exterior, supone que:
+\begin{align}
+Y &= C + I \\
+C &= C_0 + c Y\\
+I &= I_0 - b r
+\end{align}
+donde $Y$ es el ingreso nacional, $C$ es el consumo y $I$  es la
+inversión, ex\'ogenamente fijas. Además se tiene que $C_0 > 0$ es el
+consumo autónomo, $I_0 > 0$ es la inversión autónoma, y $0 < c < 1$
+y $b > 0$ son los par\'ametros.
+\medskip
+
+En este tipo de modelos macroeconómicos se busca obtener el nivel de
+equilibrio del ingreso nacional ($Y$) con respecto a la tasa de
+interés ($r$). Para obtener la ecuación del ingreso en función de la
+tasa de interés sustituimos la ecuación (2) y (3) en la ecuación
+(1).
+\begin{align*}
+ Y & = C_0 + c Y+ I_0 - b r \\
+ Y - cY & = C_0 + I_0 - br \\
+ Y (1-c) & = A - br \,\,\,\,\,\,\,\, \text{donde} \,\,\,\, A = C_0 + I_0 \\
+ Y & = \frac{A}{(1 - c)} - \frac{b}{(1 - c)} \cdot r
+\end{align*}
+En este modelo se tiene que la pendiente de la función es negativa y
+su grado de inclinación depende de los parametros $b$ y $c$.
+\end{ejemplo}
+
+\begin{problema}
+En un modelo b\'asico macroeconómico keynesiano se supone que $Y = C
++ I$, donde $C =10+0.5Y$ e $I = 15-2r$.
+\begin{enumerate}
+ \vspace{.2cm}
+ \item[a)] Grafique la funci\'on de consumo e int\'erprete.
+ \item[b)] Grafique la funci\'on de inversión e int\'erprete.
+ \item[c)] Obtenga la función de ingreso ($Y$) en funci\'on
+           de la tasa de interés $(r)$ argumentando y graficando tu resultado.
+\end{enumerate}
+\end{problema}
+\newpage
+
+\textbf{Solución al problema 1}
+
+\begin{enumerate}
+  \item[a)] La gráfica del consumo se muestra en la figura 5 e
+  interpretamos que si incrementa el ingreso aumenta el consumo
+  y por lo tanto la pendiente es positiva.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf134.pdf}
+\end{center}
+\caption{$C =10+0.5Y$}\label{Figura4}
+\end{figure}
+
+  \item[b)] La gráfica de la inversión se muestra en la figura 6 e
+  interpretamos que si incrementa la tasa de interés disminuye la
+  inversión y por lo tanto la pendiente es negativa.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf135.pdf}
+\end{center}
+\caption{$I = 15-2r$}\label{Figura4}
+\end{figure}
+
+  \item[c)] Siguiendo a la ecuación del ingreso obtenida
+  anteriormente tenemos
+\begin{align*}
+  Y & = \frac{A}{(1 - c)} - \frac{b}{(1 - c)} \cdot r \\[.3cm]
+    & = \frac{10+15}{(1-0.5)}-\frac{2}{(1 - 0.5)} \cdot r \\
+  Y & = 50 - 4r
+\end{align*}
+La gráfica del ingreso se muestra en la figura 7 e interpretamos que
+si incrementa la tasa de interés disminuye el ingreso y por lo tanto
+la pendiente es negativa.
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf136.pdf}
+\end{center}
+\caption{$Y = 50 - 4r$}\label{Figura4}
+\end{figure}
+\end{enumerate}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\begin{center}
+\textbf{TAREA 1: FUNCIONES}
+\end{center}
+
+\vspace{.3cm}
+
+Trabajo individual
+
+\vspace{.2cm}
+
+Resuelva los siguientes ejercicios argumentando tus resultados.
+
+\vspace{.2cm}
+\begin{enumerate}
+\item[1.]Considera la funci\'on $f(x) = x^2 - 1$, contesta en los espacios
+disponibles las siguientes preguntas:
+\begin{enumerate}
+\item[a)] ?`Cu\'al es el valor de la funci\'on si $x= -2$? \hrulefill
+\item[b)] ?`Cu\'anto vale $f(3)$? \hrulefill
+\item[c)] Grafica la funci\'on anterior.
+\item[d)] ?`Cu\'al es el dominio de la funci\'on? \hrulefill
+\end{enumerate}
+
+\item[2.] La función de demanda $Q_d$ depende del precio $P$ y
+  está determinada por la siguiente relación:
+\[
+   Q_d = a - bP \hspace{.5cm} a,b > 0
+\]
+Sea la siguiente función de demanda de cierto bien, contesta en los espacios
+disponibles las siguientes preguntas:
+\[
+   Q_d = 72 - 4P \hspace{.5cm}  0 \leq P \leq 18
+\]
+\begin{enumerate}
+ \item[a)] \textquestiondown Cuánto vale la pendiente? \hrulefill
+ \item[b)] Grafique esta función en el dominio especificado.
+ \item[c)] \textquestiondown Qué sucede con tu gráfica si $a = 50$? \hrulefill
+ \item[d)] \textquestiondown Qué sucede con tu gráfica si $b = 8$? \hrulefill
+\end{enumerate}
+\vspace{.2cm}
+
+\item[3.] El consumo de las familias $(C)$ depende de su ingreso
+  $(Y)$ y est\'a determinado por la siguiente relaci\'on:
+\[
+   C = C_0 + cY \hspace{.5cm} 0 < c < 1
+\]
+Grafique la función de consumo.
+\[
+   C = 50 + \frac{1}{2}Y  \hspace{.5cm}  0 \leq Y \leq 10
+\]
+\begin{enumerate}
+   \item[a)] Si el ingreso incrementa de 5 a 6 unidades, \textquestiondown En
+   cuánto incrementa el consumo? \hrulefill
+   \item[b)] Si el ingreso incrementa de 6 a 7 unidades, \textquestiondown En
+   cuánto incrementa el consumo? \hrulefill
+   \item[c)] Si el ingreso incrementa de 7 a 8 unidades, \textquestiondown En
+   cuánto incrementa el consumo? \hrulefill
+   \item[d)] \textquestiondown Qu\'e conclusi\'on observas? \hrulefill
+\end{enumerate}
+
+\item[4.]En un modelo b\'asico macroeconómico keynesiano se supone que $Y = C
++ I$, donde $C =4 + 0.5Y$ e $I = 2 - r$.
+\begin{enumerate}
+ \item[a)] Grafique la funci\'on de consumo e int\'erprete.
+ \item[b)] Grafique la funci\'on de inversión e int\'erprete.
+ \item[c)] Obtenga la función de ingreso ($Y$) en funci\'on
+           de la tasa de interés $(r)$ argumentando y graficando tu resultado.
+\end{enumerate}
+
+\item[5.] Se define a las exportaciones netas $(NX)$ como las
+  exportaciones $(X)$ menos las importaciones $(M)$. En M\'exico
+  durante todo el a\~{n}o 2009 las exportaciones se mantuvier\'on en
+  25 mil millones de d\'olares y las importaciones tuvieron el
+  siguiente comportamiento $M = 18 + \frac{1}{2}Y$ millones de
+  d\'olares, donde $Y$ es el Producto Interno Bruto (PIB).
+ \begin{enumerate}
+ \item[a)] Grafique la funci\'on de exportaciones e int\'erprete.
+ \item[b)] Grafique la funci\'on de importaciones e int\'erprete.
+ \item[c)] Obtenga y grafique la funci\'on de exportaciones netas
+           $(NX)$ en funci\'on del Producto Interno Bruto $(Y)$.
+\end{enumerate}
+\end{enumerate}
+
+
+\newpage
+
+\setcounter{page}{1}
+
+
+\subsection{L\'{\i}mites de funciones}
+
+\textbf{Introducci\'on}
+\medskip
+
+El concepto que marca la diferencia entre el c\'alculo, el \'algebra
+y la trigonometr\'{\i}a, es el de l\'{\i}mite. El l\'{\i}mite es
+fundamental para determinar la tangente a una curva o la velocidad
+de un objeto.
+
+\subsubsection{Definici\'on de l\'{\i}mites}
+
+\begin{definicion}
+El l\'{\i}mite de una funci\'on $f(x)$ cuando $x$ se acerca a $x_0$,
+es el n\'umero $L$, el cual se le denota por:
+\[
+   \lim_{x \to x_0} f(x) = L,
+\]
+
+siempre que $f(x)$ est\'e arbitrariamente cercana a $L$ para toda $x$
+lo suficientemente cerca, pero diferente de $x_0$.
+\end{definicion}
+
+En pocas palabras, el proceso de límite consiste en examinar el
+comportamiento de una función $f(x)$ cuando $x$ se aproxima a un
+número $x_0$, que puede o no estar en el dominio de $f$.
+
+\subsubsection{Reglas de los l\'{\i}mites}
+
+El siguiente resultado nos indica c\'omo calcular l\'{\i}mites de
+funciones que son combinaciones aritm\'eticas de otros cuyos
+l\'{\i}mites ya se conocen.
+
+\begin{teorema}
+Supongamos que $\lim\limits_{x \to x_0} f(x) = L$ y $\lim\limits_{x
+\to x_0} g(x) = M$, entonces:
+\begin{itemize}
+\item El l\'{\i}mite de una suma o resta de funciones:
+\[
+   \lim_{x \to x_0}(f(x) \pm g(x))  = \lim_{x \to x_0} f(x) \, \pm \,
+ \lim_{x \to x_0} g(x) = L \pm  M,
+\]
+\item El l\'{\i}mite de un producto de funciones:
+\[
+\lim_{x \to x_0}(f(x) \cdot g(x)) = \lim_{x\to x_0} f(x) \cdot
+ \lim_{x \to x_0} g(x) = L \cdot M,
+\]
+\item El l\'{\i}mite de un cociente de funciones: \vspace{.4cm}
+\[
+\lim_{x \to x_0} \left( \frac{f(x)}{g(x)} \right)  =
+   \frac{\lim\limits_{x \to x_0} f(x) }{\lim\limits_{x \to x_0} g(x)} =
+   \frac{L}{M}, \, M \ne 0.
+\]
+\item El l\'{\i}mite del m\'ultiplo constante:
+\[
+  \lim_{x \to x_0} ( k \cdot f(x)) = k \cdot L
+\]
+\end{itemize}
+\end{teorema}
+
+\begin{ejemplo}
+Si $f(x) = \frac{x^{2}-1}{x-1}$, para $x \to 1$:
+\[
+  \lim_{x \to 1} \frac{x^{2}-1}{x-1}  =  \lim_{x \to 1} \frac{(x-1)(x+1)}{x-1} =   \lim_{x \to 1} (x+1) =2.
+\]
+\end{ejemplo}
+
+En la figura 8 se muestra la gráfica de $f(x)$. El cálculo del
+límite indica que cuando el dominio $x\to1$, la imagen $f(x)$ tiende
+a 2. En este mismo ejemplo  se utiliza un procedimiento algebraico
+para encontrar el mismo resultado.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf11.pdf}
+\end{center}
+\caption{$\lim_{x \to 1} f \to 2 $}\label{Figura10}
+\end{figure}
+
+\begin{ejemplo}
+Si $f(x) = \frac{x^{2}-3x-10}{x-5}$, para $x \to 5$:
+\[
+  \lim\limits_{x \to 5} \frac{x^{2}-3x-10}{x-5}  =  \lim\limits_{x \to 5} \frac{(x-5)(x+2)}{x-5} =   \lim\limits_{x \to 5} (x+2)=7.
+\]
+\end{ejemplo}
+
+En la figura 9 se muestra la gráfica de $f(x)$. El cálculo del
+límite indica que cuando el dominio $x\to5$, la imagen $f(x)$ tiende
+a 7. En este mismo ejemplo  se utiliza un procedimiento algebraico
+para encontrar el mismo resultado.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{unid1graf10.pdf}
+\end{center}
+\caption{$\lim_{x \to 5} f \to 7 $}\label{Figura10}
+\end{figure}
+
+\begin{ejemplo}
+\begin{align*}
+\lim\limits_{x \to 1} (x^{3} + 4x^{2} - 3) &=
+ \lim\limits_{x \to 1}  x^{3} + \lim\limits_{x \to 1} 4x^{2} -
+\lim\limits_{x \to 1} 3    \\
+  &= 1^{3} + 4(1)^{2} - 3\\
+  &=2.
+\end{align*}
+\end{ejemplo}
+
+\subsubsection{l\'{\i}mites al infinito}
+
+Con frecuencia el comportamiento a \textbf{largo plazo} es un tema
+de interés en economía. Por ejemplo, un economista podría desear
+conocer la población de cierto país después de un periodo de tiempo
+indefinido.
+\medskip
+
+En matemáticas, el símbolo infinito $\infty$ se utiliza para
+representar el cre\-ci\-mien\-to ilimitado o el resultado de tal
+cre\-ci\-mien\-to. He aqui las definiciones de los límites que
+implican infinito, que se usarán para estudiar el comportamiento
+\textbf{a largo plazo}.
+
+\begin{definicion}
+Decimos que $f(x)$ tiene el \textbf{l\'{\i}mite $L$ cuando $x$
+tiende al infinito}, y escribimos:
+\[
+   \lim\limits_{x \to \infty} f(x) = L
+\]
+si cuando $x$ se aleja cada vez m\'as del origen en direcci\'on
+positiva, $f(x)$ se acerca arbitrariamente a $L.$
+\end{definicion}
+
+Se tienen los siguientes hechos b\'asicos:
+\[
+     \lim\limits_{x \to \pm \infty} k = k \hspace{.2cm}\text{y} \hspace{.2cm}
+      \lim\limits_{x \to \pm \infty} \frac{1}{x^{k}} = 0.
+\]
+
+Los l\'{\i}mites al infinito tienen propiedades similares a los de
+los l\'{\i}mites finitos. Además, debido a que cualquier recíproco
+de una potencia $1/x^{k}$ para $k>0$, se hace más y más pequeño en
+valor absoluto cuando $x$ aumenta o disminuye sin límite.
+
+
+\begin{teorema}
+Supongamos que $\lim\limits_{x \to x_0} f(x) = L$ y
+$\lim\limits_{x \to \pm \infty} g(x) = M$, entonces:
+\begin{itemize}
+\item El l\'{\i}mite de una suma o resta de funciones:
+\[
+   \lim_{x \to \infty}(f(x) \pm g(x))  = \lim_{x \to  \pm \infty} f(x)
+   \, \pm \, \lim_{x \to  \pm \infty} g(x) = L \pm  M,
+\]
+\item El l\'{\i}mite de un producto de funciones:
+\[
+\lim_{x \to  \pm \infty}(f(x) \cdot g(x)) = \lim_{x\to  \pm \infty} f(x) \cdot
+ \lim_{x \to  \pm \infty} g(x) = L \cdot M,
+\]
+\item El l\'{\i}mite de un cociente de funciones: \vspace{.4cm}
+\[
+\lim_{x \to  \pm \infty} \left( \frac{f(x)}{g(x)} \right)  =
+   \frac{\lim\limits_{x \to  \pm \infty} f(x) }{\lim\limits_{x \to
+\pm \infty} g(x)} =    \frac{L}{M}, \, M \ne 0.
+\]
+\item El l\'{\i}mite del m\'ultiplo constante:
+\[
+  \lim_{x \to  \pm \infty} ( k \cdot f(x)) = k \cdot L
+\]
+\end{itemize}
+\end{teorema}
+
+\begin{ejemplo}
+Encuentre el $\lim\limits_{x \to \infty} \left(  5 + \frac{1}{x}
+\right)$
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Para obtener intuitivamente lo que ocurre con este límite, se evalúa
+la función
+\[
+f(x)=5+\frac{1}{x}
+\]
+
+en $x$=0.5, 1, 5, 10, 20 y 50 y se muestran los datos en una tabla:
+
+\begin{center}
+\begin{tabular}{|  l |  r  | r   | r   | r  | r | r | }
+\hline $x$ & 0.5  & 1 & 5 & 10 & 20 & 50 \\
+\hline $f(x)$   &    7   &   6  &  5.2  &  5.1 &  5.05 & 5.02 \\
+\hline
+\end{tabular}
+\end{center}
+\medskip
+
+Los valores de la función en el renglón inferior de la tabla indican
+que $f(x)$ se aproxima a 5 cuando $x$ crece más y más (ver figura
+10). En este ejemplo observamos que $1/x$ se hace más y más pequeño
+en valor absoluto cuando $x$ aumenta.
+\begin{align*}
+ \lim\limits_{x \to \infty} \left(  5 + \frac{1}{x}  \right)
+  &= \lim\limits_{x \to \infty} 5  + \lim\limits_{x \to \infty}
+  \frac{1}{x} \\
+  &= 5  + 0 = 5.
+\end{align*}
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.3
+\textheight]{unid1graf15.pdf}
+\end{center}
+\caption{$\lim_{x \to \infty} f \to 5 $}\label{Figura15}
+\end{figure}
+
+\begin{ejemplo}
+Encuentre el $\lim\limits_{x \to \infty} \frac{x^{2}}{1+x+2x^{2}}$
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Para obtener intuitivamente lo que ocurre con este límite, se evalúa
+la función
+\[
+f(x)=\frac{x^{2}}{1+x+2x^{2}}
+\]
+
+en $x$=100, 1 000, 10 000 y 100 000 y se muestran los datos en una
+tabla:
+
+\begin{center}
+\begin{tabular}{|  l |  r  | r   | r   | r  |}
+\hline $x$ & 100  & 1 000 & 10 000 & 100 000 \\
+\hline $f(x)$   &    0.49749   &   0.49975  &  0.49997  &  0.49999 \\
+\hline
+\end{tabular}
+\end{center}
+\medskip
+
+Los valores de la función en el renglón inferior de la tabla indican
+que $f(x)$ se aproxima a 0.5 cuando $x$ crece más y más (ver figura
+11). Para confirmar esta observación analíticamente, se divide cada
+término de la ecuación en $f(x)$ entre la potencia más alta que
+aparece en el denominador $1+x+x^{2}$; es decir, entre $x^{2}$. Esto
+permite encontrar el $\lim_{x \to \infty} f(x)$; aplicando las
+reglas del recíproco de la potencia de la siguiente manera:
+\begin{align*}
+ \lim_{x \to \infty} \frac{x^{2}}{1+x+2x^{2}}
+ &= \lim_{x \to \infty} \frac{x^{2}/x^{2}}{1\left/x^{2}\right.+x\left/x^{2}\right.+2x^{2}/x^{2}} \\
+ &= \frac{1}{0+0+2}=0.5
+\end{align*}
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.255
+\textheight]{unid1graf14.pdf}
+\end{center}
+\caption{$\lim_{x \to \infty} f \to 0.5 $}\label{Figura9}
+\end{figure}
+
+\newpage
+
+\begin{problema}
+ Una mercanc\'{\i}a se introduce en un precio inicial de
+ $\$ 5$ por unidad, y $t$ semanas despu\'es el precio es:
+ \[
+  p(t) = 1 + 20 e^{-0.1t} - 16 e^{-0.2t}
+ \]
+
+por unidad. Determine lo siguiente:
+
+ \begin{enumerate}
+  \item[a)] \textquestiondown Cu\'al es el precio unitario de la mercanc\'{\i}a 5
+    semanas despu\'es?
+  \item[b)] \textquestiondown Cu\'al es el precio unitario de la mercanc\'{\i}a
+  22 semanas despu\'es?
+  \item[c)] \textquestiondown Cu\'al es el precio de
+   \textquoteleft \textquoteleft  largo
+   plazo\textquoteright\textquoteright
+   $(t \to \infty)$?
+  \end{enumerate}
+
+\textbf{Solución al problema 2}
+
+\begin{enumerate}
+  \item[a)] Después de 5 semanas ($t=5$), el precio es
+\[
+p(5)= 1 + 20 e^{-0.1(5)} - 16 e^{-0.2(5)}=7.24454
+\]
+  \item[b)] Después de 22 semanas ($t=22$), el precio es
+\[
+p(22)= 1 + 20 e^{-0.1(22)} - 16 e^{-0.2(22)}=3.01963
+\]
+  \item[c)] Como
+\begin{align*}
+  \lim_{t \to \infty} p(t) & = \lim_{t \to \infty} (1 + 20 e^{-0.1t} - 16
+  e^{-0.2t})\\
+  &=1+20(0)-16(0)\\
+  &=1
+\end{align*}
+\end{enumerate}
+
+\textquoteleft \textquoteleft \textbf{a largo
+plazo}\textquoteright\textquoteright, el precio tiende a \$1 por
+unidad. La gráfica de la función de precio unitario $p(t)$ se
+muestra en la figura 12.
+\end{problema}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.3
+\textheight]{unid1graf16.pdf}
+\end{center}
+\caption{$\lim_{t \to \infty} p \to 1 $}\label{Figura9}
+\end{figure}
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 2: L\'IMITES}
+\end{center}
+
+Trabajo en equipo con dos o tres integrantes. \vspace{.3cm}
+
+\vspace{.2cm}
+
+Grafiquen en excel los siguientes l\'{\i}mites y deduzcan el resultado.
+Posteriormente resuelvan algebraicamente cada uno de los ejercicios
+argumentando sus resultados obtenidos. \vspace{.3cm}
+
+\begin{align*}
+   1) & \lim\limits_{x \to -5} \frac{x^{2} + 3x - 10}{x + 5} & \qquad
+   2) & \lim\limits_{x \to 2} \frac{x^{2} -7x + 10}{x - 2}  & \qquad \\[.5cm]
+   3) & \lim\limits_{x \to 5} \frac{x - 5}{x^{2} - 25}  &  \qquad
+   4) & \lim\limits_{x \to -2} \frac{-2x - 4}{x^{3} + 2x^{2}} & \qquad  \\[.5cm]
+   5) &  \lim\limits_{x \to 1} \frac{x^{4} - 1}{x^{3}- 1}  & \qquad
+   6) &  \lim\limits_{x \to 9} \frac{\sqrt{x} - 3}{x - 9}  & \qquad
+   \\[.5cm]
+   7)  &  \lim\limits_{x \to -3} \frac{x + 3}{x^{2} + 4x  + 3} & \qquad
+   8)  & \lim\limits_{t \to -1} \frac{t^{2} + 3t + 2}{t^{2}- t -
+   2}  & \qquad  \\[.5cm]
+   9) & \lim\limits_{t \to \infty} (4 - 4 e^{-t}) &  \qquad
+   10) & \lim\limits_{t \to \infty} (\frac{1}{2} + \frac{7}{2}
+    e^{-\frac{1}{2}t}) & \qquad  \\[.5cm]
+   11) & \lim\limits_{t \to \infty} (5 + \frac{1}{t}) &  \qquad
+   12)& \lim\limits_{t \to \infty} \frac{5t^{2} + 8t -3}{3t^{2}
+   + 2}  & \qquad  \\[.5cm]
+  13) & \lim\limits_{x \to \infty} e^{x}  & \qquad
+  14) & \lim\limits _{x \to \infty} e^{-x} & \qquad     \\[.5cm]
+  15)& \lim\limits _{t \to \infty} ( 5 + 4 e^{-0.1t}) & \qquad
+  16)& \lim\limits _{t \to \infty} (5 - 4e^{-0.1t}) &  \qquad  \\[.5cm]
+  17) & \lim\limits _{x \to \infty} \frac{x^{7}- x^{2} +1}{2x^{7}
+  + x^{3} + 300}
+\end{align*}
+
+\newpage
+
+\textbf{Problema 1.} Una mercanc\'{\i}a se introduce en un precio inicial de
+ $\$ 1$ por unidad, y $t$ semanas despu\'es el precio es:
+ \[
+  p(t) = 4 - 3 e^{-0.1t}
+ \]
+
+por unidad. Determine lo siguiente:
+
+\begin{enumerate}
+  \item[a)] \textquestiondown Cu\'al es el precio unitario de la mercanc\'{\i}a
+  12 semanas despu\'es?
+  \item[b)] \textquestiondown Cu\'al es el precio unitario de la mercanc\'{\i}a
+  24 semanas despu\'es?
+  \item[c)] \textquestiondown Cu\'al es el precio de \textquoteleft \textquoteleft  largo
+   plazo\textquoteright\textquoteright $(t \to \infty)$?
+   \item[d)] Grafique la función de precios.
+\end{enumerate}
+
+\newpage
+
+\setcounter{page}{1}
+
+\subsection{C\'alculo diferencial}
+\textbf{Introducci\'on}
+\medskip
+
+Uno de los conceptos m\'as importantes del c\'alculo es el de la
+derivada, la cual mide la raz\'on en que cambia la funci\'on.
+\medskip
+
+Las derivadas se usan para calcular la velocidad y la aceleraci\'on,
+estimar la raz\'on de propagaci\'on de una enfermedad, fijar niveles
+de producci\'on de manera que pueda maximizar la eficiencia y para
+muchas otras aplicaciones.\medskip
+
+En esta secci\'on  continuaremos nuestro estudio, analizando
+aplicaciones en donde se usan las derivadas para modelar las razones
+a las que cambian las cosas en nuestro mundo. Hablaremos del
+movimiento a lo largo de una recta, y examinaremos otras
+aplicaciones.
+
+\subsubsection{Definici\'on de derivada}
+
+\begin{definicion}
+La derivada de $f$ en el punto $a$ de su dominio est\'a dada por  la
+f\'ormula:
+\[
+    \frac{d}{dx} f(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h},
+\]
+
+El n\'umero $f'(a)$ es la pendiente de la recta tangente a la curva
+$y = f(x)$ en el punto $(a, f(a))$.
+\end{definicion}
+
+La ecuaci\'on de una recta que pasa por el punto $(x_1,y_1)$ y tiene
+pendiente $m$ es $y - y_1 = m (x - x_1)$. Por tanto la ecuaci\'on de
+la tangente  a la gr\'afica de $y = f(x)$ en el punto $(x_0, f(x_0))$,
+es:
+\[
+     y - f(x_0) = \frac{d}{dx} f(x_0) (x - x_0).
+\]
+\begin{ejemplo}
+
+Dada la func\'{\i}on $f(x)=2x+1$, usemos la definici\'on de derivada
+para calcular la derivada de $f$:
+\begin{align*}
+  \lim\limits_{h \to 0} \frac{2(x + h)+1-(2x+1)} {h} &=
+  \lim\limits_{h \to 0} \frac{2x+2h+1-2x-1}{h} \\
+  &= \lim\limits_{h \to 0} \frac{2h}{h} \\
+  &= 2.
+\end{align*}
+
+Por tanto, la derivada de $f(x)$ es $2$. En palabras, por una unidad
+que cambia el dominio la imagen cambia en dos unidades. Ver figura
+13.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.3
+\textheight]{unid1graf18.pdf}
+\end{center}
+\caption{$f(x)=2x + 1$}\label{Figura12}
+\end{figure}
+
+\end{ejemplo}
+
+\subsubsection{Reglas b\'asicas de la derivaci\'on.}
+
+
+\begin{itemize}
+  \item $\frac{d}{dx} (c) = 0$,
+  \item $\frac{d}{dx} (x^{n}) = n x^{n - 1}$,
+  \item $\frac{d}{dx} (c \cdot f(x)) = c \cdot \frac{d}{dx} f(x)$,
+  \item $\frac{d}{dx} (f(x)\pm g(x)) = \frac{d}{dx}  f(x) \pm  \frac{d}{dx} g(x)$,\vspace{.2cm}
+  \item $\frac{d}{dx} (f(x) \cdot g(x)) =  f(x) \cdot \frac{d}{dx} g(x) + g(x) \cdot \frac{d}{dx}
+  f(x)$,\vspace{.2cm}
+  \item $ \frac{d}{dx} (\frac{f(x)}{g(x)}) = \frac{ g(x) \cdot \frac{d}{dx}f(x) - f(x) \cdot \frac{d}{dx}
+  g(x)}{g(x)^{2}}$,
+\end{itemize}
+\vspace{.2cm}
+
+\newpage
+
+\begin{ejemplo}
+Derive el polinomio $y=x^{4}+12x$
+\medskip
+
+\textbf{Solución}
+\begin{align*}
+y & = x^{4} + 12x  \\
+\frac{dy}{dx} &= \frac{d}{dx} (x^{4}) +12 \frac{d}{dx} (x) \\
+              &= 4x^{3} + 12.
+\end{align*}
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Derive el polinomio $y  = x^{3} + \frac{4}{3} x^{2} - 5x + 1$
+\medskip
+
+\textbf{Solución}
+\begin{align*}
+y & = x^{3} + \frac{4}{3} x^{2} - 5x + 1 \\
+\frac{dy}{dx} &= \frac{d}{dx} (x^{3}) +\frac{4}{3} \frac{d}{dx}
+\left(x^{2} \right) -5 \frac{d}{dx}(x) + \frac{d}{dx} (1)\\
+ &= 3 x^{2} + \frac{8}{3}x - 5.
+\end{align*}
+\end{ejemplo}
+
+\begin{ejemplo}
+Derive el producto
+\[
+  y = \frac{1}{x} \left( x^{2} + \frac{1}{x} \right)
+\]
+
+\textbf{Solución}
+\begin{align*}
+  y &= \frac{1}{x} \left( x^{2} + \frac{1}{x} \right) \\
+  \frac{dy}{dx} &= \frac{1}{x} \left( 2x - \frac{1}{x^{2}} \right) +
+    \left( x^{2} + \frac{1}{x} \right) \left( - \frac{1}{x^{2}}  \right) \\
+   &= 2 - \frac{1}{x^{3}} - 1 - \frac{1}{x^{3}} \\
+  &= 1 - \frac{2}{x^{3}}.
+\end{align*}
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Derive el cociente
+\[
+  y = \frac{x^{2} - 1}{x^{2} + 1}
+\]
+\textbf{Solución}
+\begin{align*}
+  y &= \frac{x^{2} - 1}{x^{2} + 1} \\
+  \frac{dy}{dx} &= \frac{(x^{2} + 1) \cdot 2x - (x^{2} - 1) \cdot 2x}{
+  (x^{2} + 1)^{2}} \\
+   &= \frac{2x^{3} + 2x - 2x^{3} + 2x}{ (x^{2} +1)^{2}} \\
+  &= \frac{4x}{(x^{2} + 1)^{2}}.
+\end{align*}
+\end{ejemplo}
+
+\textbf{Análisis marginal}
+\medskip
+
+El an\'alisis marginal  es el estudio de la raz\'on de cambio de
+cantidades econ\'omicas. La \textbf{ funci\'on de costo total} de un
+fabricante, $c = f(q)$, nos da el costo total $c$ de producir y
+comerciar $q$ unidades de un producto. La raz\'on de cambio de $c$
+con respecto a $q$ se llama \textbf{costo marginal}. As\'{\i},
+\[
+ \text{costo marginal} = \frac{dc}{dq}
+\]
+
+En general, interpretamos el costo marginal como el costo aproximado
+de producir una unidad más de un bien dado.
+\medskip
+
+El análisis anterior no solo se aplica al costo, sino a otras
+magnitudes económicas. A continuación se presenta un resumen de lo
+que se entiende por ingreso marginal y utilidad marginal. Sea
+\begin{align*}
+  R(x)& = \text{Ingreso por venta de $x$ unidades}\\
+  & =\text{(número de unidades vendidas)(precio por unidad)} \\
+  C(x)& = \text{Costo de producción de $x$ unidades} \\
+  \pi(x)& = R(x)-C(x)= \text{Utilidad de producción de $x$
+  unidades}
+\end{align*}
+
+Llamamos a $R'(x)$ el \textbf{ingreso marginal}, a $C'(x)$ el
+\textbf{costo marginal} (en $x$),  y a $\pi'(x)$ la \textbf{utilidad
+marginal}. Los economistas usan a menudo la palabra
+\textbf{marginal} de esta manera con el significado de derivada.
+
+\begin{problema}
+La empresa Elektra fabrica una calculadora de bolsillo programable.
+La gerencia determin\'o  que el costo total  diario de producci\'on
+de estas calculadoras (en pesos) est\'a dado por $c(q) =
+\frac{1}{5}q^{2}+4q+27$, donde $q$ representa las calculadoras
+producidas y además, que todas las $q$ unidades se venderán, cuando
+el precio sea $p(q)=75-3q$ pesos por unidad.
+
+
+\begin{enumerate}
+  \item Encuentre el costo marginal y el ingreso marginal.
+  \item Utilice el costo marginal para calcular el costo de producir
+  la novena unidad.
+  \item \textquestiondown Cu\'al es el costo real de producir la novena unidad?.
+  \item Utilice el ingreso marginal para calcular el ingreso
+  derivado de la venta de la novena unidad.
+  \item \textquestiondown Cu\'al es el ingreso real de la venta de la novena unidad?.
+\end{enumerate}
+\end{problema}
+
+\textbf{Soluci\'on al problema 3}.
+\begin{enumerate}
+ \item La funci\'on de costo marginal es $C'(q) = \frac{2}{5}q+4$.
+  Como $q$ unidades del artículo se venden a un precio de
+  $p(q)=75-3q$ pesos por unidad, el ingreso total es
+  \[
+  R(q)=p \cdot q=(75-3q)q=75q-3q^{2}
+  \]
+
+El ingreso marginal es
+  \[
+  R'(q)=75-6q
+  \]
+
+ \item El costo de producir la novena unidad es el cambio en el
+ costo cuando $q$ se incrementa de 8 a 9 y se puede calcular usando
+ el costo marginal
+ \[
+ C'(8)=\frac{2}{5}(8)+4=\frac{36}{5}=\$7.2
+ \]
+
+ \item El costo real de producir la novena unidad es
+\[
+  C(9)-C(8)=\$7.4
+\]
+
+que se aproxima razonablemente bien mediante el costo marginal
+$C'(8)=\$7.2$
+ \item El ingreso obtenido por la venta de la novena unidad se aproxima
+  usando el ingreso marginal
+\[
+  R'(8)=75-6(8)=\$27
+\]
+
+\item El ingreso real obtenido por la venta de la novena unidad es
+ \[
+  R(9)-R(8)=\$24
+ \]
+\end{enumerate}
+
+\textbf{Análisis macroeconómico}
+\medskip
+
+En un modelo macroeconómico keynesiano simple sin sector gobierno y
+sin el comercio exterior, supone que:
+\begin{align}
+Y &= C + I \\
+C &= C_0 + c Y
+\end{align}
+
+donde $Y$ es el ingreso nacional, $C$ es el consumo y $I$  es la
+inversión, ex\'ogenamente fijas, y $C_0 > 0$ y $0 < c < 1$ son los
+par\'ametros.
+
+\vspace{.2cm}
+
+La propensión marginal del consumo ($c$) es la tasa de cambio del
+consumo a medida que se incrementa el ingreso nacional, la c\'ual es
+igual a $dC/dY=c$. El multiplicador es el cambio en la tasa de la
+renta nacional en respuesta a un aumento de la inversión determina
+de manera exógena, es decir, $dY/dI$. El multiplicador es igual a
+\[
+   k=\frac{1}{1-c}
+\]
+
+el cual es f\'acil derivar por  diferenciaci\'on. Sustitutendo (5)
+en (4), tenemos
+\begin{align*}
+ Y &= C_0 + cY + I \\
+    Y (1-c)&= C_0 + I \\
+    Y &= \frac{C_0 + I}{1- c} = \frac{C_0}{1- c} + \frac{I}{1 - c}
+\end{align*}
+
+Por lo tanto
+
+\[
+\frac{dY}{dI} = \frac{1}{1 - c}=k
+\]
+
+La c\'ual es la fórmula para el multiplicador. Este multiplicador se
+puede utilizar para calcular el aumento de la inversi\'on necesarios
+para alcanzar un determinado incremento en el ingreso nacional.
+
+\begin{problema}
+En un modelo b\'asico macroeconómico keynesiano se supone que $Y = C
++ I$, donde $I = 200$ y $C =50+0.75 Y$. ¿C\'ual es el nivel de
+equilibrio de $Y?$ ¿C\'ual es el aumento en $I$  necesario para
+hacer que $Y$ aumente a 1,200?.
+
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on al problema 4}
+\begin{align*}
+Y  = C + I  & =  50+0.75Y + 200\\
+ 0.25 Y  &= 250 \\
+ \text{Nivel de equilibrio} \  Y &= 1,000
+\end{align*}
+Para cualquier  crecimiento $(\Delta I)$ en $I$, el crecimiento
+resultante $(\Delta Y)$ en $Y$ puede ser determinado por la formula
+\[
+  \Delta Y = K \Delta I
+\]
+
+En este ejemplo, $b=0.75$. Por tanto,
+\[
+  K = \frac{1}{1- 0.75} = \frac{1}{0.25} = 4
+\]
+
+El cambio requerido  en $Y$ es
+
+\begin{equation}
+\Delta Y = 1,200 -1000 = 200
+\end{equation}
+
+Por lo tanto, sustituyendo $(2)$ y $(3)$ en $I$,
+\begin{align*}
+200 &= 4 \Delta I  \\
+\Delta I &= 50
+\end{align*}
+\end{problema}
+
+Esto es el crecimiento requerido en $I$.
+\medskip
+
+Multiplicadores de las dem\'as variables ex\'ogenas en los modelos
+macroeconomicos  m\'as complejos pueden ser creadas usando el mismo
+m\'etodo.
+
+\newpage
+\subsubsection{Tasas de crecimiento porcentual}
+\medskip
+
+Hemos interpretado la derivada de una función como la pendiente de
+la tangente a su gráfica en el punto de que se trate. En economía
+hay otras interpretaciones más importantes. Veamos primero cómo se
+puede interpretar en general la derivada como tasa de variación.
+\medskip
+
+Supongamos que una cantidad $y$ está relacionada con una cantidad
+$x$ por $y=f(x)$. Si se da a $x$ un valor $a$, el valor de la
+función es $f(a)$. Supongamos que se cambia $a$ por $a+h$. El nuevo
+valor de $y$ es $f(a+h)$ y la variación del valor de la función,
+cuando $x$ varía de $a$ a $a+h$, es $f(a+h)-f(a)$. La variación de
+$y$ por unidad de variación de $x$ tiene un nombre especial,
+\textbf{la tasa media de variación de $f$ en el intervalo
+$[a,a+h]$}, y vale
+\[
+\frac{f(a+h)-f(a)}{h}
+\]
+
+Tomando límite cuando $h$ tiende a 0 se obtiene la derivada de $f$
+en $a$. Por tanto:
+\[
+\textbf{La tasa instantánea de variación de} \,\,f\,\, en\,\, a\,\,
+es\,\, f'(a)
+\]
+
+Este concepto es muy importante cuando se estudian cantidades que
+cambian. Cuando la variable independiente es el tiempo, usamos un
+punto para designar derivación respecto a él. Por ejemplo, si
+$x(t)=t^{2}$, escribimos $\dot{x}(t)=2t$.
+\medskip
+
+Aveces nos interesa estudiar las tasas de crecimiento porcentual
+$f'(a)/f(a)$. Para ello definimos:
+\[
+\textbf{La tasa de crecimiento porcentual}\,\, f\,\, en\,\, a\,\,
+es\,\, [\frac{f'(a)}{f(a)}]\cdot 100
+\]
+
+\begin{ejemplo}
+Pondremos un ejemplo de la regla de derivaci\'on de un producto
+considerando la extracci\'on de petr\'oleo de un pozo. Supongamos
+que la cantidad de petr\'oleo que se extrae por unidad de tiempo y
+el precio unitario cambian con el tiempo. Definimos:
+\begin{align*}
+    x(t) &= \text{tasa de extracci\'on de barriles al d\'{\i}a en el instante}\, t     \\
+    p(t) & = \text{precio en d\'olares por barril en el instante} \, t
+\end{align*}
+Entonces obtenemos una expresi\'on para el ingreso $R(t)$ en dólares
+por d\'{\i}a que es la siguiente:
+\begin{align}
+\label{hola}
+      R(t) &=  p(t) x(t)
+\end{align}
+Seg\'un la regla del producto (recordando que se usan puntos para
+indicar  derivaci\'on con respecto al tiempo),
+\begin{align}
+\label{e1}
+   \dot{R}(t) = p(t) \dot{x}(t) + x(t) \dot{p}(t)
+\end{align}
+
+Se puede interpretar como sigue el miembro de la derecha de
+$(\ref{e1})$. Supongamos que $p(t)$ y $x(t)$ crecen con el tiempo por
+la inflaci\'on y por que la compa\~{n}\'{\i}a petrolera propietaria
+del pozo aumenta la capacidad de equipo de extracci\'on. Entonces
+$R(t)$ crece por dos razones. Primeramente $R(t)$ aumenta porque la
+extracci\'on aumenta y debe ser proporcional al precio  y es igual a
+$p(t) \dot{x}(t).$ Tambi\'en $R(t)$ crece porque el precio lo hace.
+Este aumento es proporcional a la cantidad extra\'{\i}da $x(t)$ y es
+igual a $\dot{p}(t) x(t).$ Su contribuci\'on a la tasa de
+variaci\'on de $R(t)$, debe ser la ecuaci\'on $(\ref{e1})$ , que
+expresa el simple hecho de que $\dot{R}(t)$, la tasa total de
+variaci\'on de $R(t)$, es la suma de esas dos partes.
+
+\vspace{.2cm}
+
+N\'otese tambi\'en que la tasa proporcional de crecimiento del
+ingreso se calcula dividiendo $(\ref{e1})$ por (\ref{hola}),
+obteni\'endose:
+\[
+   \frac{\dot{R}}{R} = \frac{\dot{p}x + p\dot{x}}{px} = \frac{\dot{p}}{p} + \frac{\dot{x}}{x}
+\]
+En palabras: la tasa proporcional de crecimiento del ingreso es la
+suma de las tasas proporcionales de variaci\'on de precio y
+cantidad.
+\end{ejemplo}
+
+\begin{problema}
+La cantidad de extracci\'on del petr\'oleo es $x(t) = \frac{1}{4}t$
+millones de barriles en el a\~{n}o 2000 y el precio de venta era
+$p(t) = \frac{1}{2} t^{2} + 5$ miles de millones de d\'olares en el
+mismo a\~{n}o.
+\begin{enumerate}
+    \item[a)] \textquestiondown A qué raz\'on porcentual cambio el precio del
+    petr\'oleo respecto al tiempo en 2008?
+    \item[b)] \textquestiondown A qué raz\'on porcentual cambio la extracci\'on del
+    petr\'oleo respecto al tiempo en el 2008?
+    \item[c)] \textquestiondown A qué raz\'on porcentual cambio el ingreso del
+    petr\' oleo respecto al tiempo en 2008?
+\end{enumerate}
+\end{problema}
+
+\textbf{Solución al problema 5}
+\medskip
+\begin{enumerate}
+    \item[a)] La tasa de crecimiento porcentual del precio esta dada por
+\[
+   \frac{\dot{p}}{p} = \frac{t}{\frac{1}{2} t^{2}+5}
+\]
+Como se analiza el periodo del 2000 al 2008 $t=8$, tenemos
+\[
+\frac{\dot{p}}{p} = \frac{8}{\frac{1}{2} (8)^{2}+5} = \frac{8}{37} =
+(0.2162) \cdot 100 = 21.62\%
+\]
+
+    \item[b)] La tasa de crecimiento porcentual de la extracción del
+    petróleo esta dada por
+\[
+   \frac{\dot{x}}{x} = \frac{\frac{1}{4}}{\frac{1}{4} t}
+\]
+Como se analiza el periodo del 2000 al 2008 $t=8$, tenemos
+\[
+\frac{\dot{x}}{x} = \frac{\frac{1}{4}}{\frac{1}{4} (8)} =
+\frac{1}{8} = (0.125) \cdot 100 = 12.5\%
+\]
+    \item[c)] La tasa de crecimiento porcentual del ingreso del
+    petróleo en 2008 es
+\begin{align*}
+   \frac{\dot{R}}{R} & = \frac{\dot{p}}{p} +\frac{\dot{x}}{x} \\
+                     & =21.62\%+12.5\% \\
+                     & =34.12\%.
+\end{align*}
+
+\end{enumerate}
+
+\begin{ejemplo}
+Otra aplicaci\'on econ\'omica es como sigue. Sea $W(t)$  la tasa
+nominal de salario y $P(t)$ el \'{\i}ndice de precios en el instante
+$t$. Entonces $w(t) = W(t)/P(t)$ se le llama \textbf{tasa de salario
+real}, si deseamos saber su tasa proporcional de variaci\'on de
+salario real a trav\'es del tiempo lo derivamos como con la regla
+del cociente:
+\begin{align*}
+     \dot{w}(t) =   \frac{  d \left(\frac{W(t)}{P(t)}\right)}{dt} &=  \frac{P(t) \dot{W}(t)- W(t) \dot{P}(t)}{\left[ P(t) \right]^{2}} \\
+            \frac{\dot{w}(t)}{w(t)} &= \frac{\dot{W}(t)}{W(t)} - \frac{\dot{P}(t)}{P(t)}
+\end{align*}
+
+La tasa proporcional de variaci\'on del salario real es igual a la
+diferencia entre las tasas proporcionales de variaci\'on del salario
+nominal y del \'{\i}ndice de precios.
+\end{ejemplo}
+
+\subsubsection{Regla de la cadena}
+\begin{teorema}
+(\textbf{La regla de la cadena}) Sí $g(y)$ es diferenciable en el
+punto $y= f(x)$ y $f(x)$ es diferenciable en $x$, entonces la
+funci\'on compuesta $(g \circ f) (x)  = g(f(x))$ es diferenciable en
+$x$, y
+\[
+   (g \circ f)'(x) = g'(f(x)) \cdot f'(x).
+\]
+En la notaci\'on de Leibniz, si $z = g(y)$ y $y = f(x)$, entonces:
+\[
+  \frac{dz}{dx}  = \frac{dz}{dy} \frac{dy}{dx},
+\]
+donde $dz/dy$ se eval\'ua en $y = f(x).$
+\end{teorema}
+
+\begin{ejemplo}
+Derive la función $f(x)=(2-5x)^3$
+\medskip
+
+\textbf{Solución}
+\begin{align*}
+\frac{d}{dx}(2-5x)^3  &= 3 (2-5x)^{2} \frac{d}{dx}(2-5x) \\
+                           &= 3(2-5x)^{2} (-5)\\
+                           &= -15(2-5x)^{2}.
+\end{align*}
+\end{ejemplo}
+
+\begin{ejemplo}
+Derive la función $f(x)=(5x^3- x^4)^7$
+\medskip
+
+\textbf{Solución}
+\begin{align*}
+\frac{d}{dx}(5x^3- x^4)^7  &= 7 (5x^{3} - x^4)^{6} \frac{d}{dx}(5x^3 - x^4) \\
+                           &= 7(5x^3 - x^4)^{6} (15x^2 -  4x^3).
+\end{align*}
+\end{ejemplo}
+
+\newpage
+
+\subsubsection{Derivadas de funciones exponenciales y
+logar\'{\i}tmicas}
+
+\textbf{Funciones exponenciales}
+
+\begin{definicion}
+La funci\'on definida por:
+\[
+ f(x) = b^{x}, (b > 0, b \ne 1)
+\]
+se le llama \textbf{ funci\'on exponencial con base $b$ y exponente
+$x$}.
+\end{definicion}
+
+\textbf{Propiedades de la funci\'on exponencial:} \vspace{.2cm}
+
+\begin{itemize}
+  \item El dominio de una funci\'on exponencial es el intervalo $(-\infty, \infty)$.\vspace{.2cm}
+  \item El rango es el intervalo $(0, \infty)$.\vspace{.2cm}
+  \item La funci\'on exponencial es continua en todo su dominio.
+\end{itemize}
+Uno de los n\'umeros m\'as \'utiles como base de una funci\'on
+exponencial es el n\'umero irracional denotado por $e$, donde:
+\[
+   e= \lim_{x \to \infty} \left( 1 + \frac{1}{x}  \right)^{x} = 2.71828182845...,
+\]
+La funci\'on exponencial con base $b = e$:
+\[
+    f(x) = e^{x},
+\]
+se le conoce como \textbf{funci\'on exponencial natural}.
+
+\vspace{.2cm}
+
+\textbf{Propiedades de la funci\'on exponencial natural:}
+
+\vspace{.2cm}
+
+\begin{itemize}
+   \item Es derivable para todo n\'umero real $x$.\vspace{.2cm}
+   \item Es estrictamente creciente para todo n\'umero real $x$.\vspace{.2cm}
+   \item Si $f(x) = e^{x}$, entonces $f'(x) = f(x) = e^{x}$.\vspace{.2cm}
+   \item La funci\'on exponencial natural cumple:
+   \vspace{.2cm}
+
+   \begin{enumerate}
+     \item $e^{s} e^{t} = e^{s + t}$,
+     \item  $ \frac{e^{s}}{e^{t}} = e^{s-t}$,
+     \item $(e^{s})^{t} = e^{st}.$
+      \end{enumerate}
+   \vspace{.2cm}
+      Para cualesquiera exponentes $s$ y $t$.
+\end{itemize}
+
+\textbf{Reglas b\'asicas de la derivaci\'on exponencial.}
+
+\begin{itemize}
+  \item $\frac{d}{dx} (e^{x}) = e^{x}$,
+  \item $\frac{d}{dx} (e^{u}) = e^{u} \cdot \frac{du}{dx}$.
+\end{itemize}
+
+\begin{ejemplo}
+Derive la función $f(x)= e^{x^{2}+1}$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Utilizando la regla de la cadena con $u=x^{2}+1$, se tiene
+\[
+  f'(x)=e^{x^{2}+1}[\frac{d}{dx}(x^{2}+1)]=2xe^{x^{2}+1}
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Derive la función
+\[
+f(x)= \frac{e^{-3x}}{x^{2}+1}.
+\]
+
+\textbf{Solución}
+\medskip
+
+Empleando la regla de la cadena junto con la regla del cociente, se
+tiene
+\begin{align*}
+f'(x)&=\frac{(x^{2}+1)(-3e^{-3x})-(2x)e^{-3x}}{(x^{2}+1)^{2}}\\
+     &=e^{-3x}[\frac{-3(x^{2}+1)-2x}{(x^{2}+1)^{2}}]\\
+     &=e^{-3x}[\frac{-3x^{2}-2x-3}{(x^{2}+1)^{2}}]
+\end{align*}
+\end{ejemplo}
+
+\textbf{Funciones exponenciales en economía}
+\medskip
+
+Supongamos que el d\'eficit comercial actual es de \$5,345  miles de
+millones  y una tasa de reducci\'on continua  de 6 \% anual,
+\textquestiondown Cuánto ser\'a el d\'eficit dentro de 10 a\~{n}os?
+\medskip
+
+La magnitud del d\'eficit comercial afecta la confianza en la
+econom\'{\i}a de M\'exico, tanto de inversionistas nacionales como
+de extranjeros. Se cree que para reducir su d\'eficit comercial del
+gobierno deber\'{\i}a reducir los gastos, lo cual afectar\'{\i}a los
+programas de gobierno, o aumentar sus ingresos, posiblemente a
+trav\'es de un aumento en los impuestos.
+
+\vspace{.2cm}
+
+Supongamos que es posible reducir el d\'eficit comercial
+continuamente a una tasa anual fija. Supongamos que el d\'eficit
+$D_0$ en el instante $t = 0$, se reduce a una tasa anual $r$.
+\medskip
+
+El d\'eficit comercial $D_0$ en el instante $t = 0$ se reduce
+continuamente a una tasa anual $r$, y $t$ a\~{n}os despu\'es el
+d\'eficit comercial esta dado por:
+\[
+   D = D_0e^{-rt}.
+\]
+
+El d\'eficit comercial dentro de $t$ an\~{o}s a partir de ahora esta
+dado por:
+\[
+   D = 5,345e^{-0.06t},
+\]
+
+en donde $D$ esta en miles de millones. Esto significa que dentro de
+10 a\~{n}os, el d\'eficit ser\'a $5,345e^{-0.6} \approx \$2,933$
+miles de millones.
+\medskip
+
+\textbf{Funciones logarítmicas}
+
+\begin{definicion}
+La funci\'on logar\'{\i}tmica de base $b$, donde $b> 0$ y $b \ne 1$,
+se denota por $\log_b$ y se define por:
+\[
+   y= \log_b x \hspace{.2cm} \text{si y s\'olo si} \hspace{.2cm} b^{y} = x.
+\]
+La funci\'on logar\'{\i}tmica de base $e$ se le llama
+\textbf{funci\'on logar\'{\i}tmica natural} y se usa la notaci\'on
+$\log_e x = \ln x$.
+\end{definicion}
+
+\textbf{Propiedades de la Funci\'on Logar\'{\i}tmica Natural:}
+\vspace{.2cm}
+
+\begin{itemize}
+  \item La funci\'on logar\'{\i}tmica natural:
+  \[
+     g(x) =  \ln x,
+  \]
+  es derivable y estrictamente creciente para todo $x > 0$. Adem\'as:
+  \[
+     \frac{dg}{dx} (x) = \frac{1}{x}.
+  \]
+  \item Para todo $x > 0$, $y > 0$:
+\vspace{.2cm}
+
+  \begin{enumerate}
+   \item  $\ln(xy)  = \ln x + \ln y$
+   \item  $\ln (\frac{x}{y}) =  \ln x - \ln y$
+   \item $\ln x^{p} = p \ln x.$
+   \end{enumerate}
+ \vspace{.2cm}
+
+
+\item La funci\'on  exponencial $f(x) = e^{x}$ y la funci\'on logar\'{\i}tmica natural
+ $g(x) =  \ln x$ son funciones inversas la una de la otra, es decir:
+
+  \vspace{.2cm}
+
+   \begin{enumerate}
+   \item   $\ln e^{x} = x \hspace{.2cm} \text{para toda} \hspace{.2cm} x$,
+   \item  $e^{\ln y} = y  \hspace{.2cm}   \text{para todo }  \hspace{.2cm} y > 0$.
+   \end{enumerate}
+  \end{itemize}
+
+\textbf{Reglas b\'asicas de la derivaci\'on logarítmica.}
+
+\begin{itemize}
+  \item $\frac{d}{dx} [\ln(x)] = \frac{1}{x}\,\, \text{para $x>0$}$,
+  \item $\frac{d}{dx} [\ln(u)] = \frac{1}{u} \cdot \frac{du}{dx}$.
+\end{itemize}
+
+\begin{ejemplo}
+Derive la función $f(x)=\ln(x^{2}+1)$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Utilizando la regla de la cadena con $u=x^{2}+1$, se tiene
+\[
+  f'(x)=\frac{1}{x^{2}+1}[\frac{d}{dx}(x^{2}+1)]=\frac{2x}{x^{2}+1}
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Derive la función $f(x)=x^{2} \ln(x)$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Utilizando la regla del producto se tiene
+\begin{align*}
+ f'(x)&=x^{2}[\frac{d}{dx}\ln(x)]+\ln(x)[\frac{d}{dx}(x^{2})]\\
+      &=x^{2}\frac{1}{x}+\ln(x)2x\\
+      &=x+2x\ln(x).
+\end{align*}
+\end{ejemplo}
+
+\textbf{Funciones logarítmicas en economía}
+\medskip
+
+Los modelos económicos suelen emplear transformaciónes logarítmicas
+de las variables del modelo. Una transformación logarítmica es la
+conversión de una variable en diferentes valores reales positivos.
+En esta sección se demuestran propiedades de los logarítmos y
+demostrar por qué ésta es una herramienta útil para los economistas.
+\medskip
+
+Los modelos económicos suelen incluir relaciones no lineales. Por
+ejemplo, los saldos monetarios reales están representados por el
+dinero en circulación ($M$), entre el nivel de precios ($P$), es
+decir, $M^{s}=\frac{M}{P}$; el tipo de cambio real ($S$) es igual al
+producto del tipo de cambio nominal ($E$) y el nivel de precios
+extranjeros ($P^{*}$), dividido por el nivel de precios internos ($P$), es decir,
+$S=\frac{(EP^{*})}{P}$. Las relaciones no lineales entre las
+variables se puede expresar como relaciones lineales entre sus
+logaritmos. Modelos que incluyen productos o cocientes son más
+difíciles de resolver que los modelos que son lineales en las
+variables de interés. Así que expresar estos modelos en términos de
+sus logaritmos es a menudo una estrategia útil para hacer un
+análisis más sencillo. Una advertencia, sin embargo, es que cero y
+números negativos no se puede expresar como logaritmos. Esto limita
+al conjunto de variables que se puedan expresar como una
+transformación logarítmica. Resolvamos los ejemplos anteriores.
+\medskip
+
+\textbf{Saldos monetarios reales}
+\medskip
+
+La ecuación de los saldos monetarios reales están representados por:
+\[
+M^{s}=\frac{M}{P}
+\]
+
+Aplicando la segunda propiedad de los logaritmos obtenemos:
+\begin{align*}
+     \ln(M^{s}) &= \ln(\frac{M}{P}) \\
+                &= \ln(M)-\ln(P) \\
+          m^{s} &= m-p
+\end{align*}
+De esta forma ya tenemos un modelo lineal que es más fácil de
+trabajar dentro del análisis económico.
+
+\newpage
+
+\textbf{Tipo de cambio real}
+\medskip
+
+La ecuación del tipo de cambio real está representada por:
+\[
+S=\frac{EP^{*}}{P}
+\]
+
+Aplicando la segunda y primera propiedad de los logaritmos
+obtenemos:
+\begin{align*}
+     \ln(S)&= \ln(\frac{EP^{*}}{P}) \\
+         s &= \ln(EP^{*})-\ln{P}\\
+           &= \ln(E)+\ln(P^{*})-\ln(P)\\
+         s &= e+p^{*}-p
+\end{align*}
+
+Nuevamente obtenemos un modelo lineal que es más fácil de trabajar
+dentro del análisis económico.
+\medskip
+
+\textbf{Función producción Cobb-Douglas}
+\medskip
+
+Suponga una función producción $Q=15K^{\frac{1}{5}}L^{\frac{4}{5}}$,
+donde $Q$ es la pro\-du\-cci\-ón, $K$ es el capital y $L$ representa
+al trabajo. Vamos a linealizar esta función usando logaritmos
+naturales para transformar esta función exponencial a una función
+lineal.
+\[
+Q=15K^{\frac{1}{5}}L^{\frac{4}{5}}
+\]
+
+Aplicando las propiedades de los logaritmos obtenemos:
+\begin{align*}
+     \ln(Q) &= \ln(15K^{\frac{1}{5}}L^{\frac{4}{5}}) \\
+            &= \ln(15)+\ln(K^{\frac{1}{5}})+\ln(L^{\frac{4}{5}})\\
+     \ln(Q) &= \ln(15)+\frac{1}{5}\ln(K)+\frac{4}{5}\ln(L)
+\end{align*}
+
+De esta forma obtenemos una función lineal
+
+Ahora supongamos que $K=5$ y $L=10$. \textquestiondown Cuál es el
+valor de $Q$?
+\begin{align*}
+      \ln(Q)&= \ln(15)+\frac{1}{5}\ln(5)+\frac{4}{5}\ln(10)\\
+            &= 4.87200586 \\
+  e^{\ln(Q)}&= e^{4.87200586}\\
+          Q &= 130.582584
+\end{align*}
+
+En este ejemplo se aplicaron las propiedades de los logaritmos.
+\medskip
+
+\subsubsection{Derivación de funciones trigonométricas}
+
+Las derivadas trigonométricas son relativamente fácil de derivar. A
+continuación se muestran las fórmulas para las derivadas del seno,
+coseno y tangente. Como estas fórmulas se usan con frecuencia junto
+con la regla de la cadena, también se indica la versión generalizada
+de cada fórmula.
+
+\begin{itemize}
+  \item $\frac{d}{dx} (\sen x) = \cos x$,
+  \item $\frac{d}{dx} (\sen u) = \cos u \frac{du}{dx}$,\vspace{.2cm}
+  \item $\frac{d}{dx} (\cos x) = -\sen x$,
+  \item $\frac{d}{dx} (\cos u) = -\sen u \frac{du}{dx}$,\vspace{.2cm}
+  \item $\frac{d}{dx} (\tan x) = \sec^{2} x$,
+  \item $\frac{d}{dx} (\tan u) = \sec^{2} u \frac{du}{dx}$,
+\end{itemize}
+
+A continuación se muestran algunos ejemplos que ilustran el uso de
+estas formulas.
+\medskip
+
+\begin{ejemplo}
+Derive la función $f(x)=\sen(3x+1)$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Con el uso de la regla de la cadena para la función seno con
+$u=3x+1$, se obtiene
+\[
+  f'(x)=3\cos(3x+1)
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Derive la función $f(x)=\cos^{2} x$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Como\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,
+$\cos^{2} x=(\cos x)^{2}$
+\medskip
+
+se usa la regla de la cadena para potencias y la fórmula para la
+derivada del coseno para obtener
+\[
+  f'(x)=2 \cos x(-\sen x)=-2\cos x \sen x
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Derive la función $f(x)=\tan(1-x^{3})$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Con el uso de la regla de la cadena para la función tangente con
+$u=1-x^{3}$, se obtiene
+\[
+  f'(x)=\sec^{2} (1-x^{3})(-3x^{2})=-3x^{2}\sec^{2} (1-x^{3})
+\]
+\end{ejemplo}
+
+
+\subsection{Derivadas impl\'{\i}citas} Las funciones de la forma $y
+= f(x)$ expresan a $y$ expl\'{\i}citamente en t\'erminos de $x$ y
+pueden derivarse de acuerdo con las reglas apropiadas al tipo de
+funci\'on que se maneje. Sin embargo, algunas ecuaciones en las que
+intervienen $x$ y $y$, de la forma $f(x,y)  = 0$, no presentan a $y$
+explic\'{\i}tamente en t\'erminos de $x$ y no pueden manipularse de
+manera que se logre ese prop\'osito. Tales ecuaciones definen a $y$
+como una funci\'on de $x$ en el sentido de que para cada valor de
+$x$ hay un correspondiente valor de $y$ que satisface la ecuaci\'on;
+por consiguiente, se dice que la ecuaci\'on determina a $y$ como una
+funci\'on impl\'{\i}cita de $x$. Es posible calcular $\frac{dy}{dx}$
+a partir de tales ecuaciones mediante el m\'etodo de derivaci\'on
+impl\'{\i}cita: Si dos variables $x$ e $y$ est\'an relacionadas por
+una ecuaci\'on, para hallar $\frac{dy}{dx}$:
+\begin{enumerate}
+  \item Der\'{\i}vese cada miembro de la ecuaci\'on respecto de $x$,
+   considerando a $y$ como funci\'on de $x$.
+ \item Desp\'ejese $\frac{dy}{dx}$ de la ecuaci\'on resultante.
+\end{enumerate}
+
+
+\begin{ejemplo}
+Encontrar $dy/dx$ si $x^2 + y^2 = 25$. \\
+
+\textbf{Soluci\'on}
+\begin{align*}
+\frac{d}{dx} \left(x^2 \right) + \frac{d}{dx} \left(  y^2 \right) &= \frac{d}{dx} (25) \\
+   2x + 2y \frac{dy}{dx} &= 0 \\
+   \frac{dy}{dx} =  - \frac{x}{y}.
+\end{align*}
+\end{ejemplo}
+
+\begin{problema}
+Los ahorros $S$ de un pa\'{\i}s se definen impl\'{\i}citamente en
+t\'erminos de su ingreso nacional $Y$ por medio de la ecuaci\'on:
+\[
+    S^{2} + \frac{1}{4} Y^{2} = SY + Y
+\]
+donde $S$ e $Y$ est\'an en miles de millones de d\'olares. Encuentre
+la propensi\'on marginal al ahorro cuando $ Y = 16$ y $S = 12$.
+\end{problema}
+
+\textbf{Soluci\'on al Problema 6.} Diferenciando ambos miembros de
+la ecuaci\'on con respecto a $Y$ y despejando $\frac{dS}{dY}$
+obtenemos:
+\[
+   \frac{dS}{dY} = \frac{S + 1 - \frac{Y}{2}}{2S - Y}.
+\]
+De la cual si $Y = 16$ y $S = 12$, la propensi\'on marginal al
+ahorro es $\frac{5}{8}$.
+
+\begin{problema}
+Para un mercado de dinero en equilibrio se tiene que la cantidad de dinero en circulaci\'on ($M^s$) es igual a la demanda de dinero ($M^d = hy - \alpha i$)
+\[
+  M^s = hy - \alpha i  \hspace{.9cm} h , \alpha > 0
+\]
+
+Usando la diferenciaci\'on impl\'icita, encontrar el efecto del aumento de la oferta de dinero en el ingreso ($Y$) y en la tasa de inter\'es ($i$). Interprete resultados.
+\medskip
+
+\textbf{Soluci\'on al Problema 7.}
+
+\begin{enumerate}
+\item[] Calculemos $\frac{dY}{dM^s}$.
+\begin{align*}
+1 & = h  \frac{dY}{dM^s} \\
+\frac{dY}{dM^s} & = \frac{1}{h} >0
+\end{align*}
+\item[] Calculemos $\frac{di}{dM^s}$.
+\begin{align*}
+1 & = - \alpha \frac{di}{dM^s} \\
+\frac{di}{dM^s} & = -\frac{1}{\alpha} < 0
+\end{align*}
+\end{enumerate}
+\end{problema}
+
+Según este modelo simple, el aumento de la oferta de dinero aumenta el ingreso nacional y disminuye la tasa de interés.
+
+\subsection{Derivadas sucesivas o de orden superior} En algunos
+problemas de Econom\'{\i}a se requiere derivar una funci\'on m\'as
+de una vez. El resultado de dos o m\'as derivaciones sucesivas de
+una funci\'on, es una derivada de orden superior. La derivada de $y
+= f(x)$, con respecto a $x$ es, en general una funci\'on de $x$, y
+puede derivarse con respecto a esta va\-ria\-ble. La derivada de la
+primera derivada es la segunda derivada; la derivada de esta
+\'ultima es a su vez la tercera derivada; y as\'{\i} sucesivamente.
+
+\vspace{.2cm}
+
+En general. La derivada de orden $n$ de una funci\'on $y = f(x)$ se
+obtiene al derivar $n$ veces sucesivamente. El resultado de esta
+derivaci\'on, es decir, la derivada $n$-\'esima, se representa por:
+\[
+    \frac{d^{n}y}{dx^{n}}.
+\]
+Al igual que la derivada de la funci\'on $y = f(x)$ con respecto a
+$x$ representa la tasa de cambio de $y$ cuando var\'{\i}a $x$, la
+segunda derivada de $y = f(x)$ con respecto a $x$, representa la
+tasa de cambio de la primera derivada $ \frac{dy}{dx} =
+\frac{df}{dx} (x)$ tambi\'en con respecto a $x$.
+
+\vspace{.2cm}
+
+En general, la  $n$-\'esima derivada con respecto a $x$ de una
+funci\'on $y = f(x)$, representa la tasa de cambio de la $(n -
+1)$-\'esima derivada de $y = f(x)$ cuando $x$ var\'{\i}a.
+
+\begin{ejemplo}
+Si $y = 6x^{3}- 12x^{2} + 6x - 2$, encontrar todas sus derivadas de
+orden superior.
+\begin{align*}
+\frac{dy}{dx}  &= 18 x^{2} - 24x + 6, \\
+\frac{d^{2}y}{dx^2} &= 36x - 24,  \\
+\frac{d^3 y}{dx^{3}} &= 36, \\
+\frac{d^4 y}{dx^4} &= 0.
+\end{align*}
+Todas las derivadas sucesivas son tambi\'en cero: $\frac{d^5y}{dx^5}
+= 0$, etc\'etera.
+\end{ejemplo}
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 3: DERIVADAS}
+\end{center}
+
+\vspace{.3cm}
+
+Trabajo individual.
+
+\vspace{.2cm}
+
+\textbf{Ejercicio 1.} Calcular las derivadas de las siguientes funciones:
+\begin{align*}
+1.\,\,\, & f(x) = 5x^{\frac{4}{3}} -\frac{2}{3} x^{\frac{3}{2}} + x^{2} - 3x + 1 & \qquad
+2.\,\,\, & f(x) = 2x - 5x^{\frac{1}{2}}  & \qquad \\[.5cm]
+3.\,\,\, & f(x) = (2x + 3)(3x - 4)   & \qquad
+4.\,\,\, & f(x) = (3x + 1)(x^{2} - 2)   & \qquad \\[.5cm]
+5.\,\,\, & g(x) = \frac{3}{2x + 4} & \qquad
+6.\,\,\, & f(x) = \frac{x - 1}{2x + 1} & \qquad \\[.5cm]
+7.\,\,\, & f(x) = (2x - 1)^{4} & \qquad
+8.\,\,\, & f(x) = (1 - x)^{3} & \qquad \\[.5cm]
+9.\,\,\, & f(x) = \sqrt{x^{2}+3x+2} & \qquad
+10.\,\,\, & f(x) = 3e^{4x+1}  &  \qquad \\[.5cm]
+11.\,\,\, & f(x) = x^{2}\ln x &  \qquad
+12.\,\,\, & f(x) = \ln(2x+5)  &  \qquad \\[.5cm]
+13.\,\,\, & f(x) = x e^{x}  &  \qquad
+14.\,\,\, & f(x) = \sen (3x^2-1) & \qquad \\[.5cm]
+15.\,\,\, & f(x) = \sen^2 \frac{x}{2} & \qquad
+16.\,\,\, & f(x) = \cos (3x^2 - x) & \qquad
+\end{align*}
+
+\textbf{Ejercicio 2.} Use diferenciaci\'on impl\'icita para encontrar
+$\frac{dy}{dx}$ en las si\-gui\-en\-tes funciones.
+\begin{align*}
+1. \,\,\,& y^2 = 5x & \qquad
+2. \,\,\,& y^2 - 2xy = 8 & \qquad \\[.5cm]
+3. \,\,\,& y + y^4 = x & \qquad
+4. \,\,\,& x^2 + y^2 = 5 &
+\end{align*}
+
+\textbf{Ejercicio 3.} Si $y = 5x^{5}- 3x^{2} + 6x$, encontrar $\frac{d^4y}{dx^4}$.
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 4: DERIVADAS APLICADAS A LA ECONOMÍA}
+\end{center}
+
+Trabajo en equipo con dos o tres integrantes.
+
+\vspace{.3cm}
+
+\textbf{Ejercicio 1.} Graficar las siguientes funciones de consumo e
+inversi\'on, y posteriormente obtener las respectivas derivadas,
+interpretando los resultados.
+
+\vspace{.2cm}
+
+a) Sea $C = 10 + \frac{1}{2} Y$
+
+\vspace{.2cm}
+
+Donde:
+\begin{align*}
+Y &= Ingreso \ (PIB)  \hspace{7cm}  &    & \\
+C &= Consumo    &      &
+\end{align*}
+
+Obtenga \ $\frac{dC}{dY}$
+
+
+\vspace{1cm}
+
+b) Sea $I = 15 - 2r$
+
+\vspace{.2cm}
+
+Donde:
+\begin{align*}
+I &= Inversi\'on  \hspace{7cm}   &   &         &   \\
+r &= Tasa \ de \ Interés  &    &         &
+\end{align*}
+
+Obtenga \ $\frac{dI}{dr}$
+\bigskip
+
+\textbf{Problema 1.} La l\'{\i}nea a\'erea Aerom\'exico tiene un ingreso
+mensual de:
+\[
+        R(x) = 8000x - 100x^{2},
+\]
+pesos, cuando el precio por pasajero es $x$ pesos.
+\begin{enumerate}
+    \item Determinar el ingreso marginal $\frac{dR}{dx}.$
+    \item Calcular $\frac{dR}{dx}(39)$, $\frac{dR}{dx}(40)$ y $\frac{dR}{dx}(41)$
+\end{enumerate}
+
+\textbf{Problema 2.} En un m\'odelo b\'asico macroeconomico  Keynesiano se
+supone que $Y =C + I$, donde $C = 60 + 0.8Y$ y $I = 820.$
+
+\begin{enumerate}
+\item[(a)] ¿Cu\'al es la propensi\'on marginal al consumo?
+\item[(b)] ¿Cu\'al es el nivel de equilibrio de Y?
+\item[(c)] ¿Cu\'al es el valor del multiplicador?
+\item[(d)] ¿Que incremento en la inversión ($I$) es requerido para un crecimiento de
+$Y$ en 5,000 ?
+\end{enumerate}
+
+\textbf{Problema 3.} En una econom\'{\i}a cerrada (es decir, sin comercio
+exterior) se tienen las siguientes relaciones:
+\begin{align*}
+ Y &= C + I + G      \\
+ C &= 0.6 Y_d  &  Y_d &= (1 -t) Y  & t &= 0.25 \\
+ I &=120       & G &= 210
+\end{align*}
+
+donde $C$ es el gasto de los consumidores, $Y_d$ el ingreso
+disponible, $Y$ es el ingreso nacional, $I$  es la inversi\'on, $t$
+es la tasa de  impuestos y $G$ es el gasto de gobierno.
+
+\begin{enumerate}
+\item[(a)] ¿Cu\'al es la propensi\'on marginal al consumo?
+\item[(b)] ¿Cu\'al es el nivel de equilibrio de Y?
+\item[(c)] ¿Cu\'al es el valor del multiplicador del gasto de gobierno?
+\item[(d)] ¿Que incremento en el gasto de gobierno ($G$) es requerido para un crecimiento de
+$Y$ en 700 ?
+\end{enumerate}
+
+\textbf{Problema 4.} La ecuaci\'on que describe el salario es $W(t) = 36 +
+\frac{1}{8} t$ milones de personas en el a\~{n}o 2000 y del
+\'{\i}ndice de precios es $P(t) = 26 + \frac{1}{4} t^{2}$ pesos en
+el mismo a\~{n}o.
+\begin{enumerate}
+   \item \textquestiondown A qué raz\'on porcentual cambio el salario respecto al
+   tiempo en 2008?
+   \item \textquestiondown A qué raz\'on porcentual cambio el \'{\i}ndice de precios respecto al tiempo 2008?
+   \item \textquestiondown A qué raz\'on porcentual cambio el salario real respecto
+   al tiempo en 2008?
+\end{enumerate}
+
+\textbf{Problema 5.} El concepto de crecimiento econ\'omico se refiere al
+incremento porcentual de una econom\'{\i}a en un periodo de tiempo.
+Los valores suelen estar expresados en t\'erminos per c\'apita y en
+t\'erminos reales para tener en cuenta los efectos de las
+variaciones en los niveles de precios, es decir, deflactando el PIB.
+
+\vspace{.2cm}
+
+Se tiene que una econom\'{\i}a cuenta con ciertas cantidades de
+capital, $K$ y cierta cantidad de fuerza de trabajo que la
+denotaremos con $L$, si queremos obtener el capital per c\'apita
+debemos dividir el capital entre el n\'umero de trabajadores, es
+decir:
+\[
+  k(t) = \frac{K(t)}{L(t)}
+\]
+\begin{enumerate}
+ \item[a)] Obtenga la evoluci\'on del capital per c\'apita en
+ t\'erminos porcentuales a trav\'es del tiempo.
+  \item[b)] Interprete el resultado obtenido.
+\end{enumerate}
+
+
+\newpage
+
+\setcounter{page}{1}
+
+\subsection{Funciones continuas, crecientes e inversas}
+
+Las funciones continuas desempeñar\'an una importante funci\'on en
+la mayor parte del estudio del c\'alculo. Cualquier funci\'on $y =
+f(x)$ cuya gr\'afica puede trazarse sobre su dominio con un
+movimiento ininterrumpido, es decir, sin levantar el l\'apiz de la
+hoja de papel, es un ejemplo de funci\'on continua.
+
+\begin{definicion}
+(Continuidad en un punto). Una funci\'on $y = f(x)$ es continua en
+un punto interior $c$ de su dominio sí
+\[
+    \lim\limits_{x \to c} f(x) = f(c).
+\]
+\end{definicion}
+\textbf{Condiciones para la continuidad:}
+
+Una funci\'on $f(x)$ es continua en $x = c$ si y s\'olo si se
+cumplen las si\-gui\-en\-tes condiciones:
+\begin{enumerate}
+\item[1.] $f(c)$ existe.
+\item[2.] $\lim\limits_{x \to c} f(x)$ existe.
+\item[3.] $\lim\limits_{x \to c} f(x) = f(c).$
+\end{enumerate}
+
+Una funci\'on es continua en un intervalo sí y s\'olo sí es continua
+en todos los puntos del mismo.
+
+\begin{teorema}
+Si las funciones $f$ y $g$ son continuas en $x = c$, entonces las
+combinaciones siguientes  son continuas en $x = c$
+\begin{enumerate}
+ \item $f \pm g$
+ \item $f \cdot g$
+ \item $f/g$
+\end{enumerate}
+\end{teorema}
+
+
+\begin{ejemplo}
+Las funciones polinomiales y racionales son continuas.
+\begin{enumerate}
+ \item[(a)] Cualquier funci\'on polinomial $P(x) = a_x x^n + a_{n -1}x^{n-1}+ \cdots + a_0$ es continua por que
+ $\lim\limits_{x \to c} P(x) = P(c).$
+ \item[(b)] Si $P(x)$ y $Q(x)$ son polinomios, entonces la funci\'on racional $R(x) = P(x)/Q(x)$ es continua en todo punto
+ $x$ donde $Q(x) \ne 0.$
+\end{enumerate}
+\end{ejemplo}
+
+\textbf{Funciones crecientes y decrecientes}
+
+\begin{definicion}
+Se dice que una funci\'on $f$ es \textbf{creciente} en el intervalo
+$I$, si para dos n\'umeros cualesquiera $x_1, x_2 \in I$, donde $x_1
+< x_2$, se cumple que $f(x_1) < f(x_2)$. Una funci\'on $f$ es
+\textbf{decreciente} en el intervalo $I$, donde $x_1 < x_2$,
+entonces $f(x_1) > f (x_2)$.
+\end{definicion}
+\textbf{Criterios en terminos de la derivada para funciones
+crecientes o decrecientes:}
+\begin{itemize}
+ \item Si $\frac{df}{dx} (x)  >  0$ para cada valor de $x$ en un intervalo $(a,b)$, entonces $f$ es creciente en $(a,b)$.
+ \item Si $\frac{df}{dx} (x)  <  0$ para cada valor de $x$ en un intervalo $(a,b)$, entonces $f$ es decreciente en $(a,b)$.
+ \item Si $\frac{df}{dx} (x)  =  0$ para cada valor de $x$ en un intervalo $(a,b)$, entonces $f$ es constante en $(a,b)$.
+\end{itemize}
+
+\begin{definicion}
+Sea $f$ diferenciable en el intervalo $(a,b)$. Entonces se dice que
+$f$ es \textbf{ c\'oncava hacia arriva [c\'oncava hacia abajo]} en
+$(a,b)$, si $f'$ es creciente [decreciente] en $(a,b)$.
+\end{definicion}
+\textbf{Criterio de la derivada para funciones Concavas hacia arriba
+o hacia abajo:}
+\begin{enumerate}
+  \item Si $\frac{d^2 f}{d x^{2}} (x) > 0$ para cada valor de $x$ en $(a,b)$, entonces $f$ es c\'oncava hacia arriba en $(a,b)$.
+  \item Si $\frac{d^2 f}{d x^{2}} (x) < 0$ para cada valor de $x$ en $(a,b)$, entonces $f$ es c\'oncava hacia abajo en $(a,b)$.
+\end{enumerate}
+
+\textbf{Funciones inversas y sus derivadas}
+\medskip
+
+Como cada valor (salida) de una funci\'on, uno a uno proviene de una
+y s\'olo una entrada, el efecto de la funci\'on puede ser invertido,
+enviando la salida de regreso a la entrada de la que vino bajo la
+funci\'on.
+
+\begin{definicion} (\textbf{Funci\'on inversa}) Suponga que $f$ es una
+  fucni\'on inyectiva en un dominio $D$ con rango $R$. La \textbf{funci\'on
+  inversa} $f^{-1}$ se define como
+\[
+    f^{-1}(a) = b \,\,   \text{si} \, \,
+     f(b) = a.
+\]
+El dominio de $f^{-1}$ es $R$ y su rango es $D$.
+\end{definicion}
+
+El proceso de pasar de $f$ a $f^{-1}$ puede realizarse en dos pasos.
+
+\begin{enumerate}
+\item[1.] Despejar $x$ en la ecuaci\'on $y = f(x)$. Esto proporciona
+  una f\'ormula $x = f^{-1}(y)$ en donde $x$ se expresa como una
+  funci\'on de $y$.
+\item[2.] Intercambiar $x$ y $y$ para obtener una f\'ormula $y =
+  f^{-1}(x)$ en donde $f^{-1}$ se expresa en el formato convencional,
+  con $x$ en la variable independiente y $y$ como la variable
+  dependiente.
+\end{enumerate}
+
+
+\begin{ejemplo}
+Determinar la inversa de $y = \frac{1}{2}x + 1$, expresada como
+funci\'on de $x$.
+
+
+\textbf{Soluci\'on:}
+
+\begin{enumerate}
+\item[1.]  Despejese $x$ en t\'erminos de y:
+\begin{align*}
+      y &= \frac{1}{2} x + 1 \\
+      2y &= x + 2 \\
+     x &= 2y - 2.
+\end{align*}
+\item[2.]  Intercambie $x$ y $y$: \,\, $y = 2x - 2$
+
+La inversa de la funci\'on  $f(x) = \frac{1}{2}x  + 1$ es la
+funci\'on $f^{-1}(x) = 2x - 2$. Para comprobarlo, hay que revisar si
+las dos funciones compuestas producen la funci\'on identidad.
+
+
+\begin{align*}
+    f^{-1}(f(x)) &= 2 \left( \frac{1}{2}x + 1 \right) -2 = x + 2 - 2
+    = x \\
+   f(f^{-1}(x)) &= \frac{1}{2} (2x - 2) + 1  =  x - -1 + 1 = x.
+\end{align*}
+\end{enumerate}
+\end{ejemplo}
+
+El siguiente resultado proporciona las condiciones en las que
+$f^{-1}$ es di\-fe\-ren\-cia\-ble en su dominio, que es el mismo que
+el rango de $f$.
+
+\begin{teorema}
+\label{inversa}
+ Si $f$ tiene un intervalo $I$ como dominio y $f'(x)$ existe y nunca
+ es cero en $I$, entonces $f^{-1}$ es derivable en cada punto de su
+ dominio. El valor de $(f^{-1})'$ en un punto $b$ del dominio de
+ $f^{-1}$ es el rec\'{\i}proco del valor de $f'$ en el punto $a =
+ f^{-1}(b)$:
+\begin{align*}
+  (f^{-1})(b) &= \frac{1}{f'(f^{-1}(b))} \\
+ \text{o}  \\
+  \frac{df^{-1}}{dx} \Bigr|_{x = b} &= \frac{1}{\frac{df}{dx}
+\Bigr|_{ x = f^{-1}(b)}   }
+\end{align*}
+\end{teorema}
+\begin{ejemplo}
+La funci\'on $f(x) = x^2$, $x \geq 0$ y su inversa $f^{-1}(x) =
+\sqrt{x}$ tienen derivadas $f'(x) = 2x$ y $(f^{-1})'(x) = 1/(2
+\sqrt{x}).$ Por el teorema \ref{inversa} tenemos:
+
+
+\begin{align*}
+ (f^{-1})'(x) &= \frac{1}{f'(f^{-1}(x))} \\
+              &= \frac{1}{2(f^{-1}(x))} \\
+              &= \frac{1}{2 \sqrt{x}}.
+\end{align*}
+
+\end{ejemplo}
+
+\begin{teorema}
+\label{intermedio} (El teorema del valor intermedio) Si $f$ es una
+funci\'on continua en un intervalo cerrado $[a, b]$ y $M$ es
+cualquier número entre $f(a)$ y $f(b)$, entonces existe al menos un
+n\'umero $c$ en $[a, b]$ tal que $f(c) = M$
+\end{teorema}
+\begin{ejemplo}
+Sea $f(x) = x^{3} +  x + 2$. Puesto que $f(-2) = -8$ y $f(1) = 4$,
+es decir, $f(-2)$ y $f(1)$ tienen signos opuestos, por el teorema
+\ref{intermedio}, hay al menos un punto $x = c$, con $-2 < c < 1$
+tal que $f(c) = 0.$ (Ver figura 14)
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.3
+\textheight]{unid1graf17.pdf}
+\end{center}
+\caption{$f(x)=x^{3} +  x + 2$}\label{Figura13}
+\end{figure}
+
+\newpage
+
+\setcounter{page}{1}
+
+\section{Optimización libre con una variable}
+\subsection{M\'aximos y m\'{\i}nimos relativos y absolutos}
+\textbf{Introducci\'on}
+\medskip
+
+En esta secci\'on resolveremos problemas que impliquen maximizar o
+mi\-ni\-mi\-zar una cantidad. Por ejemplo, podr\'{\i}amos tener que
+maximizar una ganancia o minimizar un costo. La parte crucial
+consiste en expresar la cantidad que se debe maximizar o minimizar
+como funci\'on  de alguna va\-ria\-ble contenida en el problema.
+Luego diferenciamos y probamos los valores cr\'{\i}ticos
+resultantes. Para esto pueden usarse las pruebas de la primera o de
+la segunda derivada, aunque puede ser obvio por la naturaleza  si un
+valor cr\'{\i}tico representa o no una respuesta apropiada. Como
+nuestro inter\'es estriba en los m\'aximos y m\'{\i}nimos absolutos,
+a veces tendremos que examinar los puntos extremos del dominio de la
+funci\'on.
+
+\subsubsection{Método analítico}
+
+\begin{definicion}
+Una funci\'on $f$ tiene un \textbf{m\'aximo absoluto} en $x = x_0$,
+si $f(x_0) \geq f(x)$ para toda $x$ en el dominio de $f$. El m\'aximo
+absoluto es $f(x_0)$. Una funci\'on $f$ tiene un \textbf{m\'{\i}nimo absoluto}
+en $x = x_0$, si $f(x_0) \leq f(x)$, para toda $x$ en el dominio de $f$.
+El m\'{\i}nimo absoluto es $f(x_0)$.
+\end{definicion}
+
+Los valores  m\'aximo y m\'{\i}nimo absoluto se llaman
+\textbf{extremos absolutos}. Los extremos absolutos tambi\'en
+suelen denominarse extremos \textbf{ globales}, para distinguirlos
+de los extremos locales, que se definen a continuaci\'on.
+
+
+\begin{definicion}
+Una funci\'on $f$ tiene un \textbf{m\'aximo relativo} en $x = x_0$,
+si existe un intervalo abierto que contenga a $x_0$, sobre el cual
+$f(x_0) \geq f(x)$ para toda $x$ en el intervalo. El m\'aximo
+relativo es $f(x_0)$. Una funci\'on tiene un \textbf{m\'{\i}nimo
+relativo} en $x = x_0$, si existe un intervalo abierto que contenga
+a $x_0$, sobre el cual $f(x_0) \leq f(x)$, para toda $x$ en el
+intervalo. El m\'{\i}nimo relativo es $f(x_0)$.
+\end{definicion}
+
+Cuando aludamos a un m\'aximo o un m\'{\i}nimo relativo lo llamaremos a cada uno extremo relativo.
+
+\begin{definicion}
+Si $x_0$ est\'a en el dominio de $f$ y $\frac{df}{dx} (x_0) = 0$ o $\frac{df}{dx} (x_0)$
+no est\'a definida, entonces $x_0$ se denomina valor cr\'{\i}tico de $f$. Si $x_0$ es un
+\textbf{valor cr\'{\i}tico} de $f$, entonces el punto $(x_0, f(x_0)$ se le llama \textbf{punto cr\'{\i}tico}.
+\end{definicion}
+
+\subsection{Criterios de la primera y segunda derivada }
+
+\textbf{Criterio de la derivada para hallar M\'aximos y
+M\'{\i}nimos:}
+\begin{enumerate}
+  \item[] \textbf{1er paso.} Calcular $\frac{df}{dx}(x)$.
+  \item[]\textbf{2o. paso.}   Determinar los valores de $x$ en que $\frac{df}{dx} (x) = 0 $ o no est\'a definida
+  (estos valores incluyen valores cr\'{\i}ticos y puntos de discontinuidad).
+  \item[]\textbf{3er. paso.} Calcular $\frac{d^2 f}{dx^{2}} (x)$.
+  \item[] \textbf{4o. paso.}
+  Evaluar $\frac{d^2 f}{dx^{2}} (x_0)$ para cada valor cr\'{\i}tico
+  $x_0$. Entonces
+  \begin{enumerate}
+  \item[i)] Si $\frac{d^2 f}{d x^{2}} (x_0) < 0$, entonces $f$ tiene un m\'aximo reativo en $x_0$.
+  \item[ii)] Si $\frac{d^2 f}{d x^{2}} (x_0) > 0$, entonces  $f$ tiene un m\'{\i}nimo relativo en $x_0$.
+  \item[iii)] Si $\frac{d^2 f}{d x^{2}} (x_0) = 0 $, entonces el criterio no es concluyente.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{definicion}
+Una funci\'on $f$ tiene un \textbf{punto de inflexi\'on} cuando $x =
+x_0$, si y s\'olo si $f$ es continua en $x_0$, y $f$ cambia de
+concavidad en $x_0$.
+\end{definicion}
+
+\begin{ejemplo}
+Encontar los valores m\'aximo y m\'{\i}nimo absolutos de $f(x)= x^3+3x^2 -2$ en $[-3,1]$
+
+\textbf{Soluci\'on:}
+\medskip
+
+\begin{enumerate}
+  \item[] \textbf{1er paso.} Calculemos $\frac{df}{dx}(x)$.
+  \[
+ \frac{df}{dx} = 3x^2  + 6x
+  \]
+  \item[]\textbf{2o. paso.}   Determinemos los valores de $x$ en que $\frac{df}{dx} (x) = 0 $
+ \begin{align*}
+    \frac{df}{dx} &= 0 \\
+    3x^2  + 6x   & = 0 \\
+    3x(x  +  2) & =0
+ \end{align*}
+ Resolviendo las ecuaciones $3x = 0$ y $x + 2 = 0$, tenemos que los valores cr\'{\i}ticos son  $x_1 =
+ 0$ y $x_2 = -2$.
+
+  \item[]\textbf{3er. paso.} Hallemos la segunda derivada
+\[
+ \frac{d^2 f}{dx^{2}} (x) =  6x + 6.
+\]
+
+  \item[] \textbf{4o. paso.}
+  Evaluemos  $\frac{d^2 f}{dx^{2}} (x)$ en cada  valor cr\'{\i}tico.
+  Entonces
+\begin{align*}
+\frac{d^2 f}{dx^{2}} (0) &= 6(0) + 6 \\
+\frac{d^2 f}{dx^{2}} (0) &= 6
+\end{align*}
+Por lo que $x_1 =0$ es la abscisa de un m\'{\i}nimo.
+\begin{align*}
+\frac{d^2 f}{dx^{2}} (-2) &= 6(-2) + 6 \\
+\frac{d^2 f}{dx^{2}} (-2) &= -6
+\end{align*}
+En consecuencia el punto $x_2 = -2$ es la abscisa de un m\'aximo.
+\end{enumerate}
+
+En conclusi\'on para encontrar los valores que corresponden al
+m\'aximo y al m\'{\i}nimo se deben realizar varias sustituciones en
+la funci\'on original:
+\begin{align*}
+ f(x) &= x^3 + 3x^2 -2 \\
+ \text{Para $x_1=0$ se tiene} \\
+ f(0) &=  0^3 + 3(0)^2 -2 \\
+ f(0) &= -2 \\
+ \text{Para $x_2=-2$ se tiene} \\
+ f(-2) &= (-2)^3 + 3(-2)^2 -2 \\
+ f(-2) &= 2
+\end{align*}
+Por lo que el m\'aximo es el punto (-2,2) y  el m\'{\i}nimo es el punto (0,-2) como se muestra en la figura 15.
+\end{ejemplo}
+
+\newpage
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.3
+\textheight]{unidad2graf1.pdf}
+\end{center}
+\caption{$f(x) = x^{3}+3x^{2}-2$}\label{Figura15}
+\end{figure}
+
+\begin{ejemplo}
+Encontar los valores m\'aximo y m\'{\i}nimo absolutos de $f(x) =
+2x^{3}+3x^{2}-12x-7$ en $[-3,3]$.
+
+
+\textbf{Soluci\'on:}
+\medskip
+
+\begin{enumerate}
+  \item[] \textbf{1er paso.} Calculemos $\frac{df}{dx}(x)$.
+
+\[
+  \frac{df}{dx}(x)=6x^{2}+6x-12
+\]
+
+  \item[]\textbf{2o. paso.}   Determinemos los valores de $x$ en que $\frac{df}{dx} (x) = 0 $
+ \begin{align*}
+    \frac{df}{dx} &= 0 \\
+     6x^{2}+6x-12 & = 0 \\
+     x^{2}+x-2 & =0 \\
+     (x+2)(x-1) &= 0
+ \end{align*}
+ Resolviendo las ecuaciones $x + 2 = 0$ y $x -1 = 0$, tenemos que los valores cr\'{\i}ticos son  $x_1 =
+ -2$ y $x_2 = 1$.
+
+  \item[]\textbf{3er. paso.} Hallemos la segunda derivada
+\[
+  \frac{d^2f}{dx^2}(x)=12x+6
+\]
+
+ \item[] \textbf{4o. paso.}
+  Evaluemos  $\frac{d^2 f}{dx^{2}} (x)$ en cada  valor cr\'{\i}tico.
+  Entonces
+\begin{align*}
+\frac{d^2 f}{dx^{2}} (-2) &= 12(-2) + 6 \\
+\frac{d^2 f}{dx^{2}} (-2) &= -18
+\end{align*}
+Por lo que $x_1 =-2$ es la abscisa de un m\'aximo.
+\begin{align*}
+\frac{d^2 f}{dx^{2}} (1) &= 12(1) + 6 \\
+\frac{d^2 f}{dx^{2}} (1) &= 18
+\end{align*}
+En consecuencia el punto $x_2 = -2$ es la abscisa de un m\'{\i}nimo.
+\end{enumerate}
+
+En conclusi\'on para encontrar los valores que corresponden al
+m\'aximo y al m\'{\i}nimo se deben realizar varias sustituciones en
+la funci\'on original:
+\begin{align*}
+ f(x) &= 2x^{3}+3x^{2}-12x-7 \\
+\text{Para $x_1=-2$ se tiene} \\
+ f(-2) &= 2(-2)^3 + 3(-2)^2 -12(-2) - 7 \\
+ f(-2) &= 13 \\
+\text{Para $x_2=1$ se tiene}\\
+ f(1) &= 2 + 3 -12 - 7 \\
+ f(1) &= -14
+\end{align*}
+Por lo que el m\'aximo relativo es el punto(-2,13) y  el m\'{\i}nimo
+relativo es el punto (1,-14). Como referencia, se traza la gráfica
+de $f$ en la figura 16.
+\end{ejemplo}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.3
+\textheight]{unid1graf20.pdf}
+\end{center}
+\caption{$f(x) = 2x^{3}+3x^{2}-12x-7$}\label{Figura15}
+\end{figure}
+
+\newpage
+
+\begin{problema}
+Un monopolista tiene una función de demanda inversa $p(q) = 100-q$.
+La función de costo total es $C=25q$.
+
+\begin{enumerate}
+  \item \textquestiondown Cuál es la cantidad y el precio que maximiza la utilidad?
+  \item Hallar el ingreso y el costo marginal.
+  \item Gráficar conjuntamente las funciones del ingreso, utilidad y costo.
+  \item Gráficar conjuntamente las funciones del precio, ingreso
+  marginal y costo marginal.
+\end{enumerate}
+\end{problema}
+
+\textbf{Soluci\'on al problema 8}.
+\begin{enumerate}
+ \item La funci\'on del ingreso del monopolista es
+\begin{align*}
+  R(q)& =p \cdot q\\
+      & =(100-q)q\\
+      & =100q-q^{2}
+\end{align*}
+La función de utilidad es
+\begin{align*}
+  \pi(q)& =R(q)-C(q) \\
+  & =100q-q^{2}-25q \\
+  & =75q-q^{2}
+\end{align*}
+
+Derivando la función de utilidad obtenemos
+\begin{align*}
+  \pi'(q)& = 75-2q \\
+  \pi'(q)& = 0 \\
+       q & = 37.5
+\end{align*}
+
+Para probar que este punto es un máximo, obtenemos la segunda
+derivada de la función de la utilidad.
+\[
+  \pi''(q)  = -2 < 0
+\]
+
+De acuerdo con el criterio de la segunda derivada este punto es un
+máximo. Para determinar el precio y la utilidad hacemos:
+\begin{align*}
+  p(q) & = 100-37.5 = \$62.50 \\
+\pi(q) & = 75(37.5)-(37.5)^{2}=\$1,406.25
+\end{align*}
+
+ \item El ingreso y costo marginal son respectivamente
+\begin{align*}
+  R'(q) & = 100-2q \\
+  C'(q) & = 25
+\end{align*}
+
+Si igualamos el ingreso marginal al costo marginal obtenemos la
+cantidad que maximiza la utilidad
+\begin{align*}
+  R'(q) & = C'(q) \\
+  100-2q & = 25 \\
+  75 & = 2q \\
+  q & = 37.5
+\end{align*}
+
+\newpage
+
+\item Gráfica del ingreso, utilidad y costo.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf21.pdf}
+\end{center}
+\caption{$R(q),\pi(q),C(q)$}\label{Figura16}
+\end{figure}
+
+\item Gráfica del precio, ingreso marginal y costo marginal.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf22.pdf}
+\end{center}
+\caption{$p(q),C'(q),R'(q)$}\label{Figura17}
+\end{figure}
+\end{enumerate}
+
+\begin{problema}
+La empresa de cablevisi\'on tiene actualmente $100,000$ suscriptores
+que pagan una couta mensual de  \$40 pesos. Una encuesta revel\'o
+que se tendr\'{\i}an $1000$ suscriptores m\'as por cada \$0.25 de
+disminuci\'on en la cuota. \textquestiondown Para qu\'e cuota se
+obtendr\'a el ingreso m\'aximo y cu\'antos suscriptores se
+tendr\'{\i}an entonces?
+\end{problema}
+
+\textbf{Soluci\'on del problema 9.} Sea $x$ el n\'umero de
+disminuciones de \$0.25. La couta mensual es entonces de 40 - 0.25x,
+donde $0 \leq x \leq 160$ y el n\'umero de suscriptores nuevos es $
+1000 x$. Por lo tanto, el n\'umero total de suscriptores es $100,000
++ 1000x$. Entonces queremos maximizar el ingreso, el cu\'al esta
+dado por:
+\begin{align*}
+  r &= (\text{n\'umero de suscriptores}) (\text{couta por suscriptor}) \\
+    &= (100,000 + 1000x)(40 - 0.25x) \\
+    &= 1000(100 + x)(40 - 0.25x) \\
+    &= 1000(4000 + 15x - 0.25x^{2}).
+\end{align*}
+Haciendo $\frac{dr}{dx} = 0$ y despejamos a $x$, tenemos que:
+\begin{align*}
+  \frac{dr}{dx} = 1000(15 - 0.5x) & = 0 \\
+                                 & =30.
+\end{align*}
+Como el dominio de $r$ es el intervalo cerrado $[0, 160]$, el valor
+m\'aximo absoluto de $r$ debe ocurrir en $x = 30$ o en los puntos
+extremos del intervalo. Ahora calculamos $r$ en estos tres puntos:
+\begin{enumerate}
+   \item Si $x =0$, entonces $r = 4,000,000;$
+   \item Si $x = 30$, entonces $r = 4,225,000;$
+   \item Si $x = 160$, entonces $r = 0$.
+\end{enumerate}
+De esto se sigue que el ingreso m\'aximo ocurre cuando $x = 30$.
+Esto co\-rres\-pon\-de a 30 disminuciones de \$0.25, para una
+disminuci\'on total de \$7.5; esto es la couta mensual \$32.50. El
+n\'umero de suscriptores con esa couta son 100,000 + 30(1000) =
+130,000.
+
+\newpage
+
+\begin{problema}
+Una empresa tiene una funci\'on dada por $ q (L) = aL-bL ^ 2 $, donde $L$ es el n\'umero de trabajadores empleados por la empresa y $ a, b> 0 $. El producto de la empresa se vende a un precio de $p$, y el salario promedio de un trabajador es $w$. Encontrar el n\'umero de trabajadores que maximiza el beneficio de la empresa. Demostrar que el beneficio es, en efecto, un m\'aximo.
+\medskip
+
+\textbf{Soluci\'on al Problema 10.}
+\medskip
+
+Expresamos la ganancia como la diferencia entre los ingresos totales y el costo total
+\begin{align*}
+    \pi(L) &=  p(aL - bL^2) - wL \\
+    \pi'(L) &=  ap - 2bpL - w = 0  \qquad \pi''(L)= - 2bp< 0  \ \text{implica un m\'aximo} \\
+    L^{*} &= \frac{ap- w}{2bp}
+\end{align*}
+
+Por lo tanto, el n\'umero \'optimo de trabajadores y el salario promedio se ven relacionados, como dicta la l\'ogica econ\'omica.
+\medskip
+
+\begin{problema} Una empresa tiene una funci\'on de producción Cobb-Douglas $ q = 10 K ^ {\frac{3}{5}} L ^ {\frac{2}{5}}$, y vende sus productos a un precio de 30. La empresa opera en el corto plazo con un n\'umero fijo  de m\'aquinas en 32. Buscar el m\'aximo beneficio de la empresa, si se sabe que el precio de una m\'aquina es de 120 y el salario de los trabajadores es de 15 unidades.
+\medskip
+
+\textbf{Soluci\'on al Problema 11.}
+    Restando el costo total de capital y el trabajo de los ingresos totales da la ecuaci\'on de beneficios:
+    \begin{align*}
+    \pi &= pq - rK - wL = 30 (10)32^{\frac{3}{5}}L^{\frac{2}{5}} - 120(32) - 15L \\
+    \pi(L) &= 300(32)^{\frac{3}{5}}L^{\frac{2}{5}} - 120 (32) - 15(L) = 300(8)L^{\frac{2}{5}}-
+    3840- 15L \\
+    &= 2400 L^{\frac{2}{5}}- 3840 - 15L
+    \end{align*}
+    La maximizaci\'on de beneficios con respecto a la mano de obra
+    \begin{align*}
+    \pi'(L) &=  \frac{2400 (2)}{5} L^{-\frac{3}{5}} - 15 = 0 \quad \pi''(L)= -576L^{-\frac{8}{5}}< 0  \\
+    960L^{-\frac{3}{5}} &=  15 \\
+    L^{\frac{3}{5}} &= 64 \\
+    L &= 64^{\frac{5}{3}} \\
+    L^{*} &= 1024  \ \text{ trabajadores} \\
+    \pi(1024) &= 2400(1024)^{\frac{2}{5}} - 3840 - 15 (1024)\\
+    & = 2400(16)- 3840-15360\\
+    & = 19,200
+    \end{align*}
+\end{problema}
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 1: MÁXIMOS Y MÍNIMOS}
+\end{center}
+
+Trabajo individual.
+\medskip
+
+
+En los ejercicios 1 al 8, encontrar los valores m\'aximos,
+m\'{\i}nimos absolutos de cada funci\'on en el intervalo dado.
+Después graficar la función en la computadora,  comprobando los
+puntos en donde se alcanzan los extremos absolutos.
+\begin{align*}
+1. \,  f(x) &= \frac{x^3}{3}  - \frac{x^2}{2}  - 2x + \frac{1}{3} &
+& -3 \leq x \leq 4 &  &  \hspace{.8cm}  (-1,3/2) \  M\'aximo   \\
+     &      & &     & &  \hspace{.8cm} (2,-3) \   M\'{\i}nimo  \\[.3cm]
+2.\,  f(x) & = \frac{x^4}{4}  -2x^2 + 4                           &
+&-3 \leq x \leq 3  &  &\hspace{.8cm}   (-2,0) \  M\'inimo \\
+     &      & &     & &  \hspace{.8cm} (0,4)  \   M\'aximo \\
+     &          & &     & &  \hspace{.8cm} (2,0) \   M \'{\i}nimo \\[.3cm]
+3.\,  f(x) & = x^3 -3x + 3                           & &-3
+\leq x \leq 3  &  &\hspace{.8cm}   (-1,5) \  M\'aximo \\
+     &      & &     & &  \hspace{.8cm} (1,1)  \   M\'{\i}nimo \\[.3cm]
+4.\,  f(x) & =-2x^3  + 6x^2 - 3                           & &-1
+\leq x \leq 3  &  &\hspace{.8cm}   (0,-3) \  M\'inimo \\
+     &      & &     & &  \hspace{.8cm} (2,5)  \   M\'aximo \\[.3cm]
+5.\,  f(x) & =x^2-\frac{x^4}{8}                            & &-3
+\leq x \leq 3  &  &\hspace{.8cm}   (-2,2) \  M\'aximo \\
+     &      & &     & &  \hspace{.8cm} (0,0)  \   M\'{\i}nimo \\
+     &      & &     & &  \hspace{.8cm} (2,2)  \   M\'aximo \\[.3cm]
+6.\,  f(x) & = 2x^3  + 3x^2 -12x -7                           & &-4
+\leq x \leq 3  &  &\hspace{.8cm}   (-2,13) \  M\'aximo \\
+     &      & &     & &  \hspace{.8cm} (1,-14)  \   M\'{\i}nimo \\[.3cm]
+7.\,  f(x) & = x^2 - 8 \ln x                            & & 0 < x
+\leq 4  &  &\hspace{.8cm}   (2,-1.5) \  M\'{\i}nimo \\[.3cm]
+8.\,  f(x) & = \frac{1}{\sqrt{2 \pi}} e^{ - \frac{x^2}{2}} & & -5
+\leq x \leq 5 & &\hspace{.8cm}   (0,0.398942) \  M\'aximo \\[.3cm]
+\end{align*}
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 2: MÁXIMOS Y MÍNIMOS APLICADOS A LA ECONOMÍA}
+\end{center}
+
+Trabajo en equipo con dos o tres integrantes.
+\medskip
+
+\hspace{.2cm} \textbf{Teor\'{\i}a Microecon\'omica: problemas de
+maximizaci\'on del be\-ne\-fi\-cio}
+
+\vspace{.3cm}
+
+En los problemas  del 1 al 6, $C(q)$ es el costo total de producir
+$q$ unidades de un bien y $p(q)$ es el precio al cual se vender\'an
+las $q$ unidades.
+
+\begin{enumerate}
+ \item[a)] \textquestiondown Cuál es la cantidad y el precio que maximiza la utilidad?. \vspace{.2cm}
+ \item[b)] Hallar el ingreso y el costo marginal. \vspace{.2cm}
+ \item[c)] Utilizar Excel o el software de su preferencia para calcular
+  los valores del ingreso, beneficio, costo, precio, ingreso
+  marginal y costo marginal en el rango solicitado. \vspace{.2cm}
+ \item[d)] Graficar conjuntamente las funciones del ingreso, beneficio y
+ costo. \vspace{.2cm}
+ \item[e)] Graficar conjuntamente las funci\'on del precio, ingreso marginal y
+ costo marginal. \vspace{.2cm}
+\end{enumerate}
+
+\begin{enumerate}
+ \item $p(q) = 75-3q \quad ; \quad C(q) = \frac{1}{5}q^2 + 4 q + 27 \quad 0 \leq q \leq 15$
+ \item $p(q) = 45-4q \quad ; \quad C(q) = \frac{1}{4}q^2 + 3 q + 7
+ \quad 0 \leq q \leq 10$
+ \item $p(q) = 100-q \quad ; \quad C(q) = 25q \quad 0 \leq q \leq 60$
+ \item $p(q) = 50-2q \quad ; \quad C(q) = 20 + 2q + \frac{1}{2}q^2
+ \quad 0 \leq q \leq 15$
+ \item $p(q) = 150-2q \quad ; \quad C(q) = \frac{1}{10} q^3 - 3q^2 + 50 q + 100
+ \quad 0 \leq q \leq 35$
+ \item $p(q) = 200-2q \quad ; \quad C(q) = \frac{2}{3}q^3 - 14q^2 +
+ 222q+50 \quad 0 \leq q \leq 18$
+\end{enumerate}
+
+\vspace{.2cm}
+
+\newpage
+
+\textbf{Teor\'{\i}a Macroecon\'omica: Modelo de demanda de trabajo.}
+
+\vspace{.2cm}
+
+Suponga que para producir el bien $q$ solo se emplea el capital
+$(K)$ y el trabajo $(L)$. El trabajo puede variar libremente
+mientras que el capital es fijo. As\'{\i} que la funci\'on de
+producci\'on toma la forma
+\begin{equation*}
+ q = q(L,\bar{K})
+\end{equation*}
+El objetivo del empresario racional es maximizar el beneficio, la
+diferencia entre ingresos, $Y$ y costos totales, $CT$.
+
+\begin{equation*}
+  \pi = Y - CT
+\end{equation*}
+
+donde el ingreso esta determinado por:
+
+\begin{equation*}
+   Y = pq
+\end{equation*}
+
+y la funci\'on de costos totales es:
+\begin{equation*}
+  CT = \overline{CF} +  CV + \overline{CF} +WL
+\end{equation*}
+donde $W$ es el salario o precio del trabajo y $CF$ son los costos
+fijos generados por el uso del capital.
+
+\begin{enumerate}
+  \item[a)] Demostrar que la funci\'on de beneficios es:
+  \[
+      \pi = q(L,\bar{K})p- \overline{CF} -WL
+  \]
+  \item[b)] Obtener la demanda \'optima de trabajo e interpretar su
+  resultado.
+\end{enumerate}
+
+\newpage
+
+\setcounter{page}{1}
+
+\section{Cálculo en varias variables}
+\subsection{Funciones en varias variables}
+
+Hasta ahora hemos estudiado mayormente funciones de una variable,
+esto es, funciones cuyo dominio es un conjunto de n\'umeros reales y
+cuyo rango es tambi\'en un conjunto de n\'umeros reales. Sin embargo
+la descripci\'on de muchos fen\'omenos econ\'omicos exigen
+considerar un n\'umero grande de variables de manera simult\'anea.
+Por ejemplo, la demanda de un bien depende del precio del bien, de
+los gustos del consumidor, de las rentas de los diferentes
+consumidores, y de los precios de los bienes complementarios y
+sustitutos, entre otras cosas. As\'{\i} esta demanda es
+esencialmente una funci\'on de varias variables.
+
+\begin{definicion}
+Una \textbf{ funci\'on de $n$ variables} $x_1,x_2,...,x_n$ con
+dominio $D \subset \Bbb{R}^{n}$ es una regla que asigna un n\'umero
+especifico $f(x_1,...,x_n)$ a cada n-vector $(x_1,...,x_n) \in D.$
+\end{definicion}
+
+Por ejemplo, la forma general de la función de producción es:
+\[
+Q=f(K,L)
+\]
+
+Decimos que $Q$  depende de las dos variables independientes, la
+variable capital $(K)$  y el trabajo $(L)$  . La forma específica de
+una función nos dice exactamente cómo el valor de la variable
+dependiente se determina a partir de los valores de la variable
+independiente. Una forma específica en una función de producción
+puede ser:
+\[
+Q=4K^{0.5}L^{0.5}
+\]
+
+Para cualquier valor dado de $K$ y $L$ la función específica nos
+permite calcular el valor de $Q$. Por ejemplo:
+
+\begin{center}
+$Si\,\,K=1\,y\,\,L=1\,\, entonces\,\, Q=4(1)^{0.5}(1)^{0.5}=4$
+$Si\,\,K=4\,y\,\,L=4\,\, entonces\,\, Q=4(4)^{0.5}(4)^{0.5}=16$
+\end{center}
+
+\begin{ejemplo}
+   Otro ejemplo de funci\'on de Producci\'on es:
+   \[
+     Y = F(K, L, T),
+   \]
+   donde $Y$ es el volumen de cosecha, $K$ es el capital invertido,
+   $L$ el trabajo y $T$ la superficie de explotaci\'on
+   agr\'{\i}cola.
+\end{ejemplo}
+
+\begin{ejemplo}
+Funci\'on de Cobb-Douglas:
+   \[
+                       F(x,y) = A x^{a}y^{b},
+   \]
+   donde $a>0$, $b>0$ y $A > 0, x > 0, y > 0$.
+\end{ejemplo}
+
+La gráfica de la función producción Cobb-Douglas se presenta en la
+figura 19.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.28
+\textheight]{unid1graf25.jpg}
+\end{center}
+\caption{$f(x,y)=A x^{a}y^{b}$\,\, \text{con}\,\, $a>0$, $b>0$ y $A,
+x, y, > 0$}\label{Figura4}
+\end{figure}
+\subsubsection{Curvas de nivel}
+\medskip
+
+El correspondiente conjunto de puntos $(x,y)$ del plano $xy$ que
+satisface $f(x,y)=C$ se llama \textbf{curva de nivel} de $f$ en $C$,
+cuando $C$ varía sobre un conjunto de números se genera toda una
+familia de curvas de nivel. Las curvas de nivel aparecen en
+numerosas aplicaciones diferentes. Por ejemplo, en economía, si la
+salida $Q(x,y)$ de un proceso de producción está determinada por dos
+entradas $x$ y $y$ (digamos horas de fuerza laboral e inversión de
+capital), entonces la curva de nivel $Q(x,y)=C$ se llama
+\textbf{curva de producción constante $C$} o, más brevemente,
+\textbf{isocuanta}.
+\medskip
+
+\begin{ejemplo}
+Una empresa tiene la siguiente función de producción
+\[
+  Q=4L^{1/2}K^{3/4}
+\]
+Identifique que combinaciones de trabajo $(L)$ y capital $(K)$
+generan el mismo nivel de producción $(Q)$ y por lo tanto se
+encuentran en la misma isocuanta.
+
+\textbf{Solución}
+\medskip
+
+Se construye la siguiente tabla de combinaciones de trabajo y
+capital
+\begin{center}
+\begin{tabular}{c|cccc|}
+ K/L &  \multicolumn{4}{c|}{Trabajo } \\
+ Capital &  1 &  16 &  64 & 729 \\
+\hline
+ 1  &  4   &  16  &  32 & 108 \\
+ 16 &  32  &  128 & 256 & 864 \\
+ 81 &  108 &  432 & 864 & 2916 \\
+\hline
+\end{tabular}
+\end{center}
+
+A partir de la tabla anterior se observa que
+\begin{align*}
+  \text{Si}\, L & = 1, K = 16\,\, \text{y}\,\, L = 64, K = 1 \Rightarrow Q = 32 \\
+  \text{Si}\, L & = 1, K = 81\,\, \text{y}\,\, L = 729, K = 1 \Rightarrow Q = 108 \\
+  \text{Si}\, L & = 64, K = 81\,\, \text{y}\,\, L = 729, K = 16 \Rightarrow Q = 864
+\end{align*}
+
+En la figura 20 se muestran las isocuantas de la función producción
+Cobb-Douglas.
+\medskip
+
+Otra aplicación de curvas de nivel en economía comprende el concepto
+de curvas de indiferencia. Un consumidor que esté considerando la
+compra de varias unidades de cada una de dos mercancías está
+asociado con una \textbf{función de utilidad} $U(x,y)$, que mide la
+satisfacción total (o \textbf{utilidad}) que el consumidor obtiene
+por tener $x$ unidades de la primera mercancía, así como $y$
+unidades de la segunda. Una curva de nivel $U(x,y)=C$ de la función
+de utilidad se llama \textbf{curva de indiferencia} y da todas las
+combinaciones de $x$ y $y$ que conducen al mismo nivel de
+satisfacción del consumidor.
+\medskip
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{ll}
+\includegraphics{unid1graf28.jpg}
+& \includegraphics{unid1graf27.pdf}\\
+\end{tabular}
+\end{center}
+\caption{$Q(L,K)=4L^{1/2}K^{3/4}$}\label{Figura4}
+\end{figure}
+
+\newpage
+
+Las funciones que los economistas estudian normalmente tienen m\'as
+de dos variables, luego necesitamos extender a ellas el concepto  de
+derivadas parciales.
+
+\subsection{Derivadas parciales}
+Cuando se estudia una funci\'on $y = f(x)$ de una variable, la
+derivada $\frac{\partial f}{\partial x}$ mide la tasa de variaci\'on
+de la funci\'on cuando $x$ cambia. Para funciones de dos variables
+$z = f(x,y)$ queremos ver la velocidad de variaci\'on de la
+funci\'on respecto de los cambios de valores en las variables
+independientes.
+
+\begin{definicion}
+Sea $z = f(x,y)$. La \textbf{derivada parcial de z} con respecto de
+$x$, la cual se le denota por $\partial z/ \partial x$, es la
+derivada de $f(x,y)$ con respecto a $x$ cuando $y$ se mantiene
+constante. La derivada parcial de $f$ con respecto de $y$, la cual
+se le denota por $\partial z/ \partial y$, es la derivada de $f$ con
+respecto a $y$ cuando $x$ se mantiene constante.
+\end{definicion}
+
+\begin{definicion}
+Sea $z = f(x_1,...,x_n)$. Entonces $\partial f/ \partial x_i$ es la
+derivada de $f(x_1,...,x_n)$ con respecto a $x_i$, considerando las
+otras variables $x_j  \, (i \ne i)$ como constantes.
+\end{definicion}
+
+\begin{ejemplo}
+Encuentre las derivadas parciales $f_x$ y $f_y$ si
+$f(x,y)=2xy^{5}+3x^{2}y+x^{2}$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Para calcular $f_x$, considere $f$ como una función de $x$ y derive
+la suma término por término, tratando $y$ como constante para
+obtener
+\begin{align*}
+ f_x(x,y)&=2(1)y^{5}+3(2x)y+2x\\
+         &=2y^{5}+6xy+2x
+\end{align*}
+
+Para calcular $f_y$, considere $f$ como una función de $y$ y derive
+término por término, tratando $x$ como constante para obtener
+\begin{align*}
+ f_y(x,y)&=2x(5y^{4})+3x^{2}(1)+0\\
+         &=10xy^{4}+3x^{2}
+\end{align*}
+\end{ejemplo}
+
+\begin{ejemplo}
+Encuentre las derivadas parciales $f_x$ y $f_y$ si
+$f(x,y)=x^{2}+2xy^{2}+\frac{2y}{3x}$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Para simplificar el cálculo, empiece por reescribir la función como
+\[
+ f(x,y)=x^{2}+2xy^{2}+\frac{2}{3}yx^{-1}
+\]
+
+Para calcular $f_x$, considere $f$ como una función de $x$ y derive
+la suma término por término, tratando $y$ como constante para
+obtener
+
+\begin{align*}
+ f_x(x,y)&=2x+2(1)y^{2}+\frac{2}{3}y(-x^{-2})\\
+         &=2x+2y^{2}-\frac{2y}{3x^{2}}
+\end{align*}
+
+Para calcular $f_y$, considere $f$ como una función de $y$ y derive
+término por término, tratando $x$ como constante para obtener
+\begin{align*}
+ f_y(x,y)&=0+2x(2y)+\frac{2}{3}(1)(x^{-1})\\
+         &=4xy+\frac{2}{3x}
+\end{align*}
+\end{ejemplo}
+
+\subsubsection{Derivadas parciales de orden superior} Si $z =
+f(x,y)$, entonces $\partial f/ \partial x$ y , $\partial f/
+\partial y$ se llaman las \textbf{derivadas parciales de primer orden} o
+\textbf{derivadas parciales primeras}. Esas derivadas parciales son,
+a su vez, funciones de dos variables. A partir de $\partial f/
+\partial x$, podemos construir dos nuevas funciones tomando las
+derivadas parciales con res\-pec\-to a $x$ y $y$. De la misma manera
+podemos tomar las derivadas parciales de $\partial f/
+\partial y$ con respecto a $x$ y $y$. A continuación se muestra un
+resumen de la definición y notación para las cuatro posibles
+derivadas parciales de segundo orden de una función de dos
+variables.
+
+\begin{enumerate}
+ \item[(a)] Si $z = f(x,y)$, la derivada parcial de $f_x$ con respecto a $x$ es
+  \[
+  f_{xx}=(f_{x})_x \,\,\,\,\text{o}\,\,\,\, \frac{\partial^{2} z}{ \partial
+  x^{2}}=\frac{\partial }{ \partial  x}(\frac{\partial z}{ \partial  x})
+  \]
+
+  \item[(b)] La derivada parcial de $f_x$ con respecto a $y$ es
+\[
+  f_{xy}=(f_{x})_y \,\,\,\,\text{o}\,\,\,\, \frac{\partial^{2} z}{ \partial
+  y \partial x}=\frac{\partial } {\partial  y}(\frac{\partial z} {\partial  x})
+\]
+
+  \item[(c)] La derivada parcial de $f_y$ con respecto a $x$ es
+  \[
+  f_{yx}=(f_{y})_x \,\,\,\,\text{o}\,\,\,\, \frac{\partial^{2} z}{ \partial
+  x \partial y}=\frac{\partial } {\partial  x}(\frac{\partial z} {\partial  y})
+  \]
+
+  \item[(d)] La derivada parcial de $f_y$ con respecto a $y$ es
+  \[
+  f_{yy}=(f_{y})_y \,\,\,\,\text{o}\,\,\,\,  \frac{\partial^{2} z} {\partial
+  y^{2}}=\frac{\partial } {\partial  y}(\frac{\partial z} {\partial  y})
+  \]
+\end{enumerate}
+
+\begin{ejemplo}
+Calcule las cuatro derivadas parciales de segundo orden de la
+función $f(x,y)=xy^{3}+5xy^{2}+2x^{2}+1$.
+\medskip
+
+\textbf{Solución}
+\medskip
+
+Como
+\begin{align*}
+ f_x &= y^{3}+5y^{2}+4x \\
+ f_y &= 3xy^{2}+10xy
+\end{align*}
+
+se deduce que
+\begin{align*}
+ f_{xx} &= 4\\
+ f_{yy} &= 6xy+10x
+\end{align*}
+
+Las derivadas cruzadas son
+\begin{align*}
+ f_{yx}=3y^{2}+10y\\
+ f_{xy}=3y^{2}+10y
+\end{align*}
+\end{ejemplo}
+
+\textbf{Aplicaciones de diferenciaci\'on parcial}
+\medskip
+
+La diferenciaci\'on parcial es b\'asicamente un aplicaci\'on
+matem\'atica del supuesto de ceteris paribus (es decir,  las otras
+cosas se suponen constantes), que es frecuentemente utilizado en el
+análisis econ\'omico. Debido a que la econom\'{\i}a es un sistema
+complejo de entender, los economistas a menudo ven el efecto de los
+cambios en una variable asumiendo que todos los demas factores
+permanecen sin cambios. Cuando la relaci\'on entre las distintas
+va\-ria\-bles se puede expresar en forma matem\'atica, el an\'alisis
+del efecto de los cambios en una variable puede ser descubierto a
+trav\'es de la diferenciaci\'on parcial. La diferenciaci\'on parcial
+se puede aplicar a las funciones de utilidad y a modelos
+macroeconómicos como veremos a continuación.
+\medskip
+
+\textbf{Funci\'on de utilidad del Consumo}
+\medskip
+
+La forma general de la funci\'on de utilidad del consumo es
+\[
+U = f(x_1,x_2,...,x_n)
+\]
+
+donde $x_1,x_2,...,x_n$ representan las cantidades de los diferentes
+bienes consumidos.
+
+\vspace{.2cm}
+
+La teor\'{\i}a econ\'omica moderna asume que la utilidad es un
+concepto ordinal, lo que significa que diferentes combinaciones de
+productos se pueden clasificar en orden de preferencia, pero las
+utilidades en sí mismas no puede ser cuantificados de ninguna
+manera. Sin embargo, los economistas tambi\'en trabajan un poco con
+el concepto de utilidad cardinal donde se supone que, al menos
+hipot\'eticamente, cada individuo puede cuantificar y comparar los
+diferentes niveles de su propia utilidad. Es este concepto de
+utilidad cardinal el que se utiliza aquí.
+\medskip
+
+Si se supone que s\'olo los dos bienes $x$ y $y$  son consumidos, la
+función de utilidad tendrá la forma.
+\[
+  U = f(x,y)
+\]
+
+\textbf{La utilidad marginal} se define como la tasa de cambio  de
+la utilidad total con respecto al aumento en el consumo de un bien.
+Por lo tanto las funciones de la utilidad marginal de los bienes $x$
+y $y$ son respectivamente
+
+\[
+  U_x = \frac{\partial U}{\partial x} \quad U_y =
+  \frac{\partial U}{\partial y}
+\]
+
+Dos principios importantes de la teoría de la utilidad son:
+\begin{enumerate}
+\item La ley de la utilidad marginal decreciente dice que si, ceteris paribus,
+la satisfacción adicional del consumidor disminuye a medida que se
+consume una mayor cantidad del bien.
+\item El consumidor va a consumir un bien hasta el punto de que su utilidad
+marginal es cero.
+\end{enumerate}
+
+Algunos aplicaciones de los dos principios se dan en los siguientes
+ejemplos.
+
+\begin{ejemplo}
+Analizar si la ley de la utilidad marginal decreciente es v\'alida
+para los bienes $x$ y $y$ en la siguiente función de utilidad del
+tipo Cobb-Douglas: $U = x^{\alpha} y^{\beta}$ y $0<\alpha<1,
+0<\beta<1, x>0, y>0$.
+
+\vspace{.2cm}
+
+\textbf{Solución}
+
+Para la funci\'on utilidad $U = x^{\alpha} y^{\beta}$ la
+diferenciaci\'on parcial lleva a la funci\'on de utilidad marginal
+\begin{align*}
+  U_x & = \frac{\partial U}{\partial x} =  \alpha x^{\alpha-1}
+  y^{\beta}>0 \quad \text{y} \\[.3cm]
+  U_y & = \frac{\partial U}{\partial y} = \beta
+  x^{\alpha}y^{\beta-1}>0
+\end{align*}
+
+Cuando aumenta el consumo del bien $x$ manteniendo constante la
+cantidad del bien $y$, la utilidad del consumidor $U$ aumenta. Del
+mismo modo cuando aumenta el consumo del bien $y$ manteniendo
+constante la cantidad del bien $x$, la utilidad del consumidor $U$
+aumenta. Para analizar los utilidad marginal decreciente hacemos las
+segundas derivadas de la función de utilidad.
+\begin{align*}
+  U_{xx} & = \frac{\partial^{2} U}{\partial x^{2}} = \alpha(\alpha-1) x^{\alpha-2}
+  y^{\beta}<0   \quad \text{y} \\[.3cm]
+  U_{yy} & = \frac{\partial^{2} U}{\partial y^{2}} =
+  \beta(\beta-1)  x^{\alpha}y^{\beta-2}<0
+\end{align*}
+As\'{i} $U_{xx}$ cae a medida que $x$ aumenta y la caída $U_{yy}$
+cae a medida que $y$ aumenta.
+\end{ejemplo}
+
+\textbf{Modelo macroeconómico keynesiano de una economía abierta}
+\medskip
+
+Si se introduce al comercio exterior el modelo macroeconómico
+keynesiano b\'asico se convierte en la identidad
+\begin{equation}
+\label{aa1}
+  Y = C + I + G + X - M
+\end{equation}
+
+y la relaci\'on funcional de la funci\'on consumo
+\begin{equation}
+\label{bb1}
+ C = c Y_d
+\end{equation}
+
+donde $c$ es la propensi\'on marginal al consumo, m\'as
+\begin{equation}
+\label{cc1}
+ M = m Y
+\end{equation}
+
+donde $M$ es la importaci\'on y $m$ es la propensi\'on marginal de
+la importaci\'on, y
+\begin{align}\label{dd1}
+ Y_d & = Y - T \nonumber \\
+   T & = tY
+\end{align}
+
+donde $Y_d$ es el ingreso disponible, $T$ son los impuestos y $t$ es
+la tasa de impuestos.
+
+\vspace{.2cm}
+
+La inversi\'on $I$, el gasto p\'ublico $G$ y las exportaciones $X$
+se determinan de manera ex\'ogena y $c,m$ y $t$ son par\'ametros
+dados. Sustituyendo (\ref{bb1}), (\ref{cc1}) y (\ref{dd1}) en (\ref{aa1})
+tenemos
+\begin{align}\label{ee1}
+       Y &= c(1-t) Y + I + G + X - m Y \nonumber  \\
+    Y[1 - c(1 - t)  + m ] &= I + G + X \nonumber  \\
+   Y &=  \frac{ I + G +  X  }{1 - c(1 - t) + m }
+\end{align}
+
+en el modelo b\'asico keynesiano sin $G$ y $X$, el multiplicador de
+la inversi\'on es simplemente $dY/dI$. Sin embargo, en este modelo
+extendido tambi\'en se tiene que asumir que $G$, $I$ y $X$ son
+constantes con el fin de obtener el multiplicador de la inversi\'on.
+Así, el multiplicador de la inversi\'on se encuentra  diferenciando
+parcialmente (\ref{ee1}) con respecto a $I$, lo c\'ual da
+
+\[
+\frac{\partial Y}{\partial  I} = \frac{1}{ 1- c(1 - t) + m }
+\]
+tambi\'en debe ser capaz de ver que el gasto p\'ublico y el
+multiplicador de exportaci\'on también toma esta, ya que
+
+\[
+\frac{\partial Y   }{\partial I} = \frac{\partial Y}{\partial G} =
+\frac{\partial Y  }{\partial X} = \frac{1}{1 - c(1 - t) + m}
+\]
+
+\begin{ejemplo}
+En un sistema macroecon\'omico Keynesiano se tienen las
+si\-gui\-en\-tes ecuaciones:
+\begin{align*}
+Y & = C + I + G + X - M \\
+C & = 0.8 Y_d & Y_d &= Y - T  & T &= 0.2 Y & M &= 0.16 Y \\
+G &= 400      & I   &= 300    & X &= 288
+\end{align*}
+
+¿Cu\'al es el nivel de equilibrio de $Y$? ¿Que aumento en $G$
+ser\'{\i}a necesario para que $Y$ tenga un crecimiento de 2,500? Si
+este aumento del gasto se lleva a cabo,  ¿Qu\'e pasar\'a con
+
+\begin{enumerate}
+\item[(i)] el superavit presupuestario o d\'eficit del gobierno, y
+\item[(ii)] el saldo de la balanza de pagos?
+\end{enumerate}
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+\vspace{.2cm}
+
+Primero derivamos ambas relaciones entre $C$ y $Y$. As\'{\i}:
+
+\begin{equation}
+\label{ff1} C = 0.8 Y_d = 0.8 (1 - t)Y = 0.8 (1- 0.2) Y
+\end{equation}
+
+A continuación sustituimos  (\ref{ff1}), las relaciones funcionales y
+los valores que figuran en la identidad  para encontrar el
+equilibrio $Y$. Por lo tanto
+\begin{align*}
+  Y &= C + I + G + X - M \\
+    &= 0.8(1-0.2)Y + 300 + 400 + 288 - 0.16 Y \\
+    &=  0.64 Y + 988 - 0.16 Y \\
+(1 - 0.48) Y &= 988 \\
+Y &= \frac{988}{0.52} = 1,900
+\end{align*}
+
+en este nivel de equilibr\'{\i}o de $Y$, la cantidad total de
+impuestos recaudados es
+\[
+T = tY  = 0.2 (1,900) = 380
+\]
+
+por lo tanto, el d\'eficit presupuestario, que es el monto de
+impuesto recaudados menos el gasto público, es
+\[
+ T - G = 380 - 400 = -20
+\]
+
+la cantidad gastada en las importaciones es
+\[
+ M =0.16 Y  = 0.16 \times 1,900 = 304
+\]
+
+por lo que la balanza de pagos es
+\[
+  X- M = 288 - 304 = -16
+\]
+
+es decir, un deficit de 16.
+
+\vspace{.2cm}
+
+El multiplicador del gasto p\'ublico es
+\begin{align}\label{gg1}
+  \frac{\partial Y}{\partial G} &= \frac{1}{1 - c( 1 - t ) + m}
+    = \frac{1}{1  - 0.8(1 - 0.2) + 0.16}  \nonumber \\
+    &= \frac{1}{1  - (0.8)(0.8) + 0.16} = \frac{1}{1- 0.48} = \frac{1}{0.52}
+\end{align}
+
+como el equilibrio $Y$ es 1,900, el aumento en $Y$ necesario para
+llegar al nivel deseado de  2,500 es
+\begin{equation}
+\label{hh1}
+ \Delta Y = 2,500 - 1,900 = 600
+\end{equation}
+
+dado que el impacto del multiplicador sobre $Y$ será siempre igual a
+
+\begin{equation}
+\label{ii1} \Delta G \frac{\partial Y}{\partial G} = \Delta Y
+\end{equation}
+
+D\'onde $\Delta G$ es el cambio en el gasto p\'ublico, sustituyendo
+(\ref{gg1}) y (\ref{hh1}) en
+ (\ref{ii1}) da
+\begin{align*}
+\Delta G  \frac{1}{0.52}  &= 600 \\
+  \Delta G  &= 600 (0.52) = 312
+\end{align*}
+
+este es el aumento en $G$ necesario para elevar a $Y$ a 2,500.
+
+\vspace{.2cm}
+
+En el nuevo nivel del ingreso nacional, el importe del impuesto
+recaudado ser\'a
+\[
+T = t Y = 0.2 (2,500) = 500
+\]
+
+el nivel de gasto p\'ublico nuevo, incluyendo  el aumento de 312 es
+\[
+ 400 + 312  = 712
+\]
+
+por lo tanto, el d\'eficit presupuestario es
+\[
+ T - G = 500 - 712 = -212
+\]
+
+es decir, hay un aumento de 192 en el d\'eficit.
+
+\vspace{.2cm}
+
+El nuevo nivel de importaciones es
+\[
+  M = (0.16)2,500 = 400
+\]
+
+por lo que el nuevo equilibr\'{\i}o donde figuran los pagos
+\[
+X - M = 288 - 400 = -112
+\]
+
+es decir, el  d\'eficit aumento en 96.
+\end{ejemplo}
+
+\begin{problema}
+Sea $F$ una funci\'on de producci\'on agr\'{\i}cola
+ $Y = F(K,L,T)$, donde $Y$ es el n\'umero de unidades producidas, $K$
+ el capital invertido, $L$ el trabajo y $T$ la superficie de la
+ tierra. Entonces $\frac{\partial Y}{\partial K} = F_K'$ se le llama
+ la \textbf{ productividad marginal del capital} y es la tasa de variaci\'on
+ de la producci\'on de $Y$ con respecto a $K$ cuando $L$ y $T$ se
+ mantienen constantes. De manera an\'aloga $\frac{\partial Y}{\partial L} =
+ F_L'$, es la \textbf{ productividad marginal del trabajo} y  $\frac{\partial Y}{\partial T} =
+ F_T'$ es la \textbf{productividad marginal de la tierra}.
+ Supongamos que $F$ es una funci\'on de Cobb-Douglas:
+ \[
+      F(K,L,T) = A K^{a}L^{b}T^{c}
+ \]
+Hallar las productividades marginales y las parciales segundas.
+Estudiar sus signos.
+\end{problema}
+
+
+\textbf{Soluci\'on del problema 12.} Las productividades marginales
+son:
+\[
+    F_K' = A aK^{a-1}L^{b}T^{c},\,\,    F_L' = A bK^{a}L^{b-1}T^{c},\,\,  F_T' = A cK^{a}L^{b}T^{c-1},
+\]
+Si $K,L$ y $T$ son positivas, las productividades marginales son
+positivas. As\'{\i}, un aumento de capital, trabajo o tierra se
+traducir\'a en un aumento del n\'umero de unidades producidas.
+
+\vspace{.2cm}
+
+Las derivadas parciales cruzadas son:
+\begin{align*}
+  F_{KL}'' &= AabK^{a-1}L^{b-1}T^{c}  \\
+  F_{KT}'' &= AacK^{a-1}L^{b}T^{c-1} \\
+  F_{LT}'' &= AbcK^{a}L^{b-1}T^{c-1}
+\end{align*}
+
+Adem\'as es f\'acil ver que  $F_{LK}'' = F_{KL}'', F_{TK}'' =
+F_{KT}''$ y $F_{LT}'' = F_{LT}$. Observemos que estas parciales son
+positivas. Llamamos complementarios a los factores de cada uno de
+los pares (capital y trabajo, capital y tierra, tierra y trabajo)
+por que si uno aumenta, aumenta la productividad marginal del otro.
+
+\vspace{.2cm}
+
+Las parciales directas son:
+\begin{align*}
+  F_{KK}'' &= Aa(a-1)K^{a-2}L^{b}T^{c}  \\
+  F_{LL}'' &= Ab(b-1)K^{a}L^{b-2}T^{c-1} \\
+  F_{TT}'' &= Ac(c-1)K^{a}L^{b}T^{c-2}
+\end{align*}
+Por ejemplo, $F_{KK}''$ es la derivada parcial de la productividad
+marginal del capital respecto a $K$. Si $a < 1$, entonces $F_{KK}''
+< 0$ y por lo tanto hay una disminuci\'on de la
+pro\-duc\-ti\-vi\-dad marginal del capital, es decir, un peque\~{n}o
+incremento del capital invertido redunda en una disminuci\'on de la
+productividad marginal del capital. Entonces podemos interpretar
+esto diciendo que, un peque\~{n}o incremento del capital hace que la
+producción aumente $(F_k' > 0)$, este aumento se prouduce a una tasa
+decreciente $(F_{kk}'' <  0)$. Lo an\'alogo ocurre para el trabajo
+si $(b < 1)$ y la tierra si $c> 1$.
+
+\subsection{La regla de la cadena}
+
+Muchos modelos económicos manejan funciones compuestas. Se trata de
+funciones de una o varias variables que, a su vez, son funciones de
+otras variables básicas. Por ejemplo, la cantidad producida puede
+ser función del capital y el trabajo y ambos funciones del tiempo.
+\textquestiondown Cómo varía la cantidad producida con el tiempo?.
+Más generalmente, \textquestiondown qué ocurre al valor de una
+función compuesta cuando los valores de sus variables básicas
+cambian?.
+\medskip
+
+Supongamos que
+\[
+  z=F(x,y)
+\]
+
+es una función de $x$ y $y$ donde, a su vez,
+\[
+  x=f(t) , \,\,\,\, y=g(t)
+\]
+
+son funciones de una variable $t$. Sustituyendo tenemos
+\[
+  z=F(f(t),g(t))
+\]
+
+de tal manera que $z$ es función de $t$ únicamente. Una variación de
+$t$ producirá en general una variación de $f(t)$ y $g(t)$ y, como
+resultado, una variación de $z$. \textquestiondown Cómo cambia $z$
+cuando varía $t$? Por ejemplo, \textquestiondown producirá un
+aumento de $t$ un aumento o disminución de $z$? La respuesta a estas
+preguntas será mucho más fácil si se puede hallar una expresión de
+$dz/dt$, la tasa de variación de $z$ con respecto a $t$. Esta
+expresión viene dada por la regla siguiente:
+
+\begin{definicion}
+Si la funcion esta dada por $z=F(x,y)$, $x=f(t)$, $y=g(t)$, entonces
+\[
+  \frac{dz}{dt}=F_x(x,y)\frac{dx}{dt}+F_y(x,y)\frac{dy}{dt}
+\]
+\end{definicion}
+
+Esta definición suministra la derivada de $z=F(x,y)$ con respecto a
+$t$, existen las derivadas parciales de $F$ con respecto a $x$ y
+$y$, y $x$, $y$ son funciones derivables de $t$. Esta derivada se
+llama normalmente la \textbf{derivada total} de $z$ con respecto a
+$t$. Según la definición, el hecho de que la primera variable $x$
+depende de $t$ contribuye con el término $F_x(x,y)dx/dt$ a la
+derivada total. Análogamente, el hecho de que la segunda variable
+$y$ dependa de $t$ contribuye con el término $F_y(x,y)dy/dt$ a la
+derivada total. La derivada total $dz/dt$ es la \textbf{suma} de las
+dos contribuciones.
+
+\begin{ejemplo}
+Calcular $dz/dt$ en la función $z=F(x,y)=x^{2}+y^{3}$, donde
+$x=t^{2}$, $y=2t$.
+
+\textbf{Solución}
+\medskip
+
+Se tiene que
+\[
+  F_x(x,y)=2x,\,\,\,\,\,\,F_y(x,y)=3y^{2},\,\,\,\,\,\,\frac{dx}{dt}=2t,\,\,\,\,\,\,\frac{dy}{dt}=2
+\]
+
+Así por la definición obtenemos
+\begin{align*}
+  \frac{dz}{dt} & = 2x \cdot 2t + 3y^{2} \cdot 2 \\
+                & = 4tx+6y^{2}  \\
+                & = 4t^{3}+24t^{2}
+\end{align*}
+
+donde la última igualdad se obtiene al sustituir $x$ y $y$ por sus
+valores en función de $t$.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea $Y=F(K,L)$, donde $Y$ representa la cantidad producida, $K$
+capital y $L$ trabajo. Supongamos que $K$ y $L$ son funciones del
+tiempo. Entonces a partir de la regla de la cadena tenemos que:
+\[
+  \dot{Y}=\frac{\partial Y} {\partial  K} \dot{K}+\frac{\partial Y} {\partial  L} \dot{L}
+\]
+
+Esto se interpreta diciendo que la producción total crece a la tasa
+obtenida multiplicando la productividad marginal de cada recurso por
+la tasa de cambio de ese recurso y sumando estos términos.
+\end{ejemplo}
+
+\subsection{Funciones implícitas}
+
+A menudo necesitamos derivar funciones definidas impl\'{\i}citamente
+por una ecuaci\'on o un sistema de ecuaciones.
+\medskip
+
+Sea $F$ una funci\'on de dos variables y consideremos la ecuaci\'on:
+\begin{equation}
+\label{im1}
+  F(x,y) = c \quad   \text{(c es constante)}
+\end{equation}
+
+Vemos que $(\ref{im1})$  representa una curva de nivel de $F$.
+Supongamos que esta ecuaci\'on define a $y$ como una funci\'on $y =
+f(x)$ de $x$ en cierto intervalo $I$. Esto significa que:
+\begin{equation}
+\label{im2}
+   F(x, f(x)) =  c \quad \text{para todo}\, x \in I
+\end{equation}
+
+Si $f$ es derivable ¿cu\'al es la derivada de $y = f(x)$?, el problema geom\'etrico es hallar
+su pendiente en el punto $P$.
+\medskip
+
+Para hallar la expresi\'on de la pendiente se introduce la funci\'on
+auxiliar $u$ definida por:
+\[
+   u(x) = F(x, f(x))
+\]
+Para todo $x \in I$. Entonces por la regla de la cadena tenemos
+$u'(x)= F_x'(x,f(x)) \cdot 1 + F_y'(x,f(x)) \cdot f'(x)$. Ahora
+bien, (\ref{im2}) dice que $u(x) = c$ para todo $x \in I$ y, como la
+derivada de una constante es cero, tenemos:
+\[
+   u'(x)= F_x'(x,f(x))  +  F_y'(x,f(x)) \cdot f'(x) =  0
+\]
+Si $F_y'(x,f(x)) \ne 0 $, entonces $f'(x) = \frac{-F_x (x,
+f(x))}{F_y'(x,f(x))}$.
+
+\vspace{.2cm}
+
+As\'{\i}, despu\'es de simplificar la notaci\'on, tenemos:
+\begin{equation}
+\label{im3} F(x,y)  \Longrightarrow \frac{dy}{dx} =
+-\frac{F_x'(x,y)}{F_y'(x,y)} \quad (F_y'(x,y) \ne 0)
+\end{equation}
+
+Este resultado es importante. Notese que, cuando $(\ref{im1})$
+define a $y$ como funci\'on impl\'{\i}cita de $x$, la formula
+(\ref{im3}) da la derivada de $y$ con respecto a $x$, aun cuando sea
+imposible resolver la ecuaci\'on en $y$.
+
+\begin{ejemplo}
+Usar $(\ref{im3})$ para calcular $y'$ si $xy^{1/2} = 2.$
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:} Escribimos $F(x,y) = xy^{1/2}$. Entonces
+$F_x'(x,y) =  y^{1/2}$ y $F_y'(x,y) =  1/2 xy^{-1/2}$. Por tanto
+$(\ref{im3})$ da:
+\[
+ y' = \frac{dy}{dx} =
+-\frac{F_x'(x,y)}{F_y'(x,y)} = - \frac{y^{1/2}}{1/2 xy^{-1/2}} = -
+\frac{2y}{x}
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Dada la curva de ecuaci\'on:
+\[
+   x^3 + x^2y -2y^2 -10y = 0
+\]
+Hallar la pendiente y la ecuaci\'on de la tangente en el punto
+$(x,y) = (2,1).$
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:} Se comprueba primero que $x = 2$ e $y = 1$
+satisfacen la ecuaci\'on, luego $(2,1)$ es un punto de la curva. Sea
+$F(x,y) =  x^3 + x^2y -2y^2 -10y ;$ la ecuaci\'on dada es
+equivalente a $F (x,y) = 0 $, que es la curva de nivel de $F$. Como
+$F_x'(x,y) = 3x^2 + 2xy$ y $F_y'(x,y) = x^2-4y-10, (\ref{im3})$
+implica que:
+\[
+     y' = - \frac{3x^2 + 2xy}{x^2 -4y -10}
+\]
+
+Para $x = 2$ e $y = 1$ se tiene que $y' = 8/5$. Por la formula
+punto-pendiente la ecuaci\'on de la tangente en $(2,1)$ es $y-1 =
+(8/5)(x -2)$, o bien $y = (1/5) (8x -11)$.
+\end{ejemplo}
+
+\begin{ejemplo}
+En el modelo de ingreso $Y = C(Y) + I(Y) + G_0$, utilice la regla de la funci\'on impl\'{\i}cita para encontrar el multiplicador del gasto del gobierno, es decir, $\frac{\partial Y}{ \partial G_0}$. Todas las derivadas son conocidas por ser continuas, ademas se tiene que, $0< C_Y < 1$ y $I'>0$. ¿Qu\'e otra condici\'on es necesaria para escribir una identidad de equilibrio?
+\medskip
+
+Utilizar el resultado para encontrar el equilibrio de ingreso, si $C= 65$ millones, $I= 12$ millones, $G_0= 5$ millones. Use diferenciales para encontrar el aumento del ingreso nacional, cuando el gasto p\'ublico se duplica.
+
+\textbf{ Soluci\'on:}
+\[
+ F = Y - C(Y)- I(Y)- G_0= 0
+\]
+
+De acuerdo con la regla de la funci\'on impl\'{\i}cita:
+
+
+$\frac{\partial y}{\partial x} = - \frac{F_x}{F_y}$, donde $F_y \ne 0$ y $F_x, F_y$ son continuas. Para este ejemplo se tiene
+$F'_{G_0} = -1$ y $F'_Y = 1- C_Y - I'$
+\[
+ \frac{\partial Y}{\partial G_0} = - \frac{-1}{1- C_Y - I'} =  \frac{1}{1- C_Y - I'}
+\]
+
+Necesitamos tener $C_Y - I' \ne 1$ a fin de que la regla de funciones impl\'{\i}citas se pueda aplicar y  obtener una solución viable. Para encontrar el equilibrio de ingreso nacional, sustituimos en la f\'ormula
+\[
+\bar{Y}= 65 + 12 + 5 = 82 \ \text{millones}
+\]
+
+Para el multiplicador del gasto del gobierno,
+\[
+\frac{\partial Y}{\partial G_0} =\frac{1}{1- C_Y- I'} = \frac{1}{1- 0.75-0.05} = \frac{1}{0.2} =5
+\]
+
+Cuando el gasto p\'ublico se duplic\'o, lo que tenemos $dG_0= 5$. Utilizando las reglas de los diferenciales, expresamos el aumento del ingreso nacional:
+\[
+dY=  \frac{\partial Y}{\partial G_0} dG_0 = 5(5)= 25 \ \text{millones}
+\]
+Debido al efecto estimulante de los gastos del gobierno, el ingreso nacional se incrementa por 25 millones para un total de 107 millones.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea el siguiente modelo:
+\[
+S(Y,i) +  T(Y)= I(i) + G_0  \hspace{.9cm} 0 < S_y < 1  \qquad S_i, T'> 0 \qquad I_i'< 0
+\]
+Donde $S, Y, i, T, I $ y $ G_0$ son el ahorro, la renta nacional, la tasa de inter\'es, los impuestos, la inversión y el gasto público, respectivamente. Todas las derivadas son continuas. Usando la regla de la funci\'on impl\'{\i}cita, dar el efecto del gasto de gobierno $G_0$ sobre el ingreso nacional $Y$ ($\frac{\partial Y}{ \partial G_0}$) y de la tasa de inter\'es  $i$ ($\frac{\partial i}{ \partial G_0}$). Interpretar los resultados.
+
+\textbf{Soluci\'on:}
+\[
+F = S(Y,i) + T(Y) - I(i) - G_0 = 0
+\]
+\[
+\frac{\partial Y}{\partial G_0} = -\frac{F_{G_0}}{F_Y} = \frac{1}{S_Y + T'} > 0
+\hspace{1 cm} \frac{\partial i}{\partial G_0} = - \frac{F_{G_0}}{F_i} = \frac{1}{S_i - I'}> 0
+\]
+\end{ejemplo}
+\medskip
+El aumento del gasto del gobierno aumenta el ingreso y la tasa de inter\'es.
+
+
+
+\newpage
+
+\setcounter{page}{1}
+\begin{center}
+\textbf{TAREA 1: DERIVADAS PARCIALES}
+\end{center}
+
+\vspace{.3cm}
+
+Trabajo individual.
+
+\vspace{.2cm}
+
+\textbf{Ejercicio 1.} Halle las derivadas parciales indicadas $\frac{\partial
+f}{\partial  x},\frac{\partial f}{\partial y} , \frac{\partial^{2}f}{\partial x^{2}},\frac{\partial^2 f}{\partial y^2 }. \frac{\partial f}{\partial x \partial  y },\frac{\partial f}{\partial y \partial  x } $ de las  siguientes funciones.
+\begin{align*}
+1.\,\,\, & f(x,y) = 2xy^5 + 3x^2 + y^2 & \qquad
+2.\,\,\, & f(x,y) = (3x + 2y)^5  & \qquad \\[.5cm]
+3.\,\,\, & f(x,y) = \cos 4xy + \sen \frac{x}{y} & \qquad
+4.\,\,\, & f(x,y) = x e^y
+\end{align*}
+
+\textbf{Ejercicio 2.} Use diferenciaci\'on impl\'icita para encontrar
+$\frac{dy}{dx}$ en los si\-gui\-en\-tes ejercicios.
+\begin{align*}
+1.\,\,\, &  x^2y + xy^2 = 6 & \qquad
+2.\,\,\, &  x^3 + y^3 = 18x & \qquad \\[.5cm]
+3.\,\,\, &  x^2 + 3xy + 2y^2 = 48 & \qquad
+4.\,\,\, &  e^{xy} + 2 (x + y) = 5
+\end{align*}
+
+\textbf{Problema 1.} Supongamos que una empresa tiene un funci\'on de
+pro\-du\-cci\-ón $Q(K,L) = A K^{\alpha} L^{1-\alpha}$, donde $A>0$ y
+$0 <\alpha<1$. Demostrar que el producto marginal del trabajo
+$\partial Q / \partial L$ es positivo y que es una funci\'on
+decreciente  de $L$ cuando $K$ es fija.
+\medskip
+
+\textbf{Problema 2.} En un modelo macroecon\'omico keynesiano con sector
+externo y con la terminolog\'{\i}a usual,
+\begin{align*}
+Y & = C + I + G + X - M\\
+Y_d  & = (1-t)Y  \hspace{.7cm}  C = 0.75 Y_d  \hspace{.7cm} M =
+0.25 Y \\
+I & = 820   \hspace{.7cm}   G = 960 \hspace{.7cm}  t = 0.3
+\hspace{.7cm}  X = 650
+\end{align*}
+
+¿cu\'al ser\'a el valor de equilibrio de $Y$? ¿Use el multiplicador
+de exportaci\'on para saber qu\'e pasar\'a con la balanza de pagos
+si la variable ex\'ogena exportaci\'on aumenta en 100 unidades?.
+\newpage
+
+\textbf{Problema 3.} Sea el siguiente modelo:
+\[
+S(Y,i) +  M(Y)= I(i) + X_0  \hspace{.9cm} 0 < S_y, M' < 1  \qquad S_i> 0 \qquad I_i'< 0
+\]
+donde $ S, Y,i , M, I$ y $ X_0 $ son el ahorro, la renta nacional, la tasa de inter\'es, importaciones, inversión y exportaciones, respectivamente. Todas las derivadas son continuas. Usando la regla de funciones impl\'{\i}cita, dar el efecto de las exportaciones de $X_0 $ sobre la renta nacional $Y$ (es decir, el multiplicador de las exportaciones) y sobre la tasa de inter\'es $i$. Interpretar los resultados.
+
+\textbf{Problema 4.} Para un mercado de dinero en equilibrio se tiene que la cantidad de dinero en circulaci\'on ($M^s$) es igual a la demanda de dinero ($M^d = L(Y,i)$)
+\[
+  M^s = L(Y,i)  \hspace{.9cm} L_Y > 0 , \qquad L_i < 0
+\]
+
+Usando la diferenciaci\'on impl\'icita, encontrar el efecto del aumento de la oferta de dinero en el ingreso ($Y$) y en la tasa de inter\'es ($i$). Interprete resultados.
+
+
+\newpage
+
+\setcounter{page}{1}
+
+\section{Optimizaci\'on libre y restringida en varias \\
+         va\-ria\-bles}
+
+\textbf{Introducci\'on}
+\medskip
+
+Los problemas de optimizaci\'on se pueden describir usualmente  de
+la siguiente forma matem\'atica. Hay una \textbf{funci\'on objetivo}
+$f(x_1,...,x_n)$, que es una funci\'on real de $n$ variables  de la
+que hay que hallar los valores m\'aximos o m\'{\i}nimos. Tambi\'en
+hay un \textbf{conjunto de restricciones} o un \textbf{conjunto de
+oportunidades} $S$ que es un subconjunto de $\Bbb{R}^{n}.$
+
+\vspace{.2cm}
+
+Se pueden abarcar varios tipos de distintos problemas de
+optimizaci\'on dando el conjunto $S$ adecuadamente. Si $f$ tiene un
+punto \'optimo en el interior de $S$ se habla del caso cl\'asico. Si
+$S$ es el conjunto  de todos los puntos $(x_1,...,x_n)$ que
+verifican un cierto n\'umero de ecuaciones tenemos un problema
+lagrangiano, que es maximizar o minimizar una funci\'on  sujeta a
+restricciones de igualdad.
+
+
+\subsection{Optimización libre}
+
+Sea $f$ una funci\'on de $n$ variables $x_1,...,x_n$ definida en un dominio
+ $S \subset \Bbb{R}^{n}$. Sea $c = (c_1,...,c_n) \in S$ y supongamos que $f$ toma
+ un valor  en $c$ que es mayor o igual que todos los valores de $f$ en los otros puntos
+ $x = (x_1,...,x_n)$ de $S$, es decir:
+ \[
+     f(x) \leq f(c) \,\, \text{para todo} \,\,  x   \in S.
+ \]
+Entonces se llama a $c$ un \textbf{ m\'aximo global} de $f$ en $S$ y
+a $f(c)$ el \textbf{ va\-lor m\'aximo}. De forma an\'aloga definimos
+un \textbf{ m\'{\i}nimo global} y el \textbf{valor m\'{\i}nimo}
+invirtiendo el signo de la desigualdad. Conjuntamente se usar\'an
+los nombres de \'optimos y valores \'optimos para significar
+m\'aximos o m\'{\i}nimos. El vector $c$ se llama \textbf{ un punto
+estacionario} de $f(x_1,...,x_n)$ si $x = c$ es una soluci\'on  de
+las $n$ ecuaciones:
+\[
+\frac{\partial f}{\partial x_1 } (x) = 0, \,\,   \frac{\partial f}{\partial x_2 } (x) = 0,...,\,\,
+\frac{\partial f}{\partial x_n } (x) = 0,
+\]
+
+\begin{teorema}
+Sea $f$ una funci\'on  definida en un conjunto $S \subset
+\Bbb{R}^{n}$ y sea $c= (c_1,...,c_n)$ un punto interior de $S$ en el
+que $f$ es diferenciable. Una condici\'on necesaria para que $c$ sea
+un m\'aximo o un m\'{\i}nimo
+ para $f$ es que $c$ sea un punto estacionario para $f$, es decir,
+ \[
+    f'_i(c) = 0 \,\, (i = 1,...,n).
+ \]
+En particular se tiene el siguiente
+\end{teorema}
+
+\begin{teorema}
+\label{porden} Una condici\'on necesaria para que una funci\'on
+$f(x,y)$ di\-fe\-ren\-cia\-ble tenga un m\'aximo o un m\'{\i}nimo en
+un punto interior $(x_0,y_0)$ de su dominio es que $(x_0,y_0)$ sea
+un punto estacionario de $f$, esto es,
+
+\begin{equation}
+        f_x'(x_0,y_0) =  0,\,\, f_y'(x_0,y_0) = 0.
+\end{equation}
+\end{teorema}
+
+\begin{teorema}
+\label{soptimos} (Condiciones suficientes de \'optimos globales) Si
+$f(x,y)$ es una funci\'on con derivadas parciales primeras y
+segundas continuas en un dominio convexo $S$, y sea $(x_0, y_0)$ un
+punto estacionario de $f$ interior a $S$, entonces la condici\'on
+suficiente para que la funci\'on $f(x,y)$
+ tenga un m\'aximo o un m\'{\i}nimo respectivamente es:
+
+\vspace{.2cm}
+
+\begin{enumerate}
+ \item[(a)] Si para todo $(x, y) \in S$ se cumplen las siguientes condiciones:
+  \[
+  D(x,y)=f_{xx}''(x,y)f_{yy}''(x,y) - [f_{xy}''(x,y)]^{2} < 0,
+  \]
+  entonces $(x_0, y_0)$ es un punto de silla de $f(x,y)$ en $S$.
+
+  \item[(b)] Si para todo $(x, y) \in S$ se cumplen las siguientes condiciones:
+\[
+  D(x,y) = f_{xx}''(x,y)f_{yy}''(x,y) - [f_{xy}''(x,y)]^{2} >0,\,\, \text{y}\,\,
+  f_{xx}''(x,y) < 0,
+\]
+  entonces $(x_0, y_0)$ es un m\'aximo de $f(x,y)$ en $S$.
+
+  \item[(c)] Si para todo $(x, y) \in S$ se cumplen las siguientes condiciones:
+  \[
+  D(x,y)=f_{xx}''(x,y)f_{yy}''(x,y) - [f_{xy}''(x,y)]^{2} > 0, \,\, \text{y}  \,\,
+  f_{xx}''(x,y) > 0,
+  \]
+ entonces $(x_0, y_0)$ es un m\'{\i}nimo de $f(x,y)$ en $S$.
+\end{enumerate}
+\end{teorema}
+
+\begin{ejemplo}
+Encuentre todos los puntos  cr\'{\i}ticos de la funci\'on $f(x,y) =
+x^2 + y^2$ y clasifique cada uno como un m\'aximo relativo, un
+m\'{\i}nimo relativo o un punto de silla.
+
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on}
+
+Como
+\[
+    f_x = 2x \quad  \text{y} \quad f_y = 2y
+\]
+el \'unico punto cr\'{\i}tico de $f$ es $(0,0)$. Para poner a prueba
+este punto, use las derivadas parciales de segundo orden
+\[
+   f_{xx} = 2   \quad f_{yy} = 2 \quad \text{y} \quad  f_{xy} = 0
+\]
+
+y obtenga
+\[
+      D(x,y) = f_{xx} f_{yy} - (f_{xy})^2 = (2)(2) - 0^2 = 4
+\]
+Esto es , $D(x,y)= 4$, para todos los puntos $(x,y)$, en particular,
+\[
+     D(0,0) = 4 > 0
+\]
+
+Por tanto $f$ tiene un extremo relativo en $(0,0)$. Adem\'as, como
+\[
+   f_{xx}(0,0) = 2 > 0
+\]
+
+se deduce que el extremo relativo en $(0,0)$ es un m\'{\i}nimo
+relativo. Como referencia, la grafica de $f$ aparece en la figura
+21.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf23.jpg}
+\end{center}
+\caption{$f(x,y) = x^2 + y^2$}\label{Figura20}
+\end{figure}
+
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Encuentre todos los puntos cr\'{\i}ticos  de la funcion $f(x,y) =
+12x - x^3 - 4y^2$ y clasifique cada uno como un m\'aximo relativo,
+un m\'{\i}nimo relativo o un punto silla.
+
+\textbf{Soluci\'on}
+
+Como
+\[
+  f_x = 12- 3x^2 \quad  \text{y} \quad f_y = -8y
+\]
+
+los puntos cr\'{\i}ticos  se encuentran resolviendo simultaneamente
+las dos ecuaciones
+\begin{align*}
+  12 - 3x^2 &= 0 \\
+   -8y & = 0
+\end{align*}
+
+De la segunda ecuaci\'on obtenemos $y =0$ y, de la primera,
+\begin{align*}
+    3x^2  &= 12 \\
+    x  &= 2  \  \text{o}  \ -2
+\end{align*}
+
+Por tanto, hay dos puntos cr\'{\i}ticos, $(2,0)$ y $(-2,0)$.
+
+Para determinar la naturaleza de estos puntos, primero se calcula
+\[
+     f_{xx} = -6x   \quad f_{yy} = -8  \quad  \text{y} \quad f_{xy} = 0
+\]
+
+y luego se forma la funci\'on
+\[
+     D =  f_{xx}f_{yy} - (f_{xy})^2  = (-6x)(-8) - 0 = 48x
+\]
+
+Al aplicar la prueba de las segundas derivadas parciales a los dos
+puntos cr\'{\i}ticos, se obtiene
+\[
+   D(2,0) = 48(2) = 96 > 0  \quad \text{y} \quad f_{xx}(2,0) = -6(2)
+   = -12< 0
+\]
+
+y
+\[
+  D(-2,0) = 48(-2) = -96 < 0
+\]
+
+de modo que hay un m\'aximo realtivo en $(2,0)$ y un punto silla en
+$(-2,0)$. Ver figura 22.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf24.jpg}
+\end{center}
+\caption{$f(x,y) = 12x - x^3 - 4y^2$}\label{Figura16}
+\end{figure}
+\end{ejemplo}
+
+\begin{ejemplo}
+Encuentre todos los puntos cr\'{\i}ticos de la funci\'on $f(x,y) =
+x^3 - y^3 + 6xy$ y clasifique cada uno como m\'aximo relativo,
+m\'{\i}nimo relativo o punto silla.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on}
+
+Como
+\[
+    f_x = 3x^2 + 6y  \quad  \text{y} \quad  f_y = -3y^2 + 6x
+\]
+
+los puntos cr\'{\i}ticos de $f$ se encuentran resolviendo
+simult\'aneamente las dos ecuaciones
+
+\[
+   3x^2 + 6y = 0  \quad   \text{o}  \quad  -3y^2 + 6x = 0
+\]
+
+De la primera ecuaci\'on se obtiene $y = -\frac{x^2}{2}$ que se
+puede sustituir en la segunda ecuaci\'on para encontrar
+
+\begin{align*}
+  -3 \left( \frac{-x^2}{2} \right)^2 + 6x &= 0 \\
+  -\frac{3x^4}{4} +  6x &= 0 \\
+  -x(x^3 - 8) &= 0
+\end{align*}
+
+Las soluciones de dicha ecuaci\'on  son $x = 0$ y $x = 2$. Estas son
+las coordenadas $x$ de los puntos cr\'{\i}ticos  de $f$. Para
+obtener las coordenadas $y$ correspondientes, sustituya estos
+valores de $x$ en la ecuaci\'on $y = - \frac{x^2}{2}$ (o en
+cualquiera de las dos ecuaciones originales).
+
+\vspace{.2cm}
+
+As\'{\i} encontrara que $y = 0$ cuando $x = 0$ y $y = -2$ cuando $x
+= 2$. De ah\'{\i} se deduce que los puntos cr\'{\i}ticos de $f$ son
+$(0,0)$ y $(-2,2)$.
+
+\vspace{.2cm}
+
+Las derivadas parciales de segundo orden de $f$
+ son
+ \[
+   f_{xx} = 6x \quad  f_{yy} = -6y  \quad \text{o}  \quad f_{xy} = 6
+  \]
+Por tanto,
+\[
+  D(x,y) = f_{xx} f_{yy} - (f_{xy})^2 = -36xy -36 =  -36(xy + 1)
+\]
+
+Como
+\[
+   D(0,0) = -36[(0)(0) + 1] = -36 < 0
+\]
+
+se deduce que $f$ tiene un punto silla en $(0,0)$. Como
+\[
+    D(2,-2)= -36 [2(-2) + 1] = 108 > 0
+\]
+y
+\[
+  f_{xy}(2,-2) = 6(2)= 12 > 0
+\]
+
+se ve que $f$ tiene un m\'{\i}nimo relativo en $(2,-2)$.
+
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Sea $Y = F(K,L)$ es una funci\'on de producci\'on,  donde $K$ es el
+capital y $L$ es el trabajo. Designemos por $p$ el precio por unidad
+de producci\'on, por $r$ el costo por unidad de capital y $w$ el
+precio (o tasa de salario) por unidad de trabajo. El beneficio de
+producir y vender $F(K,L)$ unidades es entonces:
+\[
+   \pi(K,L)= pF(K,L) -rK - wL,
+\]
+Si $F$ es diferenciable y $\pi$ tiene un m\'aximo con $K> 0$ y $L >
+0$, entonces por el teorema (\ref{porden})
+ las parciales de $\pi$ deben anularse. Por tanto, las
+condicione de primer orden son:
+\begin{align*}
+   \pi'_K(K,L) &= p F_{K}'(K,L)- r = 0 \\
+   \pi'_L(K,L) &= p F_{L}'(K,L)- w = 0.
+\end{align*}
+As\'{\i} una condici\'on necesaria para que el beneficio tenga un
+m\'aximo para $K = K^{*}$ y $L = L^{*}$ es que:
+\[
+  pF_{K}'(K^{*}, L^{*})= r, \, \,  pF_{L}(K^{*}, L^{*}) = w
+\]
+
+otra forma de interpretarlo es
+\[
+  F_{K}'(K^{*}, L^{*})= \frac{r}{p}, \, \,  F_{L}(K^{*}, L^{*}) =
+  \frac{w}{p}
+\]
+
+Supongamos que incrementamos el capital en una unidad desde el
+ni\-vel $K^{*}$. \textquestiondown Cuánto ganaremos? La producci\'on
+crece en, aproximadamente, $F_{K}'(K^{*},L^{*})$ unidades. Como cada
+una de esas unidades tiene un precio $p$, el aumento de ingresos es
+de $p F_{K}'(K^{*}, L^{*})$ aproximadamente.\textquestiondown
+C\'uanto se pierde en este aumento unitario de capital? Se pierde
+$r$, que es el costo de una unidad de capital. Estas dos cantidades
+deben ser iguales. La segunda ecuaci\'on tiene una interpretaci\'on
+an\'aloga: incrementando el trabajo  en una unidad desde el nivel
+$L^{*}$ se tendr\'a un aumento aproximado de los ingresos  de $p
+F_{L}'(K^{*}, L^{*})$, mientras que el costo del trabajo extra es
+$w$, y esas dos cantidades son iguales. El punto $(K^{*}, L^{*})$
+que maximiza el beneficio tiene la propiedad de que el ingreso extra
+generado por un aumento unitario de capital o trabajo se compensa
+con el aumento del costo.
+\end{ejemplo}
+
+
+\begin{problema}
+Supongamos que:
+\[
+   Y = F(K,L) =  6 K^{\frac{1}{2}} L^{\frac{1}{3}},
+\]
+es una funci\'on de producci\'on,  donde $K$ es el capital y $L$ es
+el trabajo. Sean $p = 0.5$ el precio por unidad de producci\'on, $r
+= 0.1$ el costo por unidad de capital y $w = 1$ el precio por unidad
+de trabajo. Hallar el beneficio m\'aximo en este caso.
+\end{problema}
+
+
+\textbf{Soluci\'on del problema 13:} La funci\'on de beneficios es:
+\[
+   \pi(K,L)= 0.5 \cdot    6 K^{\frac{1}{2}} L^{\frac{1}{3}} - 0.1 K -
+  1 \cdot L = 3 K^{\frac{1}{2}} L^{\frac{1}{3}} - 0.1 K - L,
+\]
+Las condiciones de primer orden son:
+\begin{align*}
+   \pi'_K(K,L) &= 1.5 \cdot  K^{-\frac{1}{2}} L^{\frac{1}{3}} - 0.1 = 0, \\
+   \pi'_L(K,L) &=   K^{\frac{1}{2}} L^{-\frac{2}{3}} - 1  =  0.
+\end{align*}
+
+La primera ecuaci\'on da $K ^{-1/2} = L^{1/3}$. Sustitutendo este
+valor de $K^{\frac{1}{2}}$ en la segunda ecuaci\'on obtenemos $15
+L^{\frac{1}{3}} L^{-\frac{2}{3}} = 1$. As\'{\i}  $15
+L^{-\frac{1}{3}} = 1$,
+ \'o $L = 15^{3}$. Veamos que el punto estacionario $(K,L) = (50.625, 3.375)$ maximiza los
+ beneficios.
+
+\vspace{.2cm}
+
+ Tenemos que:
+ \[
+  \pi(K,L) = 3 K^{\frac{1}{2}} L^{\frac{1}{3}} - 0.1 k - L,
+ \]
+ con $K > 0$ y $L > 0$, luego:
+ \begin{align*}
+   \pi_{KK}'' &= -\frac{3}{4} K^{-3/2} L^{1/3} \, \pi_{KL}'' = \frac{1}{2} K^{-1/2} L^{-2/3}, \text{y} \\
+   \pi_{LL}'' &= -\frac{2}{3} K^{1/2} L^{-5/3}.
+\end{align*}
+Por tanto, $\pi_{KK}'' < 0$ y $\pi_{LL}'' < 0 $ para todo $K > 0$ y
+$L > 0$. Adem\'as,
+\[
+  \pi_{KK}''\pi_{LL}'' - (\pi_{KL}'')^{2} = \frac{1}{2} K^{-1} L^{-4/3} -
+  \frac{1}{4} K^{-1} L^{-4/3} > 0
+\]
+Por el teorema \ref{soptimos} el punto $(50.625, 3.375)$ es un m\'aximo de
+$\pi(K,L)$. Entonces, para maximizar los beneficios, hay que tomar:
+\begin{equation*}
+     L = 15^{3} = 3.375 \,\, \text{y} \,\, K = 15^{2}L^{2/3}
+     = 15^{4} = 50.625
+\end{equation*}
+El valor de la funci\'on de beneficios es $\pi(50.625, 3.375) =
+1687.5$.
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 1: OPTIMIZACI\'ON LIBRE EN VARIAS VARIABLES}
+\end{center}
+
+Trabajo en equipos con dos o tres integrantes.
+
+\vspace{.3cm}
+
+En los ejercicios 1 a 6, encontrar los valores m\'aximos,
+m\'{\i}nimos o puntos de silla de cada funci\'on.
+\begin{enumerate}
+\item $f(x,y) = -2x^2 - 2xy - 2y^2 + 36x + 42y -158$ \vspace{.2cm}
+\item $f(x,y) = x^2  + y^2 - 6x + 8y + 35$ \vspace{.2cm}
+\item $f(x,y) = x^3 + y^3 + 3xy$ \vspace{.2cm}
+\item $f(x,y) = -2x^2 - y^2 + 4x + 4y -3$ \vspace{.2cm}
+\item $f(x,y) = x^2  + xy  + y^2 - 3x + 2$ \vspace{.2cm}
+\item $f(x,y) = 4x^3 + y^3 -12x  -3y $ \vspace{.2cm}
+\end{enumerate}
+
+\newpage
+
+\setcounter{page}{1}
+
+\subsection{Optimización restringida}
+\textbf{El M\'etodo de los multiplicadores de Lagrange}
+\medskip
+
+Las variables que aparecen en los problemas econ\'omicos  de
+optimizaci\'on  estan casi siempre sometidas a ciertas
+restricciones. Por ejemplo, precios y cantidades son a menudo no
+negativos por definici\'on, y la escasez impone que las cantidades
+que se consumen est\'en acotadas superiormente. Adem\'as cuotas de
+producci\'on, limitaciones presupuestarias y otras condiciones
+pueden restringir el rango de elecci\'on.
+
+\vspace{.2cm} Cuando la restricci\'on es una funci\'on complicada, o
+cuando hay todo un sistema de ecuaciones para expresar
+restricciones, los economistas usan el \textbf{ m\'etodo de los
+multiplicadores de Lagrange}.
+\medskip
+
+
+Para hallar las soluciones del problema:
+
+\begin{equation}
+\label{principal}
+   \max(\min) \, \, f(x,y) \mbox{ sujeta a }  g(x,y) = c
+\end{equation}
+
+se usa el m\'etodo de los multiplicadores de Lagrange  el cual consiste en:
+
+\begin{enumerate}
+   \item Escribir la funci\'on lagrangiana:
+  \[
+    \mathcal{L}(x,y) =  f(x,y) - \lambda (g(x,y) - c)
+  \]
+ donde $\lambda$ es una constante.
+ \vspace{.2cm}
+   \item Derivar $\mathcal{L}$ con respecto a $x$ e $y$, e igualar a cero las parciales.
+   \vspace{.2cm}
+  \item  Escribir el sistema formado por las dos ecuaciones de 2 junto con la restricci\'on:
+\begin{align*}
+      f_1'(x,y) &= \lambda g_1'(x,y) \\
+      f_2'(x,y) &= \lambda g_2'(x,y) \\
+      g(x,y) &= c
+\end{align*}
+  \item Resolver esas tres ecuaciones en las tres inc\'ognitas $x$, $y$ y $\lambda$.
+\end{enumerate}
+
+Consideremos el problema:
+\[
+\max \, \, f(x,y) \mbox{ sujeta a }  g(x,y) = c
+\]
+Sean $x^{*}$ e $y^{*}$ los valores de $x$ y $y$ que resuelven el
+problema. En general $x^{*}$ y $y^{*}$ dependen de $c$. Vamos a
+suponer que $x^{*} = x^{*}(c)$ e $y^{*} = y^{*}(c)$ son funciones
+diferenciables de $c$. Entonces:
+\[
+ f^{*}(c)= (x^{*}(c), y^{*}(c)),
+\]
+es tambi\'en funci\'on de $c$. A $f^{*}(c)$ se le llama
+$\textbf{funci\'on valor \'optimo}$ para el problema. Cuando se usa
+el m\'etodo lagrangiano, el valor correspondiente del multiplicador
+de Lagrange tambi\'en depende de $c$. Si se satisfacen ciertas
+condiciones de regularidad tenemos el siguiente resultado:
+\begin{equation}\label{a}
+    \frac{df^{*}(c)}{dc} =  \lambda(c)
+\end{equation}
+As\'{\i} el multiplicador de Lagrange $\lambda = \lambda(c)$ es la
+tasa de variaci\'on del valor \'optimo de la funci\'on objetivo
+cuando la constante de restricci\'on $c$ cambia.
+\vspace{.2cm}
+
+
+\begin{teorema}
+\label{Lagrange}
+(Teorema de Lagrange) Supongamos que $f(x,y)$ y $g(x,y)$ tienen derivadas parciales continuas en
+un dominio $A$ del plano $xy$ y que $(x_0,y_0)$ es un punto interior
+de $A$ y un \'optimo local para $f(x,y)$ sujeta a la restricci\'on
+$g(x,y) = c$. Supongamos adem\'as que no se anulan a la vez
+$g_1'(x_0,y_0)$ y $g_2'(x_0,y_0)$. Existe un n\'umero \'unico
+$\lambda$ tal que la funci\'on lagrangiana:
+\[
+    \mathcal{L}(x,y) =  f(x,y) - \lambda (g(x,y) - c)
+\]
+tiene un punto estacionario en $(x_0,y_0)$.
+\end{teorema}
+
+Bajo las hip\'otesis del Teorema \ref{Lagrange} el m\'etodo de los multiplicadores de Lagrange
+para el problema:
+\[
+   \max(\min) \, \, f(x,y) \mbox{ sujeta a }  g(x,y) = c
+\]
+da condiciones necesarias para la soluci\'on del problema. El siguiente resultado da condiciones suficientes
+para resolver el problema.
+
+\begin{teorema}
+\label{slag}
+(Suficiencia global) Supongamos que las funciones $f(x,y)$ y $g(x,y)$ son
+continuamente diferenciables en un conjunto abierto convexo $A$ de
+$\Bbb{R}^{2}$ y sea $(x_0,y_0) \in A$ un punto estacionario para la
+funci\'on lagrangeana:
+\[
+    \mathcal{L}(x,y) =  f(x,y) - \lambda (g(x,y) - c)
+\]
+Supongamos adem\'as que $g(x_0,y_0) = c$. Entonces:
+\begin{enumerate}
+  \item $\mathcal{L}$ es concava $\Longrightarrow$ resuelve el problema de maximizaci\'on de ($\ref{principal}$).
+  \item $\mathcal{L}$ es convexa $\Longrightarrow$ resuelve el problema de minimizaci\'on de ($\ref{principal}$).
+\end{enumerate}
+\end{teorema}
+
+\begin{problema}
+Empleando $L$ unidades de mano de obra y $K$ unidades de capital,
+una empresa puede elaborar $Q$ unidades de su producto, con
+\[
+  Q= F(L,K) = 50 L^{2/3} K^{1/3}
+\]
+
+Le cuesta a la empresa \$100 por cada unidad de mano de obra y \$300
+por cada unidad de capital empleado. La empresa dispone de una suma
+de \$45,000 para propósitos de producción.
+
+\begin{enumerate}
+ \item[i)] Mediante el método de multiplicadores de Lagrange
+ determine las unidades de mano de obra y de capital que la empresa
+ debería utilizar con objeto de maximizar su producción.
+ \item[ii)] Gráfique a través de las curvas de nivel los resultados
+ obtenidos.
+\end{enumerate}
+\end{problema}
+
+\textbf{Soluci\'on del problema 11}
+
+\begin{enumerate}
+\item[i)] Aquí la función a maximizar es
+\[
+    \max Q(L,K) = 50 L^{2/3} K^{1/3}
+\]
+
+El costo de emplear $L$ unidades de mano de obra a \$100 cada una y
+$K$ unidades de capital a \$300 cada una es de $(100L+300K)$ pesos.
+Puesto que deseamos disponer por completo de la suma de \$45 000,
+debemos tener que
+
+\[
+100L+300K=45,000
+\]
+
+Maximizaremos $Q(L,K)$ sujeta a esta restricción. La función
+lagrangeana es
+\[
+\mathcal{L}(L,K,\lambda)= 50 L^{2/3} K^{1/3}- \lambda (100L+300K -
+45,000).
+\]
+
+A fin de obtener un máximo de $Q(L,K)$, debe cumplirse que:
+\begin{align*}
+\frac{\partial \mathcal{L}}{\partial L} &=
+\frac{100}{3}L^{-1/3}K^{1/3}-100 \lambda=0 \\[.3cm]
+\frac{\partial \mathcal{L}}{\partial K} &=
+\frac{50}{3}L^{2/3}K^{-2/3}-300 \lambda=0 \\[.3cm]
+\frac{\partial \mathcal{L}}{\partial \lambda} &=
+-(100L+300K-45,000)=0
+\end{align*}
+
+Resolviendo las primeras dos ecuaciones para $\lambda$, obtenemos
+\[
+\lambda = \frac{1}{3} L^{-1/3} K^{1/3} \,\,\,\, \text{y} \,\,\,\,
+\lambda = \frac{1}{18} L^{2/3} K^{-2/3}
+\]
+
+Ahora igualamos los dos valores de $\lambda$
+\[
+\frac{1}{3} L^{-1/3} K^{1/3} = \frac{1}{18} L^{2/3} K^{-2/3}
+\]
+
+Despejando en ambos lados $L$, obtenemos
+\[
+L = 6K
+\]
+
+Sustituyendo esto en la expresión de $\frac{\partial
+\mathcal{L}}{\partial \lambda}$ resulta que
+
+\[
+600K+300K-45,000=0 \,\,\,\, \text{o bien} \,\,\,\, K=50
+\]
+
+Por consiguiente, $L=6K=300$ y la empresa maximiza su producción si
+emplea 300 unidades de mano de obra y 50 de capital.
+\item[ii)] La gráfica de las curvas de nivel se muestra en la
+figura 23.
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf29.pdf}
+\end{center}
+\caption{$50 L^{2/3} K^{1/3}$ sujeto a $100L+300K =
+45,000$}\label{Figura22}
+\end{figure}
+
+\begin{problema}
+Un consumidor tiene \$600 para gastar en dos mercancias, la primera
+de las cuales cuesta \$20 por unidad y, la segunda, \$30 por unidad.
+Suponga que la utilidad obtenida por el consumidor con $x$ unidades
+de la primera mercancía y $y$ unidades de la segunda mercancía, está
+dada por la \textbf{función de utilidad de Cobb-Douglas} $U(x,y)=
+10x^{3/5}y^{2/5}$.
+
+\begin{enumerate}
+ \item[i)] Mediante el método de multiplicadores de Lagrange
+ determine las unidades de cada mercancía que debe comprar el
+ consumidor para maximizar su utilidad.
+ \item[ii)] Gráfique a través de las curvas de nivel los resultados
+ obtenidos.
+\end{enumerate}
+\end{problema}
+
+\textbf{Solución al problema 12}
+\medskip
+
+\begin{enumerate}
+\item[i)] Aquí la función a maximizar es
+\[
+    \max U(x,y) = 10 x^{3/5} y^{2/5}
+\]
+
+El costo total de comprar $x$ unidades de la primera mercancía a
+\$20 por unidad y, $y$ unidades de la segunda mercancía a \$30 por
+unidad, es $20x+30y$. Como el consumidor tiene sólo \$600 para
+gastar, la meta es maximizar la utilidad $U(x,y)$ sujeta a la
+restricción presupuestal
+\[
+20x+30y=600
+\]
+
+Maximizaremos $U(x,y)$ sujeta a esta restricción. La función
+lagrangeana es
+\[
+\mathcal{L}(x,y,\lambda)= 10 x^{3/5} y^{2/5}- \lambda (20x+30y -
+600).
+\]
+
+A fin de obtener un máximo de $U(x,y)$, debe cumplirse que:
+\begin{align*}
+\frac{\partial \mathcal{L}}{\partial x} &=
+6 x^{-2/5} y^{2/5}-20 \lambda=0 \\[.3cm]
+\frac{\partial \mathcal{L}}{\partial y} &=
+4 x^{3/5} y^{-3/5}-30 \lambda=0 \\[.3cm]
+\frac{\partial \mathcal{L}}{\partial \lambda} &= -(20x+30y-600)=0
+\end{align*}
+
+Resolviendo las primeras dos ecuaciones para $\lambda$, obtenemos
+\[
+\lambda = \frac{3}{10} x^{-2/5} y^{2/5} \,\,\,\, \text{y} \,\,\,\,
+\lambda = \frac{2}{15} x^{3/5} y^{-3/5}
+\]
+
+Ahora igualamos los dos valores de $\lambda$
+\[
+\frac{3}{10} x^{-2/5} y^{2/5} = \frac{2}{15} x^{3/5} y^{-3/5}
+\]
+
+Despejando en ambos lados $y$, obtenemos
+\[
+y = \frac{4}{9}x
+\]
+
+Sustituyendo esto en la expresión de $\frac{\partial
+\mathcal{L}}{\partial \lambda}$ resulta que
+\[
+20x+30(\frac{4}{9}x)=600 \,\,\,\, \text{o bien} \,\,\,\, x=18
+\]
+
+Por consiguiente, $y = \frac{4}{9}(18)=8$. Esto es, para maximizar
+la utilidad, el consumidor debe comprar 18 unidades de la primera
+mercancía y 8 unidades de la segunda.
+
+\item[ii)] La gráfica de las curvas de nivel se muestran en la
+figura 24
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf30.pdf}
+\end{center}
+\caption{$10 x^{3/5} y^{2/5}$ sujeto a $20x+30y =
+600$}\label{Figura23}
+\end{figure}
+
+\begin{problema}
+Una empresa usa cantidades $K$ y $L$ de capital y trabajo,
+res\-pec\-ti\-va\-men\-te para producir una cantidad $Q$ de un solo
+producto, siguiendo la funci\'on de producci\'on:
+\[
+ Q = F(K,L) = K^{1/2} L^{1/4}.
+\]
+Los precios de capital y trabajo son $r$ y $w$ respectivamente.
+\begin{enumerate}
+ \item[i)] Hallar las cantidades $K$ y $L$ que  minimizan los costos, as\'{\i} como el
+costo m\'{\i}nimo, como funciones de $r$, $w$ y $Q$. Designemos por
+$K^{*}$, $L^{*}$, y $C^{*}$ a estos valores.
+ \item[ii)] Comprobar que:
+\[
+   K^{*} = \frac{\partial C^{*}}{\partial r}, \, L^{*} = \frac{\partial C^{*}}{\partial w}, \,
+   \lambda = \frac{\partial C^{*}}{\partial Q}, \,  \frac{\partial K^{*}}{\partial w} = \frac{\partial L^{*}}{\partial r}.
+\]
+\end{enumerate}
+
+\end{problema}
+\textbf{Soluci\'on del problema 13}
+\begin{enumerate}
+\item[i)] La empresa tiene que resolver el siguiente problema de minimizaci\'on de costo:
+\[
+    \min C = rK + wL \mbox{ sujeta  a } Q = K^{1/2} L^{1/4}
+\]
+La funci\'on lagrangiana es:
+\[
+\mathcal{L}(K,L)= rK  + wL - \lambda (K^{1/2} L^{1/4} - Q).
+\]
+Igualando las derivadas parciales a cero obtenemos:
+\begin{align*}
+  \frac{\partial \mathcal{L}}{\partial K} &= r - \frac{1}{2} \lambda K^{-1/2} L^{1/4} = 0, \\
+\frac{\partial \mathcal{L}}{\partial L} &= w - \frac{1}{4} \lambda
+K^{1/2} L^{-3/4} = 0.
+\end{align*}
+As\'{\i}, $r = \frac{1}{2} \lambda K^{-1/2} L^{1/4}$ y $w =
+\frac{1}{4} \lambda K^{1/2} L^{-3/4}$. Despejando $\lambda$ de estas
+dos ecuaciones e igualando los resultados:
+\[
+\lambda = 2r \lambda K^{1/2} L^{-1/4} = 4w K^{-1/2}L^{3/4}
+\]
+
+Simplificando por $K^{1/2} L^{1/4}$ obtenemos $2rK = 4wL$, luego $L
+= (r/2w)K$. Llevando este valor a la restricci\'on $K^{-1/2} L^{1/4}
+= Q$ tenemos que $K^{1/2}(r/2w)^{1/4} K^{1/4} = Q$, luego:
+
+\begin{equation}
+\label{soluc}
+ K^{3/4} = 2^{1/4}r^{-1/4} w^{1/4}Q
+\end{equation}
+
+
+Elevando ambos miembros de la igualdad (\ref{soluc}) a $4/3$ y
+usando super\'{\i}ndices ($*$) se tiene:
+\[
+ K^{*} = 2^{1/3}r^{-1/3} w^{1/3}Q^{4/3}
+\]
+y as\'{\i}:
+\[
+L^{*} = (r/2w) K^{*} = 2^{-2/3}r^{2/3} w^{-2/3}Q^{4/3}
+\]
+La funci\'on lineal $r K + w L$  es convexa y la funci\'on  de
+Cobb-Douglas $K^{1/2} L^{1/4}$ es c\'oncava. Como $\lambda \geq 0$,
+la funci\'on lagrangiana:
+\[
+\mathcal{L}(K,L)= rK  + wL + (-\lambda) (K^{1/2} L^{1/4} - Q)
+\]
+es suma de dos funciones convexas y, por tanto, es convexa. Por el
+Teorema \ref{slag}, el punto $(K^{*}, L^{*})$ minimiza el costo. El costo m\'{\i}nimo
+correspondiente  es:
+\begin{equation}
+\label{soluc2}
+   C^{*} = rK^{*} + wL^{*} = 3 \cdot 2^{-2/3}r^{2/3} w^{1/3}Q^{4/3}
+\end{equation}
+Finalmente, usando $(\ref{soluc})$
+ otra vez, hallamos  $\lambda = 2^{4/3}r^{2/3} w^{1/3}Q^{1/3}$.
+ \vspace{.2cm}
+\item[ii)] Por (\ref{soluc2}) tenemos que:
+\begin{align*}
+  \frac{\partial C^{*}}{\partial r} &= 3 \cdot 2^{- 2/3} \frac{2}{3} r^{-1/3} w^{1/3}Q^{4/3} \\
+   &=  2^{1/3}r^{-1/3} w^{1/3}Q^{4/3} \\
+   &= K^{*}
+\end{align*}
+ Observemos que la tercera igualdad de ii) es un caso particular de (\ref{a}), y vemos que el
+valor com\'un es $\lambda = \partial C^{*}/ \partial Q =
+2^{4/3}r^{2/3} w^{1/3}Q^{1/3}$. Se comprueban f\'acilmente las
+dem\'as igualdades.
+\end{enumerate}
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 2: OPTIMIZACI\'ON RESTRINGIDA}
+\end{center}
+
+Trabajo en equipo con dos o tres integrantes.
+
+\begin{enumerate}
+\item Emplendo $K$ unidades de capital y $L$ unidades de mano de
+obra, una empresa puede elaborar $Q$ unidades de su producto, con
+\[
+    Q(K,L) = 50 K^{\frac{1}{3}} L^{\frac{2}{3}}
+\]
+Le cuesta a la empresa \$300 por cada unidad de capital y \$100  por
+cada unidad de mano de obra empleado. La empresa dispone de una suma
+de  \$ 45,000 para propositos de producci\'on.
+\begin{enumerate}
+  \item Mediante el m\'etodo de multiplicadores de Lagrange
+  determine las unidades de capital y trabajo que la empresa
+  deber\'{\i}a  utilizar con objeto de maximizar su producci\'on.
+  \item Grafique las curvas de nivel de la funci\'on de
+  restricci\'on presupuestaria y de la funci\'on de producci\'on.
+\end{enumerate}
+
+\item Emplendo $K$ unidades de capital y $L$ unidades de mano de
+obra, una empresa puede elaborar $Q$ unidades de su producto, con
+\[
+    Q(K,L) = 12 K^{\frac{2}{5}} L^{\frac{2}{5}}
+\]
+Le cuesta a la empresa \$40 por cada unidad de capital y \$5  por
+cada unidad de mano de obra empleado. La empresa dispone de una suma
+de  \$ 800 para propositos de producci\'on.
+\begin{enumerate}
+  \item Mediante el m\'etodo de multiplicadores de Lagrange
+  determine las unidades de capital y trabajo que la empresa
+  deber\'{\i}a  utilizar con objeto de maximizar su producci\'on.
+  \item Grafique las curvas de nivel de la funci\'on de
+  restricci\'on presupuestaria y de la funci\'on de producci\'on.
+\end{enumerate}
+
+\item Supongamos que tenemos dos bienes con unos precios de $p_1 = 2$
+y $p_2 = 5$, con un ingreso $m =40$ y una funci\'on de utilidad:
+\[
+   u(x,y) = x^\frac{1}{3} y^{\frac{1}{2}}
+\]
+\begin{enumerate}
+   \item Mediante el m\'etodo de multiplicadores de Lagrange
+   determine las unidades del bien uno y del bien dos que el
+   consumidor deber\'{\i}a utilizar con objeto de maximizar su
+   utilidad.
+   \item Grafique las curvas de nivel de la funci\'on de
+   restricci\'on presupuestaria  y de la funci\'on de utilidad.
+\end{enumerate}
+
+\item Supongamos que tenemos dos bienes con unos precios de $p_1 = 20$
+y $p_2 = 5$, con un ingreso $m =600$ y una función de utilidad:
+\[
+   u(x,y) = 40x^\frac{1}{2} y^{\frac{1}{2}}
+\]
+\begin{enumerate}
+   \item Mediante el m\'etodo de multiplicadores de Lagrange
+   determine las unidades del bien uno y del bien dos que el
+   consumidor deber\'{\i}a utilizar con objeto de maximizar su
+   utilidad.
+   \item Grafique las curvas de nivel de la funci\'on de
+   restricci\'on presupuestaria  y de la funci\'on de utilidad.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\setcounter{page}{1}
+
+\section{Integral definida e indefinida}
+\textbf{Introducci\'on}
+\medskip
+
+Hemos analizado como encontrar la derivada de una funci\'on. Sin
+embargo, muchos problemas exigen como recuperar una funci\'on a
+partir de su derivada conocida. Por ejemplo, supongamos que una
+función de costo marginal $C'(x)$ se da, es decir, se sabe cómo
+el costo está cambiando de acuerdo a la cantidad producida $x$,
+y estamos en busca de la correspondiente función de costos $C(x)$.
+Esta función se puede encontrar por medio de la integración,
+que es lo contrario al proceso de diferenciación. De manera m\'as general, queremos
+encontrar una funci\'on $F$ a partir de su derivada $f$. Si tal
+funci\'on $F$ existe, se llama  una antiderivada de $f$ y al
+conjunto de todas las antiderivadas de $f$ se le llama la integral
+indefinida de $f$.
+\medskip
+
+\textbf{Antiderivadas}
+
+\begin{definicion}
+Sea $f$ una funci\'on. Una antiderivada de $f$ es una funci\'on $F$
+diferenciable tal que $F'(x) = f(x)$.
+\end{definicion}
+
+Si $F$ y $G$ son primitivas de $f$, entonces existe una constante
+$c\in \Bbb{R}$, tal que:
+\[
+   F(x) = G(x) + c.
+\]
+
+\subsection{Integral indefinida.}
+
+Las antiderivas de una funci\'on $f$ se les llama integrales
+indefinidas de la funci\'on $f$  y se denotan:  Si $F$ es una
+primitiva de $f$,
+\[
+   \int f(x) \, dx = F(x) + c
+\]
+donde $c \in \Bbb{R}$ es una constante arbitraria.
+
+\vspace{.2cm}
+
+\subsubsection{Reglas de integraci\'on.  }
+
+ \vspace{.2cm}
+
+\begin{enumerate}
+    \item $\int ( c \cdot f(x)) \, dx = c \cdot \int f(x)\, dx$ \vspace{.2cm}
+    \item $\int dx = x + c$  \vspace{.2cm}
+    \item $\int x^{n}\, dx = \frac{x^{n + 1}}{n + 1} + c$, $n \ne -1$  \vspace{.2cm}
+    \item $\int \frac{dx}{x} = ln |x| + c$  \vspace{.2cm}
+    \item $\int e^{x} dx = e^{x} + c$  \vspace{.2cm}
+    \item $\int sen\,x dx = -cos\, x + c $  \vspace{.2cm}
+    \item $\int cos\,x dx = sen\, x + c$  \vspace{.2cm}
+    \item $\int tg\,x \,dx = -\ln(cos\, x) + c$  \vspace{.2cm}
+    \item $\int (f(x) + g(x))\, dx = \int\, f(x) dx  + \int g(x)\, dx$ \vspace{.2cm}
+    \item $\int (f(x) - g(x))\, dx = \int\, f(x) dx  - \int g(x)\, dx$  \vspace{.2cm}
+\end{enumerate}
+
+\begin{ejemplo}
+\begin{align*}
+ \int(x^{2}-2x + 5) \, dx &= \int x^{2}  \,dx - \int 2x \,dx + \int 5  \,dx \\
+                          &= \int x^{2} \,dx - 2\int x \,dx + 5 \int 1 \, dx \\
+                          &= \frac{x^{3}}{3}- x^{2} + 5x + C.
+\end{align*}
+\end{ejemplo}
+
+\subsection{Técnicas de integraci\'on.}
+
+
+\begin{itemize}
+\item \textbf{Sustituci\'on o Cambio de Variable}:
+\[
+\int f(\mu) \, d \mu =  \int f(\varphi(t)) \cdot  \varphi'(t)  dt,
+\]
+donde $\mu = \varphi (x).$ \vspace{.2cm}
+
+\begin{ejemplo}
+Evaluar:
+\[
+    \int \frac{2x - 9}{\sqrt{x^{2} -9x  + 1 }} \, dx.
+\]
+\textbf{Soluci\'on:}
+
+
+ Sean:
+\begin{align*}
+   u  &=  x^{2} - 9x + 1,  \\
+  du  &= (2x - 9) \, dx.
+\end{align*}
+Entonces:
+\begin{align*}
+    \int \frac{2x - 9}{\sqrt{x^{2} -9x  + 1 }} \, dx &= \int
+    \frac{du}{\sqrt{u}} \hspace{.7cm}           \\
+   &= \int u^{-\frac{1}{2}} \, du \\
+   &= \frac{  u^{(-1/2 ) + 1} }{(-1/2) + 1} + C \\
+   &= 2u^{1/2} + C \\
+   &= 2 \sqrt{x^{2} - 9x + 1} + C.
+\end{align*}
+
+\begin{ejemplo}
+Evaluar:
+\[
+    \int \frac{2}{2x + 1} \, dx.
+\]
+\textbf{Soluci\'on}
+
+Sean:
+\begin{align*}
+   u  &=  2x + 1 \\
+  du  &= 2 \, dx. \\
+\end{align*}
+Entonces:
+\begin{align*}
+    \int \frac{2}{2x + 1 } \, dx &= \int
+    \frac{du}{u} \hspace{.7cm}           \\
+   &= \ln u \\
+   &= \ln(2x + 1) + C
+\end{align*}
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Evaluar:
+\[
+    \int e^{3x} \, dx.
+\]
+\textbf{Soluci\'on}
+
+
+ Sean:
+\begin{align*}
+   u  &=  3x \\
+  du  &= 3 \, dx. \\
+\end{align*}
+Entonces:
+\begin{align*}
+    \int e^{3x} \, dx &= \frac{1}{3} \int
+    e^u \, du \hspace{.7cm}           \\
+   &= \frac{e^u}{3}  \\
+   &= \frac{e^{3x}}{3} + C
+\end{align*}
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Evaluar:
+\[
+    \int sen(5x) \, dx.
+\]
+\textbf{Soluci\'on}
+
+
+ Sean:
+\begin{align*}
+   u  &=  5x \\
+  du  &= 5 \, dx. \\
+\end{align*}
+Entonces:
+\begin{align*}
+    \int sen(5x) \, dx &= \frac{1}{5} \int
+    sen\, u \, du \hspace{.7cm}           \\
+   &=  - \frac{\cos u}{5}  \\
+   &= - \frac{\cos (5x)}{5} + C
+\end{align*}
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Evaluar:
+\[
+    \int 3 \cos (4x) \, dx.
+\]
+\textbf{Soluci\'on}
+
+
+ Sean:
+\begin{align*}
+   u  &=  4x \\
+  du  &= 4 \, dx. \\
+\end{align*}
+Entonces:
+\begin{align*}
+    \int 3 \cos (4x) \, dx &= \frac{3}{4} \int
+    \cos  u \, du \hspace{.7cm}           \\
+   &=  \frac{3}{4} \cos u  \\
+   &=  \frac{3}{4} \cos (4x) + C
+\end{align*}
+\end{ejemplo}
+
+
+\end{ejemplo}
+
+
+\item \textbf{Por Partes}: Sean $f, g$ funciones derivables. Entonces:
+\[
+\int f(x) \cdot g'(x) \, dx = f(x) \cdot g(x) - \int f'(x) \cdot
+g(x) \, dx
+\]
+En ocasiones es m\'as f\'acil recordar la f\'ormula si la escribimos
+en forma diferencial. Sea $u = f(x)$ y $v = g(x)$. Entonces $du =
+f'(x) \, dx$ y $dv = g'(x) \, dx$. Utilizando la regla de
+sustituci\'on, la f\'ormula de integraci\'on por partes se transforma
+en:
+\[
+  \int u \,dv = uv - \int v \,du.
+\]
+
+\begin{ejemplo}
+Evaluar la integral:
+\[
+   \int x e^x \, dx.
+\]
+
+Hacemos:
+\begin{align*}
+  u &= x,    &dv   &=  e^x \, dx, \\
+ du &= dx,    &v    &= e^x\, dx.
+ \notag
+ \end{align*}
+Entonces:
+\[
+  \int x e^x \, dx =x e^x  - \int e^x \, dx = x e^x +
+  e^x = e^x (x -1) + C
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Evaluar la integral:
+\[
+   \int x \cos x \, dx.
+\]
+
+Hacemos:
+\begin{align*}
+  u &= x,    &dv   &= \cos x \, dx, \\
+ du &= dx,    &v    &= \sen x \, dx.
+ \notag
+ \end{align*}
+Entonces:
+\[
+  \int x \cos  x \, dx = x \sen x - \int \sen x \, dx = x \sen x +
+  \cos x + C.
+\]
+\end{ejemplo}
+\end{itemize}
+
+\begin{problema}
+El costo marginal, como la funci\'on de las unidades producidas $x$,
+esta dado por $C' = 10 + 40x -12x^2$. Hallar la función de costo
+total, sabiendo que \$100 es el costo fijo.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on al problema 14}
+
+\vspace{.2cm}
+
+Para determinar la funci\'on de costo total se calcula la integral
+indefinida siguiente:
+
+\begin{align*}
+C(x) &= \int (10 + 40 x - 12x^2) \, dx \Rightarrow \\
+C(x) &= 10 \int dx + 40 \int x \, dx  - 12 \int x^2 \, dx     \Rightarrow\\
+C(x) &= 10x + 40 \frac{x^2}{2} - 12 \frac{x^3}{3} + k \Rightarrow\\
+C(x) &= 10x + 20 x^2 - 4 x^3 + k
+\end{align*}
+
+
+Para determinar $k$ se utiliza el dato del costo fijo, vale decir:
+si $x=0$, entonces $C(0)=100$.
+
+\vspace{.2cm}
+
+Por lo tanto: $C(0) = 10\cdot 0 + 20 \cdot 0^2 - 4 \cdot 0^3 + k
+\Rightarrow   \quad 100 = k$
+
+\vspace{.2cm}
+
+Luego: $C(x) = 10x + 20x^2 - 4x^3 + 100$.
+\end{problema}
+
+\begin{problema}
+Una empresa advierte que un incremento en el precio de \$1 provoca
+una ca\'{\i}da en las ventas de 5 unidades. Adem\'as, la empresa
+puede vender \$100 unidades a un precio de \$10 cada una. Encontrar
+la funci\'on de demanda de la empresa.
+\end{problema}
+\vspace{.2cm}
+
+\textbf{Soluci\'on al problema 15}
+
+\vspace{.2cm}
+
+Sea $q$ es la cantidad demandada con respecto al precio, entonces la
+funci\'on de demanda es
+\begin{align*}
+\frac{dq}{dp} & =-5 \\
+          dq  & =-5 \, dp \\
+     \int dq  & =-5 \int dp \\
+           q  & =-5p+k
+\end{align*}
+
+Entonces, para encontrar el valor de $k$, tenemos que
+\begin{align*}
+100 &= -5(10) + k \\
+100 &= -50 + k \\
+k &= 100 + 50 = 150
+\end{align*}
+
+Por lo tanto la funci\'on de demanda es $q =  -5p + 150$.
+
+\begin{problema}
+La propensi\'on marginal al consumo para M\'exico est\'a dada por:
+\[
+      \frac{dC}{dY} = \frac{3}{4} - \frac{1}{2 \sqrt{3Y}},
+\]
+donde el consumo $C$ es una funci\'on del ingreso nacional $Y$. En
+esta caso $Y$ se expresa en miles de millones de pesos. Determinar
+la funci\'on de consumo para México si se sabe que el consumo es de
+10 mil millones de pesos $(C=10)$ cuando $Y=12$.
+\end{problema}
+
+\textbf{Soluci\'on al problema 16:} Como la propensi\'on marginal al
+consumo es $\frac{dC}{dY}$, tenemos que:
+\begin{align*}
+ C &= \int \frac{dC}{dY}  dY \\
+   &=  \int \left( \frac{3}{4} - \frac{1}{2 \sqrt{3Y}} \right) \, dY \\
+   &= \frac{3}{4}Y - \frac{1}{2} \int (3Y)^{-\frac{1}{2}} \, dY \\
+   &= \frac{3}{4}Y - \left( \frac{1}{2}\right) \frac{1}{3}
+  \int (3Y)^{-\frac{1}{2}}[3 \, dY] \\
+  &= \frac{3}{4}Y - \frac{\sqrt{3Y}}{3} + C_1
+\end{align*}
+Como $C=10$ cuando $Y=12$, de la \'ultima ecuaci\'on se sigue que
+$C_1=3$, por tanto la funci\'on de consumo es:
+\[
+   C = \frac{3}{4}Y - \frac{\sqrt{3Y}}{3} + 3.
+\]
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 1: INTEGRAL INDEFINIDA}
+\end{center}
+
+Trabajo individual.
+
+\vspace{.3cm}
+
+\begin{enumerate}
+\item[a)] Calcular las siguientes integrales:
+\begin{align*}
+1) & \int (x^3 + 2x^2 + x + 2) dx & \qquad
+2) & \int (\sqrt{x} + \frac{1}{2 \sqrt{x}})\, dx & \qquad \\[.5cm]
+3) & \int \frac{(\ln x)^2} {x} dx & \qquad
+4) & \int \frac{ax^2}{\sqrt{x^3 + 8}}\, dx & \qquad \\[.5cm]
+5) & \int \frac{5x}{x^2+1}\,dx  & \qquad
+6) & \int \frac{1}{2x - 4}\, dx & \qquad \\[.5cm]
+7) & \int \frac{1}{\cos^2 3x}\, dx & \qquad
+8) & \int \frac{\cos x}{\sen^2 x}\, dx  & \qquad \\[.5cm]
+9) & \int xe^{2x}\, dx  & \qquad
+10) & \int \ln(x) dx
+\end{align*}
+
+\item [b)] El costo marginal, como la funci\'on de las unidades producidas $x$,
+esta dado por $C' = 2 + 60x -5x^2$. Hallar la función de costo
+total, sabiendo que \$65 es el costo fijo.
+
+\item [c)] La propensi\'on marginal al consumo en miles de millones est\'a dada
+por:
+\[
+      \frac{dC}{dY} = \frac{7}{10} + \frac{0.2}{ \sqrt{Y}},
+\]
+Determinar la funci\'on de consumo si se sabe que el consumo es de 8
+mil millones de pesos $(C=8)$ cuando $Y=0$.
+\end{enumerate}
+
+\newpage
+
+\setcounter{page}{1}
+
+\subsection{Integral definida}
+
+\textbf{Introducci\'on}
+\medskip
+
+El \'area de la regi\'on  con una frontera curva puede ser
+aproximada sumando \'areas de un conjunto de rectángulos. Al usar
+m\'as rectángulos podemos aumentar la exactitud de la
+aproximaci\'on. El proceso de l\'{\i}mite nos conduce a la
+definici\'on de integral definida de una funci\'on en un intervalo
+cerrado.
+\medskip
+
+La integral definida tiene muchas aplicaciones en estad\'{\i}stica y
+econom\'{\i}a. Nos permite calcular rangos de cantidades de probabilidad y promedios de
+consumo de energ\'{\i}a.
+
+
+\subsection{Definici\'on de integral definida}
+Sea $f$ una funci\'on continua no negativa en $[a, b]$. Entonces el
+\'area $A$ de la regi\'on bajo la gr\'afica de $f$ es:
+\[
+ A = \lim_{n \to \infty} \, [f(x_1) + f(x_2) + \cdots + f(x_n) ]
+ \,  \Delta x,
+\]
+donde $x_1,x_2,..., x_n$ son puntos arbitrarios en los $n$
+subintervalos de $[a, b]$ del mismo ancho $ \Delta x =  \frac{b - a}{n}.$
+
+\begin{definicion}
+Sea $f$ una funci\'on continua definida en $[a, b]$. Si
+\[
+  \lim_{n \to \infty} \, [f(x_1) + f(x_2) + \cdots + f(x_n) ]
+ \,  \Delta x,
+\]
+existe para todas las elecciones de puntos representativos
+$x_1,x_2,...,x_n$ en los $n$ subintervalos de $[a, b]$ del mismo ancho
+ $\Delta x = \frac{b - a}{n}$, entonces este l\'{\i}mite se llama
+la \textbf{integral definida} de $f$ en $[a, b]$ y se le denota por
+$\int_{a}^{b} f(x) dx$. As\'{\i} :
+\[
+  \int_{a}^{b} f(x) dx  = \lim_{n \to \infty} \,
+[f(x_1) + f(x_2) + \cdots + f(x_n) ]
+ \,  \Delta x.
+\]
+\end{definicion}
+
+
+\textbf{Interpretaci\'on geom\'etrica de la integral definida}
+
+
+\begin{itemize}
+  \item Si $f$ es no negativa y continua en $[a, b]$, entonces:
+ \[
+\int_{a}^{b} f(x) dx
+\]
+es el \'area de la regi\'on bajo la gr\'afica de $f$ en el intervalo
+$[a, b]$. \vspace{.3cm}
+  \item  Si $f$ es continua en $[a, b]$, entonces:
+ \[
+\int_{a}^{b} f(x) dx
+ \]
+es el \'area de la regi\'on por arriba del intervalo $[a, b]$ menos el
+\'area de la regi\'on por debajo de $[a, b]$.
+\end{itemize}
+
+\begin{ejemplo}
+Trazar la gr\'afica y hallar el área de la región acotada por debajo
+de la gráfica de la función $f$ y arriba del eje $x$ donde:
+\[
+f(x) = -x^2+4
+\]
+
+\textbf{Solución}
+\medskip
+
+Igualando a cero la $f$ obtenemos los puntos de intersecci\'on con
+el eje $x$
+\begin{align*}
+-x^{2}+4 &=0\\
+4 &=x^{2} \\
+x^{2} &=4 \\
+x &=\pm2
+\end{align*}
+Los puntos de intersección son $-2$ y $2$, entonces el \'area entre
+esta gráfica y el eje $x$ es (ver figura 25):
+\begin{align*}
+   \int_{-2}^{2} f(x) dx  &= \int_{-2}^{2} [-x^2 + 4] dx \\
+   &= (-\frac{x^3}{3} + 4x) \Bigg|_{-2}^{2} \\
+   & = (-\frac{2^{3}}{3}+4(2)) - (-\frac{(-2)^{3}}{3}+4(-2)) \\
+   &= \frac{32}{3}.
+\end{align*}
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf33.pdf}
+\end{center}
+\caption{$f(x) = -x^2+4$}\label{Figura23}
+\end{figure}
+
+\newpage
+
+\begin{ejemplo}
+En estad\'{\i}stica, una funci\'on de densidad (de probabilidad) $f$
+de una va\-ria\-ble $x$, donde $x$ toma todos los valores en el intevalo $[a, b]$,
+tiene las siguientes propiedades:
+
+ \vspace{.2cm}
+
+\begin{enumerate}
+   \item $f(x) \geq 0 .$  \vspace{.2cm}
+   \item $ \int_{a}^{b} f(x)  dx = 1.$  \vspace{.2cm}
+
+ Si $f$ es una funci\'on de densidad de probabilidad continua, la media $\mu$ de $f$ en el intervalo $[a,b]$
+  est\'a definida por:
+  \[
+   \mu = \int_{a}^{b} [x \cdot f(x)] dx,
+  \]
+y la varianza $\sigma^2$ est\'a dada por
+\[
+ \sigma^2 =\int_{a}^{b}   (x - \mu)^2 f(x) dx,
+\]
+
+   La probabilidad de que $x$ tome un valor entre $c$ y $d$, lo
+   cual se escribe $P(c \leq x \leq d)$,  donde
+   $a \leq c \leq x \leq d \leq b,$ se representa por el \'area de la
+   regi\'on limitada por la gr\'afica de $f$ y el eje $x$ entre $x =
+   c$ y $x = d$. Por tanto:
+\[
+   P(c \leq x \leq d)  =  \int_{a}^{b} f(x) \, dx.
+\]
+\end{enumerate}
+\end
+
+\vspace{.2cm}
+
+La funci\'on  $f(x) = 6 (x - x^{2})$, donde $0 \leq x
+\leq 1$, satisface que es una funci\'on de densidad, por:
+\[
+f(x) = 6(x- x^2) =6x(1-x) \geq 0
+\]
+en $[0,1]$ ya que $6x \geq 0 $ si $x \geq 0 $ y $1- x \geq 0$ si $ x \leq 1$, lo cual se cumple pues $x \in [0,1]$, ademas:
+\[
+\int_{0}^{1} 6 (x- x^2) dx = 6\int_{0}^{1} ( x- x^2) dx =6 (\frac{x^2}{2}- \frac{x^3}{3}) \Bigr|_{0}^{1} = 6 (\frac{1}{2}- \frac{1}{3} )=6( \frac{1}{6})  =1
+\]
+\medskip
+\,\,\,\,\,\,\,con media $\mu$
+  \begin{align*}
+   \mu &= \int_{0}^{1} [x \cdot f(x)] dx = \mu = 6 \int_{0}^{1} [x (x-x^2)  ] dx \\
+   & = 6 \int_{0}^{1} [x^2 - x^3] dx = 6 (\frac{x^3}{3}- \frac{x^4}{4}) \Bigr|_{0}^{1} = 6 (\frac{1}{3}- \frac{1}{4} )=6( \frac{1}{12})= \frac{1}{2}
+  \end{align*}
+
+y varianza $\sigma^2$
+\begin{align*}
+ \sigma^2  &=\int_{0}^{1}   (x - \frac{1}{2})^2 f(x) dx = \int_{0}^{1}   (x^2 -x +\frac{1}{4}) (6 (x- x^2)) dx  \\
+& = 6 \int_{0}^{1}   (x^2 -x + \frac{1}{4}) (x- x^2) dx  = 6 \int_{0}^{1}   (x^3 -x^2 + \frac{x}{4}- x^4  + x^3 -\frac{x^2}{4}) \\
+ &= 6 (-\frac{x^5}{5} + \frac{x^4}{2}-\frac{5x^3}{3} + \frac{x^2}{8}) \Bigr|_{0}^{1} \\
+ &= 6(-\frac{1}{5} + \frac{1}{2} -\frac{5}{12} + \frac{1}{8}) = \frac{1}{20}
+\end{align*}
+
+
+ \vspace{.2cm}
+
+Para esta funci\'on, podemos encontrar las siguientes probabilidades:
+\begin{enumerate}
+\item[a)] $P( 0 \leq x \leq \frac{1}{4})$.
+\end{enumerate}
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on}:  Por la propiedad 3:
+\begin{align*}
+   P(0 \leq x \leq \frac{1}{4}) &= \int_{0}^{\frac{1}{4}} 6(x - x^{2})
+   \, dx  \\
+   &=  6  \,  \int_{0}^{\frac{1}{4}} (x - x^{2})   \, dx  \\
+   &= 6 \left( \frac{x^{2}}{2} - \frac{x^{3}}{3} \right )
+   \Bigr|_{0}^{\frac{1}{4}} \\
+   &= (3x^{2} -  2 x^{3}) \Bigr|_{0}^{ \frac{1}{4}} \\
+   &= \frac{5}{32}.
+\end{align*}
+
+\item[b)] $P( x \geq \frac{1}{2})$.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on}:
+\begin{align*}
+   P(x \geq \frac{1}{2}) &= \int_{\frac{1}{2}}^{1} 6(x - x^{2})
+   \, dx  \\
+   &=  6  \,  \int_{\frac{1}{2}}^{1} (x - x^{2})   \, dx  \\
+   &= 6 \left( \frac{x^{2}}{2} - \frac{x^{3}}{3} \right )
+   \Bigr|_{\frac{1}{2}}^{1} \\
+   &= (3x^{2} -  2 x^{3}) \Bigr|_{\frac{1}{2}}^{1} \\
+   &= \frac{1}{2}.
+\end{align*}
+\end{enumerate}
+\end{ejemplo}
+
+\newpage
+
+\subsection{\'Area entre dos curvas}
+
+Sean $f$ y $g$ funciones continuas tales que $f(x) \geq g(x)$ en el intervalo $[a, b]$. Entonces
+el \'area de la regi\'on acotada por arriba por $y = f(x)$ y por abajo por  $y = g(x)$ en $[a, b]$
+est\'a dada por:
+\[
+ \int_{a}^{b}[f(x) - g(x)] \, dx.
+\]
+
+\begin{ejemplo}
+Trazar la gr\'afica de las funciones $f$ y $g$ y determine el \'area
+de la regi\'on encerrada entre estas gr\'aficas donde:
+
+\[
+f(x) = x^2 \, \text{y} \, g(x) = x^3
+\]
+
+\textbf{Solución}
+\medskip
+
+Igualando ambas funciones $f$ y $g$ obtenemos los puntos de
+intersecci\'on entre las gr\'aficas de las funciones
+\begin{align*}
+x^{2} &= x^{3}\\
+x^{2}-x^{3} &=0 \\
+x^{2}(1-x) &=0 \\
+x^{2}&=0 \\
+(1-x) &=0
+\end{align*}
+
+Los puntos de intersección son $(0,0)$ y $(1,1)$, entonces el \'area
+entre estas graficas es (ver figura 26):
+\begin{align*}
+   \int_{0}^{1} [f(x) - g(x)] dx  &= \int_{0}^{1} [x^2 - x^3] dx \\
+   &= (\frac{x^3}{3} - \frac{x^4}{4}) \Bigg|_{0}^{1} \\
+   & = \frac{1}{3} - \frac{1}{4} \\
+   &= \frac{1}{12}.
+\end{align*}
+\end{ejemplo}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.7 \textwidth,height=0.29
+\textheight]{unid1graf31.pdf}
+\end{center}
+\caption{$f(x) = x^2$ y $g(x) = x^3$}\label{Figura23}
+\end{figure}
+
+\begin{ejemplo}
+Una curva de Lorenz $y=L(x)$ se utiliza para estudiar las distribuciones de ingresos. Si $x$ es el porcentaje acumulativo de receptores de ingresos, ordenados de m\'as pobres a m\'as ricos, y $y$ es el porcentaje acumulativo de ingresos, entonces la igualdad de la distribuci\'on de ingresos est\'a dada por la recta $y= x$, donde $x$ y $y$ se expresan como decimales. Por ejemplo, 10 \% de la gente recibe 10 \% de los ingresos totales, 20 \% de la gente recibe 20 \% de los ingresos, etc\'etera.
+\medskip
+
+Si $y=L(x)$ es la ecuaci\'on de una curva de Lorentz, entonces la desigualdad en la distribuci\'on de riqueza correspondiente se mide mediante el \'{\i}ndice  de Gini $G$, cuya formula esta dada por
+\[
+G = 2 \int_{0}^{1}[x - L(x)] dx
+\]
+El \'indice de Gini siempre se situa entre 0 y 1. Un \'indice de 0 corresponde a una igualdad completa. Cuanto m\'as peque\~{n}o sea el \'{\i}ndice, m\'as equitativa ser\'a la distribuci\'on de la riqueza; cuanto m\'as grande sea el \'{\i}ndice, m\'as riqueza estar\'a concentrada en pocas manos. Ver figura 27.
+\medskip
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.6 \textwidth,height=0.29
+\textheight]{Gini1.pdf}
+\end{center}
+\caption{Curva de Lorenz y coeficiente de Gini}\label{Figura23}
+\end{figure}
+
+Suponga que la distribuci\'on real esta dada por la curva de Lorenz definida por
+\[
+ L(x) = \frac{20}{21}x^2 + \frac{1}{21}x.
+\]
+\begin{align*}
+G   &= 2 \int_{0}^{1}[x - L(x)] dx = 2 \int_{0}^{1} (x- (\frac{20}{21}x^2 + \frac{1}{21}x)) dx \\
+&=2 \int_{0}^{1} (-\frac{20}{21}x^2 + \frac{20}{21}x) dx =  2 (-\frac{20}{63}x^3 + \frac{20}{42}x^2)\Bigg|_{0}^{1} \\
+& = 2(-\frac{20}{63} + \frac{20}{42}) =0.3
+\end{align*}
+Por lo tanto, el valor (0,3 , 0,1) significa que el 30\% de la población posee el 10\% de la riqueza total en la sociedad. Ver figura 28.
+\end{ejemplo}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width= 0.6 \textwidth,height=0.29
+\textheight]{Gini.pdf}
+\caption{$\frac{20}{21}x^2+\frac{1}{21}x$}\label{Figura23}
+\end{center}
+\end{figure}
+
+\begin{problema}
+La funci\'on de demanda para un producto es:
+\[
+   p = D(q) = 100- 0.05q,
+\]
+donde $p$  es el precio por unidad (en pesos) de $q$ unidades. La
+funci\'on de oferta es:
+\[
+    p = S(q) = 10 + 0.1q.
+\]
+Determinar el excedente de los consumidores y de los productores,
+bajo equilibrio de mercado.
+\end{problema}
+
+Supongamos que el mercado para un producto est\'a en equilibrio y que
+$(q_0,p_0)$ es el punto de equilibrio (el punto de intersecci\'on de
+las curvas de demanda y oferta para el producto). El excedente de
+los consumidores, y se abrevia EC, corresponde al \'area
+entre $q = 0$ y $q = q_0$, limitada por arriba por
+la curva de demanda y abajo por la recta $p =p_0$. Entonces,
+\[
+ \text{EC} = \int_{0}^{q_0} [ f(q) - p_0] \,dq,
+\]
+donde $f$ es la funci\'on  de demanda. El excedente de los
+productores, y se abrevia EP, corresponde al \'area, entre $q = 0$ y
+$q =q_0$. limitada por arriba por la recta $p = p_0$ y abajo por la
+curva de oferta. Entonces:
+\[
+ \text{EP} = \int_{0}^{q_0} [ p_0 - g(q)] \,dq,
+\]
+donde $g$ es la funci\'on de oferta.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on del problema 17:} Primero debemos encontrar el
+punto de equilibrio $(p_0,q_0)$ resolviendo el siguiente sistema de
+ecuaciones:
+\begin{align*}
+   p &=  100 - 0.05q \\
+   p &=  10 + 0.1q.
+\end{align*}
+Por el m\'etodo de igualaci\'on, tenemos que:
+\begin{align*}
+  10 + 0.1q &= 100- 0.05q,\\
+     0.15q &= 90, \\
+      q &= 600.
+\end{align*}
+Cuando $q=600$, $p = 10 + 0.1(600) = 70.$ As\'{\i}, $q_0 =600$ y
+$p_0=70$. El excedente de los consumidores es:
+\begin{align*}
+ \text{EC} &= \int_{0}^{q_0} [ f(q) - p_0] \,dq, \\
+           &= \int_{0}^{600} [100-0.05q - 70] \,dq, \\
+           &= \left(30q - 0.05 \,  \frac{q^{2}}{2} \right)
+           \Bigr|_{0}^{600} \\
+           &= 9000.
+\end{align*}
+ El excedente de los productores es:
+\begin{align*}
+ \text{EP} &= \int_{0}^{q_0} [ p_0 - g(q)] \,dq, \\
+           &= \int_{0}^{600} [70 - (10 + 0.1q)] \,dq, \\
+           &= \left(60q - 0.1 \,  \frac{q^{2}}{2} \right)
+           \Bigr|_{0}^{600} \\
+            &= 18000.
+\end{align*}
+Por tanto, el excedente de los consumidores es de \$9,000 y el de
+los pro\-ducto\-res es de \$18,000.
+
+\subsection{Integral impropia}
+
+La definici\'on de la integral definida $\int_{a}^{b} f(x) \, dx$
+requiere que el intervalo de integraci\'on $a \leq x \leq b$ este
+acotado, pero en ciertas aplicaciones  es \'util considerar
+integrales sobre intervalos no acotados como $x \geq a.$ A este tipo
+de integrales se les llaman \textbf{integrales impropias}.
+
+\begin{definicion}
+(\textbf{La integral impropia}). Si $f(x)$ es continua para $x \geq
+a$, entonces:
+\[
+   \int_{a}^{\infty} f(x) \, dx = \lim\limits_{N \to  \infty}
+   \int_{a}^{N} f(x) \,dx
+\]
+Si el l\'{\i}mite existe, se dice que la integral \textbf{converge}
+al valor del l\'{\i}mite. Si no existe el l\'{\i}mite, se dice que
+la integral impropia \textbf{diverge}.
+\end{definicion}
+
+
+\begin{ejemplo}
+Evalu\'e  o demuestre que converge la integral impropia:
+\[
+    \int_{1}^{\infty} \frac{1}{x^2} \, dx
+\]
+\textbf{Soluci\'on:} Primero calcule la integral de $1$ a $N$ y
+luego haga que $N$ tienda al infinito. Contin\'ue su trabajo de este
+modo:
+\[
+\int_{1}^{\infty} \frac{1}{x^2} \, dx  = \lim\limits_{N \to \infty}
+\int_{1}^{N} \frac{1}{x^2}\,dx = \lim\limits_{N \to  \infty} \left(-
+\frac{1}{x}\,  \Big|_{1}^{N} \right) = \lim\limits_{N \to  \infty}
+\left(-\frac{1}{N} + 1 \right)=1
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Evalu\'e o demuestre que diverge la integral impropia:
+\[
+    \int_{1}^{\infty} \frac{1}{\sqrt{x}} \, dx
+\]
+\textbf{Soluci\'on:} Primero calcule la integral de $1$ a $N$ y
+luego haga que $N$ tienda al infinito. Contin\'ue su trabajo de este
+modo:
+\[
+\int_{1}^{\infty} \frac{1}{\sqrt{x}} \, dx  = \lim\limits_{N \to \infty}
+\int_{1}^{N}  x^{-1/2} \,dx = \lim\limits_{N \to  \infty}  2x^{1/2}\,  \Big|_{1}^{N} \right)
+= \lim\limits_{N \to  \infty}
+\left(2 \sqrt{x} - 1)=\infty .
+\]
+Por lo tanto la integral impropia diverge.
+\end{ejemplo}
+
+\textbf{Un test de comparaci\'on para la convergencia}
+\medskip
+
+El siguiente test de convergencia de integrales suele ser \'util por
+que no requiere el c\'alculo de la integral.
+
+\begin{teorema}
+\label{convergencia} ( \textbf{Un test de comparaci\'on para la
+convergencia}) Su\-pon\-ga\-mos que $f$ y $g$ son continuas para
+toda $x \geq a$ y que
+\[
+    \mid  f(x)  \mid \leq  g(x)   \quad (\text{para toda} x \leq a)
+\]
+\end{teorema}
+
+Si $\int_{a}^{\infty} g(x) \, dx$ converge, entonces
+$\int_{a}^{\infty} f(x) \, dx $ y
+\[
+\left| \int_{a}^{\infty} f(x) \, dx \right| \leq \int_{a}^{\infty}
+g(x) \, dx
+\]
+
+\begin{ejemplo}
+Para todo $x \geq 1$, se tiene $0 \leq e^{-x^2} \leq e^{-x}$. Como
+$\int_{1}^{\infty} e^{-x} \, dx$ converge, por el Teorema
+(\ref{convergencia}), la integral $\int_{1}^{\infty} e^{-x^2} \, dx$
+tambi\'en converge.
+\end{ejemplo}
+
+\begin{ejemplo}
+En la teor\'{\i}a de crecimiento econ\'omico aparecen frecuentemente
+integrales de la forma
+\begin{equation}
+\label{convergencia1}
+   \int_{t_0}^{\infty} U(c(t)) e^{-\alpha t} \, dt
+\end{equation}
+En la expresi\'on, $c(t)$ designa el consumo en el momento $t$, $U$
+es la funci\'on de utilidad instant\'anea y $\alpha$ es una tasa
+positiva de descuento. Supongamos que existen n\'umeros $M$ y
+$\beta$, con $\beta \leq \alpha$, tales que
+\begin{equation}
+\label{convergencia2}
+     \mid U(c(t)) \mid  \leq M e^{\beta t}
+\end{equation}
+pata todo $t \geq t_0$ y para todo nivel posible de consumo $c(t)$ en el tiempo $t$. As\'{\i}, el valor absoluto de la utilidad de consumo crece a  una tasa menor  que la de descuento $\alpha$. Probar que, entonces (\ref{convergencia1})  converge. \\
+
+\vspace{.2cm}
+
+Soluci\'on: De (\ref{convergencia2}) obtenemos
+\[
+     \mid U(c(t)) e^{-\alpha t} \mid  \leq M e^{-(\alpha- \beta) t} \quad (\text{parea todo} t \geq t_0)
+\]
+Adem\'as,
+\[
+   \int_{t_0}^{T} M e^{(\alpha - \beta) t} \, dt = \bigg|_{t_0}^{T} \frac{-M}{\alpha - \beta} e^{(\alpha - \beta)t}
+   = \frac{M}{\alpha - \beta} \left[e^{-(\alpha -\beta)t_0} - e^{-(\alpha - \beta)T}  \right]
+\]
+
+Como $\alpha - \beta > 0$, la \'ultima expresi\'on tiende a $[ M /
+(\alpha - \beta)] e^{-(\alpha - \beta) t_0}$ cuando $T \to \infty$.
+Se deduce del Teorema (\ref{convergencia}) que
+(\ref{convergencia1}) converge.
+\end{ejemplo}
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{center}
+\textbf{TAREA 2: INTEGRAL DEFINIDA}
+\end{center}
+
+\vspace{.3cm}
+
+Trabajo individual
+
+\vspace{.2cm}
+
+\begin{enumerate}
+\item Trazar la gr\'afica y hallar el \'area de la regi\'on acotada por
+debajo de la gr\'afica de la funci\'on $f$ y por arriba del eje $x$,
+de $x = a$ a $x = b$, donde:
+\begin{enumerate}
+   \item[a)] $f(x) = 2x-x^{2}$ ;\, $a = 0, b = 2.$
+   \item[b)] $f(x) = 4-x^{2}$;\,  $a = -2, b= 2.$
+   \item[c)] $f(x) = x e^{-x^{2}}$;\, $a= 0, b = 3.$
+\end{enumerate}
+\item  Trazar la gr\'aficas de las funciones $f$ y $g$ y determine el \'area de la region encerrada
+entre estas gr\'aficas donde:
+\begin{enumerate}
+   \item[a)] $f(x) = 4- x^{2}$ y $g(x) = x^{2}$.
+   \item[b)] $f(x) = x+2$ y $g(x) = x^{2}$.
+   \item[c)] $f(x) = 5x -x^{2}$ y $g(x) = x $.
+\end{enumerate}
+\item C\'alcule el \'{\i}ndice de Gini para las siguientes curvas de Lorenz e interprete:
+\begin{enumerate}
+\item[a)] $L(x) = \frac{3}{5}x^2 + \frac{2}{5}x$.
+\item[b)] $L(x) = 0.8 x^2 + 0.2 x$.
+\end{enumerate}
+\item Encuentre el excedente de los consumidores y de los productores bajo
+equilibrio de mercado de las siguientes funciones de demanda y
+oferta
+\begin{enumerate}
+   \item[a)] $D(q)=16-q^{2}$ y $S(q)=4+q$.
+   \item[b)] $D(q)=14-q^{2}$ y $S(q)=2q^{2}+2$.
+\end{enumerate}
+\item Demuestre la convergencia o divergencia de las siguientes integrales:
+\begin{align*}
+  a)\int_{1}^{\infty} \frac{1}{x^3} dx  && b) \int_{1}^{\infty} x^{-3/2} dx && c) \int_{0}^{\infty} \lambda e^{-\lambda x} dx
+\end{align*}
+\end{enumerate}
+
+
+\newpage
+
+\setcounter{page}{1}
+
+\begin{thebibliography}{10}
+   \bibitem{T1}
+    Sydsaeter Knut, Peter J. Hammond, 2008. Matem\'aticas
+    para el An\'alisis Econ\'omico. Pearson Educaci\'on. 3a. edici\'on.
+   \bibitem{T2}
+    Darell A. Turkington, 2007. Mathematical Tools for Economics,
+    Blackwell Publishing.
+   \bibitem{T3}
+    Mike Rosser, 2003. Basic Mathematics for Economists,
+    Routledge. 2da. edici\'on.
+   \bibitem{T4}
+   Jean Soper, 2004. Mathematics for Economics and Business.
+   Blackwell. 2da. Edition
+   \bibitem{T5}
+   Gustavo Zorzoli, 2006. An\'alisis Matem\'atico utilizando
+   Mathematica. Omicron.
+\end{thebibliography}
+
+
+\end{document}

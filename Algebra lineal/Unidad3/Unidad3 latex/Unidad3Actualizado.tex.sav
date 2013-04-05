@@ -1,0 +1,1173 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{graphicx} % PDFLaTeX
+\DeclareGraphicsExtensions{.png,.pdf,.jpg}
+\usepackage{epsf}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{prop}[teorema]{Proposici\'on}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definici\'on}
+\newtheorem{problema}{Problema}
+\newtheorem{ejemplo}{Ejemplo}
+\spanishdecimal{.}
+\usepackage[latin1]{inputenc}
+
+\begin{document}
+
+\title{\'ALGEBRA LINEAL}
+\author{\textbf{ESCUELA SUPERIOR DE ECONOMIA}}
+\date{\large{M\'exico, D.F., 10 de marzo de 2010}}
+\def\contentsname{Contenido}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Espacios vectoriales}
+\subsection{Espacio y subespacio  vectorial}
+
+\begin{definicion}
+Sea $K$ un campo. Un espacio vectorial sobre $K,$ o tambi\'en
+llamado un $K$- espacio vectorial, consta de lo siguiente:
+\begin{enumerate}
+\item[1.] Un conjunto $V,$ cuyos elementos se llaman vectores.
+\item[2.] Una operaci\'on binaria en $V,$ llamada suma de vectores, denotada por $+$, y que cumple lo
+siguiente:
+\begin{enumerate}
+\item[a)] Para todos $x, y \in V,$ se cumple que $x + y = y + x$ (conmutatividad).
+\item[b)] Para todos $x,y$ y $z \in V,$ se cumple que $(x + y) + z =x + (y + z)$ (asociatividad).
+\item[c)] Existe un elemento en $V$ llamado cero y denotado por  0 tal que $0 + x = x$, pata todo $x \in V$ (existencia del neutro aditivo).
+\item[d)] Para todo $x \in V$ existe un elemento $-x$ tal que $x + (-x) = 0$ (existencia de elementos inversos).
+\end{enumerate}
+\item[3.] Una operaci\'on binaria en $V,$  llamada producto de vectores, denotada por $\cdot$, y que cumple lo
+siguiente:
+\begin{enumerate}
+ \item[a)] Para todo $x \in V$, se tiene que $1 \, x = x$, con $1 \in K.$
+ \item[b)] Para todo $x \in V$ y para todo $\lambda$ y $\mu \in k$, se tiene que $\lambda(\mu x) = (\lambda\mu) x$.
+ \item[c)] El producto por escalar es distributivo, es decir,
+ \begin{align*}
+(\lambda + \mu) x &=\lambda x + \mu x, \\
+\lambda(x + y) &= \lambda x + \lambda y,
+\end{align*}
+para todos $\lambda,\mu \in K$ y para todos $x, y \in
+V$
+\end{enumerate}
+\end{enumerate}
+
+\begin{definicion}
+Al conjunto $V$ con la suma y el producto por escalar se le llama \textbf{ espacio vectorial sobre $K$}.
+\end{definicion}
+
+\begin{ejemplo}
+La operaci\'on de suma y producto por escalar en $\Bbb{R}^{3}$ se formulan como:
+
+\begin{enumerate}
+  \item Dados $(x_1,x_2,x_3)$, $(y_1,y_2,y_3) \in \Bbb{R}^3$, se define:
+  \[
+     (x_1,x_2,x_3) + (y_1,y_2,y_3) = (x_1 + y_1,x_2 + y_2, x_3+y_3)
+   \]
+   \item Dados $(x_1,x_2,x_3) \in \Bbb{R}^3$ y $c \in \Bbb{R}$, se define:
+   \[
+    c\,\,  (x_1,x_2,x_3) = (cx_1,cx_2,cx_3)
+   \]
+\end{enumerate}
+
+Entonces $\Bbb{R}^3$ con la suma y producto definidos anteriormente
+es un espacio vectorial. Para esto verifiquemos que $\Bbb{R}^3$ con
+la operaci\'on $+$ cumple las siguientes propiedades
+\begin{enumerate}
+\item[a)] Para todos $x, y \in \Bbb{R}^3$, se cumple que $x + y = y + x$ (conmutatividad).
+ Sean $x=(x_1,x_2,x_3)$ y $y =(y_1,y_2,y_3)$, entonces
+ \[
+ x+y = (x_1 +y_1,x_2+ y_2, x_3 + y_3)= (y_1+x_1, y_2+x_2, y_3 + x_3)= y + x
+ \]
+\item[b)] Para todos $x,y,z \in \Bbb{R}^3$, se cumple que $(x + y) + z =x + (y + z)$ (asociatividad).
+Sean $x=(x_1,x_2,x_3),$  $y=(y_1,y_2,y_3),$ y $z=(z_1,z_2,z_3)$, entonces
+\begin{align*}
+(x + y) + z &=((x_1,x_2,x_3) + (y_1,y_2,y_3))+ (z_1,z_2,z_3) \\
+&=(x_1 +y_1,x_2+y_2,x_3 + y_3) +(z_1,z_2,z_3) \\ &=((x_1 +y_1) +
+z_1,(x_2+y_2) + z_2,(x_3 + y_3) + z_3)  \\ & = (x_1 + (y_1 +
+z_1),x_2+ (y_2 + z_2),x_3 + (y_3 + z_3)) \\ &= (x_1,x_2,x_3) +
+((y_1,y_2,y_3)+ (z_1,z_2,z_3)) \\ &= x + (y + z)
+\end{align*}
+\item[c)] Existe un elemento en $\Bbb{R}^3$ llamado cero y denotado por  0 tal que $0 + x = x$, pata todo $x \in \Bbb{R}^3$ (existencia del neutro aditivo).
+Sea $0 =(0,0,0)$ entonces si $x = (x_1,x_2,x_3)$ tenemos
+\[0 + x =(0,0,0) + (x_1,x_2,x_3) = (0 + x_1, 0 + x_2, 0 + x_3) =
+(x_1,x_2,x_3) =x
+\]
+\item[d)] Para todo $x \in \Bbb{R}^3$ existe un elemento $-x$ tal que $x + (-x) = 0$ (existencia de elementos inversos).
+Sea $x \in \Bbb{R}^3$, con $x =(x_1,x_2,x_3)$, definimos el inverso
+de $x$ por $-x=(-x_1,-x_2,-x_3)$, entonces tenemos
+\begin{align*}
+ x + (-x) &= (x_1,x_2,x_3) + (-x_1,-x_2,-x_3)\\
+  & = (x_1 + (-x_1), x_2 + (-x_2), x_3 +
+ (-x_3)) \\   &= (x_1 -x_1, x_2 -x_2, x_3-x_3) = (0,0,0) = 0
+\end{align*}
+\end{enumerate}
+Ahora veamos que $\Bbb{R}^3$ con la operaci\'on producto $\cdot$
+cumple
+\begin{enumerate}
+ \item[a)] Para todo $x \in \Bbb{R}^3$, se tiene que $1 \, x = x$, con $1 \in \Bbb{R}.$
+Si $x \in \Bbb{R}^3$,
+\[
+ 1 \cdot x = 1 \cdot (x_1,x_2,x_3) = (1 \cdot x_1, 1 \cdot x_2, 1 \cdot
+ x_3) = (x_1,x_2,x_3) = x
+\]
+
+ \item[b)] Para todo $x \in \Bbb{R}^3$ y para todo $\lambda$ y $\mu \in \Bbb{R}$, se tiene que $\lambda(\mu x) = (\lambda\mu) x$.
+ Sea $x \in \Bbb{R}^3$, con $x = (x_1,x_2,x_3)$, tenemos
+ \begin{align*}
+ \lambda(\mu x) &=\lambda(\mu (x_1,x_2,x_3)) = \lambda (\mu x_1,\mu
+x_2,\mu x_3)   = (\lambda(\mu x_1),\lambda (\mu x_2),\lambda (\mu
+x_3)) \\ & = ((\lambda\mu) x_1,(\lambda \mu) x_2,(\lambda \mu) x_3)
+ = (\lambda\mu) x
+ \end{align*}
+ \item[c)] El producto por escalar es distributivo, es decir,
+ \begin{align*}
+(\lambda + \mu) x &=\lambda x + \mu x, \\
+\lambda(x + y) &= \lambda x + \lambda y,
+ \end{align*}
+para todos $\lambda,\mu \in K$ y para todos $x, y \in V$.
+
+\vspace{.2cm}
+
+Sea $x \in \Bbb{R}^3$, con $x = (x_1,x_2,x_3)$, tenemos
+\begin{align*}
+ (\lambda + \mu) \cdot x & = (\lambda +\mu)\cdot (x_1,x_2,x_3) = ((\lambda +\mu) x_1,
+(\lambda +\mu) x_2,(\lambda +\mu) x_3)  \\
+&= (\lambda x_1 + \mu
+x_1,\lambda x_2 + \mu x_2,\lambda  x_3 + \mu x_3) \\
+& = (\lambda
+x_1,\lambda x_2,\lambda x_3) + (\mu x_1,\mu x_2,\mu x_3) =
+ \\ &= \lambda x + \mu x.
+ \end{align*}
+\begin{align*}
+ \lambda  \cdot ( x + y) &= \lambda \cdot ((x_1,x_2,x_3)+ (y_1,y_2,y_3)) = \lambda \cdot
+ (x_1 + y_1, x_2 + y_2, x_3 + y_3)  \\ &= (\lambda (x_1 + y_1),\lambda (x_2 +  y_2),\lambda (x_3 + y_3)) \\
+ & = (\lambda x_1,\lambda x_2,\lambda x_3) + (\lambda
+y_1,\lambda y_2,\lambda y_3) =
+ \\ &= \lambda x + \lambda y.
+ \end{align*}
+
+para todos $\lambda,\mu \in K$ y para todos $x, y \in V$
+\end{enumerate}
+\end{ejemplo}
+
+
+\begin{definicion}
+Sea $W$ un subconjunto no vac\'{\i}o de $V,$ se dice que $W$
+es un\textbf{ subespacio vectorial} de $V,$ si satisface las
+siguientes propiedades:
+
+\begin{enumerate}
+ \item Para todos $x$ y $y \in W,$ se tiene que $x+y \in W,$ es decir, $W$ es cerrado bajo la suma.
+ \item Para todo $x \in W$ y para todo $\lambda \in \Bbb{R}$, $\lambda
+  x \in W,$ es decir $W$ es cerrado bajo producto por escalar.
+\end{enumerate}
+\end{definicion}
+
+\begin{ejemplo}
+Sea
+\[
+  W = \{(x_1,x_2,x_3) \in \Bbb{R}^3 \mid x_3 = 0  \}
+\]
+es decir, $x \in W$, entonces $x =(x_1,x_2, 0)$. Entonces $W$ es un
+subespacio vectorial de $\Bbb{R}^3.$ Para esto verifiquemos que si
+$x, y \in W,$ entonces $x + y \in W$. Como $x,y \in W,$ $x=(x_1,x_2, 0)$ y $y =(y_1,y_2, 0 )$, luego $x + y = (x_1+y_1,x_2 +
+y_2, 0) \in W $. Ahora veamos que si $x \in W$ y $\lambda \in
+\Bbb{R}$, $\lambda x \in W$, lo cual se sigue de que si $x =
+(x_1,x_2, 0)$, entonces $\lambda x = \lambda(x_1,x_2, 0) =
+(\lambda x_1,\lambda x_2, 0) \in W$.
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea $A$ una matriz 3 por 2. Entonces
+\begin{enumerate}
+\item[a)] el espacio columna de $A$, el cual es el conjunto de todas las combinaciones lineales de las
+columnas de $A$ y se le denota por $C(A)$ es un subespacio de
+$\Bbb{R}^3$
+\item[b)] el espacio nulo de $A$, que consta de todos los vectores $x$ tales que $Ax= 0$
+y  se le denota por $N(A)$ es un subespacio de $\Bbb{R}^2$
+\item[c)] el espacio rengl\'on de $A$, generado por los renglones de
+$A$, el cual es el espacio columna de $A^T$ y se le denota por
+$C(A^T)$ es un subespacio de $\Bbb{R}^2$
+\item[d)] el espacio nulo izquierdo de $A$ el cual es espacio nulo
+de $A^T$,  denotado por $N(A^T)$, es un subespacio de $\Bbb{R}^3$.
+\end{enumerate}
+\end{ejemplo}
+
+
+\newpage
+\textbf{TAREA: ESPACIOS Y SUBESPACIOS VECTORIALES}
+
+\vspace{.2cm}
+
+
+\begin{enumerate}
+\item Demostrar que el conjunto $V$ de matrices $3 \times 3$, es un espacio
+vectorial sobre  $\Bbb{R}$ con las operaciones suma  y producto por
+escalar usuales, es decir:
+
+Si $A = [a_{ij}], B = [b_{ij}]$ matrices 3 por 3. La operación
+\textbf{ suma} de $A$ con $B$ es:
+
+
+\begin{equation*}
+ \left[
+  \begin{matrix}
+
+
+     a_{11}   & a_{12}   & a_{13} \\
+     a_{21}   & a_{22}  & a_{23} \\
+      a_{31}  & a_{32}  & a_{33}
+  \end{matrix}
+  \right] +
+ \left[
+  \begin{matrix}
+     b_{11}   & b_{12}   & b_{13} \\
+     b_{21}   & b_{22}  & b_{23} \\
+      b_{31}  & b_{32}  & b_{33}
+  \end{matrix}
+  \right] =
+  \left[
+  \begin{matrix}
+     a_{11} + b_{11}  & a_{12} + b_{12}  & a_{13} + b_{13} \\
+     a_{21} + b_{21}   & a_{22} + b_{22}  & a_{23} + b_{23} \\
+      a_{31} + b_{31}  & a_{32} + b_{32}  & a_{33} + b_{33}
+  \end{matrix}
+\right]
+\end{equation*}
+
+y producto de una matriz por un escalar:
+\[ \lambda  \cdot A = \lambda
+ \left[
+  \begin{matrix}
+     a_{11}   & a_{12}   & a_{13} \\
+     a_{21}   & a_{22}  & a_{23} \\
+      a_{31}  & a_{32}  & a_{33}
+  \end{matrix}
+  \right]
+  =
+\left[
+  \begin{matrix}
+    \lambda a_{11}   &\lambda  a_{12}   & \lambda a_{13} \\
+     \lambda a_{21}   &\lambda a_{22}  & \lambda a_{23} \\
+    \lambda  a_{31}  &\lambda a_{32}  &\lambda a_{33}
+  \end{matrix}
+  \right]
+\]
+
+\item Una matriz (cuadrada) 3 \times 3 \  $\left[a_{ij} \right]$ sobre $\Bbb{R}$  es sim\'etrica si
+$a_{ij} = a_{ji}$ para todo $i,j$. Demostrar que las matrices sim\'etricas forman un subespacio del espacio de las
+matrices $3 \times 3$.
+
+\item Sea $V$ el conjunto de todas las matrices $2 \times 2$ sobre $\Bbb{R}$. Demostrar que $V$ es un espacio vectorial sobre $\Bbb{R}$ con las operaciones usuales de suma y producto por escalar usuales. Sea $W$ el subconjunto de $V$ que consta de las matrices de la forma
+\[
+\left[
+  \begin{matrix}
+   a_1    & a_2 \\
+   a_3  &  0
+  \end{matrix}
+ \right]
+ \]
+con $a_1,a_2,a_3 \in \Bbb{R}$. Demostrar que $W$  es un subespacio
+vectorial de $V$.
+\item  Demostrar que los siguientes conjuntos de vectores $\alpha = (x_1,x_2,x_3) \in \Bbb{R}^3$ son subespacios vectoriales de $\Bbb{R}^3$
+\begin{enumerate}
+\item Todos los $\alpha$, tales que $x_1 \geq 0$.
+\item Todos los $\alpha$, tales que $x_1 + 3x_2 = x_3$.
+\end{enumerate}
+\item
+
+\end{enumerate}
+
+
+
+\newpage
+
+\subsection{Combinacion lineal de vectores, dependencia e independencia lineal}
+
+\begin{definicion}
+Un vector $\beta \in V$, se dice \textbf{combinaci\'on lineal} de los vectores $\alpha_1,...,\alpha_n \in
+ V$,  si existen escalares $a_1,...,a_n \in K$, tales que:
+\[
+  \beta = \sum_{i=1}^{n} a_i \alpha_i.
+\]
+\end{definicion}
+
+\begin{ejemplo}
+El vector $ \left(
+\begin{matrix}
+6  \\
+7
+\end{matrix}
+\right)$ en $\Bbb{R}^2$ es combinaci\'on lineal de los vectores
+\[
+\left(
+\begin{matrix}
+1  \\
+0
+\end{matrix}
+\right) \quad \text{y} \quad \left(
+\begin{matrix}
+0  \\
+1
+\end{matrix}
+\right)
+\]
+ya que:
+
+\[ 6 \cdot
+\left(
+\begin{matrix}
+1  \\
+0
+\end{matrix}
+\right) + 7 \cdot  \left(
+\begin{matrix}
+0  \\
+1
+\end{matrix}
+\right) = \left(
+\begin{matrix}
+6  \\
+7
+\end{matrix}
+\right)
+\]
+\end{ejemplo}
+
+\begin{definicion}
+Sea $S$ es cualquier colecci\'on de vectores de $V$. \textbf{El sub\-es\-pa\-cio generado} por $S$ se define como
+\[
+  L(S) = \{ \sum_{i=1}^{k} a_i \alpha_i \mid a_i \in K, \alpha_i \in S \ \text{y}   \  k=1,2,3,... \}
+\]
+\end{definicion}
+
+Cuando $L(S) = V$, decimos que $S$ genera a $V$
+
+
+\begin{definicion}
+Un subconjunto $S$ de $V$ se dice $\textbf{linealmente dependiente}$, si existen vectores distintos
+$\alpha_1,...,\alpha_n$ de $S$ y escalares $a_1,...,a_n \in K$, no todos cero, tales que:
+\[
+     a_1 \alpha_1 + \cdots + a_n \alpha_n = 0.
+\]
+Un conjunto que no es linealmente dependiente se dice \textbf{linealmente independiente}. Si el conjunto $S$ solo tiene un n\'umero finito de vectores $\alpha_1,...,\alpha_n$, se dice a veces que los $\alpha_1,...,\alpha_n$ son dependientes (o independientes), en vez de decir que $S$ es dependiente (o independiente).
+\end{definicion}
+
+\begin{ejemplo}
+Los siguientes vectores en $\Bbb{R}^2$
+\[
+\left(
+\begin{matrix}
+2  \\
+3
+\end{matrix}
+\right) \quad \text{y} \quad \left(
+\begin{matrix}
+-1  \\
+5
+\end{matrix}
+\right)
+\]
+son linealmente independientes.
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on}: Sea
+\[ a_1 \cdot
+\left(
+\begin{matrix}
+2  \\
+3
+\end{matrix}
+\right)  +  a_2 \cdot \left(
+\begin{matrix}
+-1  \\
+5
+\end{matrix}
+\right)
+=
+\left(
+\begin{matrix}
+0  \\
+0
+\end{matrix}
+\right)
+
+de lo anterior obtenemos el sistema de ecuaciones:
+\begin{align*}
+ 2a_1 - a_2 &= 0 \\
+ 3a_1 + 5a_2 &= 0
+\end{align*}
+\]
+el cual tiene como soluci\'on: $a_1  = 0$ y $a_2 = 0$.
+\end{ejemplo}
+
+
+\begin{ejemplo}
+Los vectores
+
+\[
+\left(
+\begin{matrix}
+2  \\
+3
+\end{matrix}
+\right) \quad \text{y} \quad \left(
+\begin{matrix}
+4  \\
+6
+\end{matrix}
+\right)
+\]
+son linealmente dependientes. Esto se sigue de
+\[ -2 \cdot
+\left(
+\begin{matrix}
+2  \\
+3
+\end{matrix}
+\right) + \left(
+\begin{matrix}
+4  \\
+6
+\end{matrix}
+\right) = \left(
+\begin{matrix}
+0  \\
+0
+\end{matrix}
+\right)
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Los vectores $(1,2,3)$ y $(1,1,0)$ son linealmente independientes en
+$\Bbb{R}^3$.
+
+\vspace{.2cm} Sea:
+\[
+a_1 \cdot (1,2,3) + a_2 \cdot  (1,1,0) = ( 0,0,0)
+\]
+
+Entonces
+\begin{align*}
+ a_1  + a_2  &= 0 \\
+ 2a_1 + a_2  &= 0 \\
+ 3a_1 &= 0
+\end{align*}
+Es f\'acil ver que el sistema de ecuaciones anterior tiene como
+\'unica soluci\'on $a_1 = a_2 =  0$.
+\end{ejemplo}
+
+\begin{ejemplo} Demostrar
+\medskip
+\begin{enumerate}
+\item[(a)] Sí
+$\alpha_1 = \left( \begin{matrix} 3 \\  1 \end{matrix}
+\right)$ y $\alpha_2 =  \left(\begin{matrix} 6 \\  2 \end{matrix}
+\right) $ son linealmente dependientes.
+\item[(b)] Sí
+$\alpha_1 = \left( \begin{matrix} 3 \\  1 \end{matrix}
+\right)$ y $\alpha_2 =  \left(\begin{matrix} 1 \\  2 \end{matrix}
+\right) $ son linealmente independientes.
+\end{enumerate}
+\end{ejemplo}
+
+\vspace{.2cm}
+
+\textbf{Soluci\'on:}
+
+\vspace{.2cm}
+
+\begin{enumerate}
+\item[(a)] Se ve que $\alpha_2 =2 \alpha_1$, luego $2\alpha_1 -
+  \alpha_2 =0$. Tomando $a_1 = 2$ y $a_2 = -1$ se obtiene $a_1
+  \alpha_1 + a_2 \alpha_2 = 0$, lo cual prueba que $a_1$ y $a_2$ son
+  linealmente dependientes.
+\item[(b)] La ecuaci\'on $a_1 \alpha_1 + a_2 \alpha_2 = 0$, da lugar
+  al sistema
+\begin{align*}
+3a_1 + a_2 & = 0 \\
+ a_1 + 2a_2 &= 0
+\end{align*}
+que tiene como soluci\'on \'unica $a_1 = a_2 = 0$. Por tanto
+$\alpha_1$ y $\alpha_2$ son linealmente independientes.
+\end{enumerate}
+
+
+\subsection{Base y dimensi\'on}
+\begin{definicion}
+Una \textbf{base} de $\Bbb{R}^n$ es un conjunto de vectores linealmente independientes de $\Bbb{R}^n$ y que genera el
+espacio $\Bbb{R}^n$.
+\end{definicion}
+
+\begin{teorema}
+Sea $\{\alpha_1,...,\alpha_n\}$ un subconjunto de $\Bbb{R}^n$, entonces las siguientes condiciones son equivalentes:
+\begin{enumerate}
+  \item El conjunto $\{\alpha_1,...,\alpha_n\}$ es una base.
+  \item El conjunto $\{\alpha_1,...,\alpha_n\}$ es linealmente independiente.
+  \item El conjunto $\{\alpha_1,...,\alpha_n\}$ genera a $\Bbb{R}^n$.
+\end{enumerate}
+\end{teorema}
+
+
+\begin{ejemplo}
+
+Los vectores
+
+\[
+\left(
+\begin{matrix}
+1 \\
+1
+\end{matrix}
+\right) \quad \text{y} \quad \left(
+\begin{matrix}
+-1  \\
+1
+\end{matrix}
+\right)
+\]
+son una base de $\Bbb{R}^2$. Si
+
+
+\[ a_1 \cdot
+\left(
+\begin{matrix}
+1 \\
+1
+\end{matrix}
+\right) +  a_2 \cdot \left(
+\begin{matrix}
+-1  \\
+1
+\end{matrix}
+\right)
+=
+\left(
+\begin{matrix}
+0 \\
+0
+\end{matrix}
+\right)
+\]
+Entonces de la combinaci\'on lineal anterior, obtenemos el sistema
+de ecuaciones:
+\begin{align*}
+a_1  - a_2 &= 0 \\
+a_1 + a_2 &= 0
+\end{align*}
+El cual tiene como \'unica soluci\'on: $a_1 = a_2  = 0$.  Ahora, sea
+$(x,y) \in \Bbb{R}^2$, veamos que existen $a_1,a_2 \in \Bbb{R}$
+tales que $a_1 \cdot (1,1) + a_2 \cdot (-1,1) = (x,y)$. Es f\'acil
+ver que $a_1 = \frac{x + y}{2}$ y $a_2 = \frac{y - x}{2}$. De lo
+anterior se sigue que los vectores $(1, 1)$ y $(-1, 1)$ son
+linealmente independientes y que generan a $\Bbb{R}^2$, por lo tanto
+son una base de $\Bbb{R}^2$.
+\end{ejemplo}
+
+\begin{definicion}
+Dos bases cualesquiera de un espacio vectorial $V$  contiene el
+mismo n\'umero de vectores. Este n\'umero que es compartido por
+todas las bases y expresa el n\'umero de grados de libertad del
+espacio, es la dimensi\'on de $V$.
+\end{definicion}
+
+\begin{ejemplo}
+En $\Bbb{R}^n$, sean $e_i = (0,...,0,1,0,...,0)$ donde el 1 aparece
+en el $i$-\'esimo lugar y todas las otras coordenadas son cero. El
+conjunto $\{e_i\}_{i = 1}^{n}$ es una base de $\Bbb{R}^n$ llamada la
+\textbf{base can\'onica}, por lo tanto la dimensi\'on del espacio
+$\Bbb{R}^n $ es $n$.
+\end{ejemplo}
+\begin{ejemplo}
+Si $A$ es una matriz  3 por 2 con rango $r$, entonces:
+\begin{enumerate}
+\item[a)] La dimensi\'on del espacio columna $C(A)$ es el rango $r$.
+\item[b)] La dimensi\'on del espacio nulo de $A$ es $2-r$.
+\item[c)] La dimensi\'on del espacio rengl\'on $C(A^T)$ es tambi\'en
+$r$.
+\item[d)] La dimensi\'on del espacio nulo izquierdo $N(A^T) =3- r.$
+\end{enumerate}
+\end{ejemplo}
+
+
+\newpage
+\textbf{TAREA: BASES DE ESPACIOS VECTORIALES}
+
+\vspace{.2cm}
+
+\begin{enumerate}
+\item Decida la dependencia o independencia en $\Bbb{R}^2$ y  $\Bbb{R}^3$ de
+\begin{enumerate}
+\item[a)] los vectores
+    $(1,1)$ y $(1,-2)$.
+\item[b)] los vectores $(1,-3,2),(2,1,-3)$ y $(-3,2,1)$.
+\item[c)] los vectores
+    $(1,3,2),(2,1,3)$ y $(3,2,1)$.
+\end{enumerate}
+
+\item Demuestre que el siguiente subconjunto de las matrices $2 \times
+2$
+\[
+\left\{
+ \left(
+\begin{matrix}
+0 & 1 \\
+0 &1
+\end{matrix}
+\right),
+\left(
+\begin{matrix}
+0 & 1 \\
+0 & 1
+\end{matrix}
+\right) \right\}
+\]
+
+es linealmente independiente
+
+\item Demostrar que los siguientes vectores forman una base para $\Bbb{R}^2$.
+\begin{enumerate}
+\item[a)]
+\[
+\alpha_1=(1,1), \quad \alpha_2=(1,-1)
+\]
+\item[b)]
+\[
+\alpha_1=(-1,1), \quad \alpha_2=(-1,0)
+\]
+\end{enumerate}
+\item Demostrar que los siguientes vectores forman una base para $\Bbb{R}^3$.
+\item[a)]
+\[
+\alpha_1=(1,0,1), \quad \alpha_2=(1,1,0), \quad \alpha_3=(0,1,1)
+\]
+\item[b)]
+\[
+\alpha_1=(1,0,-1), \quad \alpha_2=(1,2,1), \quad \alpha_3=(0,3,-2)
+\]
+\item[c)]
+\[
+\alpha_1=(1,0,-1), \quad \alpha_2=(1,1,1), \quad \alpha_3=(1,0,0)
+\]
+\end{enumerate}
+\item Encuentre una base para cada uno de los siguientes subespacios
+de $\Bbb{R}^4$
+\begin{enumerate}
+\item[a)] Todos los vectores cuyas componentes son iguales.
+\item[b)] Todos los vectores tales que la suma de sus componentes es
+cero.
+\end{enumerate}
+\item Encuentre una base para cada uno de los siguientes subespacios
+de matrices 3 por 3:
+\begin{enumerate}
+\item[a)] Todas las matrices diagonales.
+\item[b)] Todas las matrices sim\'etricas.
+\item[c)] Todas las matrices sesgadas sim\'etricas (A^T = -A).
+\end{enumerate}
+\item Encontrar la dimensión y una base para la siguiente matriz.\\
+\[
+\left(
+\begin{matrix}
+2& 1& 2\\
+0& 3& -1\\
+4& 1& 1
+\end{matrix}
+\right)
+\]
+\item Encontrar la dimensión y una base para la siguiente matriz.\\
+\[
+\left(
+\begin{matrix}
+1& 1& 0& 0& -1\\
+2& 2& 0& 1& 0\\
+-1& 0& -1& 4& 2
+\end{matrix}
+\right)
+\]
+\item Sea $V$ el espacio vectorial de las matrices $2 \times 2$
+sobre el campo $\Bbb{R}$. Demuestre que $V$ tiene dimensi\'on 4
+encontrando una base de $V$ que tenga cuatro elementos.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\subsection{Transformaci\'on lineal}
+
+\begin{definicion}
+Sean $V$ y $W$ dos espacios vectoriales. Una transformaci\'on lineal
+es una funci\'on  $T: V \to W$ que satisface las siguientes
+propiedades:
+\begin{enumerate}
+\item $ T(\alpha + \beta) = T(\alpha) + T (\beta)$, para todos
+$\alpha, \beta \in V.$
+\item $T(r \alpha) = r T(\alpha)$, para todo escalar $r \in \Bbb{R}$
+ y para todo  $\alpha \in V .$
+\end{enumerate}
+Un operador lineal sobre $V$ es una transformaci\'on lineal de $V$
+en si mismo.
+\end{definicion}
+\begin{ejemplo}
+La funci\'on $0 : V \to W$ definida por $0(v) = 0$ que mapea todos
+los elementos del espacio vectorial $V$ al elemento cero del espacio
+$W,$ es claramente una funci\'on lineal, llamada la transformaci\'on
+cero.
+\end{ejemplo}
+\begin{ejemplo}
+La funci\'on $1V : V \to V$ dada por $1V (v) = v$ es un operador
+lineal denominado operador identidad sobre $V$.
+\end{ejemplo}
+
+
+
+\begin{ejemplo}
+Si $V = \Bbb{R}^n$ y $W  = \Bbb{R}^m$ las trasformaciones lineales
+entre $V$ y $W$ corresponden a las matrices $A$ de $m \times n.$ En
+particular, si
+\[
+A =
+\left(
+\begin{matrix}
+1 & 1 & -1 \\
+1 & -1 & 1
+\end{matrix}
+\right)
+ entonces $T_A : \Bbb{R}^3  \to \Bbb{R}^2$ dada por $T_A (x) = Ax$ es
+ lineal, dada por:
+\[
+ T_A
+ \left(
+\begin{matrix}
+x \\
+y \\
+z
+\end{matrix}
+\right) =
+\left(
+\begin{matrix}
+x+y-z \\
+x-y+z
+\end{matrix}
+\right)
+\end{ejemplo}
+
+
+
+\begin{teorema}
+Si $T : V \to W$ es una tranformaci\'on lineal, y si
+$\alpha_1,...,\alpha_n$  son vectores de $V,$ entonces dados los
+escalares $a_1,a_2,...,a_n,$
+\[
+   T(a_1 \alpha_1 + \cdots + a_n \alpha_n) = a_1 T(\alpha_1) + \cdots
+   + a_n T(\alpha_n).
+\]
+\end{teorema}
+
+\begin{teorema}
+Sea $T : V \to W$ una tranformaci\'on lineal, si $\{\alpha_1,...,
+\alpha_n \}$ es una base para $V,$  y si $T(\alpha_i) = \beta_i$, $i=
+1, 2,...n$ entonces para cualquier vector $\alpha \in V,$ $T(\alpha)$
+est\'a determinada y $T(\alpha) = a_1 \beta_1 + \cdots +  a_n
+\beta_n$, donde $a_1, a_2,...,a_n$ son escalares tales que $\alpha =
+a_1 \alpha_1 + \cdots + a_n \alpha_n$.
+\end{teorema}
+
+\begin{teorema}
+\label{T}
+  Sea $V$ un espacio vectorial de dimensi\'on finita $n$, sea
+  $\alpha_1,...,\alpha_n$ una base ordenada de $V$. Sean $W$  un
+  espacio vectorial y $\beta_1,...,\beta_n$ vectores cualesquiera en
+  $W.$ Entonces existe una \'unica tranformaci\'on lineal $T : V \to
+  W$ tal que
+\[
+  T(\alpha_j) = \beta_j. \quad  j=1,...,n.
+\]
+\end{teorema}
+
+\begin{ejemplo}
+Consideremos la base de $\Bbb{R}^2$ formada por lo vectores $\alpha_1 = (1,2), \alpha_2= (3,4)$. Por el Teorema \ref{T}
+existe una transformaci\'on lineal $T$ de $\Bbb{R}^2$  en $\Bbb{R}^2$ tal que
+\begin{align*}
+T(\alpha_1) &= (3,2,1) \\
+T(\alpha_2) &= (6,5,4)
+\end{align*}
+Encontremos $T(1,0)$.  Si $(1,0) = c_1(1,2) + c_2(3,4)$, con $c_1,c_2 \in \Bbb{R}$, entonces $c_1= -2$ y $c_2= 1$. Por lo tanto
+\begin{align*}
+T((1,0) ) &= T(c_1(1,2) + c_2(3,4)) \\ &= c_1 T(1,2) + c_2 T(3,4) \\ & =  -2(3,2,1) + (6,5,4) \\ & = (0,1,2).
+\end{align*}
+\end{ejemplo}
+
+
+\subsection{Nucleo e imagen}
+
+\begin{definicion}
+Sea   $T : V  \to W$ una tranformaci\'on lineal. Definimos el
+n\'ucleo de $T$ como el conjunto $N_T = \{\, \alpha \in V \mid T
+(\alpha) = 0 \}$. La imagen de $T$, denotada $R_T$, se define como
+$R_T = \{\beta \in W   \mid \text{existe un} \,  \alpha \in V
+\text{y
+  satisface} \,  T(\alpha) = \beta \}$.
+\end{definicion}
+
+\begin{ejemplo}
+Sea $T: \Bbb{R}^3 \to \Bbb{R}^2$ dada por $T(x,y,z) = (-x + 3y + z, y + 2z)$. Entonces
+$(x,y,z) \in N_T$ si y solo si
+\begin{align*}
+ -x + 3y + z &= 0 \\
+ y + 2z &= 0
+\end{align*}
+La forma escalonada reducida de la matriz de los coeficientes de este sistema es
+\[
+\left(
+\begin{matrix}
+1 & 0 & 5 \\
+0 & 1 & 2
+\end{matrix}
+\right).
+\]
+Por tanto el n\'ucleo de $T$, $N_T = \{(-5z,-2z, z) | z \in \Bbb{R}\}$.
+\end{ejemplo}
+
+El siguiente teorema  es uno de los m\'as importantes en la teor\'ia
+de espacios vectoriales  de dimensi\'on finita.
+
+\begin{teorema}
+Sean $V$ y $W$ espacios vectoriales de dimensi\'on finita,
+$T : V \to W$ una tranformaci\'on lineal, entonces la siguiente
+ecuaci\'on se cumple:
+\[
+   dim(V) =dim (N_T) + dim(R_T)
+\]
+\end{teorema}
+
+\subsection{Matriz de una tranformaci\'on lineal}
+Sabemos que una tranformaci\'on lineal  queda completamente
+determinada en una base. Si $T: V \to W$  es una tranformaci\'on
+lineal, $\{ \alpha_1,..., \alpha_n\}$ y $\{ \beta_1,...,\beta_m \}$
+son bases de $V$ y $W$ respectivamente, entonces para cada $j =
+1,...,n$, $T(\alpha_j)$ se representa como combinaci\'on linel de
+los elementos de la base $ \{ \beta_1,...,\beta_m \}$, es decir.
+existen escalares $a_{1j},...,a_{mj}$, \'unicos, tales que:
+\[
+    T(\alpha_j) = \sum_{i = 1}^{m} a_{ij} \beta_i
+\]
+
+Los escalares $a_{ij}$ solamente dependen de la tranformaci\'on
+lineal y de las bases elegidas, con ellos formamos la matriz:
+
+\begin{equation*}
+A  =
+ \left[
+  \begin{matrix}
+     a_{11}   & a_{12}  & \cdots   & a_{1n} \\
+     a_{21}   & a_{22}  & \cdots   & a_{2n} \\
+    \vdots    & \vdots  & \cdots   & \vdots \\
+      a_{m1}  & a_{m2}  & \cdots  & a_{mn}
+  \end{matrix}
+  \right]
+\end{equation*}
+
+
+\begin{ejemplo}
+Sea $T: \Bbb{R}^2 \to \Bbb{R}^2$ dada por $T(x,y) = (x,0)$. Entonces la matriz asociada a
+$T$ respecto de las bases can\'onicas es
+\[ A =
+\left[
+  \begin{matrix}
+   1    & 0     \\
+   0  &  0
+  \end{matrix}
+  \right]
+\]
+\end{ejemplo}
+
+
+
+\begin{ejemplo}
+Sea $T: \Bbb{R}^2 \to \Bbb{R}^2$ dada por $T(x,y) = (2x + y, x - y)$. Entonces la matriz asociada a
+$T$ respecto de las bases can\'onicas es
+\[ A =
+\left[
+  \begin{matrix}
+   2    & 1     \\
+   1  &  -1
+  \end{matrix}
+  \right]
+\]
+\end{ejemplo}
+
+
+\subsection{Cambio de base}
+
+
+\begin{teorema}
+Sean $V$ un espacio vectorial de dimensi\'on $n$ sobre el cuerpo $F$, y $W$ un espacio vectorial de dimensi\'on $n$ sobre
+$F$. Sean $B$ una base ordenada de $V$ y $B'$ una base ordenada de $W$. Para cada transformaci\'on lineal $T$ de $V$ en $W$, existe una matriz $m \times n$, $A$, cuyos elementos pertenecen a $F$, tal que
+\[
+ [T \alpha]_{B'} = A [\alpha]_{B}
+\]
+Para todo vector $\alpha \in V.$
+ \end{teorema}
+
+
+
+
+\begin{definicion}
+La matriz $A$ se llama \textbf{  la matriz asociada a la
+trans\-for\-ma\-ci\'on $T$ respecto a las bases $\{ \alpha_1,...,\alpha_n \}$
+y  $\{\beta_1,...,\beta_n \}$}.
+\end{definicion}
+
+
+\begin{ejemplo}
+Sea $B$ la base de $\Bbb{R}^2$ formada por lo vectores $\alpha_1 = (1,1)$ y $\alpha_2 = (3,-2)$. Por el Teorema \ref{T}, existe
+una \'unica transformaci\'on  lineal $T: \Bbb{R}^2 \to \Bbb{R}^2$ tal que $T(\alpha_1) = (4,5)$ y $T(\alpha_2) =(6, -1)$. Encontremos la matriz $A$ asociada a $T$ respecto a la base can\'onica de $\Bbb{R}^2$. Para determinar $A$, debemos determinar
+$T(e_1) =(a,b)$ y $T(e_2) = (c,d)$. De las ecuaciones
+\begin{align*}
+T(1,1) &= T(e_1) + T(e_2) \ \text{y} \\
+T(3,-2) &=  3 T(e_1) - 2T(e_2)
+\end{align*}
+se sigue que
+\begin{align*}
+(4,5) &= (a + c, b + d) \\
+(6,-1) &= (3a- 2c, 3b - 2d)
+\end{align*}
+de donde se tiene el siguiente sistema de ecuaciones:
+\begin{align*}
+a+ c &=  4 \\
+b+d &= 5 \\
+3a -2c &= 6 \\
+3b - 2d &= -1
+\end{align*}
+de cuya soluci\'on se sigue que  $T(e_1) = \left(\frac{14}{5}, \frac{9}{5} \right)$ y
+$T(e_2) = \left(\frac{6}{5}, \frac{16}{5} \right)$, por lo tanto la matriz asociada a $T$ respecto a la
+base can\'onica es:
+
+\[ A =
+\left[
+  \begin{matrix}
+   \frac{14}{5}    & \frac{6}{5}     \\
+   \frac{9}{5}  &  \frac{16}{5}
+  \end{matrix}
+  \right]
+\]
+
+Por otro lado, la expresi\'on que define a $T(x,y)$ se obtiene del siguiente producto de matrices:
+\[
+AX = \left[
+  \begin{matrix}
+   \frac{14}{5}    & \frac{6}{5}     \\
+   \frac{9}{5}  &  \frac{16}{5}
+  \end{matrix}
+  \right]
+  \left[
+  \begin{matrix}
+   x\\
+   y
+  \end{matrix}
+  \right]
+  =
+  \left[
+  \begin{matrix}
+   \frac{14}{5}x + \frac{6}{5}y     \\
+   \frac{9}{5} x +  \frac{16}{5}y
+  \end{matrix}
+  \right]
+\]
+Por lo tanto $T(x,y) = (\frac{14}{5}x + \frac{6}{5}y, \frac{9}{5} x +  \frac{16}{5}y )$.
+\end{ejemplo}
+
+\begin{teorema}
+(Cambio de base). Sea $T: V \to W$ una transformaci\'on lineal. Supongamos que $A$ es la matriz asociada a $T$ respecto a bases dadas $\{\alpha_1,...,\alpha_n \}$ en $V$ y $\{\beta_1,...,\beta_n \}$  en $W$. Si las bases anteriores se cambian a nuevas bases $\{ \alpha_1', \alpha_2',...,\alpha_n' \}$ y $\{\beta_1',...,\beta_n' \}$, con matrices de cambio de base $P$ y $Q$ respectivamente y $B$ es la matriz asociada a $T$ en estas nuevas bases, entonces se tiene:
+\[
+ B = Q^{-1} A P.
+\]
+\end{teorema}
+\begin{corolario}
+
+Si $T: V \to V$ es una transformaci\'on lineal, $\alpha_i = \beta_i$ y $\alpha_i' = \beta_i'$ para todo $i = 1,...,n.$ Entonces la matriz asociada a $T$ respecto a la nueva base es $P^{-1}A P$, $P$ la matriz de cambio de base.
+\end{corolario}
+\newpage
+
+
+\begin{ejemplo}
+Sea $T: \Bbb{R}^3 \to \Bbb{R}^3$ dada por $T(x+ y - z, 2x - y + 3z, x- z)$. Para encontrar la matriz asociada a $T$ respecto a la base $\{(1,2,0), (1,-1,0),(1,1,1) \}$, primero encontramos la matriz asociada a $T$ respecto a la base can\'onica, la cual se obtiene evaluando a $T$ en los vectores can\'onicos. Tenemos que $T(1,0,0) =(1,2,1)$, $T(0,1,0) = (1,-1-0)$ y $T(0,0,1)=(-1,3,-1)$, por lo que la matriz asociada a $T$ respecto de la base can\'onica es:
+
+\[
+A=
+\left(
+\begin{matrix}
+1 & 1 & -1 \\
+2 &-1 & 3 \\
+1 & 0 &-1
+\end{matrix}
+\right)
+\]
+
+La matriz de cambio de base es
+\[
+P=
+\left(
+\begin{matrix}
+1 & 1 & 1 \\
+2 &-1 & 1 \\
+0 & 0 & 1
+\end{matrix}
+\right)
+\]
+con
+\[
+P^{-1}=\frac{1}{3}
+\left(
+\begin{matrix}
+1 & 1 & -2 \\
+2 &-1 & -1 \\
+0 & 0 & 3
+\end{matrix}
+\right)
+\]
+Aplicando el Teorema anterior obtenemos que la matriz asociada a $T$ respecto de la base $\{(1,2,0), (1,-1,0),(1,1,1) \}$
+es:
+\[
+B=\frac{1}{3}
+\left(
+\begin{matrix}
+1 & 1 & -2 \\
+2 &-1 & -1 \\
+0 & 0 & 3
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+1 & 1 & -1 \\
+2 &-1 & 3 \\
+1 & 0 &-1
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+1 & 1 & 1 \\
+2 &-1 & 1 \\
+0 & 0 & 1
+\end{matrix}
+\right)
+=
+\frac{1}{3}
+\left(
+\begin{matrix}
+1 & 1 & 5 \\
+5 &-4 & -2 \\
+3 & 3 & 0
+\end{matrix}
+\right).
+\]
+
+\end{ejemplo}
+
+
+
+
+\newpage
+\textbf{TAREA: TRANSFORMACIONES LINEALES}
+
+\vspace{.2cm}
+
+\begin{enumerate}
+\item ?`Cu\'ales de las siguientes funciones $T$ de $\Bbb{R}^2$ en $\Bbb{R}^2$ son tranformaciones lineales?
+\begin{enumerate}
+\item[(a)] $T(x,y)  = (1 + x, y)$
+\item[(b)] $T(x,y)  = (y, x)$
+\item[(c)] $T(x,y) = (x^2, y)$
+\item[(d)] $T(x,y) =(x- y,0)$
+\end{enumerate}
+\item ?` Existe una tranformaci\'on lineal $T$ de $\Bbb{R}^3$ en $\Bbb{R}^2$ tal que $T(1,-1,1) =(1, 0)$ y $T(1,1,1) =(0,1)$?
+\item Para cada una de las siguientes transformaciones lineales, encuentre su n\'ucleo y rango
+\begin{enumerate}
+\item[a)] Sea $T : \Bbb{R}^2 \to \Bbb{R}^2$ definida por  $T(x,y) = (x-y, 3x + 2y )$
+\item[b)] Sea $T: \Bbb{R}^2 \to \Bbb{R}$ definida por $T(x,y) = x +  y$
+\item[c)]  Sea $T_A : V \to V$, dada por $T_A(X) = AX$,  con $V$ el espacio vectorial de las matrices $2 \times 2$,
+$ A =
+\left[
+  \begin{matrix}
+   1    & 2     \\
+   0  &  1
+  \end{matrix}
+  \right]
+$
+y
+$ X =
+\left[
+  \begin{matrix}
+   x    & y     \\
+   z  &  w
+  \end{matrix}
+  \right]
+  $
+\end{enumerate}
+
+
+\item Sea $T$ el operador lineal sobre $\Bbb{R}^2$ definido por
+\[
+ T(x,y) = (-y, x)
+\]
+\begin{enumerate}
+\item[a)]?` Cu\'al es la matriz de $T$ en la base can\'onica de $\Bbb{R}^2.$
+\item[b)] ?`Cu\'al es la matriz de $T$ respecto de la base ordenada en $\Bbb{R}^2$ formada por los vectores
+$\alpha_1 =(1,2)$ y $\alpha_2 =(1,-1)$?
+\end{enumerate}
+\item Sea $T$ la transformaci\'on lineal de $\Bbb{R}^3$ en $\Bbb{R}^2$ definida por
+\[
+ T(x,y,z) = (x + y, 2z-x).
+\]
+Si $B$ es la base ordenada can\'onica de $\Bbb{R}^3$ y $B'$ es la base ordenada can\'onica de $\Bbb{R}^2$,
+?` cu\'al es la matriz de $T$ respecto al par de bases $B, B'$.
+
+\newpage
+
+
+\item Sea $T$ el operador lineal en $\Bbb{R}^3$ definido por
+\[
+T(x,y,z) = (3x + z, - 2x + y, - x+ 2y + 4z)
+\]
+\begin{enumerate}
+\item[a)]?` Cu\'al es la matriz de $T$ en la base can\'onica de $\Bbb{R}^3.$
+\item[b)] ?`Cu\'al es la matriz de $T$ respecto de la base ordenada en $\Bbb{R}^3$ formada por los vectores
+$\alpha_1 =(1,0,1)$, $\alpha_2 =(-1,2,1)$ y $\alpha_3 =(2,1,1)$?.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\begin{thebibliography}{10}
+   \bibitem{T1}
+    Gilbert Strang, 2007. Algebra Lineal y sus aplicaciones,
+    Thomson. 4a edici\'on.
+   \bibitem{T2}
+    Darell A. Turkington, 2007. Mathematical Tools for Economics,
+    Blackwell Publishing.
+   \bibitem{T3}
+    Mike Rosser, 2003. Basic Mathematics for Economicsts,
+    Routledge. Routledge. 2da. edici\'on.
+   \bibitem{T4}
+   Nakos George, 2004. Algebra Lineal con aplicaciones. Internacional
+   Thomson Editores. 2a Ed, M\'exico.
+\end{thebibliography}
+
+
+
+
+
+\end{document}
